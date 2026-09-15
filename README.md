@@ -40,6 +40,11 @@ uv sync --extra sim     # + the robot repo checked out at ../hexapod, for the
 make help
 ```
 
+`make verify-fast` includes the harness-reach check, which needs the `sim`
+extra (it reads servo ids from the robot repo's joint contract). Point the
+path dependency at an up-to-date checkout; a stale `../hexapod` fails with
+`cannot import name 'servo_id'`.
+
 ## Contract with the robot repo
 
 Two things cross the boundary, both committed on the robot side:
