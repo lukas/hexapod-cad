@@ -1,0 +1,19 @@
+# Edit this file when changing purchased spacers. All dimensions are mm.
+#
+# `outside_diameter_mm` changes the modeled metal spacer, the printed bore, and
+# the fit coupon. The printed bore is spacer OD + the diametral allowance below.
+# The current 0.30 mm allowance reproduces the verified 5.50 -> 5.80 mm fit.
+# Because horizontal FDM holes print undersize, treat it as printer compensation,
+# not as the physical free play that will remain after printing.
+
+[spacer]
+# Set false to generate the normal production parts with no compression spacer,
+# no enlarged bore, and no spacer head boss. The dimensions below stay saved.
+enabled = true
+outside_diameter_mm = 5.50
+inside_diameter_mm = 3.20
+length_mm = 10.00
+
+[printed_fit]
+bore_diametral_allowance_mm = 0.30
+coupon_offsets_from_selected_bore_mm = [-0.20, 0.00, 0.20, 0.40, 0.60]

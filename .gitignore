@@ -1,0 +1,16 @@
+.venv/
+__pycache__/
+*.pyc
+.DS_Store
+
+# Build products (regenerate with `make build`, `make mesh`)
+stl_prototype/
+step_prototype/
+artifacts/
+full_robot_viz/stl/
+mesh_mujoco/assets/
+mesh_mujoco/hexapod_mesh.xml
+extra_stl/*.stl
+extra_stl/*.png
+*.cache.stl
+/uv.lock

@@ -1,0 +1,59 @@
+{
+  "description": "Material-specific screening properties for the premade C-horn walking-load envelope. Strength values are conservative allowables, not vendor certifications.",
+  "rules": [
+    {
+      "parts": "^hip_bearing_carrier_ovh$",
+      "meshStrategy": "remesh",
+      "firstOrder": true,
+      "mujocoAxis": "yaw",
+      "momentArmMm": 56.3,
+      "material": {
+        "name": "PETG 25% infill",
+        "youngMPa": 900.0,
+        "poisson": 0.36,
+        "yieldMPa": 22.66,
+        "assumption": "Upper yaw-bearing radial reaction resolves across the measured 56.3 mm upper/lower bearing-center span; the compact cartridge does not carry the full hip-pitch moment over its local 15 mm contact spacing."
+      }
+    },
+    {
+      "parts": "^chorn_clamp_cnc$",
+      "elementMm": 0.7,
+      "meshStrategy": "auto",
+      "firstOrder": false,
+      "mujocoAxis": "knee",
+      "material": {
+        "name": "unknown aluminum C-horn; conservative allowable",
+        "youngMPa": 69000.0,
+        "poisson": 0.33,
+        "yieldMPa": 110.0,
+        "assumption": "Alloy and temper are unverified; 110 MPa is used instead of 6061-T6 yield."
+      }
+    },
+    {
+      "parts": "^tibia_tube_ovh$",
+      "elementMm": 0.8,
+      "meshStrategy": "auto",
+      "firstOrder": false,
+      "material": {
+        "name": "carbon tube isotropic bending proxy",
+        "youngMPa": 55000.0,
+        "poisson": 0.25,
+        "yieldMPa": 300.0,
+        "assumption": "Conservative longitudinal bending allowable for an unverified 8 mm OD / 6 mm ID tube; not a laminate or socket-crush model."
+      }
+    },
+    {
+      "parts": "^foot_boot$",
+      "elementMm": 0.8,
+      "meshStrategy": "auto",
+      "firstOrder": false,
+      "material": {
+        "name": "TPU 95A linear secant proxy",
+        "youngMPa": 25.0,
+        "poisson": 0.45,
+        "yieldMPa": 7.0,
+        "assumption": "Linear small-strain proxy for a hyperelastic printed boot; stress utilization is screening-only and displacement is approximate."
+      }
+    }
+  ]
+}

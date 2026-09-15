@@ -1,0 +1,221 @@
+{
+  "build": "prototype_sts3215/premade-chorn-56",
+  "forceN": 109.2,
+  "impactG": 3.0,
+  "material": {
+    "name": "PETG 25% infill",
+    "youngMPa": 900.0,
+    "poisson": 0.36,
+    "yieldMPa": 22.66
+  },
+  "mujocoReport": {
+    "path": [
+      "/Users/lukas/hexapod/hexapod_walker/prototype_sts3215/concepts/premade_chorn_56/mujoco_walk_loads.json",
+      "fea/reports/onshape_study_loads.json"
+    ],
+    "stat": "max",
+    "axes": {
+      "yaw": {
+        "bend_nm": 2.856,
+        "tau_nm": 2.2,
+        "force_n": 50.7152
+      },
+      "pitch": {
+        "bend_nm": 3.291,
+        "tau_nm": 2.2,
+        "force_n": 50.7152
+      },
+      "knee": {
+        "bend_nm": 3.757,
+        "tau_nm": 2.2,
+        "force_n": 50.7152
+      }
+    },
+    "footN": 50.7152,
+    "meta": {
+      "ckpt": "ppo_goal_cw_walk_longdist_r2.zip",
+      "vx_cmd": null,
+      "mass_kg": 3.708,
+      "dr_scale": 0.0,
+      "variant": "rigid_hip",
+      "seeds": [
+        0
+      ],
+      "study": "artifacts/strength/onshape/mujoco_onshape_study_manifest.json"
+    }
+  },
+  "parts": [
+    {
+      "partType": "chassis_top_rigid",
+      "instances": 1,
+      "measured": true,
+      "maxVonMisesMPa": 0.4,
+      "maxDeflectionMm": 0.028,
+      "safetyFactor": 56.31,
+      "verdict": "OK",
+      "loadDescription": "607 N mj walk bend lift [pitch 3.29 N*m max] at L0 third 6805, L0 upper bearing carrier + 3 nut traps (NEW), L1 third 6805, L1 upper bearing carrier + 3 nut traps (NEW), L2 third 6805, L2 upper bearing carrier + 3 nut traps (NEW), L3 third 6805, L3 upper bearing carrier + 3 nut traps (NEW), L4 third 6805, L4 upper bearing carrier + 3 nut traps (NEW), L5 third 6805, L5 upper bearing carrier + 3 nut traps (NEW) joint",
+      "cases": [
+        {
+          "name": "mj walk bend lift [pitch 3.29 N*m max]",
+          "forceN": 607.0,
+          "maxVonMisesMPa": 0.4,
+          "maxDeflectionMm": 0.028,
+          "safetyFactor": 56.31
+        },
+        {
+          "name": "mj walk bend scrub [pitch 3.29 N*m max]",
+          "forceN": 607.0,
+          "maxVonMisesMPa": 0.39,
+          "maxDeflectionMm": 0.025,
+          "safetyFactor": 58.34
+        },
+        {
+          "name": "mj rise/lower tau [pitch 2.20 N*m max]",
+          "forceN": 405.8,
+          "maxVonMisesMPa": 0.27,
+          "maxDeflectionMm": 0.019,
+          "safetyFactor": 84.24
+        },
+        {
+          "name": "mj walk/rise joint force [51 N max]",
+          "forceN": 50.7,
+          "maxVonMisesMPa": 0.08,
+          "maxDeflectionMm": 0.015,
+          "safetyFactor": 271.57
+        }
+      ],
+      "hotspots": [
+        {
+          "node": 3520,
+          "positionMm": [
+            -48.8,
+            70.49,
+            82.69
+          ],
+          "vonMisesMPa": 0.4
+        },
+        {
+          "node": 7674,
+          "positionMm": [
+            46.09,
+            70.49,
+            82.69
+          ],
+          "vonMisesMPa": 0.39
+        },
+        {
+          "node": 1488,
+          "positionMm": [
+            -84.04,
+            -5.42,
+            82.69
+          ],
+          "vonMisesMPa": 0.39
+        },
+        {
+          "node": 9748,
+          "positionMm": [
+            84.04,
+            2.71,
+            82.69
+          ],
+          "vonMisesMPa": 0.38
+        },
+        {
+          "node": 3454,
+          "positionMm": [
+            -48.8,
+            -70.49,
+            82.69
+          ],
+          "vonMisesMPa": 0.38
+        },
+        {
+          "node": 7386,
+          "positionMm": [
+            40.67,
+            -75.91,
+            82.69
+          ],
+          "vonMisesMPa": 0.36
+        }
+      ]
+    },
+    {
+      "partType": "chassis_bottom",
+      "instances": 1,
+      "measured": false,
+      "maxVonMisesMPa": 0.05,
+      "maxDeflectionMm": 0.001,
+      "safetyFactor": 429.66,
+      "verdict": "OK",
+      "loadDescription": "30 N handling press at free end",
+      "cases": [
+        {
+          "name": "handling press",
+          "forceN": 30.0,
+          "maxVonMisesMPa": 0.05,
+          "maxDeflectionMm": 0.001,
+          "safetyFactor": 429.66
+        }
+      ],
+      "hotspots": [
+        {
+          "node": 105,
+          "positionMm": [
+            -108.44,
+            -39.31,
+            10.84
+          ],
+          "vonMisesMPa": 0.05
+        },
+        {
+          "node": 853,
+          "positionMm": [
+            -97.6,
+            -59.64,
+            -6.78
+          ],
+          "vonMisesMPa": 0.05
+        },
+        {
+          "node": 1833,
+          "positionMm": [
+            -84.04,
+            -74.56,
+            13.56
+          ],
+          "vonMisesMPa": 0.03
+        },
+        {
+          "node": 3283,
+          "positionMm": [
+            -65.07,
+            -73.2,
+            -6.78
+          ],
+          "vonMisesMPa": 0.0
+        },
+        {
+          "node": 624,
+          "positionMm": [
+            -100.31,
+            -18.98,
+            -6.78
+          ],
+          "vonMisesMPa": 0.0
+        },
+        {
+          "node": 2258,
+          "positionMm": [
+            -79.98,
+            -27.11,
+            10.84
+          ],
+          "vonMisesMPa": 0.0
+        }
+      ]
+    }
+  ],
+  "failures": []
+}

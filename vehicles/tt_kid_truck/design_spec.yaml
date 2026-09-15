@@ -1,0 +1,198 @@
+name: "TT-motor kid 4x4 classic pickup truck"
+units: mm
+source:
+  asin: B0GY8L28XJ
+  product: "DIANN 4 Sets DC Gearbox Motor TT Motor 200RPM"
+  generated_by: build_tt_truck.py
+
+parts:
+  chassis:
+    label: "Lower truck chassis"
+    description: >-
+      One-piece, support-free lower frame with shallow TT-motor pockets,
+      thread-forming clamp bosses, raised bumpers, wiring openings, and four
+      electronics-deck posts.  External motor clamps avoid clone-dependent
+      molded mounting-hole geometry.
+    dimensions:
+      base:
+        value: [150.0, 110.0, 4.0]
+        description: "Nominal lower plate L x W x T. Clamp bosses extend locally beyond the side edge."
+      wheelbase:
+        value: 116.0
+      motor_center_offset_y:
+        value: 40.0
+      deck_height:
+        value: 34.0
+    features:
+      motor_pockets:
+        kind: pocket
+        purpose: "Locate four 22.5 mm-wide TT gearboxes with 0.8 mm width allowance."
+      clamp_bosses:
+        kind: boss
+        purpose: >-
+          Blind 2.7 mm pilot holes accept M3 thread-forming screws from above.
+          The outer bosses continue to the print bed as local outriggers, so
+          their underside has no unsupported shelf.
+      bumpers:
+        kind: boss
+        purpose: >-
+          Protect the plate edge while staying inside the tyre sweep and the
+          rounded base tangent points, preserving support-free printing.
+
+  motor_clamp:
+    label: "TT motor clamp"
+    description: >-
+      Four identical printed bars span the gearbox and attach with two M3
+      screws.  A small lower pad provides positive contact while the main bar
+      seats on the chassis bosses, limiting crush load.
+    dimensions:
+      envelope:
+        value: [12.0, 40.0, 3.9]
+      hole_pitch:
+        value: 32.0
+      clearance_hole_diameter:
+        value: 3.6
+
+  electronics_deck:
+    label: "Electronics and battery deck"
+    description: >-
+      Removable upper platform carrying two standard L298N modules and a
+      universal strapped 64 x 64 mm battery zone.  Four screws attach it to the
+      lower chassis after the drivetrain is complete.
+    dimensions:
+      plate:
+        value: [144.0, 102.0, 3.0]
+      controller_hole_pitch:
+        value: 36.6
+        description: "Square centre-to-centre pattern for each board."
+      controller_standoff_height:
+        value: 6.0
+      battery_zone:
+        value: [44.0, 68.0]
+
+  truck_body_lower:
+    label: "Classic pickup lower body"
+    description: >-
+      Removable one-piece cosmetic and protective shell that creates the
+      pickup silhouette: separate hood, square cab with open windows, open
+      cargo bed, wheel arches, grille surround, tailgate, and bumpers.  It
+      attaches to four raised deck bosses with M3 screws and leaves the motor,
+      wheel, and electronics mounting geometry unchanged.
+    dimensions:
+      envelope:
+        value: [162.0, 114.0, 62.0]
+      deck_mount_pattern:
+        value: [134.0, 86.0]
+      outer_side_skin_y:
+        value: 56.0
+      wheel_arch_radius:
+        value: 38.0
+    features:
+      open_bed:
+        kind: access
+        purpose: "Leaves the rear battery zone visible and easy to strap down."
+      wheel_arches:
+        kind: clearance
+        purpose: "Provide 5.5 mm lateral clearance to the tyre sidewalls."
+      body_tabs:
+        kind: fastener
+        purpose: "Four top-access M3 clearance holes attach to blind deck pilots."
+
+  truck_hood:
+    label: "Removable pickup hood"
+    description: >-
+      Flat-printing hood panel with a shallow centre bulge.  Four M3 screws
+      remove it independently for direct access to the motor electronics.
+    dimensions:
+      envelope:
+        value: [66.0, 108.0, 6.0]
+      screw_pattern:
+        value: [50.0, 100.0]
+
+  truck_roof:
+    label: "Removable cab roof"
+    description: >-
+      Flat-printing rounded cab roof and front visor.  Four M3 screws attach it
+      to pilot bosses at the top of the window frame.
+    dimensions:
+      envelope:
+        value: [42.0, 116.0, 4.0]
+      screw_pattern:
+        value: [26.0, 96.0]
+
+  truck_glazing:
+    label: "Window appearance inserts"
+    description: >-
+      BuildViz-only dark surfaces behind the four open cab windows.  They are
+      not printed; the physical truck can leave the windows open or use thin
+      craft plastic or tape as optional glazing.
+    dimensions:
+      side_window:
+        value: [24.0, 18.0]
+      windshield:
+        value: [78.0, 18.0]
+
+  truck_grille:
+    label: "Front grille appearance insert"
+    description: >-
+      BuildViz-only dark inset that makes the front face read as a truck
+      grille.  The physical builder may reproduce it with paint or tape.
+    dimensions:
+      face:
+        value: [62.0, 14.0]
+
+  headlight:
+    label: "Headlight appearance insert"
+    description: >-
+      BuildViz-only yellow lamp lens, instanced on both sides of the grille;
+      paint or stickers are the intended physical equivalent.
+    dimensions:
+      face:
+        value: [14.0, 9.0]
+
+  taillight:
+    label: "Tail-light appearance insert"
+    description: >-
+      BuildViz-only red rear lamp lens, instanced on both tailgate corners;
+      paint or stickers are the intended physical equivalent.
+    dimensions:
+      face:
+        value: [10.0, 12.0]
+
+  tt_motor:
+    label: "Purchased 1:48 yellow TT motor"
+    description: >-
+      Conservative COTS envelope used only for fit and visualization.  Local
+      +X points from the wheel axle toward the metal motor can.
+    dimensions:
+      body_length:
+        value: 64.2
+      gearbox_width_height:
+        value: [22.5, 22.5]
+      axle_span:
+        value: 36.8
+      axle_diameter:
+        value: 5.4
+
+  wheel:
+    label: "Purchased nominal 65 mm wheel"
+    description: >-
+      COTS visualization of the rubber tread and press-fit hub.  The listing's
+      drawing calls out 66.03 mm OD and 30.0 mm tread width; the prose rounds
+      this to 65 x 26 mm.
+    dimensions:
+      outside_diameter:
+        value: 66.03
+      tread_width:
+        value: 30.0
+
+  l298n_board:
+    label: "Purchased L298N dual H-bridge module"
+    description: >-
+      Conservative COTS envelope for the common red HW-095/L298N board.  It is
+      a motor driver only, not a receiver or complete vehicle controller.
+    dimensions:
+      envelope:
+        value: [43.0, 43.0, 28.6]
+      mounting_holes:
+        value: "4 x diameter 3.0 on 36.6 square pitch"

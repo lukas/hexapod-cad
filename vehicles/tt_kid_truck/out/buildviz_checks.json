@@ -1,0 +1,2368 @@
+{
+  "generatedAt": "2026-09-03T22:34:13.556Z",
+  "build": {
+    "id": "out",
+    "name": "TT-motor kid 4x4 classic pickup truck"
+  },
+  "checksConfig": {
+    "toleranceMm": 0.35,
+    "clearanceMm": 0.8,
+    "minWallMm": 1.5,
+    "matingToleranceMm": 1.1
+  },
+  "summary": {
+    "total": 84,
+    "pass": 84,
+    "warn": 0,
+    "fail": 0,
+    "byKind": {
+      "scene_meta": {
+        "pass": 3,
+        "warn": 0,
+        "fail": 0
+      },
+      "placement": {
+        "pass": 1,
+        "warn": 0,
+        "fail": 0
+      },
+      "watertight": {
+        "pass": 15,
+        "warn": 0,
+        "fail": 0
+      },
+      "disconnected_components": {
+        "pass": 15,
+        "warn": 0,
+        "fail": 0
+      },
+      "wall_thickness": {
+        "pass": 15,
+        "warn": 0,
+        "fail": 0
+      },
+      "mating_contact": {
+        "pass": 35,
+        "warn": 0,
+        "fail": 0
+      }
+    }
+  },
+  "checks": [
+    {
+      "id": "scene_meta-units",
+      "kind": "scene_meta",
+      "status": "pass",
+      "label": "units = mm"
+    },
+    {
+      "id": "scene_meta-mesh-refs",
+      "kind": "scene_meta",
+      "status": "pass",
+      "label": "all 28 instances resolve to a mesh"
+    },
+    {
+      "id": "scene_meta-unique-ids",
+      "kind": "scene_meta",
+      "status": "pass",
+      "label": "instance ids are unique"
+    },
+    {
+      "id": "placement-transforms",
+      "kind": "placement",
+      "status": "pass",
+      "label": "all transforms are well-formed"
+    },
+    {
+      "id": "watertight-0",
+      "kind": "watertight",
+      "status": "pass",
+      "label": "chassis.stl: watertight & manifold",
+      "instances": [
+        "chassis"
+      ],
+      "point": [
+        46.67286936442057,
+        -23.754599253336586,
+        22.733332951863606
+      ]
+    },
+    {
+      "id": "disconnected_components-0",
+      "kind": "disconnected_components",
+      "status": "pass",
+      "label": "chassis.stl: single connected body",
+      "instances": [
+        "chassis"
+      ]
+    },
+    {
+      "id": "wall_thickness-0",
+      "kind": "wall_thickness",
+      "status": "pass",
+      "label": "chassis.stl: min wall ≈ 2.399mm (est.)",
+      "instances": [
+        "chassis"
+      ]
+    },
+    {
+      "id": "watertight-1",
+      "kind": "watertight",
+      "status": "pass",
+      "label": "motor_clamp.stl: watertight & manifold",
+      "instances": [
+        "clamp-rear-left",
+        "clamp-rear-right",
+        "clamp-front-left",
+        "clamp-front-right"
+      ],
+      "point": [
+        -47.895365472882986,
+        22.203541437784832,
+        27.466666690508525
+      ]
+    },
+    {
+      "id": "disconnected_components-1",
+      "kind": "disconnected_components",
+      "status": "pass",
+      "label": "motor_clamp.stl: single connected body",
+      "instances": [
+        "clamp-rear-left",
+        "clamp-rear-right",
+        "clamp-front-left",
+        "clamp-front-right"
+      ]
+    },
+    {
+      "id": "wall_thickness-1",
+      "kind": "wall_thickness",
+      "status": "pass",
+      "label": "motor_clamp.stl: min wall ≈ 2.206mm (est.)",
+      "instances": [
+        "clamp-rear-left",
+        "clamp-rear-right",
+        "clamp-front-left",
+        "clamp-front-right"
+      ]
+    },
+    {
+      "id": "watertight-2",
+      "kind": "watertight",
+      "status": "pass",
+      "label": "electronics_deck.stl: watertight & manifold",
+      "instances": [
+        "electronics-deck"
+      ],
+      "point": [
+        19.824716567993164,
+        -42.48591868082682,
+        39
+      ]
+    },
+    {
+      "id": "disconnected_components-2",
+      "kind": "disconnected_components",
+      "status": "pass",
+      "label": "electronics_deck.stl: single connected body",
+      "instances": [
+        "electronics-deck"
+      ]
+    },
+    {
+      "id": "wall_thickness-2",
+      "kind": "wall_thickness",
+      "status": "pass",
+      "label": "electronics_deck.stl: min wall ≈ 2.099mm (est.)",
+      "instances": [
+        "electronics-deck"
+      ]
+    },
+    {
+      "id": "watertight-3",
+      "kind": "watertight",
+      "status": "pass",
+      "label": "truck_body_lower.stl: watertight & manifold",
+      "instances": [
+        "truck-body-lower"
+      ],
+      "point": [
+        17.445222854614258,
+        -48.77048619588216,
+        67
+      ]
+    },
+    {
+      "id": "disconnected_components-3",
+      "kind": "disconnected_components",
+      "status": "pass",
+      "label": "truck_body_lower.stl: single connected body",
+      "instances": [
+        "truck-body-lower"
+      ]
+    },
+    {
+      "id": "wall_thickness-3",
+      "kind": "wall_thickness",
+      "status": "pass",
+      "label": "truck_body_lower.stl: min wall ≈ 3mm (est.)",
+      "instances": [
+        "truck-body-lower"
+      ]
+    },
+    {
+      "id": "watertight-4",
+      "kind": "watertight",
+      "status": "pass",
+      "label": "truck_hood.stl: watertight & manifold",
+      "instances": [
+        "truck-hood"
+      ],
+      "point": [
+        67.80595016479492,
+        -51.78900909423828,
+        78.66666666666667
+      ]
+    },
+    {
+      "id": "disconnected_components-4",
+      "kind": "disconnected_components",
+      "status": "pass",
+      "label": "truck_hood.stl: single connected body",
+      "instances": [
+        "truck-hood"
+      ]
+    },
+    {
+      "id": "wall_thickness-4",
+      "kind": "wall_thickness",
+      "status": "pass",
+      "label": "truck_hood.stl: min wall ≈ 2.222mm (est.)",
+      "instances": [
+        "truck-hood"
+      ]
+    },
+    {
+      "id": "watertight-5",
+      "kind": "watertight",
+      "status": "pass",
+      "label": "truck_roof.stl: watertight & manifold",
+      "instances": [
+        "truck-roof"
+      ],
+      "point": [
+        14.77570597330729,
+        -54.53262201944987,
+        105
+      ]
+    },
+    {
+      "id": "disconnected_components-5",
+      "kind": "disconnected_components",
+      "status": "pass",
+      "label": "truck_roof.stl: single connected body",
+      "instances": [
+        "truck-roof"
+      ]
+    },
+    {
+      "id": "wall_thickness-5",
+      "kind": "wall_thickness",
+      "status": "pass",
+      "label": "truck_roof.stl: min wall ≈ 2mm (est.)",
+      "instances": [
+        "truck-roof"
+      ]
+    },
+    {
+      "id": "watertight-6",
+      "kind": "watertight",
+      "status": "pass",
+      "label": "windshield_DO_NOT_PRINT.stl: watertight & manifold",
+      "instances": [
+        "truck-windshield"
+      ],
+      "point": [
+        6.399999988079071,
+        13,
+        92
+      ]
+    },
+    {
+      "id": "disconnected_components-6",
+      "kind": "disconnected_components",
+      "status": "pass",
+      "label": "windshield_DO_NOT_PRINT.stl: single connected body",
+      "instances": [
+        "truck-windshield"
+      ]
+    },
+    {
+      "id": "wall_thickness-6",
+      "kind": "wall_thickness",
+      "status": "pass",
+      "label": "windshield_DO_NOT_PRINT.stl: min wall ≈ 1.6mm (est.)",
+      "instances": [
+        "truck-windshield"
+      ]
+    },
+    {
+      "id": "watertight-7",
+      "kind": "watertight",
+      "status": "pass",
+      "label": "rear_window_DO_NOT_PRINT.stl: watertight & manifold",
+      "instances": [
+        "truck-rear-window"
+      ],
+      "point": [
+        -20.00000001192093,
+        11.666666666666666,
+        92
+      ]
+    },
+    {
+      "id": "disconnected_components-7",
+      "kind": "disconnected_components",
+      "status": "pass",
+      "label": "rear_window_DO_NOT_PRINT.stl: single connected body",
+      "instances": [
+        "truck-rear-window"
+      ]
+    },
+    {
+      "id": "wall_thickness-7",
+      "kind": "wall_thickness",
+      "status": "pass",
+      "label": "rear_window_DO_NOT_PRINT.stl: min wall ≈ 1.6mm (est.)",
+      "instances": [
+        "truck-rear-window"
+      ]
+    },
+    {
+      "id": "watertight-8",
+      "kind": "watertight",
+      "status": "pass",
+      "label": "side_window_DO_NOT_PRINT.stl: watertight & manifold",
+      "instances": [
+        "truck-window-left",
+        "truck-window-right"
+      ],
+      "point": [
+        -2,
+        52.00000001192093,
+        86
+      ]
+    },
+    {
+      "id": "disconnected_components-8",
+      "kind": "disconnected_components",
+      "status": "pass",
+      "label": "side_window_DO_NOT_PRINT.stl: single connected body",
+      "instances": [
+        "truck-window-left",
+        "truck-window-right"
+      ]
+    },
+    {
+      "id": "wall_thickness-8",
+      "kind": "wall_thickness",
+      "status": "pass",
+      "label": "side_window_DO_NOT_PRINT.stl: min wall ≈ 1.6mm (est.)",
+      "instances": [
+        "truck-window-left",
+        "truck-window-right"
+      ]
+    },
+    {
+      "id": "watertight-9",
+      "kind": "watertight",
+      "status": "pass",
+      "label": "truck_grille_DO_NOT_PRINT.stl: watertight & manifold",
+      "instances": [
+        "truck-grille"
+      ],
+      "point": [
+        75.99999998807907,
+        10.333333333333332,
+        60.33333333333333
+      ]
+    },
+    {
+      "id": "disconnected_components-9",
+      "kind": "disconnected_components",
+      "status": "pass",
+      "label": "truck_grille_DO_NOT_PRINT.stl: single connected body",
+      "instances": [
+        "truck-grille"
+      ]
+    },
+    {
+      "id": "wall_thickness-9",
+      "kind": "wall_thickness",
+      "status": "pass",
+      "label": "truck_grille_DO_NOT_PRINT.stl: min wall ≈ 1.6mm (est.)",
+      "instances": [
+        "truck-grille"
+      ]
+    },
+    {
+      "id": "watertight-10",
+      "kind": "watertight",
+      "status": "pass",
+      "label": "headlight_DO_NOT_PRINT.stl: watertight & manifold",
+      "instances": [
+        "headlight-left",
+        "headlight-right"
+      ],
+      "point": [
+        75.99999998807907,
+        41.333333333333336,
+        69
+      ]
+    },
+    {
+      "id": "disconnected_components-10",
+      "kind": "disconnected_components",
+      "status": "pass",
+      "label": "headlight_DO_NOT_PRINT.stl: single connected body",
+      "instances": [
+        "headlight-left",
+        "headlight-right"
+      ]
+    },
+    {
+      "id": "wall_thickness-10",
+      "kind": "wall_thickness",
+      "status": "pass",
+      "label": "headlight_DO_NOT_PRINT.stl: min wall ≈ 1.6mm (est.)",
+      "instances": [
+        "headlight-left",
+        "headlight-right"
+      ]
+    },
+    {
+      "id": "watertight-11",
+      "kind": "watertight",
+      "status": "pass",
+      "label": "taillight_DO_NOT_PRINT.stl: watertight & manifold",
+      "instances": [
+        "taillight-left",
+        "taillight-right"
+      ],
+      "point": [
+        -77.60000001192093,
+        43.666666666666664,
+        58
+      ]
+    },
+    {
+      "id": "disconnected_components-11",
+      "kind": "disconnected_components",
+      "status": "pass",
+      "label": "taillight_DO_NOT_PRINT.stl: single connected body",
+      "instances": [
+        "taillight-left",
+        "taillight-right"
+      ]
+    },
+    {
+      "id": "wall_thickness-11",
+      "kind": "wall_thickness",
+      "status": "pass",
+      "label": "taillight_DO_NOT_PRINT.stl: min wall ≈ 1.6mm (est.)",
+      "instances": [
+        "taillight-left",
+        "taillight-right"
+      ]
+    },
+    {
+      "id": "watertight-12",
+      "kind": "watertight",
+      "status": "pass",
+      "label": "tt_motor_DO_NOT_PRINT.stl: watertight & manifold",
+      "instances": [
+        "motor-rear-left",
+        "motor-rear-right",
+        "motor-front-left",
+        "motor-front-right"
+      ],
+      "point": [
+        -56.68941040833791,
+        56.016666412353516,
+        12.090269915262859
+      ]
+    },
+    {
+      "id": "disconnected_components-12",
+      "kind": "disconnected_components",
+      "status": "pass",
+      "label": "tt_motor_DO_NOT_PRINT.stl: single connected body",
+      "instances": [
+        "motor-rear-left",
+        "motor-rear-right",
+        "motor-front-left",
+        "motor-front-right"
+      ]
+    },
+    {
+      "id": "wall_thickness-12",
+      "kind": "wall_thickness",
+      "status": "pass",
+      "label": "tt_motor_DO_NOT_PRINT.stl: min wall ≈ 5.398mm (est.)",
+      "instances": [
+        "motor-rear-left",
+        "motor-rear-right",
+        "motor-front-left",
+        "motor-front-right"
+      ]
+    },
+    {
+      "id": "watertight-13",
+      "kind": "watertight",
+      "status": "pass",
+      "label": "wheel_DO_NOT_PRINT.stl: watertight & manifold",
+      "instances": [
+        "wheel-rear-left",
+        "wheel-rear-right",
+        "wheel-front-left",
+        "wheel-front-right"
+      ],
+      "point": [
+        -55.90166258811951,
+        95.5,
+        20.069349479675292
+      ]
+    },
+    {
+      "id": "disconnected_components-13",
+      "kind": "disconnected_components",
+      "status": "pass",
+      "label": "wheel_DO_NOT_PRINT.stl: single connected body",
+      "instances": [
+        "wheel-rear-left",
+        "wheel-rear-right",
+        "wheel-front-left",
+        "wheel-front-right"
+      ]
+    },
+    {
+      "id": "wall_thickness-13",
+      "kind": "wall_thickness",
+      "status": "pass",
+      "label": "wheel_DO_NOT_PRINT.stl: min wall ≈ 11.996mm (est.)",
+      "instances": [
+        "wheel-rear-left",
+        "wheel-rear-right",
+        "wheel-front-left",
+        "wheel-front-right"
+      ]
+    },
+    {
+      "id": "watertight-14",
+      "kind": "watertight",
+      "status": "pass",
+      "label": "l298n_board_DO_NOT_PRINT.stl: watertight & manifold",
+      "instances": [
+        "l298n-a",
+        "l298n-b"
+      ],
+      "point": [
+        33.166666666666664,
+        -33.33333333333333,
+        44.60000002384186
+      ]
+    },
+    {
+      "id": "disconnected_components-14",
+      "kind": "disconnected_components",
+      "status": "pass",
+      "label": "l298n_board_DO_NOT_PRINT.stl: single connected body",
+      "instances": [
+        "l298n-a",
+        "l298n-b"
+      ]
+    },
+    {
+      "id": "wall_thickness-14",
+      "kind": "wall_thickness",
+      "status": "pass",
+      "label": "l298n_board_DO_NOT_PRINT.stl: min wall ≈ 1.6mm (est.)",
+      "instances": [
+        "l298n-a",
+        "l298n-b"
+      ]
+    },
+    {
+      "id": "mating_contact-0",
+      "kind": "mating_contact",
+      "status": "pass",
+      "label": "taillight ⟷ truck_body_lower (likely mate): in contact, gap 0mm",
+      "instances": [
+        "taillight-left",
+        "truck-body-lower"
+      ],
+      "point": [
+        -76,
+        46.6,
+        50.8
+      ]
+    },
+    {
+      "id": "mating_contact-1",
+      "kind": "mating_contact",
+      "status": "pass",
+      "label": "taillight ⟷ truck_body_lower (likely mate): in contact, gap 0mm",
+      "instances": [
+        "taillight-right",
+        "truck-body-lower"
+      ],
+      "point": [
+        -76,
+        -37.4,
+        50.8
+      ]
+    },
+    {
+      "id": "mating_contact-2",
+      "kind": "mating_contact",
+      "status": "pass",
+      "label": "chassis ⟷ wheel (likely mate): in contact, gap 0.25mm",
+      "instances": [
+        "chassis",
+        "wheel-rear-left"
+      ],
+      "point": [
+        -29,
+        38.25,
+        15.725
+      ]
+    },
+    {
+      "id": "mating_contact-3",
+      "kind": "mating_contact",
+      "status": "pass",
+      "label": "chassis ⟷ wheel (likely mate): in contact, gap 0.25mm",
+      "instances": [
+        "chassis",
+        "wheel-rear-right"
+      ],
+      "point": [
+        -29,
+        -38.25,
+        15.725
+      ]
+    },
+    {
+      "id": "mating_contact-4",
+      "kind": "mating_contact",
+      "status": "pass",
+      "label": "electronics_deck ⟷ truck_body_lower (likely mate): in contact, gap 0mm",
+      "instances": [
+        "electronics-deck",
+        "truck-body-lower"
+      ]
+    },
+    {
+      "id": "mating_contact-5",
+      "kind": "mating_contact",
+      "status": "pass",
+      "label": "electronics_deck ⟷ chassis (likely mate): in contact, gap 0mm",
+      "instances": [
+        "electronics-deck",
+        "chassis"
+      ]
+    },
+    {
+      "id": "mating_contact-6",
+      "kind": "mating_contact",
+      "status": "pass",
+      "label": "tt_motor ⟷ wheel (likely mate): seated, contact 0.967mm",
+      "instances": [
+        "motor-rear-left",
+        "wheel-rear-left"
+      ],
+      "point": [
+        -59.274,
+        56.467,
+        14
+      ]
+    },
+    {
+      "id": "mating_contact-7",
+      "kind": "mating_contact",
+      "status": "pass",
+      "label": "tt_motor ⟷ chassis (likely mate): seated, contact 0.333mm",
+      "instances": [
+        "motor-rear-left",
+        "chassis"
+      ],
+      "point": [
+        -59.689,
+        24.053,
+        13.2
+      ]
+    },
+    {
+      "id": "mating_contact-8",
+      "kind": "mating_contact",
+      "status": "pass",
+      "label": "tt_motor ⟷ wheel (likely mate): seated, contact 0.967mm",
+      "instances": [
+        "motor-rear-right",
+        "wheel-rear-right"
+      ],
+      "point": [
+        -59.274,
+        -57.433,
+        14
+      ]
+    },
+    {
+      "id": "mating_contact-9",
+      "kind": "mating_contact",
+      "status": "pass",
+      "label": "tt_motor ⟷ chassis (likely mate): seated, contact 0.333mm",
+      "instances": [
+        "motor-rear-right",
+        "chassis"
+      ],
+      "point": [
+        -59.689,
+        -24.053,
+        13.2
+      ]
+    },
+    {
+      "id": "mating_contact-10",
+      "kind": "mating_contact",
+      "status": "pass",
+      "label": "motor_clamp ⟷ chassis (likely mate): in contact, gap 0mm",
+      "instances": [
+        "clamp-rear-left",
+        "chassis"
+      ]
+    },
+    {
+      "id": "mating_contact-11",
+      "kind": "mating_contact",
+      "status": "pass",
+      "label": "motor_clamp ⟷ tt_motor (likely mate): in contact, gap 0mm",
+      "instances": [
+        "clamp-rear-left",
+        "motor-rear-left"
+      ]
+    },
+    {
+      "id": "mating_contact-12",
+      "kind": "mating_contact",
+      "status": "pass",
+      "label": "motor_clamp ⟷ chassis (likely mate): in contact, gap 0mm",
+      "instances": [
+        "clamp-rear-right",
+        "chassis"
+      ]
+    },
+    {
+      "id": "mating_contact-13",
+      "kind": "mating_contact",
+      "status": "pass",
+      "label": "motor_clamp ⟷ tt_motor (likely mate): in contact, gap 0mm",
+      "instances": [
+        "clamp-rear-right",
+        "motor-rear-right"
+      ]
+    },
+    {
+      "id": "mating_contact-14",
+      "kind": "mating_contact",
+      "status": "pass",
+      "label": "truck_roof ⟷ truck_body_lower (likely mate): in contact, gap 0mm",
+      "instances": [
+        "truck-roof",
+        "truck-body-lower"
+      ]
+    },
+    {
+      "id": "mating_contact-15",
+      "kind": "mating_contact",
+      "status": "pass",
+      "label": "truck_glazing ⟷ truck_body_lower (likely mate): in contact, gap 0mm",
+      "instances": [
+        "truck-rear-window",
+        "truck-body-lower"
+      ],
+      "point": [
+        -20,
+        -32.778,
+        80
+      ]
+    },
+    {
+      "id": "mating_contact-16",
+      "kind": "mating_contact",
+      "status": "pass",
+      "label": "truck_glazing ⟷ truck_body_lower (likely mate): seated, contact 0.663mm",
+      "instances": [
+        "truck-window-left",
+        "truck-body-lower"
+      ],
+      "point": [
+        -16.884,
+        51.2,
+        96.875
+      ]
+    },
+    {
+      "id": "mating_contact-17",
+      "kind": "mating_contact",
+      "status": "pass",
+      "label": "truck_glazing ⟷ truck_body_lower (likely mate): seated, contact 0.663mm",
+      "instances": [
+        "truck-window-right",
+        "truck-body-lower"
+      ],
+      "point": [
+        -16.884,
+        -51.2,
+        96.875
+      ]
+    },
+    {
+      "id": "mating_contact-18",
+      "kind": "mating_contact",
+      "status": "pass",
+      "label": "tt_motor ⟷ chassis (likely mate): seated, contact 0.333mm",
+      "instances": [
+        "motor-front-left",
+        "chassis"
+      ],
+      "point": [
+        59.689,
+        24.053,
+        13.2
+      ]
+    },
+    {
+      "id": "mating_contact-19",
+      "kind": "mating_contact",
+      "status": "pass",
+      "label": "tt_motor ⟷ chassis (likely mate): seated, contact 0.333mm",
+      "instances": [
+        "motor-front-right",
+        "chassis"
+      ],
+      "point": [
+        59.689,
+        -24.053,
+        15.7
+      ]
+    },
+    {
+      "id": "mating_contact-20",
+      "kind": "mating_contact",
+      "status": "pass",
+      "label": "truck_glazing ⟷ truck_body_lower (likely mate): in contact, gap 0mm",
+      "instances": [
+        "truck-windshield",
+        "truck-body-lower"
+      ],
+      "point": [
+        8,
+        -36.524,
+        80
+      ]
+    },
+    {
+      "id": "mating_contact-21",
+      "kind": "mating_contact",
+      "status": "pass",
+      "label": "truck_hood ⟷ truck_body_lower (likely mate): seated, contact 0.8mm",
+      "instances": [
+        "truck-hood",
+        "truck-body-lower"
+      ],
+      "point": [
+        11.2,
+        -51.796,
+        79
+      ]
+    },
+    {
+      "id": "mating_contact-22",
+      "kind": "mating_contact",
+      "status": "pass",
+      "label": "l298n_board ⟷ electronics_deck (likely mate): in contact, gap 0mm",
+      "instances": [
+        "l298n-a",
+        "electronics-deck"
+      ]
+    },
+    {
+      "id": "mating_contact-23",
+      "kind": "mating_contact",
+      "status": "pass",
+      "label": "l298n_board ⟷ electronics_deck (likely mate): in contact, gap 0mm",
+      "instances": [
+        "l298n-b",
+        "electronics-deck"
+      ]
+    },
+    {
+      "id": "mating_contact-24",
+      "kind": "mating_contact",
+      "status": "pass",
+      "label": "wheel ⟷ tt_motor (likely mate): seated, contact 0.967mm",
+      "instances": [
+        "wheel-front-left",
+        "motor-front-left"
+      ],
+      "point": [
+        56.567,
+        56.467,
+        14
+      ]
+    },
+    {
+      "id": "mating_contact-25",
+      "kind": "mating_contact",
+      "status": "pass",
+      "label": "wheel ⟷ chassis (likely mate): in contact, gap 0.25mm",
+      "instances": [
+        "wheel-front-left",
+        "chassis"
+      ],
+      "point": [
+        29,
+        38.25,
+        15.725
+      ]
+    },
+    {
+      "id": "mating_contact-26",
+      "kind": "mating_contact",
+      "status": "pass",
+      "label": "wheel ⟷ chassis (likely mate): in contact, gap 0.25mm",
+      "instances": [
+        "wheel-front-right",
+        "chassis"
+      ],
+      "point": [
+        29,
+        -38.25,
+        15.725
+      ]
+    },
+    {
+      "id": "mating_contact-27",
+      "kind": "mating_contact",
+      "status": "pass",
+      "label": "wheel ⟷ tt_motor (likely mate): seated, contact 0.967mm",
+      "instances": [
+        "wheel-front-right",
+        "motor-front-right"
+      ],
+      "point": [
+        56.567,
+        -57.433,
+        14
+      ]
+    },
+    {
+      "id": "mating_contact-28",
+      "kind": "mating_contact",
+      "status": "pass",
+      "label": "motor_clamp ⟷ tt_motor (likely mate): in contact, gap 0mm",
+      "instances": [
+        "clamp-front-left",
+        "motor-front-left"
+      ]
+    },
+    {
+      "id": "mating_contact-29",
+      "kind": "mating_contact",
+      "status": "pass",
+      "label": "motor_clamp ⟷ chassis (likely mate): in contact, gap 0mm",
+      "instances": [
+        "clamp-front-left",
+        "chassis"
+      ]
+    },
+    {
+      "id": "mating_contact-30",
+      "kind": "mating_contact",
+      "status": "pass",
+      "label": "motor_clamp ⟷ chassis (likely mate): in contact, gap 0mm",
+      "instances": [
+        "clamp-front-right",
+        "chassis"
+      ]
+    },
+    {
+      "id": "mating_contact-31",
+      "kind": "mating_contact",
+      "status": "pass",
+      "label": "motor_clamp ⟷ tt_motor (likely mate): in contact, gap 0mm",
+      "instances": [
+        "clamp-front-right",
+        "motor-front-right"
+      ]
+    },
+    {
+      "id": "mating_contact-32",
+      "kind": "mating_contact",
+      "status": "pass",
+      "label": "truck_grille ⟷ truck_body_lower (likely mate): in contact, gap 0mm",
+      "instances": [
+        "truck-grille",
+        "truck-body-lower"
+      ],
+      "point": [
+        76,
+        -20.175,
+        51
+      ]
+    },
+    {
+      "id": "mating_contact-33",
+      "kind": "mating_contact",
+      "status": "pass",
+      "label": "headlight ⟷ truck_body_lower (likely mate): in contact, gap 0mm",
+      "instances": [
+        "headlight-left",
+        "truck-body-lower"
+      ],
+      "point": [
+        76,
+        32.4,
+        63
+      ]
+    },
+    {
+      "id": "mating_contact-34",
+      "kind": "mating_contact",
+      "status": "pass",
+      "label": "headlight ⟷ truck_body_lower (likely mate): in contact, gap 0mm",
+      "instances": [
+        "headlight-right",
+        "truck-body-lower"
+      ],
+      "point": [
+        76,
+        -45.6,
+        63
+      ]
+    }
+  ],
+  "highlights": {
+    "parts": [],
+    "points": [],
+    "regions": []
+  },
+  "report": {
+    "passed": true,
+    "problemCount": 0,
+    "toleranceMm": 0.35,
+    "minPenetrationMm": 1,
+    "instanceCount": 28,
+    "meshCount": 15,
+    "missingMeshes": [],
+    "fastenersExcluded": 0,
+    "fastenersIncluded": false,
+    "broadPhasePairs": 45,
+    "narrowPhasePairs": 45,
+    "capped": false,
+    "collisions": [],
+    "floating": [],
+    "gaps": [],
+    "declaredInterferences": [],
+    "printability": [
+      {
+        "meshId": "stl:chassis",
+        "meshName": "chassis.stl",
+        "instanceIds": [
+          "chassis"
+        ],
+        "triangleCount": 13908,
+        "openEdges": 0,
+        "nonManifoldEdges": 0,
+        "inconsistentWinding": false,
+        "degenerateTriangles": 0,
+        "selfIntersections": 0,
+        "selfIntersectionPoint": null,
+        "componentCount": 1,
+        "smallestComponent": null,
+        "volumeMm3": 80684.197,
+        "minWallMm": 2.399,
+        "thinPoint": [
+          46.67286936442057,
+          -23.754599253336586,
+          22.733332951863606
+        ]
+      },
+      {
+        "meshId": "stl:motor_clamp",
+        "meshName": "motor_clamp.stl",
+        "instanceIds": [
+          "clamp-rear-left",
+          "clamp-rear-right",
+          "clamp-front-left",
+          "clamp-front-right"
+        ],
+        "triangleCount": 1044,
+        "openEdges": 0,
+        "nonManifoldEdges": 0,
+        "inconsistentWinding": false,
+        "degenerateTriangles": 0,
+        "selfIntersections": 0,
+        "selfIntersectionPoint": null,
+        "componentCount": 1,
+        "smallestComponent": null,
+        "volumeMm3": 1568.883,
+        "minWallMm": 2.206,
+        "thinPoint": [
+          -47.895365472882986,
+          22.203541437784832,
+          27.466666690508525
+        ]
+      },
+      {
+        "meshId": "stl:electronics_deck",
+        "meshName": "electronics_deck.stl",
+        "instanceIds": [
+          "electronics-deck"
+        ],
+        "triangleCount": 14836,
+        "openEdges": 0,
+        "nonManifoldEdges": 0,
+        "inconsistentWinding": false,
+        "degenerateTriangles": 0,
+        "selfIntersections": 0,
+        "selfIntersectionPoint": null,
+        "componentCount": 1,
+        "smallestComponent": null,
+        "volumeMm3": 46499.543,
+        "minWallMm": 2.099,
+        "thinPoint": [
+          19.824716567993164,
+          -42.48591868082682,
+          39
+        ]
+      },
+      {
+        "meshId": "stl:truck_body_lower",
+        "meshName": "truck_body_lower.stl",
+        "instanceIds": [
+          "truck-body-lower"
+        ],
+        "triangleCount": 9040,
+        "openEdges": 0,
+        "nonManifoldEdges": 0,
+        "inconsistentWinding": false,
+        "degenerateTriangles": 0,
+        "selfIntersections": 0,
+        "selfIntersectionPoint": null,
+        "componentCount": 1,
+        "smallestComponent": null,
+        "volumeMm3": 115960.65,
+        "minWallMm": 3,
+        "thinPoint": [
+          17.445222854614258,
+          -48.77048619588216,
+          67
+        ]
+      },
+      {
+        "meshId": "stl:truck_hood",
+        "meshName": "truck_hood.stl",
+        "instanceIds": [
+          "truck-hood"
+        ],
+        "triangleCount": 3084,
+        "openEdges": 0,
+        "nonManifoldEdges": 0,
+        "inconsistentWinding": false,
+        "degenerateTriangles": 0,
+        "selfIntersections": 0,
+        "selfIntersectionPoint": null,
+        "componentCount": 1,
+        "smallestComponent": null,
+        "volumeMm3": 30590.714,
+        "minWallMm": 2.222,
+        "thinPoint": [
+          67.80595016479492,
+          -51.78900909423828,
+          78.66666666666667
+        ]
+      },
+      {
+        "meshId": "stl:truck_roof",
+        "meshName": "truck_roof.stl",
+        "instanceIds": [
+          "truck-roof"
+        ],
+        "triangleCount": 2836,
+        "openEdges": 0,
+        "nonManifoldEdges": 0,
+        "inconsistentWinding": false,
+        "degenerateTriangles": 0,
+        "selfIntersections": 0,
+        "selfIntersectionPoint": null,
+        "componentCount": 1,
+        "smallestComponent": null,
+        "volumeMm3": 18628.732,
+        "minWallMm": 2,
+        "thinPoint": [
+          14.77570597330729,
+          -54.53262201944987,
+          105
+        ]
+      },
+      {
+        "meshId": "stl:windshield",
+        "meshName": "windshield_DO_NOT_PRINT.stl",
+        "instanceIds": [
+          "truck-windshield"
+        ],
+        "triangleCount": 12,
+        "openEdges": 0,
+        "nonManifoldEdges": 0,
+        "inconsistentWinding": false,
+        "degenerateTriangles": 0,
+        "selfIntersections": 0,
+        "selfIntersectionPoint": null,
+        "componentCount": 1,
+        "smallestComponent": null,
+        "volumeMm3": 2246.4,
+        "minWallMm": 1.6,
+        "thinPoint": [
+          6.399999988079071,
+          13,
+          92
+        ]
+      },
+      {
+        "meshId": "stl:rear_window",
+        "meshName": "rear_window_DO_NOT_PRINT.stl",
+        "instanceIds": [
+          "truck-rear-window"
+        ],
+        "triangleCount": 12,
+        "openEdges": 0,
+        "nonManifoldEdges": 0,
+        "inconsistentWinding": false,
+        "degenerateTriangles": 0,
+        "selfIntersections": 0,
+        "selfIntersectionPoint": null,
+        "componentCount": 1,
+        "smallestComponent": null,
+        "volumeMm3": 2016,
+        "minWallMm": 1.6,
+        "thinPoint": [
+          -20.00000001192093,
+          11.666666666666666,
+          92
+        ]
+      },
+      {
+        "meshId": "stl:side_window",
+        "meshName": "side_window_DO_NOT_PRINT.stl",
+        "instanceIds": [
+          "truck-window-left",
+          "truck-window-right"
+        ],
+        "triangleCount": 12,
+        "openEdges": 0,
+        "nonManifoldEdges": 0,
+        "inconsistentWinding": false,
+        "degenerateTriangles": 0,
+        "selfIntersections": 0,
+        "selfIntersectionPoint": null,
+        "componentCount": 1,
+        "smallestComponent": null,
+        "volumeMm3": 691.2,
+        "minWallMm": 1.6,
+        "thinPoint": [
+          -2,
+          52.00000001192093,
+          86
+        ]
+      },
+      {
+        "meshId": "stl:truck_grille",
+        "meshName": "truck_grille_DO_NOT_PRINT.stl",
+        "instanceIds": [
+          "truck-grille"
+        ],
+        "triangleCount": 12,
+        "openEdges": 0,
+        "nonManifoldEdges": 0,
+        "inconsistentWinding": false,
+        "degenerateTriangles": 0,
+        "selfIntersections": 0,
+        "selfIntersectionPoint": null,
+        "componentCount": 1,
+        "smallestComponent": null,
+        "volumeMm3": 1388.8,
+        "minWallMm": 1.6,
+        "thinPoint": [
+          75.99999998807907,
+          10.333333333333332,
+          60.33333333333333
+        ]
+      },
+      {
+        "meshId": "stl:headlight",
+        "meshName": "headlight_DO_NOT_PRINT.stl",
+        "instanceIds": [
+          "headlight-left",
+          "headlight-right"
+        ],
+        "triangleCount": 12,
+        "openEdges": 0,
+        "nonManifoldEdges": 0,
+        "inconsistentWinding": false,
+        "degenerateTriangles": 0,
+        "selfIntersections": 0,
+        "selfIntersectionPoint": null,
+        "componentCount": 1,
+        "smallestComponent": null,
+        "volumeMm3": 201.6,
+        "minWallMm": 1.6,
+        "thinPoint": [
+          75.99999998807907,
+          41.333333333333336,
+          69
+        ]
+      },
+      {
+        "meshId": "stl:taillight",
+        "meshName": "taillight_DO_NOT_PRINT.stl",
+        "instanceIds": [
+          "taillight-left",
+          "taillight-right"
+        ],
+        "triangleCount": 12,
+        "openEdges": 0,
+        "nonManifoldEdges": 0,
+        "inconsistentWinding": false,
+        "degenerateTriangles": 0,
+        "selfIntersections": 0,
+        "selfIntersectionPoint": null,
+        "componentCount": 1,
+        "smallestComponent": null,
+        "volumeMm3": 192,
+        "minWallMm": 1.6,
+        "thinPoint": [
+          -77.60000001192093,
+          43.666666666666664,
+          58
+        ]
+      },
+      {
+        "meshId": "stl:tt_motor",
+        "meshName": "tt_motor_DO_NOT_PRINT.stl",
+        "instanceIds": [
+          "motor-rear-left",
+          "motor-rear-right",
+          "motor-front-left",
+          "motor-front-right"
+        ],
+        "triangleCount": 1036,
+        "openEdges": 0,
+        "nonManifoldEdges": 0,
+        "inconsistentWinding": false,
+        "degenerateTriangles": 0,
+        "selfIntersections": 0,
+        "selfIntersectionPoint": null,
+        "componentCount": 1,
+        "smallestComponent": null,
+        "volumeMm3": 29985.515,
+        "minWallMm": 5.398,
+        "thinPoint": [
+          -56.68941040833791,
+          56.016666412353516,
+          12.090269915262859
+        ]
+      },
+      {
+        "meshId": "stl:wheel",
+        "meshName": "wheel_DO_NOT_PRINT.stl",
+        "instanceIds": [
+          "wheel-rear-left",
+          "wheel-rear-right",
+          "wheel-front-left",
+          "wheel-front-right"
+        ],
+        "triangleCount": 1508,
+        "openEdges": 0,
+        "nonManifoldEdges": 0,
+        "inconsistentWinding": false,
+        "degenerateTriangles": 0,
+        "selfIntersections": 0,
+        "selfIntersectionPoint": null,
+        "componentCount": 1,
+        "smallestComponent": null,
+        "volumeMm3": 104043.194,
+        "minWallMm": 11.996,
+        "thinPoint": [
+          -55.90166258811951,
+          95.5,
+          20.069349479675292
+        ]
+      },
+      {
+        "meshId": "stl:l298n_board",
+        "meshName": "l298n_board_DO_NOT_PRINT.stl",
+        "instanceIds": [
+          "l298n-a",
+          "l298n-b"
+        ],
+        "triangleCount": 60,
+        "openEdges": 0,
+        "nonManifoldEdges": 0,
+        "inconsistentWinding": false,
+        "degenerateTriangles": 0,
+        "selfIntersections": 0,
+        "selfIntersectionPoint": null,
+        "componentCount": 1,
+        "smallestComponent": null,
+        "volumeMm3": 18584.4,
+        "minWallMm": 1.6,
+        "thinPoint": [
+          33.166666666666664,
+          -33.33333333333333,
+          44.60000002384186
+        ]
+      }
+    ],
+    "fasteners": [],
+    "access": [],
+    "mating": [
+      {
+        "a": {
+          "instanceId": "taillight-left",
+          "partType": "taillight",
+          "name": "Tail light left"
+        },
+        "b": {
+          "instanceId": "truck-body-lower",
+          "partType": "truck_body_lower",
+          "name": "Classic pickup lower body"
+        },
+        "declared": false,
+        "gapMm": 0,
+        "penetrationMm": 0,
+        "point": [
+          -76,
+          46.6,
+          50.8
+        ],
+        "region": {
+          "min": [
+            -77.6,
+            37,
+            50
+          ],
+          "max": [
+            -76,
+            47,
+            62
+          ]
+        }
+      },
+      {
+        "a": {
+          "instanceId": "taillight-right",
+          "partType": "taillight",
+          "name": "Tail light right"
+        },
+        "b": {
+          "instanceId": "truck-body-lower",
+          "partType": "truck_body_lower",
+          "name": "Classic pickup lower body"
+        },
+        "declared": false,
+        "gapMm": 0,
+        "penetrationMm": 0,
+        "point": [
+          -76,
+          -37.4,
+          50.8
+        ],
+        "region": {
+          "min": [
+            -77.6,
+            -47,
+            50
+          ],
+          "max": [
+            -76,
+            -37,
+            62
+          ]
+        }
+      },
+      {
+        "a": {
+          "instanceId": "chassis",
+          "partType": "chassis",
+          "name": "Lower truck chassis"
+        },
+        "b": {
+          "instanceId": "wheel-rear-left",
+          "partType": "wheel",
+          "name": "65 mm wheel rear-left"
+        },
+        "declared": false,
+        "gapMm": 0.25,
+        "penetrationMm": 0,
+        "point": [
+          -29,
+          38.25,
+          15.725
+        ],
+        "region": null
+      },
+      {
+        "a": {
+          "instanceId": "chassis",
+          "partType": "chassis",
+          "name": "Lower truck chassis"
+        },
+        "b": {
+          "instanceId": "wheel-rear-right",
+          "partType": "wheel",
+          "name": "65 mm wheel rear-right"
+        },
+        "declared": false,
+        "gapMm": 0.25,
+        "penetrationMm": 0,
+        "point": [
+          -29,
+          -38.25,
+          15.725
+        ],
+        "region": null
+      },
+      {
+        "a": {
+          "instanceId": "electronics-deck",
+          "partType": "electronics_deck",
+          "name": "Electronics + battery deck"
+        },
+        "b": {
+          "instanceId": "truck-body-lower",
+          "partType": "truck_body_lower",
+          "name": "Classic pickup lower body"
+        },
+        "declared": false,
+        "gapMm": 0,
+        "penetrationMm": 0,
+        "point": null,
+        "region": null
+      },
+      {
+        "a": {
+          "instanceId": "electronics-deck",
+          "partType": "electronics_deck",
+          "name": "Electronics + battery deck"
+        },
+        "b": {
+          "instanceId": "chassis",
+          "partType": "chassis",
+          "name": "Lower truck chassis"
+        },
+        "declared": false,
+        "gapMm": 0,
+        "penetrationMm": 0,
+        "point": null,
+        "region": null
+      },
+      {
+        "a": {
+          "instanceId": "motor-rear-left",
+          "partType": "tt_motor",
+          "name": "TT motor rear-left"
+        },
+        "b": {
+          "instanceId": "wheel-rear-left",
+          "partType": "wheel",
+          "name": "65 mm wheel rear-left"
+        },
+        "declared": false,
+        "gapMm": 0,
+        "penetrationMm": 0.967,
+        "point": [
+          -59.274,
+          56.467,
+          14
+        ],
+        "region": {
+          "min": [
+            -60.177,
+            56.467,
+            12.2
+          ],
+          "max": [
+            -55.665,
+            58.4,
+            16.7
+          ]
+        }
+      },
+      {
+        "a": {
+          "instanceId": "motor-rear-left",
+          "partType": "tt_motor",
+          "name": "TT motor rear-left"
+        },
+        "b": {
+          "instanceId": "chassis",
+          "partType": "chassis",
+          "name": "Lower truck chassis"
+        },
+        "declared": false,
+        "gapMm": 0,
+        "penetrationMm": 0.333,
+        "point": [
+          -59.689,
+          24.053,
+          13.2
+        ],
+        "region": {
+          "min": [
+            -69.2,
+            24.053,
+            3.2
+          ],
+          "max": [
+            -59.689,
+            51.04,
+            15.7
+          ]
+        }
+      },
+      {
+        "a": {
+          "instanceId": "motor-rear-right",
+          "partType": "tt_motor",
+          "name": "TT motor rear-right"
+        },
+        "b": {
+          "instanceId": "wheel-rear-right",
+          "partType": "wheel",
+          "name": "65 mm wheel rear-right"
+        },
+        "declared": false,
+        "gapMm": 0,
+        "penetrationMm": 0.967,
+        "point": [
+          -59.274,
+          -57.433,
+          14
+        ],
+        "region": {
+          "min": [
+            -60.177,
+            -57.433,
+            12.2
+          ],
+          "max": [
+            -55.665,
+            -55.5,
+            16.7
+          ]
+        }
+      },
+      {
+        "a": {
+          "instanceId": "motor-rear-right",
+          "partType": "tt_motor",
+          "name": "TT motor rear-right"
+        },
+        "b": {
+          "instanceId": "chassis",
+          "partType": "chassis",
+          "name": "Lower truck chassis"
+        },
+        "declared": false,
+        "gapMm": 0,
+        "penetrationMm": 0.333,
+        "point": [
+          -59.689,
+          -24.053,
+          13.2
+        ],
+        "region": {
+          "min": [
+            -69.2,
+            -51.04,
+            3.2
+          ],
+          "max": [
+            -57.311,
+            -21.6,
+            15.7
+          ]
+        }
+      },
+      {
+        "a": {
+          "instanceId": "clamp-rear-left",
+          "partType": "motor_clamp",
+          "name": "Motor clamp rear-left"
+        },
+        "b": {
+          "instanceId": "chassis",
+          "partType": "chassis",
+          "name": "Lower truck chassis"
+        },
+        "declared": false,
+        "gapMm": 0,
+        "penetrationMm": 0,
+        "point": null,
+        "region": null
+      },
+      {
+        "a": {
+          "instanceId": "clamp-rear-left",
+          "partType": "motor_clamp",
+          "name": "Motor clamp rear-left"
+        },
+        "b": {
+          "instanceId": "motor-rear-left",
+          "partType": "tt_motor",
+          "name": "TT motor rear-left"
+        },
+        "declared": false,
+        "gapMm": 0,
+        "penetrationMm": 0,
+        "point": null,
+        "region": null
+      },
+      {
+        "a": {
+          "instanceId": "clamp-rear-right",
+          "partType": "motor_clamp",
+          "name": "Motor clamp rear-right"
+        },
+        "b": {
+          "instanceId": "chassis",
+          "partType": "chassis",
+          "name": "Lower truck chassis"
+        },
+        "declared": false,
+        "gapMm": 0,
+        "penetrationMm": 0,
+        "point": null,
+        "region": null
+      },
+      {
+        "a": {
+          "instanceId": "clamp-rear-right",
+          "partType": "motor_clamp",
+          "name": "Motor clamp rear-right"
+        },
+        "b": {
+          "instanceId": "motor-rear-right",
+          "partType": "tt_motor",
+          "name": "TT motor rear-right"
+        },
+        "declared": false,
+        "gapMm": 0,
+        "penetrationMm": 0,
+        "point": null,
+        "region": null
+      },
+      {
+        "a": {
+          "instanceId": "truck-roof",
+          "partType": "truck_roof",
+          "name": "Removable cab roof"
+        },
+        "b": {
+          "instanceId": "truck-body-lower",
+          "partType": "truck_body_lower",
+          "name": "Classic pickup lower body"
+        },
+        "declared": false,
+        "gapMm": 0,
+        "penetrationMm": 0,
+        "point": null,
+        "region": null
+      },
+      {
+        "a": {
+          "instanceId": "truck-rear-window",
+          "partType": "truck_glazing",
+          "name": "Dark rear-window insert"
+        },
+        "b": {
+          "instanceId": "truck-body-lower",
+          "partType": "truck_body_lower",
+          "name": "Classic pickup lower body"
+        },
+        "declared": false,
+        "gapMm": 0,
+        "penetrationMm": 0,
+        "point": [
+          -20,
+          -32.778,
+          80
+        ],
+        "region": {
+          "min": [
+            -20,
+            -35,
+            80
+          ],
+          "max": [
+            -20,
+            33.889,
+            96.364
+          ]
+        }
+      },
+      {
+        "a": {
+          "instanceId": "truck-window-left",
+          "partType": "truck_glazing",
+          "name": "Dark side-window insert left"
+        },
+        "b": {
+          "instanceId": "truck-body-lower",
+          "partType": "truck_body_lower",
+          "name": "Classic pickup lower body"
+        },
+        "declared": false,
+        "gapMm": 0,
+        "penetrationMm": 0.663,
+        "point": [
+          -16.884,
+          51.2,
+          96.875
+        ],
+        "region": {
+          "min": [
+            -18,
+            50.4,
+            80
+          ],
+          "max": [
+            6,
+            52,
+            98
+          ]
+        }
+      },
+      {
+        "a": {
+          "instanceId": "truck-window-right",
+          "partType": "truck_glazing",
+          "name": "Dark side-window insert right"
+        },
+        "b": {
+          "instanceId": "truck-body-lower",
+          "partType": "truck_body_lower",
+          "name": "Classic pickup lower body"
+        },
+        "declared": false,
+        "gapMm": 0,
+        "penetrationMm": 0.663,
+        "point": [
+          -16.884,
+          -51.2,
+          96.875
+        ],
+        "region": {
+          "min": [
+            -18,
+            -52,
+            80
+          ],
+          "max": [
+            6,
+            -50.4,
+            98
+          ]
+        }
+      },
+      {
+        "a": {
+          "instanceId": "motor-front-left",
+          "partType": "tt_motor",
+          "name": "TT motor front-left"
+        },
+        "b": {
+          "instanceId": "chassis",
+          "partType": "chassis",
+          "name": "Lower truck chassis"
+        },
+        "declared": false,
+        "gapMm": 0,
+        "penetrationMm": 0.333,
+        "point": [
+          59.689,
+          24.053,
+          13.2
+        ],
+        "region": {
+          "min": [
+            57.311,
+            21.6,
+            13.2
+          ],
+          "max": [
+            59.689,
+            24.053,
+            15.7
+          ]
+        }
+      },
+      {
+        "a": {
+          "instanceId": "motor-front-right",
+          "partType": "tt_motor",
+          "name": "TT motor front-right"
+        },
+        "b": {
+          "instanceId": "chassis",
+          "partType": "chassis",
+          "name": "Lower truck chassis"
+        },
+        "declared": false,
+        "gapMm": 0,
+        "penetrationMm": 0.333,
+        "point": [
+          59.689,
+          -24.053,
+          15.7
+        ],
+        "region": {
+          "min": [
+            59.689,
+            -24.053,
+            13.2
+          ],
+          "max": [
+            59.689,
+            -24.053,
+            15.7
+          ]
+        }
+      },
+      {
+        "a": {
+          "instanceId": "truck-windshield",
+          "partType": "truck_glazing",
+          "name": "Dark windshield insert"
+        },
+        "b": {
+          "instanceId": "truck-body-lower",
+          "partType": "truck_body_lower",
+          "name": "Classic pickup lower body"
+        },
+        "declared": false,
+        "gapMm": 0,
+        "penetrationMm": 0,
+        "point": [
+          8,
+          -36.524,
+          80
+        ],
+        "region": {
+          "min": [
+            8,
+            -39,
+            80
+          ],
+          "max": [
+            8,
+            39,
+            98
+          ]
+        }
+      },
+      {
+        "a": {
+          "instanceId": "truck-hood",
+          "partType": "truck_hood",
+          "name": "Removable pickup hood"
+        },
+        "b": {
+          "instanceId": "truck-body-lower",
+          "partType": "truck_body_lower",
+          "name": "Classic pickup lower body"
+        },
+        "declared": false,
+        "gapMm": 0,
+        "penetrationMm": 0.8,
+        "point": [
+          11.2,
+          -51.796,
+          79
+        ],
+        "region": {
+          "min": [
+            9,
+            -54,
+            76
+          ],
+          "max": [
+            70.6,
+            54,
+            79
+          ]
+        }
+      },
+      {
+        "a": {
+          "instanceId": "l298n-a",
+          "partType": "l298n_board",
+          "name": "L298N motor board A"
+        },
+        "b": {
+          "instanceId": "electronics-deck",
+          "partType": "electronics_deck",
+          "name": "Electronics + battery deck"
+        },
+        "declared": false,
+        "gapMm": 0,
+        "penetrationMm": 0,
+        "point": null,
+        "region": {
+          "min": [
+            14.865,
+            -43.635,
+            43
+          ],
+          "max": [
+            55.135,
+            -3.365,
+            43
+          ]
+        }
+      },
+      {
+        "a": {
+          "instanceId": "l298n-b",
+          "partType": "l298n_board",
+          "name": "L298N motor board B"
+        },
+        "b": {
+          "instanceId": "electronics-deck",
+          "partType": "electronics_deck",
+          "name": "Electronics + battery deck"
+        },
+        "declared": false,
+        "gapMm": 0,
+        "penetrationMm": 0,
+        "point": null,
+        "region": {
+          "min": [
+            14.865,
+            3.365,
+            43
+          ],
+          "max": [
+            55.135,
+            43.635,
+            43
+          ]
+        }
+      },
+      {
+        "a": {
+          "instanceId": "wheel-front-left",
+          "partType": "wheel",
+          "name": "65 mm wheel front-left"
+        },
+        "b": {
+          "instanceId": "motor-front-left",
+          "partType": "tt_motor",
+          "name": "TT motor front-left"
+        },
+        "declared": false,
+        "gapMm": 0,
+        "penetrationMm": 0.967,
+        "point": [
+          56.567,
+          56.467,
+          14
+        ],
+        "region": {
+          "min": [
+            55.665,
+            56.467,
+            12.2
+          ],
+          "max": [
+            60.177,
+            57.433,
+            16.7
+          ]
+        }
+      },
+      {
+        "a": {
+          "instanceId": "wheel-front-left",
+          "partType": "wheel",
+          "name": "65 mm wheel front-left"
+        },
+        "b": {
+          "instanceId": "chassis",
+          "partType": "chassis",
+          "name": "Lower truck chassis"
+        },
+        "declared": false,
+        "gapMm": 0.25,
+        "penetrationMm": 0,
+        "point": [
+          29,
+          38.25,
+          15.725
+        ],
+        "region": null
+      },
+      {
+        "a": {
+          "instanceId": "wheel-front-right",
+          "partType": "wheel",
+          "name": "65 mm wheel front-right"
+        },
+        "b": {
+          "instanceId": "chassis",
+          "partType": "chassis",
+          "name": "Lower truck chassis"
+        },
+        "declared": false,
+        "gapMm": 0.25,
+        "penetrationMm": 0,
+        "point": [
+          29,
+          -38.25,
+          15.725
+        ],
+        "region": null
+      },
+      {
+        "a": {
+          "instanceId": "wheel-front-right",
+          "partType": "wheel",
+          "name": "65 mm wheel front-right"
+        },
+        "b": {
+          "instanceId": "motor-front-right",
+          "partType": "tt_motor",
+          "name": "TT motor front-right"
+        },
+        "declared": false,
+        "gapMm": 0,
+        "penetrationMm": 0.967,
+        "point": [
+          56.567,
+          -57.433,
+          14
+        ],
+        "region": {
+          "min": [
+            55.665,
+            -58.4,
+            12.2
+          ],
+          "max": [
+            60.177,
+            -55.5,
+            16.7
+          ]
+        }
+      },
+      {
+        "a": {
+          "instanceId": "clamp-front-left",
+          "partType": "motor_clamp",
+          "name": "Motor clamp front-left"
+        },
+        "b": {
+          "instanceId": "motor-front-left",
+          "partType": "tt_motor",
+          "name": "TT motor front-left"
+        },
+        "declared": false,
+        "gapMm": 0,
+        "penetrationMm": 0,
+        "point": null,
+        "region": null
+      },
+      {
+        "a": {
+          "instanceId": "clamp-front-left",
+          "partType": "motor_clamp",
+          "name": "Motor clamp front-left"
+        },
+        "b": {
+          "instanceId": "chassis",
+          "partType": "chassis",
+          "name": "Lower truck chassis"
+        },
+        "declared": false,
+        "gapMm": 0,
+        "penetrationMm": 0,
+        "point": null,
+        "region": null
+      },
+      {
+        "a": {
+          "instanceId": "clamp-front-right",
+          "partType": "motor_clamp",
+          "name": "Motor clamp front-right"
+        },
+        "b": {
+          "instanceId": "chassis",
+          "partType": "chassis",
+          "name": "Lower truck chassis"
+        },
+        "declared": false,
+        "gapMm": 0,
+        "penetrationMm": 0,
+        "point": null,
+        "region": null
+      },
+      {
+        "a": {
+          "instanceId": "clamp-front-right",
+          "partType": "motor_clamp",
+          "name": "Motor clamp front-right"
+        },
+        "b": {
+          "instanceId": "motor-front-right",
+          "partType": "tt_motor",
+          "name": "TT motor front-right"
+        },
+        "declared": false,
+        "gapMm": 0,
+        "penetrationMm": 0,
+        "point": null,
+        "region": null
+      },
+      {
+        "a": {
+          "instanceId": "truck-grille",
+          "partType": "truck_grille",
+          "name": "Front grille insert"
+        },
+        "b": {
+          "instanceId": "truck-body-lower",
+          "partType": "truck_body_lower",
+          "name": "Classic pickup lower body"
+        },
+        "declared": false,
+        "gapMm": 0,
+        "penetrationMm": 0,
+        "point": [
+          76,
+          -20.175,
+          51
+        ],
+        "region": {
+          "min": [
+            76,
+            -31,
+            51
+          ],
+          "max": [
+            76,
+            31,
+            64.3
+          ]
+        }
+      },
+      {
+        "a": {
+          "instanceId": "headlight-left",
+          "partType": "headlight",
+          "name": "Headlight left"
+        },
+        "b": {
+          "instanceId": "truck-body-lower",
+          "partType": "truck_body_lower",
+          "name": "Classic pickup lower body"
+        },
+        "declared": false,
+        "gapMm": 0,
+        "penetrationMm": 0,
+        "point": [
+          76,
+          32.4,
+          63
+        ],
+        "region": {
+          "min": [
+            76,
+            32,
+            63
+          ],
+          "max": [
+            76,
+            46,
+            71.591
+          ]
+        }
+      },
+      {
+        "a": {
+          "instanceId": "headlight-right",
+          "partType": "headlight",
+          "name": "Headlight right"
+        },
+        "b": {
+          "instanceId": "truck-body-lower",
+          "partType": "truck_body_lower",
+          "name": "Classic pickup lower body"
+        },
+        "declared": false,
+        "gapMm": 0,
+        "penetrationMm": 0,
+        "point": [
+          76,
+          -45.6,
+          63
+        ],
+        "region": {
+          "min": [
+            76,
+            -46,
+            63
+          ],
+          "max": [
+            76,
+            -32,
+            71.591
+          ]
+        }
+      }
+    ],
+    "routing": [],
+    "minWallMm": 1.5,
+    "minThreadEngagementMm": 2,
+    "matingToleranceMm": 1.1,
+    "components": {
+      "count": 1,
+      "mainComponentSize": 28,
+      "floatingComponentCount": 0
+    },
+    "timings": {
+      "loadMs": 36,
+      "bvhMs": 1,
+      "broadMs": 0,
+      "narrowMs": 630,
+      "connectivityMs": 0,
+      "printabilityMs": 539,
+      "threadMs": 0,
+      "accessMs": 0,
+      "matingMs": 620,
+      "routingMs": 0,
+      "totalMs": 1826
+    }
+  }
+}

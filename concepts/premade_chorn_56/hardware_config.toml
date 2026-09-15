@@ -1,0 +1,219 @@
+[bracket]
+# User measurements. Recheck with calipers before printing a complete set.
+outside_span_mm = 56.0
+plate_thickness_mm = 2.10
+axis_to_front_outer_mm = 51.0
+center_hole_diameter_mm = 8.0
+
+# Matching long-U commodity nominal; this was not supplied in the note.
+blade_and_front_width_mm = 25.0
+
+[front]
+# Physical bracket measurement (Lukas, 2026-09-02): 34 mm between the inner
+# hole edges and 40 mm across the outer edges. The generators derive Ø3.0 mm
+# physical holes, 37.0 mm centre spacing, and 9.5 mm edge insets from these.
+extra_pair_inner_edge_gap_mm = 34.0
+extra_pair_outer_edge_span_mm = 40.0
+usual_pattern_pcd_mm = 14.0
+# Printed receiver/coupon clearance; intentionally larger than the measured
+# Ø3.0 mm holes in the bought bracket.
+m3_clearance_diameter_mm = 3.40
+
+# The femur receiver ends at the inherited servo-cavity wall instead of
+# projecting into the servo. Six ordinary M3 hex nuts load from the bracket
+# face and are captured when the metal web is seated. M3x5 screws reach through
+# each nut but stop inside the remaining printed skin before the servo cavity.
+femur_center_clearance_diameter_mm = 8.00
+femur_nut_pocket_across_flats_mm = 5.80
+femur_nut_pocket_depth_mm = 2.70
+femur_nut_nominal_thickness_mm = 2.40
+femur_screw_length_mm = 5.00
+femur_screw_tip_clearance_mm = 0.20
+femur_minimum_thread_beyond_nut_mm = 0.40
+
+[tibia_socket]
+# Double the original 14 mm captured length so the socket sleeves much more of
+# the existing Ø8 carbon tube and reduces its unsupported bending span.
+tube_engagement_depth_mm = 30.0
+
+# Four radial U-shaped windows expose the four central captive nylocs without
+# removing the complete tube collar at the mouth. The two measured outer-pair
+# pockets already sit beyond the ring and need no scallop.
+window_width_mm = 6.80
+window_beyond_receiver_mm = 0.35
+
+# Walking-load FEA placed the socket hotspot at the back of the 8 mm receiver,
+# where the nut windows interrupt the Ø18 tube boss. Spread that load through a
+# broad, tapered root and four diagonal ribs between the access windows. The
+# lobes stay inside the 25 mm bracket-web width in Y and do not cover any nut.
+root_flare_outer_radius_mm = 12.0
+root_flare_length_mm = 10.0
+root_flare_receiver_overlap_mm = 0.30
+root_rib_outer_radius_mm = 13.0
+root_rib_inner_radius_mm = 8.25
+root_rib_width_mm = 3.20
+root_rib_length_mm = 11.0
+root_rib_angles_deg = [45.0, 135.0, 225.0, 315.0]
+
+[spacers]
+thickness_mm = 7.0
+outside_diameter_mm = 21.0
+m3_clearance_diameter_mm = 3.40
+driven_head_pocket_diameter_mm = 8.8
+driven_head_pocket_depth_mm = 2.8
+driven_tool_access_diameter_mm = 4.2
+passive_center_through_diameter_mm = 8.6
+
+[servo_clamp_caps]
+# Replace the two M3 self-tapped plastic threads at each removable hip and
+# knee clamp cap with ordinary captive M3 hex nuts. The nuts load from the
+# open clamp face and are trapped when the cap is seated; the servo-case
+# M2.5 self-tappers remain unchanged. The screw length is the existing M3x8
+# (M3 diameter, 8 mm under-head length), not an M8-diameter fastener.
+screw_length_mm = 8.0
+m3_clearance_diameter_mm = 3.40
+nut_pocket_across_flats_mm = 5.80
+nut_pocket_depth_mm = 2.70
+nut_nominal_thickness_mm = 2.40
+tip_clearance_mm = 0.20
+minimum_thread_beyond_nut_mm = 1.00
+
+[coxa_support_tower]
+# Vertical rear crescent fused into the coxa. Its footprint copies the lower
+# yaw hub's circular contour and never exceeds that existing plan envelope.
+outer_radius_mm = 19.0
+front_chord_x_mm = -10.5
+tower_bottom_z_mm = 4.0
+tower_top_z_mm = 46.25
+cap_flange_bottom_z_mm = 46.30
+cap_flange_top_z_mm = 50.40
+top_screw_x_mm = -14.0
+top_screw_ys_mm = [-6.0, 6.0]
+yaw_driver_extra_radial_clearance_mm = 2.0
+
+# Two top-entry M3x8 SHCS through the removable bearing-carrier flange into
+# captive M3 nuts dropped into hex pockets in the top of the integral coxa
+# tower. The carrier closes the pockets after the nuts are installed. Rotate
+# the assembly for installation access.
+m3_clearance_diameter_mm = 3.40
+shcs_head_pocket_diameter_mm = 6.20
+shcs_head_pocket_depth_mm = 3.0
+nut_pocket_across_flats_mm = 5.80
+nut_pocket_depth_mm = 2.70
+screw_tip_clearance_depth_mm = 7.00
+
+[coxa_reinforcement]
+# The negative-Y side retains separate upper/lower ribs. On positive Y, the
+# former pair of long stepped ribs is one full-height rectangular block that
+# stops at the servo's rear-retention tab. All three supports retain curved
+# roots following the lower R19 yaw-hub contour. The centre of the lower hub
+# stays open instead of recreating the old perforated slab. Keep this relief
+# exactly flush with the R16.9 yaw-cartridge socket: the former R20 cut ran
+# 3.1 mm into the flat servo-holder foot and left a stray D-shaped bottom hole.
+arm_x0_mm = -13.0
+arm_x1_mm = 42.0
+curve_x1_mm = 2.0
+lower_curve_inner_radius_mm = 17.0
+lower_curve_outer_radius_mm = 25.1
+lower_straight_center_y_mm = 21.9
+upper_curve_inner_radius_mm = 17.0
+upper_curve_outer_radius_mm = 25.1
+upper_straight_center_y_mm = 21.9
+centre_relief_radius_mm = 16.9
+straight_width_mm = 4.0
+lower_bridge_z0_mm = 4.0
+lower_bridge_z1_mm = 10.0
+upper_bridge_z0_mm = 27.5
+upper_bridge_z1_mm = 35.8
+# A single through-axis opens the inherited front-case screw path through the
+# remaining negative-Y upper rib. The positive side ends before this axis, so
+# that side is open air rather than another bored rail.
+upper_screw_access_x_mm = 25.5
+upper_screw_access_z_mm = 34.65
+upper_screw_access_diameter_mm = 6.5
+
+# Continue only the circular roots of the two upper supports toward the bearing
+# carrier. This thickens the highly loaded wall below the bearing without
+# extending another arm across the servo or changing the servo enclosure.
+upper_bearing_buttress_z0_mm = 34.5
+upper_bearing_buttress_z1_mm = 44.0
+upper_bearing_buttress_inner_radius_mm = 17.0
+upper_bearing_buttress_outer_radius_mm = 25.1
+upper_bearing_buttress_front_x_mm = -7.5
+
+# The positive-Y pair is replaced by one solid side block. It follows the
+# same circular root, then stops at the servo's existing rear-retention tab
+# instead of continuing uselessly across the servo. The two tab screws remain
+# accessible through straight driver bores in the block.
+positive_tab_block_x0_mm = -0.5
+positive_tab_block_x1_mm = 23.8
+positive_tab_block_y0_mm = 15.65
+positive_tab_block_y1_mm = 23.9
+positive_tab_block_z0_mm = 4.0
+positive_tab_block_z1_mm = 36.7
+positive_tab_hole_x_mm = 21.7
+positive_tab_hole_zs_mm = [14.2, 34.6]
+positive_tab_driver_diameter_mm = 6.8
+
+[coxa_servo_holder_centering]
+# The inherited open-face cradle is correctly located on the hip axis, but
+# its flat support foot stopped at Y=+16.65 while reaching Y=-23.65 on the
+# other side.  Extend only the low foot toward Y=+24.25, which centers its plan
+# outline on the seated servo centreline at Y=+0.50.  The servo, horn, cap,
+# hip axis, and +Y horn-on extraction opening all stay in their existing
+# positions. The solid positive-Y tab block nests inside this footprint.
+servo_center_y_mm = 0.50
+existing_foot_negative_y_mm = -23.65
+existing_foot_positive_y_mm = 16.65
+# Exact centering would put the new edge at Y=+24.65. Trim that by 0.40 mm so
+# the moving aluminum C bracket at Y=+24.40 retains 0.15 mm model clearance.
+# The resulting foot centre is within 0.20 mm of the servo centreline and the
+# tab block remains fully inside the outline.
+positive_edge_centering_trim_mm = 0.40
+foot_x_range_mm = [9.30, 74.70]
+foot_z_range_mm = [4.00, 12.00]
+
+[hip_bearing_carrier]
+# The upper 6805 pedestal is now a separate flat-backed cartridge. Four
+# M3x8 countersunk screws enter from the underside of the flat hip-cap pad
+# into captive M3 nuts dropped into hex pockets in the cartridge mounting
+# face. The cap closes the pockets after the nuts are installed. The pattern
+# stays clear of the two tower-to-carrier screws at X=-14, Y=+/-6.
+mount_radius_mm = 19.0
+cap_pad_inner_face_y_mm = 17.0
+mount_screw_radius_mm = 15.5
+# The first screw moves off 0 degrees so its countersink stays clear of the
+# fixed inboard clamp-cap bolt. A fourth screw at 180 degrees supports the rear
+# side where the walking-load carrier analysis concentrated bending; the other
+# two retain the pattern that clears the coxa tower's top-entry screws.
+mount_screw_angles_deg = [35.0, 97.5, 180.0, 262.5]
+m3_clearance_diameter_mm = 3.40
+countersink_major_diameter_mm = 6.50
+countersink_depth_mm = 2.0
+nut_pocket_across_flats_mm = 5.80
+nut_pocket_depth_mm = 2.70
+screw_tip_clearance_depth_mm = 3.30
+flange_top_gap_below_bearing_mm = 0.40
+
+[coxa_yaw_hub_split]
+# The lower yaw carrier grows an annular male collar upward into a matching
+# coxa socket. Three radial M3 screws enter through edge-access tunnels at the
+# rear half of the socket and engage captive nuts in the carrier collar. This
+# deletes the two thin top-screw tongues while keeping the five vertical horn
+# driver corridors open.
+interface_z_mm = 4.0
+carrier_collar_inner_radius_mm = 13.00
+carrier_collar_outer_radius_mm = 16.60
+coxa_socket_inner_radius_mm = 16.90
+coxa_socket_outer_radius_mm = 19.00
+collar_top_z_mm = 12.00
+radial_clearance_mm = 0.30
+radial_screw_axis_z_mm = 8.00
+radial_screw_angles_deg = [120.0, 180.0, 240.0]
+m3_clearance_diameter_mm = 3.40
+head_access_diameter_mm = 6.20
+head_seat_radius_mm = 18.00
+head_access_outer_radius_mm = 26.00
+nut_pocket_across_flats_mm = 5.80
+nut_pocket_depth_mm = 2.70
+screw_length_mm = 6.0

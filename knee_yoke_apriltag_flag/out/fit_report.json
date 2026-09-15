@@ -1,0 +1,489 @@
+{
+  "pass": true,
+  "holder_watertight": true,
+  "holder_components": 1,
+  "yoke_overlap_mm3": 0.0,
+  "outboard_gap_mm": 8.583068833445395e-07,
+  "max_fixed_side_overlap_mm3": 0.0,
+  "sweep_knee_deg": [
+    -25.0,
+    85.0
+  ],
+  "bolt_radii_mm": [
+    7.0,
+    7.0,
+    7.0,
+    7.0
+  ],
+  "expected_bolt_radius_mm": 7.0,
+  "opencv_decoded_tag_ids": [
+    16
+  ],
+  "bambu_assigned_extruders": [
+    "1",
+    "2"
+  ],
+  "white_component_watertight": true,
+  "black_component_max_z_mm": 2.1,
+  "black_rear_label_expected_top_z_mm": 2.1,
+  "rear_label_material": "black / extruder 2",
+  "dimensions": {
+    "plate_size_mm": 38.0,
+    "tag_size_mm": 34.0,
+    "plate_thickness_mm": 1.6,
+    "cup_height_mm": 3.25,
+    "total_height_mm": 4.85,
+    "head_diameter_mm": 5.5,
+    "head_height_mm": 3.0,
+    "cup_throat_diameter_mm": 5.5,
+    "cup_back_diameter_mm": 5.75,
+    "bolt_circle_diameter_mm": 14.0,
+    "back_label_height_mm": 0.5
+  },
+  "samples": [
+    {
+      "knee_deg": -25.0,
+      "fixed_overlap_mm3": 0.0
+    },
+    {
+      "knee_deg": -24.0,
+      "fixed_overlap_mm3": 0.0
+    },
+    {
+      "knee_deg": -23.0,
+      "fixed_overlap_mm3": 0.0
+    },
+    {
+      "knee_deg": -22.0,
+      "fixed_overlap_mm3": 0.0
+    },
+    {
+      "knee_deg": -21.0,
+      "fixed_overlap_mm3": 0.0
+    },
+    {
+      "knee_deg": -20.0,
+      "fixed_overlap_mm3": 0.0
+    },
+    {
+      "knee_deg": -19.0,
+      "fixed_overlap_mm3": 0.0
+    },
+    {
+      "knee_deg": -18.0,
+      "fixed_overlap_mm3": 0.0
+    },
+    {
+      "knee_deg": -17.0,
+      "fixed_overlap_mm3": 0.0
+    },
+    {
+      "knee_deg": -16.0,
+      "fixed_overlap_mm3": 0.0
+    },
+    {
+      "knee_deg": -15.0,
+      "fixed_overlap_mm3": 0.0
+    },
+    {
+      "knee_deg": -14.0,
+      "fixed_overlap_mm3": 0.0
+    },
+    {
+      "knee_deg": -13.0,
+      "fixed_overlap_mm3": 0.0
+    },
+    {
+      "knee_deg": -12.0,
+      "fixed_overlap_mm3": 0.0
+    },
+    {
+      "knee_deg": -11.0,
+      "fixed_overlap_mm3": 0.0
+    },
+    {
+      "knee_deg": -10.0,
+      "fixed_overlap_mm3": 0.0
+    },
+    {
+      "knee_deg": -9.0,
+      "fixed_overlap_mm3": 0.0
+    },
+    {
+      "knee_deg": -8.0,
+      "fixed_overlap_mm3": 0.0
+    },
+    {
+      "knee_deg": -7.0,
+      "fixed_overlap_mm3": 0.0
+    },
+    {
+      "knee_deg": -6.0,
+      "fixed_overlap_mm3": 0.0
+    },
+    {
+      "knee_deg": -5.0,
+      "fixed_overlap_mm3": 0.0
+    },
+    {
+      "knee_deg": -4.0,
+      "fixed_overlap_mm3": 0.0
+    },
+    {
+      "knee_deg": -3.0,
+      "fixed_overlap_mm3": 0.0
+    },
+    {
+      "knee_deg": -2.0,
+      "fixed_overlap_mm3": 0.0
+    },
+    {
+      "knee_deg": -1.0,
+      "fixed_overlap_mm3": 0.0
+    },
+    {
+      "knee_deg": 0.0,
+      "fixed_overlap_mm3": 0.0
+    },
+    {
+      "knee_deg": 1.0,
+      "fixed_overlap_mm3": 0.0
+    },
+    {
+      "knee_deg": 2.0,
+      "fixed_overlap_mm3": 0.0
+    },
+    {
+      "knee_deg": 3.0,
+      "fixed_overlap_mm3": 0.0
+    },
+    {
+      "knee_deg": 4.0,
+      "fixed_overlap_mm3": 0.0
+    },
+    {
+      "knee_deg": 5.0,
+      "fixed_overlap_mm3": 0.0
+    },
+    {
+      "knee_deg": 6.0,
+      "fixed_overlap_mm3": 0.0
+    },
+    {
+      "knee_deg": 7.0,
+      "fixed_overlap_mm3": 0.0
+    },
+    {
+      "knee_deg": 8.0,
+      "fixed_overlap_mm3": 0.0
+    },
+    {
+      "knee_deg": 9.0,
+      "fixed_overlap_mm3": 0.0
+    },
+    {
+      "knee_deg": 10.0,
+      "fixed_overlap_mm3": 0.0
+    },
+    {
+      "knee_deg": 11.0,
+      "fixed_overlap_mm3": 0.0
+    },
+    {
+      "knee_deg": 12.0,
+      "fixed_overlap_mm3": 0.0
+    },
+    {
+      "knee_deg": 13.0,
+      "fixed_overlap_mm3": 0.0
+    },
+    {
+      "knee_deg": 14.0,
+      "fixed_overlap_mm3": 0.0
+    },
+    {
+      "knee_deg": 15.0,
+      "fixed_overlap_mm3": 0.0
+    },
+    {
+      "knee_deg": 16.0,
+      "fixed_overlap_mm3": 0.0
+    },
+    {
+      "knee_deg": 17.0,
+      "fixed_overlap_mm3": 0.0
+    },
+    {
+      "knee_deg": 18.0,
+      "fixed_overlap_mm3": 0.0
+    },
+    {
+      "knee_deg": 19.0,
+      "fixed_overlap_mm3": 0.0
+    },
+    {
+      "knee_deg": 20.0,
+      "fixed_overlap_mm3": 0.0
+    },
+    {
+      "knee_deg": 21.0,
+      "fixed_overlap_mm3": 0.0
+    },
+    {
+      "knee_deg": 22.0,
+      "fixed_overlap_mm3": 0.0
+    },
+    {
+      "knee_deg": 23.0,
+      "fixed_overlap_mm3": 0.0
+    },
+    {
+      "knee_deg": 24.0,
+      "fixed_overlap_mm3": 0.0
+    },
+    {
+      "knee_deg": 25.0,
+      "fixed_overlap_mm3": 0.0
+    },
+    {
+      "knee_deg": 26.0,
+      "fixed_overlap_mm3": 0.0
+    },
+    {
+      "knee_deg": 27.0,
+      "fixed_overlap_mm3": 0.0
+    },
+    {
+      "knee_deg": 28.0,
+      "fixed_overlap_mm3": 0.0
+    },
+    {
+      "knee_deg": 29.0,
+      "fixed_overlap_mm3": 0.0
+    },
+    {
+      "knee_deg": 30.0,
+      "fixed_overlap_mm3": 0.0
+    },
+    {
+      "knee_deg": 31.0,
+      "fixed_overlap_mm3": 0.0
+    },
+    {
+      "knee_deg": 32.0,
+      "fixed_overlap_mm3": 0.0
+    },
+    {
+      "knee_deg": 33.0,
+      "fixed_overlap_mm3": 0.0
+    },
+    {
+      "knee_deg": 34.0,
+      "fixed_overlap_mm3": 0.0
+    },
+    {
+      "knee_deg": 35.0,
+      "fixed_overlap_mm3": 0.0
+    },
+    {
+      "knee_deg": 36.0,
+      "fixed_overlap_mm3": 0.0
+    },
+    {
+      "knee_deg": 37.0,
+      "fixed_overlap_mm3": 0.0
+    },
+    {
+      "knee_deg": 38.0,
+      "fixed_overlap_mm3": 0.0
+    },
+    {
+      "knee_deg": 39.0,
+      "fixed_overlap_mm3": 0.0
+    },
+    {
+      "knee_deg": 40.0,
+      "fixed_overlap_mm3": 0.0
+    },
+    {
+      "knee_deg": 41.0,
+      "fixed_overlap_mm3": 0.0
+    },
+    {
+      "knee_deg": 42.0,
+      "fixed_overlap_mm3": 0.0
+    },
+    {
+      "knee_deg": 43.0,
+      "fixed_overlap_mm3": 0.0
+    },
+    {
+      "knee_deg": 44.0,
+      "fixed_overlap_mm3": 0.0
+    },
+    {
+      "knee_deg": 45.0,
+      "fixed_overlap_mm3": 0.0
+    },
+    {
+      "knee_deg": 46.0,
+      "fixed_overlap_mm3": 0.0
+    },
+    {
+      "knee_deg": 47.0,
+      "fixed_overlap_mm3": 0.0
+    },
+    {
+      "knee_deg": 48.0,
+      "fixed_overlap_mm3": 0.0
+    },
+    {
+      "knee_deg": 49.0,
+      "fixed_overlap_mm3": 0.0
+    },
+    {
+      "knee_deg": 50.0,
+      "fixed_overlap_mm3": 0.0
+    },
+    {
+      "knee_deg": 51.0,
+      "fixed_overlap_mm3": 0.0
+    },
+    {
+      "knee_deg": 52.0,
+      "fixed_overlap_mm3": 0.0
+    },
+    {
+      "knee_deg": 53.0,
+      "fixed_overlap_mm3": 0.0
+    },
+    {
+      "knee_deg": 54.0,
+      "fixed_overlap_mm3": 0.0
+    },
+    {
+      "knee_deg": 55.0,
+      "fixed_overlap_mm3": 0.0
+    },
+    {
+      "knee_deg": 56.0,
+      "fixed_overlap_mm3": 0.0
+    },
+    {
+      "knee_deg": 57.0,
+      "fixed_overlap_mm3": 0.0
+    },
+    {
+      "knee_deg": 58.0,
+      "fixed_overlap_mm3": 0.0
+    },
+    {
+      "knee_deg": 59.0,
+      "fixed_overlap_mm3": 0.0
+    },
+    {
+      "knee_deg": 60.0,
+      "fixed_overlap_mm3": 0.0
+    },
+    {
+      "knee_deg": 61.0,
+      "fixed_overlap_mm3": 0.0
+    },
+    {
+      "knee_deg": 62.0,
+      "fixed_overlap_mm3": 0.0
+    },
+    {
+      "knee_deg": 63.0,
+      "fixed_overlap_mm3": 0.0
+    },
+    {
+      "knee_deg": 64.0,
+      "fixed_overlap_mm3": 0.0
+    },
+    {
+      "knee_deg": 65.0,
+      "fixed_overlap_mm3": 0.0
+    },
+    {
+      "knee_deg": 66.0,
+      "fixed_overlap_mm3": 0.0
+    },
+    {
+      "knee_deg": 67.0,
+      "fixed_overlap_mm3": 0.0
+    },
+    {
+      "knee_deg": 68.0,
+      "fixed_overlap_mm3": 0.0
+    },
+    {
+      "knee_deg": 69.0,
+      "fixed_overlap_mm3": 0.0
+    },
+    {
+      "knee_deg": 70.0,
+      "fixed_overlap_mm3": 0.0
+    },
+    {
+      "knee_deg": 71.0,
+      "fixed_overlap_mm3": 0.0
+    },
+    {
+      "knee_deg": 72.0,
+      "fixed_overlap_mm3": 0.0
+    },
+    {
+      "knee_deg": 73.0,
+      "fixed_overlap_mm3": 0.0
+    },
+    {
+      "knee_deg": 74.0,
+      "fixed_overlap_mm3": 0.0
+    },
+    {
+      "knee_deg": 75.0,
+      "fixed_overlap_mm3": 0.0
+    },
+    {
+      "knee_deg": 76.0,
+      "fixed_overlap_mm3": 0.0
+    },
+    {
+      "knee_deg": 77.0,
+      "fixed_overlap_mm3": 0.0
+    },
+    {
+      "knee_deg": 78.0,
+      "fixed_overlap_mm3": 0.0
+    },
+    {
+      "knee_deg": 79.0,
+      "fixed_overlap_mm3": 0.0
+    },
+    {
+      "knee_deg": 80.0,
+      "fixed_overlap_mm3": 0.0
+    },
+    {
+      "knee_deg": 81.0,
+      "fixed_overlap_mm3": 0.0
+    },
+    {
+      "knee_deg": 82.0,
+      "fixed_overlap_mm3": 0.0
+    },
+    {
+      "knee_deg": 83.0,
+      "fixed_overlap_mm3": 0.0
+    },
+    {
+      "knee_deg": 84.0,
+      "fixed_overlap_mm3": 0.0
+    },
+    {
+      "knee_deg": 85.0,
+      "fixed_overlap_mm3": 0.0
+    }
+  ]
+}

@@ -1,0 +1,296 @@
+{
+  "schema_version": 1,
+  "name": "STS3215 knee-yoke AprilTag snap-flag tray",
+  "tag_family": "tag36h11",
+  "tag_ids": [
+    33,
+    34,
+    35,
+    36,
+    37,
+    38,
+    39,
+    40,
+    41,
+    42,
+    43,
+    44,
+    45,
+    46,
+    47,
+    48,
+    49,
+    50,
+    51,
+    52,
+    53,
+    54,
+    55,
+    56,
+    57,
+    58,
+    59,
+    60,
+    61,
+    62,
+    63,
+    64
+  ],
+  "part_count": 32,
+  "attachment": "four split friction cups over M3 SHCS heads",
+  "camera_face": "tag and full white quiet zone only; black human-readable ID is on back",
+  "print_orientation": "tag faces on build plate; cups and black raised IDs upward; no supports",
+  "colour_assignment": {
+    "white": "holder plate and four grip cups",
+    "black": "AprilTag cells and raised rear IDs"
+  },
+  "dimensions": {
+    "plate_size_mm": 38.0,
+    "tag_size_mm": 34.0,
+    "plate_thickness_mm": 1.6,
+    "cup_height_mm": 3.25,
+    "total_height_mm": 4.85,
+    "head_diameter_mm": 5.5,
+    "head_height_mm": 3.0,
+    "cup_throat_diameter_mm": 5.5,
+    "cup_back_diameter_mm": 5.75,
+    "bolt_circle_diameter_mm": 14.0,
+    "back_label_height_mm": 0.5
+  },
+  "opencv_decoded_tag_ids": [
+    33,
+    34,
+    35,
+    36,
+    37,
+    38,
+    39,
+    40,
+    41,
+    42,
+    43,
+    44,
+    45,
+    46,
+    47,
+    48,
+    49,
+    50,
+    51,
+    52,
+    53,
+    54,
+    55,
+    56,
+    57,
+    58,
+    59,
+    60,
+    61,
+    62,
+    63,
+    64
+  ],
+  "holders": [
+    {
+      "tag_id": 33,
+      "watertight": true,
+      "connected_components": 1,
+      "volume_mm3": 2641.896
+    },
+    {
+      "tag_id": 34,
+      "watertight": true,
+      "connected_components": 1,
+      "volume_mm3": 2641.736
+    },
+    {
+      "tag_id": 35,
+      "watertight": true,
+      "connected_components": 1,
+      "volume_mm3": 2641.896
+    },
+    {
+      "tag_id": 36,
+      "watertight": true,
+      "connected_components": 1,
+      "volume_mm3": 2641.976
+    },
+    {
+      "tag_id": 37,
+      "watertight": true,
+      "connected_components": 1,
+      "volume_mm3": 2641.576
+    },
+    {
+      "tag_id": 38,
+      "watertight": true,
+      "connected_components": 1,
+      "volume_mm3": 2642.056
+    },
+    {
+      "tag_id": 39,
+      "watertight": true,
+      "connected_components": 1,
+      "volume_mm3": 2641.976
+    },
+    {
+      "tag_id": 40,
+      "watertight": true,
+      "connected_components": 1,
+      "volume_mm3": 2641.816
+    },
+    {
+      "tag_id": 41,
+      "watertight": true,
+      "connected_components": 1,
+      "volume_mm3": 2641.496
+    },
+    {
+      "tag_id": 42,
+      "watertight": true,
+      "connected_components": 1,
+      "volume_mm3": 2641.736
+    },
+    {
+      "tag_id": 43,
+      "watertight": true,
+      "connected_components": 1,
+      "volume_mm3": 2641.736
+    },
+    {
+      "tag_id": 44,
+      "watertight": true,
+      "connected_components": 1,
+      "volume_mm3": 2641.576
+    },
+    {
+      "tag_id": 45,
+      "watertight": true,
+      "connected_components": 1,
+      "volume_mm3": 2641.736
+    },
+    {
+      "tag_id": 46,
+      "watertight": true,
+      "connected_components": 1,
+      "volume_mm3": 2641.816
+    },
+    {
+      "tag_id": 47,
+      "watertight": true,
+      "connected_components": 1,
+      "volume_mm3": 2641.416
+    },
+    {
+      "tag_id": 48,
+      "watertight": true,
+      "connected_components": 1,
+      "volume_mm3": 2641.896
+    },
+    {
+      "tag_id": 49,
+      "watertight": true,
+      "connected_components": 1,
+      "volume_mm3": 2641.816
+    },
+    {
+      "tag_id": 50,
+      "watertight": true,
+      "connected_components": 1,
+      "volume_mm3": 2641.976
+    },
+    {
+      "tag_id": 51,
+      "watertight": true,
+      "connected_components": 1,
+      "volume_mm3": 2641.656
+    },
+    {
+      "tag_id": 52,
+      "watertight": true,
+      "connected_components": 1,
+      "volume_mm3": 2641.896
+    },
+    {
+      "tag_id": 53,
+      "watertight": true,
+      "connected_components": 1,
+      "volume_mm3": 2641.896
+    },
+    {
+      "tag_id": 54,
+      "watertight": true,
+      "connected_components": 1,
+      "volume_mm3": 2641.736
+    },
+    {
+      "tag_id": 55,
+      "watertight": true,
+      "connected_components": 1,
+      "volume_mm3": 2641.896
+    },
+    {
+      "tag_id": 56,
+      "watertight": true,
+      "connected_components": 1,
+      "volume_mm3": 2641.976
+    },
+    {
+      "tag_id": 57,
+      "watertight": true,
+      "connected_components": 1,
+      "volume_mm3": 2641.576
+    },
+    {
+      "tag_id": 58,
+      "watertight": true,
+      "connected_components": 1,
+      "volume_mm3": 2642.056
+    },
+    {
+      "tag_id": 59,
+      "watertight": true,
+      "connected_components": 1,
+      "volume_mm3": 2641.976
+    },
+    {
+      "tag_id": 60,
+      "watertight": true,
+      "connected_components": 1,
+      "volume_mm3": 2642.056
+    },
+    {
+      "tag_id": 61,
+      "watertight": true,
+      "connected_components": 1,
+      "volume_mm3": 2641.736
+    },
+    {
+      "tag_id": 62,
+      "watertight": true,
+      "connected_components": 1,
+      "volume_mm3": 2641.976
+    },
+    {
+      "tag_id": 63,
+      "watertight": true,
+      "connected_components": 1,
+      "volume_mm3": 2641.976
+    },
+    {
+      "tag_id": 64,
+      "watertight": true,
+      "connected_components": 1,
+      "volume_mm3": 2641.816
+    }
+  ],
+  "outputs": {
+    "portable_3mf": "tag36h11_33-64_knee_yoke_snap_flags.3mf",
+    "bambu_project": "tag36h11_33-64_knee_yoke_snap_flags_BambuStudio.3mf",
+    "bambu_rear_plate_preview": "tag36h11_33-64_knee_yoke_snap_flags_rear_plate_preview.png",
+    "paper_tag_directory": "paper_tags",
+    "preview": "tag36h11_33-64_knee_yoke_snap_flags_preview.png"
+  },
+  "pass": true
+}

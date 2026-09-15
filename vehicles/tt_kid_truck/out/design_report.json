@@ -1,0 +1,385 @@
+{
+  "name": "TT-motor kid 4x4 classic pickup truck",
+  "source_asin": "B0GY8L28XJ",
+  "units": "mm",
+  "source_geometry": {
+    "motor_advertised_body": [
+      70.0,
+      22.0,
+      18.0
+    ],
+    "motor_dimensioned_body_length": 64.2,
+    "motor_gearbox_width": 22.5,
+    "motor_axle_span": 36.8,
+    "wheel_nominal_diameter": 65.0,
+    "wheel_drawing_diameter": 66.03,
+    "wheel_tread_width": 30.0,
+    "l298n_board": [
+      43.0,
+      43.0,
+      28.6
+    ],
+    "l298n_hole_pitch_square": 36.6,
+    "l298n_hole_diameter": 3.0
+  },
+  "vehicle_envelope": {
+    "overall_length": 182.03,
+    "overall_tire_width": 183.0,
+    "overall_height": 126.56,
+    "ground_clearance": 18.57,
+    "wheelbase": 116.0,
+    "track_width": 153.0
+  },
+  "print_quantities": {
+    "chassis": 1,
+    "electronics_deck": 1,
+    "truck_body_lower": 1,
+    "truck_hood": 1,
+    "truck_roof": 1,
+    "motor_clamp": 4,
+    "motor_fit_coupon_optional": 1,
+    "l298n_fit_gauge_optional": 1
+  },
+  "mesh_stats": {
+    "chassis": {
+      "watertight": true,
+      "triangles": 13908,
+      "volume_mm3": 80684.2,
+      "bbox_mm": [
+        150.0,
+        119.5,
+        34.0
+      ]
+    },
+    "motor_clamp": {
+      "watertight": true,
+      "triangles": 1044,
+      "volume_mm3": 1568.88,
+      "bbox_mm": [
+        12.0,
+        40.0,
+        3.9
+      ]
+    },
+    "electronics_deck": {
+      "watertight": true,
+      "triangles": 14836,
+      "volume_mm3": 46499.54,
+      "bbox_mm": [
+        144.0,
+        102.0,
+        9.0
+      ]
+    },
+    "truck_body_lower": {
+      "watertight": true,
+      "triangles": 9040,
+      "volume_mm3": 115960.65,
+      "bbox_mm": [
+        162.0,
+        114.0,
+        62.0
+      ]
+    },
+    "truck_hood": {
+      "watertight": true,
+      "triangles": 3084,
+      "volume_mm3": 30590.71,
+      "bbox_mm": [
+        66.0,
+        108.0,
+        6.0
+      ]
+    },
+    "truck_roof": {
+      "watertight": true,
+      "triangles": 2836,
+      "volume_mm3": 18628.73,
+      "bbox_mm": [
+        42.0,
+        116.0,
+        4.0
+      ]
+    },
+    "windshield": {
+      "watertight": true,
+      "triangles": 12,
+      "volume_mm3": 2246.4,
+      "bbox_mm": [
+        1.6,
+        78.0,
+        18.0
+      ]
+    },
+    "rear_window": {
+      "watertight": true,
+      "triangles": 12,
+      "volume_mm3": 2016.0,
+      "bbox_mm": [
+        1.6,
+        70.0,
+        18.0
+      ]
+    },
+    "side_window": {
+      "watertight": true,
+      "triangles": 12,
+      "volume_mm3": 691.2,
+      "bbox_mm": [
+        24.0,
+        1.6,
+        18.0
+      ]
+    },
+    "truck_grille": {
+      "watertight": true,
+      "triangles": 12,
+      "volume_mm3": 1388.8,
+      "bbox_mm": [
+        1.6,
+        62.0,
+        14.0
+      ]
+    },
+    "headlight": {
+      "watertight": true,
+      "triangles": 12,
+      "volume_mm3": 201.6,
+      "bbox_mm": [
+        1.6,
+        14.0,
+        9.0
+      ]
+    },
+    "taillight": {
+      "watertight": true,
+      "triangles": 12,
+      "volume_mm3": 192.0,
+      "bbox_mm": [
+        1.6,
+        10.0,
+        12.0
+      ]
+    },
+    "motor_fit_coupon": {
+      "watertight": true,
+      "triangles": 2596,
+      "volume_mm3": 5815.71,
+      "bbox_mm": [
+        24.0,
+        44.0,
+        26.4
+      ]
+    },
+    "l298n_fit_gauge": {
+      "watertight": true,
+      "triangles": 3056,
+      "volume_mm3": 3525.98,
+      "bbox_mm": [
+        44.0,
+        44.0,
+        6.0
+      ]
+    },
+    "tt_motor": {
+      "watertight": true,
+      "triangles": 1036,
+      "volume_mm3": 29985.52,
+      "bbox_mm": [
+        64.2,
+        36.8,
+        22.5
+      ]
+    },
+    "wheel": {
+      "watertight": true,
+      "triangles": 1508,
+      "volume_mm3": 104043.19,
+      "bbox_mm": [
+        66.03,
+        42.0,
+        66.009
+      ]
+    },
+    "l298n_board": {
+      "watertight": true,
+      "triangles": 60,
+      "volume_mm3": 18584.4,
+      "bbox_mm": [
+        43.0,
+        43.0,
+        28.6
+      ]
+    }
+  },
+  "checks": [
+    {
+      "id": "watertight-chassis",
+      "status": "pass",
+      "value": true,
+      "requirement": "all exported meshes are watertight"
+    },
+    {
+      "id": "watertight-motor_clamp",
+      "status": "pass",
+      "value": true,
+      "requirement": "all exported meshes are watertight"
+    },
+    {
+      "id": "watertight-electronics_deck",
+      "status": "pass",
+      "value": true,
+      "requirement": "all exported meshes are watertight"
+    },
+    {
+      "id": "watertight-truck_body_lower",
+      "status": "pass",
+      "value": true,
+      "requirement": "all exported meshes are watertight"
+    },
+    {
+      "id": "watertight-truck_hood",
+      "status": "pass",
+      "value": true,
+      "requirement": "all exported meshes are watertight"
+    },
+    {
+      "id": "watertight-truck_roof",
+      "status": "pass",
+      "value": true,
+      "requirement": "all exported meshes are watertight"
+    },
+    {
+      "id": "watertight-windshield",
+      "status": "pass",
+      "value": true,
+      "requirement": "all exported meshes are watertight"
+    },
+    {
+      "id": "watertight-rear_window",
+      "status": "pass",
+      "value": true,
+      "requirement": "all exported meshes are watertight"
+    },
+    {
+      "id": "watertight-side_window",
+      "status": "pass",
+      "value": true,
+      "requirement": "all exported meshes are watertight"
+    },
+    {
+      "id": "watertight-truck_grille",
+      "status": "pass",
+      "value": true,
+      "requirement": "all exported meshes are watertight"
+    },
+    {
+      "id": "watertight-headlight",
+      "status": "pass",
+      "value": true,
+      "requirement": "all exported meshes are watertight"
+    },
+    {
+      "id": "watertight-taillight",
+      "status": "pass",
+      "value": true,
+      "requirement": "all exported meshes are watertight"
+    },
+    {
+      "id": "watertight-motor_fit_coupon",
+      "status": "pass",
+      "value": true,
+      "requirement": "all exported meshes are watertight"
+    },
+    {
+      "id": "watertight-l298n_fit_gauge",
+      "status": "pass",
+      "value": true,
+      "requirement": "all exported meshes are watertight"
+    },
+    {
+      "id": "watertight-tt_motor",
+      "status": "pass",
+      "value": true,
+      "requirement": "all exported meshes are watertight"
+    },
+    {
+      "id": "watertight-wheel",
+      "status": "pass",
+      "value": true,
+      "requirement": "all exported meshes are watertight"
+    },
+    {
+      "id": "watertight-l298n_board",
+      "status": "pass",
+      "value": true,
+      "requirement": "all exported meshes are watertight"
+    },
+    {
+      "id": "ground-clearance",
+      "status": "pass",
+      "value": 18.57,
+      "requirement": ">= 15 mm under lower chassis"
+    },
+    {
+      "id": "motor-to-deck-clearance",
+      "status": "pass",
+      "value": 8.3,
+      "requirement": ">= 7 mm for motor wires"
+    },
+    {
+      "id": "wheel-to-clamp-boss-clearance",
+      "status": "pass",
+      "value": 1.75,
+      "requirement": ">= 1.5 mm static tyre clearance"
+    },
+    {
+      "id": "front-rear-motor-tail-gap",
+      "status": "pass",
+      "value": 10.0,
+      "requirement": ">= 8 mm between opposed motor tails"
+    },
+    {
+      "id": "controller-deck-edge-clearance",
+      "status": "pass",
+      "value": 6.0,
+      "requirement": ">= 5 mm around controller PCB"
+    },
+    {
+      "id": "pickup-body-to-tyre-clearance",
+      "status": "pass",
+      "value": 5.5,
+      "requirement": ">= 3 mm between removable body and tyre sidewall"
+    },
+    {
+      "id": "electronics-to-hood-clearance",
+      "status": "pass",
+      "value": 4.4,
+      "requirement": ">= 3 mm above the L298N visual envelope"
+    },
+    {
+      "id": "controller-to-cab-clearance",
+      "status": "pass",
+      "value": 1.5,
+      "requirement": ">= 1 mm between controller boards and cab front wall"
+    },
+    {
+      "id": "chassis-fits-x1c-bed",
+      "status": "pass",
+      "value": [
+        150.0,
+        119.5
+      ],
+      "requirement": "fits 256 x 256 mm print bed"
+    },
+    {
+      "id": "pickup-body-fits-x1c-bed",
+      "status": "pass",
+      "value": [
+        162.0,
+        114.0
+      ],
+      "requirement": "fits 256 x 256 mm print bed"
+    }
+  ]
+}

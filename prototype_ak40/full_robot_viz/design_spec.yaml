@@ -1,0 +1,229 @@
+# Human-readable geometry contract for the AK40 hexapod prototype.
+# MIRROR of the constants in hexapod_ak40.py -- that file is the source of
+# truth; if the two disagree, the .py wins and this file is stale.
+
+meta:
+  name: prototype_ak40
+  design_revision: "D (Aug 2026) -- ROM/access/assembly audit: coxa arm screw tunnels added; every fastener has a verified tool path; combined-pose ROM clean"
+  status: printable-pending-verification  # concept -> measured -> printable -> as-built
+  sibling: ../prototype_sts3215
+  units: mm, kg, N*m, deg
+
+actuator:
+  model: CubeMars AK40-10 KV170
+  count: 18            # 3 per leg x 6 legs; all joints identical
+  body_dia: 53.0
+  body_len: 40.2       # V3.0 envelope (original AK40-10 is 37.0)
+  mass_kg: 0.190
+  rated_torque_nm: 1.3
+  peak_torque_nm: 4.1
+  rated_speed_rpm: 370
+  rated_voltage: 24.0  # run from 6S LiPo, 22.2 nom / 25.2 full
+  rated_current_a: 2.7
+  peak_current_a: 7.3
+  gear_ratio: 10.0
+  backlash_arcmin: 18
+  backdrive_torque_nm: 0.06
+  bus: CAN 1 Mbps, MIT mode + servo mode
+  interfaces:  # official CubeMars 2D drawing (AK40-10 V3.0, 2026/6/12).
+               # VERIFY with calipers on one unit before printing 6 leg sets.
+    output_flange: 3x M2.5 tapped x3 deep on Ø27 PCD
+    output_pilot: Ø15 +0.05, assumed BORE (printed hubs grow a Ø14.85 boss;
+      flip AK40_PILOT_IS_BORE in the .py if it is a boss)
+    front_case: 3x M2.5 x5 on Ø47.5 PCD
+    rear_case: 4x M2.5 x5 on Ø47 PCD, Ø37 x 1 centering boss
+    power_can: XT30PW (2+2) -M, side-mounted; ships with power + CAN cables
+    uart_config: A1257WR-S-3P (1.25 mm pitch)
+
+# BuildViz part registry (partType -> intent).  full_robot_viz/scene.json
+# instances reference these types; regenerate the scene with
+# full_robot_viz/make_scene.py after editing geometry.
+parts:
+  chassis_bottom:
+    label: "chassis bottom"
+    role: "chassis"
+    cots: false
+    qty: 1
+    description: "260 mm flat-to-flat hex deck, 5 mm PETG. Six Ø44 yaw wells at the hex vertices; each AK40 stands on the plate output-DOWN, bolted by 3x M2.5x8 from below into its front-case taps on Ø47.5. Also carries the M3x50 standoff square, per-leg harness slots, battery strap slots, XT90 pass-through. Prints flat, no supports."
+  chassis_top:
+    label: "chassis top"
+    role: "chassis"
+    cots: false
+    qty: 1
+    description: "260 mm hex top plate, 4 mm PETG: Ø80 centre access hole, standoff square, Pi 5 mount pattern east of centre."
+  coxa_link:
+    label: "coxa link"
+    role: "frame"
+    cots: false
+    qty: 6
+    description: "One print per leg: Ø40 yaw-output hub (turns inside the chassis Ø44 well, 3x M2.5x6 + Ø14.85 pilot boss into the flange) + arm plate + hip rear-mount wall (Ø37 boss recess, 4x M2.5x8, side gussets). The hip body hangs 1.5 mm below the arm plate -- that clearance set HIP_AXIS_DROP=66."
+  femur_link:
+    label: "femur link"
+    role: "frame"
+    cots: false
+    qty: 6
+    description: "Flat 6 mm plate: hip-flange hub (pilot boss + 3x M2.5x6 counterbored) on one end, knee rear mount (Ø37 recess + 4x M2.5x8) on the other. Actuator bodies alternate sides of the plate, Mini-Cheetah style."
+  tibia_yoke:
+    label: "tibia yoke"
+    role: "frame"
+    cots: false
+    qty: 6
+    description: "Knee-flange hub + web + Ø12 CF tube socket (30 mm epoxied bore, 2x Ø2.5 roll-pin cross-holes). Socket top sits below the Ø53 knee body sweep."
+  tibia_tube:
+    label: "tibia tube"
+    role: "spar"
+    cots: true
+    qty: 6
+    description: "Ø12 x Ø10 roll-wrapped CF tube, 102 mm cut. Epoxied 30 mm into the yoke socket, pinned twice. COTS stock."
+  foot_boot:
+    label: "foot boot"
+    role: "frame"
+    cots: false
+    qty: 6
+    description: "TPU 95A boot pressed over the tube end; Ø11.7 bore = 0.3 mm interference, 18 mm solid rounded tip."
+  actuator:
+    label: "AK40-10 actuator"
+    role: "motor"
+    cots: true
+    qty: 18
+    description: "CubeMars AK40-10 KV170 QDD: Ø53 x 40.2, 190 g, 1.3/4.1 N*m rated/peak, CAN + MIT mode. Mock cylinder in the viz (with output pilot bore); real interface dims from the official 2D drawing, caliper verification pending."
+  battery:
+    label: "6S battery"
+    role: "electronics"
+    cots: true
+    qty: 1
+    description: "6S 5000 mAh LiPo (~155 x 48 x 55) velcro'd under the belly; must stay inside r~95 mm of centre or the swinging hip actuators find it. COTS."
+  pi5:
+    label: "Raspberry Pi 5"
+    role: "electronics"
+    cots: true
+    qty: 1
+    description: "Pi 5 8 GB + active cooler on the top plate; 3x CANable 2.0 USB-CAN hang off it (one bus per leg pair). COTS."
+  standoff:
+    label: "chassis standoff"
+    role: "frame"
+    cots: true
+    qty: 4
+    description: "M3 x 50 F-F brass standoff at (+-40, +-40) carrying the plate stack across the 50 mm gap. COTS."
+  screw_m25x6:
+    label: "M2.5 x 6 SHCS"
+    role: "fastener"
+    cots: true
+    qty: 54
+    description: "Flange-hub screw: 3 per output flange (Ø27 PCD, M2.5 tapped x3 deep). 6 mm length gives 3.0 mm grip through the printed hub cb + full 3.0 mm tap engagement. Blue threadlocker. COTS."
+  screw_m25x8:
+    label: "M2.5 x 8 SHCS"
+    role: "fastener"
+    cots: true
+    qty: 66
+    description: "Case-mount screw: 3x front case ring per yaw (Ø47.5 PCD, chassis well) + 4x rear case ring per hip/knee (Ø47 PCD, coxa wall / femur plate). 4.5-4.7 mm into 5 mm deep case taps. Blue threadlocker. COTS."
+  screw_m3x8:
+    label: "M3 x 8 SHCS"
+    role: "fastener"
+    cots: true
+    qty: 8
+    description: "Plate-stack screw into the M3x50 F-F standoffs: 4 from below the bottom plate, 4 from above the top plate. COTS."
+  screw_m25x12:
+    label: "M2.5 x 12 SHCS"
+    role: "fastener"
+    cots: true
+    qty: 4
+    description: "Raspberry Pi 5 mount: up through the top plate into the Pi standoff stack (58 x 49 mm hole pattern). COTS."
+  pin_25x22:
+    label: "Ø2.5 x 22 roll pin"
+    role: "fastener"
+    cots: true
+    qty: 12
+    description: "Tibia retention: 2 cross pins per leg through yoke socket + CF tube, backing up the epoxy bond against axial pull-out. COTS."
+
+chassis:
+  flat_to_flat: 260.0
+  bottom_plate_t: 5.0
+  top_plate_t: 4.0
+  plate_gap: 50.0          # yaw actuator bodies stand on the bottom plate
+  leg_mount_radius: 150.0  # yaw axes at hex vertices
+  leg_azimuths_deg: [0, 60, 120, 180, 240, 300]
+  yaw_well_dia: 40.0       # coxa hub Ø36 turns inside with 2 mm clearance.
+                           # Was 44/Ø40: front-case cb (Ø5.5 on Ø47.5 PCD,
+                           # inner edge r=21.0) broke through a Ø44 well.
+  standoffs: 4x M3x50 F-F brass at (+-40, +-40)
+  battery_keepout_r: 95    # swinging hip actuators own the annulus outside
+
+leg:
+  coxa_length: 65.0    # yaw axis -> hip pitch axis (wraps a Phi53 pancake)
+  femur_length: 100.0  # hip -> knee, flat 6 mm printed plate
+  tibia_length: 150.0  # knee -> foot tip
+  hip_axis_drop: 66.0  # below body-centre z=0; sized so the hip body clears
+                       # the coxa arm plate by 1.5 mm
+  tibia_tube: {od: 12.0, id: 10.0, cut_length: 102.0, socket_depth: 30.0,
+               material: CF roll-wrapped, retention: epoxy + 2x Ø2.5 roll pin}
+  lateral_stack: actuator bodies alternate sides of the femur plate;
+    tibia plane ~35 mm tangentially outboard of the hip plane
+  joint_style: bolt link direct to actuator output flange (no external bearings)
+  flange_relief: every hub contact face carries a 0.6 mm relief annulus
+    r16-r22 so contact lands only on the rotating output flange (<=Ø32) --
+    guards against hub rub on the fixed front ring if the flange is flush
+  plug_clocking: side XT30PW plug clocked to leg-frame -x (inboard/up-leg)
+    on all 18 actuators; plug stub is modeled in the mock so overlap
+    checks enforce it (hip plug clocked "up" would hit the coxa arm)
+  fasteners: 54x M2.5x6 (flange hubs, 3 per joint) + 66x M2.5x8 (case
+    mounts) into aluminum taps, blue threadlocker everywhere; all 144
+    fasteners (incl. 8x M3x8, 4x M2.5x12, 12x roll pins) are instanced
+    in the BuildViz scene with an auto-checked attachment graph
+
+printed_parts:  # stl_prototype/, `make build`; solid PETG masses from CAD
+  chassis_bottom: {qty: 1, solid_g: 343}
+  chassis_top: {qty: 1, solid_g: 272}
+  coxa_link: {qty: 6, solid_g: 71}   # incl. 4x Ø7 screw-access tunnels
+                                     # through the arm (yaw flange x3 +
+                                     # 330-deg case screw; audit-required)
+  femur_link: {qty: 6, solid_g: 39}
+  tibia_yoke: {qty: 6, solid_g: 17}
+  foot_boot: {qty: 6, solid_g: 18, material: TPU 95A}
+
+stances:  # [femur deg below horizontal, tibia deg from vertical]
+  tall:    [60.0, 12.0]   # park/travel, minimum torque
+  nominal: [55.0, 15.0]   # default stand + walk
+  crouch:  [20.0, 45.0]   # TRANSITIONAL only -- exceeds rated even on 6 legs
+
+software_joint_limits:  # enforce in the safety layer.  Mechanical margins
+  # measured by scripts/rom_audit.py (exact-boolean onset search): yaw
+  # collision-free to +-85 deg; hip- first contact at -79 (44 deg margin);
+  # hip+ and knee free 60+ deg past the limits.  All 11 combined
+  # worst-case poses (yaws converged, hip/knee corners, all stances) clean.
+  femur_pitch_max_deg: 75    # tibia yoke approaches the coxa wall past this
+  yaw_range_deg: 25          # neighbour-leg spacing
+  crouch: transitional only (PROTOTYPE.md section 3)
+
+budgets:  # derived; regenerate with `python hexapod_ak40.py --report-only`
+  total_mass_kg: 5.80
+  weight_n: 56.9
+  hip_torque_nm: {nominal_tripod: 1.82, nominal_6leg: 0.91, crouch_6leg: 1.90}
+  knee_torque_nm: {nominal_tripod: 0.74, nominal_6leg: 0.37}
+  sizing_joint: hip pitch
+  power_w: {standing: ~25, walking: 90-180}
+  battery_wh: 111
+  runtime_min: 40-60
+
+electrical:
+  battery: 6S 5000 mAh LiPo, XT90, under-belly (keepout r<95)
+  main_fuse_a: 40
+  estop: XT90-S anti-spark loop key on the motor rail (compute stays up)
+  compute_rail: Pololu D24V50F5-class 24->5 V 5 A buck, upstream of the loop key
+  distribution: trunk -> Wago splice -> 6 XT30 leg branches (3 actuators daisy-chained)
+
+control:
+  compute: Raspberry Pi 5 (8 GB) + active cooler
+  can_buses: 3           # one per leg pair, 6 actuators each
+  can_adapters: 3x CANable 2.0 (candleLight -> socketcan gs_usb) + 1 spare
+  bus_rate_hz: "<=500 per bus (MIT mode cmd+reply, 1 Mbps)"
+  policy_rate_hz: 50
+  safety: per-joint torque clamp ramp, command watchdog, temp cutback,
+    software joint limits above, crouch-pose torque rule
+
+open_items:
+  - "caliper-verify on one unit: flange PCD 27 / pilot Ø15 bore-or-boss /"
+  - "  front Ø47.5 / rear Ø47 + Ø37 boss (gates the 6-set print run)"
+  - CAN termination: check whether actuator harness/CANable terminate
+  - yaw actuator thermal path to bottom plate (pad needed?)
+  - battery strap geometry vs the real pack footprint

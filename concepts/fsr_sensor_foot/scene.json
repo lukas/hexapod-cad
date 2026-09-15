@@ -1,0 +1,779 @@
+{
+  "name": "STS3215 angle-tolerant guided RP-C10 sensor foot",
+  "source": "make_fsr_sensor_foot.py",
+  "buildId": "prototype_sts3215/fsr-sensor-foot",
+  "designSpecUrl": "design_spec.yaml",
+  "units": "mm",
+  "center": [
+    0.0,
+    0.0,
+    19.0
+  ],
+  "meshes": [
+    {
+      "id": "mesh:fsr_foot_housing",
+      "name": "fsr_foot_housing.stl",
+      "url": "stl/fsr_foot_housing.stl"
+    },
+    {
+      "id": "mesh:fsr_guided_carriage",
+      "name": "fsr_guided_carriage.stl",
+      "url": "stl/fsr_guided_carriage.stl"
+    },
+    {
+      "id": "mesh:fsr_tpu_tread",
+      "name": "fsr_tpu_tread.stl",
+      "url": "stl/fsr_tpu_tread.stl"
+    },
+    {
+      "id": "mesh:fsr_tpu_sensing_spring",
+      "name": "fsr_tpu_sensing_spring.stl",
+      "url": "stl/fsr_tpu_sensing_spring.stl"
+    },
+    {
+      "id": "mesh:fsr_force_spreader",
+      "name": "fsr_force_spreader.stl",
+      "url": "stl/fsr_force_spreader.stl"
+    },
+    {
+      "id": "mesh:makerhawk_rpc10_sensor",
+      "name": "makerhawk_rpc10_sensor.stl",
+      "url": "viz/makerhawk_rpc10_sensor.stl"
+    },
+    {
+      "id": "mesh:carbon_tube_reference",
+      "name": "carbon_tube_reference.stl",
+      "url": "viz/carbon_tube_reference.stl"
+    },
+    {
+      "id": "mesh:ground_plate",
+      "name": "ground_plate.stl",
+      "url": "viz/ground_plate.stl"
+    },
+    {
+      "id": "mesh:load_arrow",
+      "name": "load_arrow.stl",
+      "url": "viz/load_arrow.stl"
+    }
+  ],
+  "instances": [
+    {
+      "id": "foot-housing",
+      "meshId": "mesh:fsr_foot_housing",
+      "name": "rigid sensor housing and three guide towers",
+      "partType": "fsr_foot_housing",
+      "role": "structure",
+      "focusGroup": "angle_tolerant_sensor_foot",
+      "joint": "foot",
+      "leg": 0,
+      "cots": false,
+      "color": "#4f78b8",
+      "transform": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0.0,
+        0.0,
+        0.0,
+        1
+      ]
+    },
+    {
+      "id": "foot-sensor",
+      "meshId": "mesh:makerhawk_rpc10_sensor",
+      "name": "flat MakerHawk RP-C10 sensor",
+      "partType": "makerhawk_rpc10_fsr",
+      "role": "sensor",
+      "focusGroup": "angle_tolerant_sensor_foot",
+      "joint": "foot",
+      "leg": 0,
+      "cots": true,
+      "color": "#d9a441",
+      "transform": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0.0,
+        0.0,
+        0.0,
+        1
+      ]
+    },
+    {
+      "id": "foot-spring",
+      "meshId": "mesh:fsr_tpu_sensing_spring",
+      "name": "three-spoke TPU sensing and return spring",
+      "partType": "fsr_tpu_sensing_spring",
+      "role": "sensor_compliance",
+      "focusGroup": "angle_tolerant_sensor_foot",
+      "joint": "foot",
+      "leg": 0,
+      "cots": false,
+      "color": "#8ed7c8",
+      "transform": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0.0,
+        0.0,
+        0.0,
+        1
+      ]
+    },
+    {
+      "id": "foot-spreader",
+      "meshId": "mesh:fsr_force_spreader",
+      "name": "7.5 mm smooth force spreader",
+      "partType": "fsr_force_spreader",
+      "role": "load_spreader",
+      "focusGroup": "angle_tolerant_sensor_foot",
+      "joint": "foot",
+      "leg": 0,
+      "cots": false,
+      "color": "#e6d9ae",
+      "transform": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0.0,
+        0.0,
+        0.0,
+        1
+      ]
+    },
+    {
+      "id": "foot-carriage",
+      "meshId": "mesh:fsr_guided_carriage",
+      "name": "rigid translating shoe carriage with three guides",
+      "partType": "fsr_guided_carriage",
+      "role": "guided_load_path",
+      "focusGroup": "angle_tolerant_sensor_foot",
+      "joint": "foot",
+      "leg": 0,
+      "cots": false,
+      "color": "#dd7b4a",
+      "transform": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0.0,
+        0.0,
+        0.0,
+        1
+      ]
+    },
+    {
+      "id": "foot-tread",
+      "meshId": "mesh:fsr_tpu_tread",
+      "name": "54 degree spherical TPU tread with captive snap lip",
+      "partType": "fsr_tpu_tread",
+      "role": "ground_contact",
+      "focusGroup": "angle_tolerant_sensor_foot",
+      "joint": "foot",
+      "leg": 0,
+      "cots": false,
+      "color": "#45b9a6",
+      "transform": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0.0,
+        0.0,
+        0.0,
+        1
+      ]
+    },
+    {
+      "id": "foot-tube",
+      "meshId": "mesh:carbon_tube_reference",
+      "name": "existing \u00d88 x \u00d86 carbon-fibre tibia reference",
+      "partType": "carbon_tube_reference",
+      "role": "robot_interface",
+      "focusGroup": "angle_tolerant_sensor_foot",
+      "joint": "foot",
+      "leg": 0,
+      "cots": true,
+      "color": "#303840",
+      "transform": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0.0,
+        0.0,
+        0.0,
+        1
+      ]
+    },
+    {
+      "id": "foot-ground",
+      "meshId": "mesh:ground_plate",
+      "name": "ground tangent at the robot's 40 degree planted tibia angle",
+      "partType": "inspection_fixture",
+      "role": "ground_reference",
+      "focusGroup": "angle_tolerant_sensor_foot",
+      "joint": "foot",
+      "leg": 0,
+      "cots": true,
+      "color": "#747b86",
+      "transform": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0.766044443118978,
+        -0.6427876096865393,
+        0,
+        0,
+        0.6427876096865393,
+        0.766044443118978,
+        0,
+        0.0,
+        -8.999026535611549,
+        2.675377796334308,
+        1
+      ]
+    },
+    {
+      "id": "foot-load-arrow",
+      "meshId": "mesh:load_arrow",
+      "name": "ground reaction direction at 40 degrees",
+      "partType": "load_vector",
+      "role": "load_direction",
+      "focusGroup": "angle_tolerant_sensor_foot",
+      "joint": "foot",
+      "leg": 0,
+      "cots": true,
+      "color": "#d95757",
+      "transform": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0.766044443118978,
+        -0.6427876096865393,
+        0,
+        0,
+        0.6427876096865393,
+        0.766044443118978,
+        0,
+        15.0,
+        -8.613353969799626,
+        3.1350044622056945,
+        1
+      ]
+    }
+  ],
+  "joints": [
+    {
+      "id": "explode-tread",
+      "type": "prismatic",
+      "axis": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "origin": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "instances": [
+        "foot-tread"
+      ],
+      "limits": {
+        "min": -13.0,
+        "max": 0.25
+      },
+      "home": 0.0,
+      "label": "tread spacing / sensing stroke"
+    },
+    {
+      "id": "explode-carriage",
+      "type": "prismatic",
+      "axis": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "origin": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "instances": [
+        "foot-carriage"
+      ],
+      "limits": {
+        "min": -4.0,
+        "max": 0.25
+      },
+      "home": 0.0,
+      "label": "carriage spacing / sensing stroke"
+    },
+    {
+      "id": "explode-spring",
+      "type": "prismatic",
+      "axis": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "origin": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "instances": [
+        "foot-spring"
+      ],
+      "limits": {
+        "min": 0.0,
+        "max": 1.0
+      },
+      "home": 0.0,
+      "label": "spring spacing / sensing stroke"
+    },
+    {
+      "id": "explode-spreader",
+      "type": "prismatic",
+      "axis": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "origin": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "instances": [
+        "foot-spreader"
+      ],
+      "limits": {
+        "min": 0.0,
+        "max": 5.0
+      },
+      "home": 0.0,
+      "label": "spreader spacing / sensing stroke"
+    },
+    {
+      "id": "explode-sensor",
+      "type": "prismatic",
+      "axis": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "origin": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "instances": [
+        "foot-sensor"
+      ],
+      "limits": {
+        "min": 0.0,
+        "max": 11.0
+      },
+      "home": 0.0,
+      "label": "sensor spacing / sensing stroke"
+    },
+    {
+      "id": "explode-housing",
+      "type": "prismatic",
+      "axis": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "origin": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "instances": [
+        "foot-housing"
+      ],
+      "limits": {
+        "min": 0.0,
+        "max": 23.0
+      },
+      "home": 0.0,
+      "label": "housing spacing / sensing stroke"
+    },
+    {
+      "id": "explode-tube",
+      "type": "prismatic",
+      "axis": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "origin": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "instances": [
+        "foot-tube"
+      ],
+      "limits": {
+        "min": 0.0,
+        "max": 48.0
+      },
+      "home": 0.0,
+      "label": "tube spacing / sensing stroke"
+    },
+    {
+      "id": "explode-fixture",
+      "type": "prismatic",
+      "axis": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "origin": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "instances": [
+        "foot-ground",
+        "foot-load-arrow"
+      ],
+      "limits": {
+        "min": -30.0,
+        "max": 0.0
+      },
+      "home": 0.0,
+      "label": "ground/load reference spacing"
+    }
+  ],
+  "poses": [
+    {
+      "id": "assembled-40deg",
+      "name": "Assembled on 40\u00b0 ground",
+      "jointValues": {
+        "explode-tread": 0.0,
+        "explode-carriage": 0.0,
+        "explode-spring": 0.0,
+        "explode-spreader": 0.0,
+        "explode-sensor": 0.0,
+        "explode-housing": 0.0,
+        "explode-tube": 0.0
+      }
+    },
+    {
+      "id": "sensor-contact",
+      "name": "0.10 mm: spreader reaches FSR",
+      "jointValues": {
+        "explode-tread": 0.1,
+        "explode-carriage": 0.1,
+        "explode-spring": 0.1,
+        "explode-spreader": 0.1
+      }
+    },
+    {
+      "id": "overload-stop",
+      "name": "0.25 mm: carriage reaches hard stop",
+      "jointValues": {
+        "explode-tread": 0.25,
+        "explode-carriage": 0.25,
+        "explode-spring": 0.1,
+        "explode-spreader": 0.1
+      }
+    },
+    {
+      "id": "exploded",
+      "name": "Exploded assembly",
+      "jointValues": {
+        "explode-tread": -13.0,
+        "explode-carriage": -4.0,
+        "explode-spring": 1.0,
+        "explode-spreader": 5.0,
+        "explode-sensor": 11.0,
+        "explode-housing": 23.0,
+        "explode-tube": 48.0,
+        "explode-fixture": -30.0
+      }
+    }
+  ],
+  "animations": [
+    {
+      "id": "contact-stroke",
+      "name": "Contact approach \u2192 hard stop",
+      "loop": true,
+      "duration": 3.0,
+      "keyframes": [
+        {
+          "t": 0.0,
+          "jointValues": {}
+        },
+        {
+          "t": 1.0,
+          "jointValues": {
+            "explode-tread": 0.1,
+            "explode-carriage": 0.1,
+            "explode-spring": 0.1,
+            "explode-spreader": 0.1
+          }
+        },
+        {
+          "t": 2.0,
+          "jointValues": {
+            "explode-tread": 0.25,
+            "explode-carriage": 0.25,
+            "explode-spring": 0.1,
+            "explode-spreader": 0.1
+          }
+        },
+        {
+          "t": 3.0,
+          "jointValues": {}
+        }
+      ]
+    }
+  ],
+  "checksConfig": {
+    "overlapMm3": 0.5,
+    "pitchMm": 0.2,
+    "partDensitiesGCm3": {
+      "fsr_foot_housing": 1.27,
+      "fsr_guided_carriage": 1.27,
+      "fsr_tpu_tread": 1.2,
+      "fsr_tpu_sensing_spring": 1.2,
+      "fsr_force_spreader": 1.27,
+      "makerhawk_rpc10_fsr": 1.4,
+      "carbon_tube_reference": 1.55,
+      "inspection_fixture": 0.05,
+      "load_vector": 0.05
+    }
+  },
+  "analysis": {
+    "purpose": "Detect touchdown at the normal 40 degree tibia angle without letting side load fold the FSR or wedge a flexible flange.",
+    "views": {
+      "assembled-40deg": "Connected home assembly on tangent ground; tail exits uphill.",
+      "sensor-contact": "Carriage, TPU spring, and spreader translated 0.10 mm to first FSR contact.",
+      "overload-stop": "Carriage reaches 0.25 mm while the spring center remains against the FSR.",
+      "exploded": "One-click pose separating tread, carriage, TPU spring, spreader, sensor, housing, and tube."
+    },
+    "printableCandidates": [
+      "stl/fsr_foot_housing.stl",
+      "stl/fsr_guided_carriage.stl",
+      "stl/fsr_tpu_tread.stl",
+      "stl/fsr_tpu_sensing_spring.stl",
+      "stl/fsr_force_spreader.stl"
+    ],
+    "geometryReport": {
+      "buildId": "prototype_sts3215/fsr-sensor-foot",
+      "kinematics": {
+        "existingTubeLengthMm": 142.0,
+        "tubeEndToGroundTipMm": 8.0,
+        "preservedKneeToGroundTipMm": 150.0
+      },
+      "sensor": {
+        "model": "MakerHawk RP-C10-ST",
+        "asin": "B0CZ6L5NMM",
+        "headODMm": 10.0,
+        "activeODMm": 8.0,
+        "overallLengthMm": 19.0,
+        "filmThicknessMm": 0.4,
+        "terminalPitchMm": 2.54,
+        "listedForceRangeG": [
+          20.0,
+          2000.0
+        ],
+        "listedForceCeilingN": 19.6133
+      },
+      "angledContact": {
+        "robotPlantedTibiaFromGroundNormalDeg": 40.0,
+        "designContactAngleDeg": 50.0,
+        "sphericalTreadEdgeAngleDeg": 54.0,
+        "operatingMarginBeyondPlantedDeg": 10.0,
+        "axialForceFractionAtPlantedAngle": 0.766044443118978,
+        "lowerCollarGroundClearanceAtDesignAngleMm": 0.31617280028234784,
+        "mainHousingGroundClearanceAtDesignAngleMm": 0.2915329650961107,
+        "tailOrientation": "Point the sensor tail toward the chassis/uphill side. The spherical tread is azimuth-independent; the flat tail lobe is not."
+      },
+      "mechanism": {
+        "treadSphereRadiusMm": 13.4,
+        "treadThicknessMm": 1.0,
+        "treadOuterDiameterAtEdgeMm": 21.68165544924859,
+        "treadLockCarriageRimDiameterMm": 19.04,
+        "treadLockTpuThroatDiameterMm": 18.04,
+        "treadLockRadialUndercutMm": 0.5,
+        "treadLockOuterClearanceInHousingMm": 0.09999999999999964,
+        "guideCount": 3,
+        "guidePinDiameterMm": 1.8,
+        "guideBoreDiameterMm": 2.5,
+        "guideDiametralClearanceMm": 0.7,
+        "engagedGuideLengthMm": 6.7,
+        "firstSensorContactGapMm": 0.10000000000000053,
+        "positiveStopTravelMm": 0.25,
+        "postContactSpringDeflectionToStopMm": 0.14999999999999947,
+        "sensingSpringThicknessMm": 1.0,
+        "sensingSpringDownwardReliefMm": 0.5999999999999996,
+        "retention": "The TPU tread's 18.04 mm return lip snaps behind the carriage's 19.04 mm rim without adhesive. The rigid carriage flange separately snaps through the split lower housing collar and retains the moving shoe only while airborne."
+      },
+      "loadProtection": {
+        "staticTripodAveragePerFootN": 4.249548333333333,
+        "recordedWalkingPeakSingleFootN": 44.6966,
+        "peakToListedSensorCeilingRatio": 2.2788923842494633,
+        "decision": "The guided carriage first loads the flat FSR through the 7.5 mm spreader, then its broad flange reaches an annular rigid stop. The stop and guide towers carry structural and lateral load."
+      },
+      "printables": {
+        "fsr_foot_housing": {
+          "watertight": true,
+          "windingConsistent": true,
+          "volumeMm3": 2195.1936380071097,
+          "boundsMm": [
+            [
+              -11.5,
+              -11.5,
+              5.75
+            ],
+            [
+              11.5,
+              17.5,
+              28.5
+            ]
+          ]
+        },
+        "fsr_guided_carriage": {
+          "watertight": true,
+          "windingConsistent": true,
+          "volumeMm3": 777.6786677435139,
+          "boundsMm": [
+            [
+              -9.800000190734863,
+              -9.800000190734863,
+              1.0
+            ],
+            [
+              9.800000190734863,
+              9.800000190734863,
+              13.0
+            ]
+          ]
+        },
+        "fsr_tpu_tread": {
+          "watertight": true,
+          "windingConsistent": true,
+          "volumeMm3": 412.0132436805766,
+          "boundsMm": [
+            [
+              -10.840827724624296,
+              -10.840827724624296,
+              0.0
+            ],
+            [
+              10.840827724624296,
+              10.840827724624296,
+              5.719433639886912
+            ]
+          ]
+        },
+        "fsr_tpu_sensing_spring": {
+          "watertight": true,
+          "windingConsistent": true,
+          "volumeMm3": 70.18977267118477,
+          "boundsMm": [
+            [
+              -6.150000095367432,
+              -6.150000095367432,
+              5.300000190734863
+            ],
+            [
+              6.150000095367432,
+              6.150000095367432,
+              6.300000190734863
+            ]
+          ]
+        },
+        "fsr_force_spreader": {
+          "watertight": true,
+          "windingConsistent": true,
+          "volumeMm3": 11.040226723669056,
+          "boundsMm": [
+            [
+              -3.75,
+              -3.75,
+              6.3
+            ],
+            [
+              3.75,
+              3.75,
+              6.55
+            ]
+          ]
+        }
+      }
+    }
+  }
+}

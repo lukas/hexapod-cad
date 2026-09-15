@@ -1,0 +1,148 @@
+name: STS3215 two-piece CNC chorn experiment
+status: experimental_not_for_machining_release
+inherits: concepts/cnc_chorn_overhead
+units: mm
+
+intent:
+  problem: >-
+    The one-piece clamp requires four driven-horn and four passive-horn
+    holes to be clocked at the same time through a rigid 38.04 mm span.
+  change: >-
+    Split the clamp at the passive blade.  The driven horn receives an
+    L-shaped drive frame; the passive horn receives its own plate.  The
+    passive plate then enters a broad keyed receiver and is retained by
+    two accessible low-head screws.
+  unchanged:
+    - full cnc_chorn_overhead robot and 42 mm outboard hip station
+    - 4x M3 on 14 mm PCD per horn face
+    - nominal 38.04 mm disc-face span; no rigid horn preload
+    - printed-part web interface and its four fasteners
+    - femur limit -110 deg; knee and yaw limits
+
+parts:
+  chassis_bottom:
+    quantity: 1
+    material: PETG
+    description: inherited rigid-hip lower chassis and yaw-servo cradles
+  chassis_top_rigid:
+    quantity: 1
+    material: PETG
+    description: inherited rigid-hip top plate and bearing towers
+  top_hatch_rigid:
+    quantity: 1
+    material: PETG
+    description: inherited removable electronics hatch
+  centre_wago_block:
+    quantity: 1
+    material: PETG
+    description: inherited central four-bay power-splice carrier
+  wago5:
+    quantity: 4
+    material: COTS
+    description: Wago 221-415 splice-block visual
+  coxa_link_ovh:
+    quantity: 6
+    material: PETG
+    description: inherited 42 mm outboard coxa and hip cradle
+  yaw_bearing_upper:
+    quantity: 6
+    material: COTS
+    description: inherited upper yaw-bearing visual
+  bearing_6805:
+    quantity: 6
+    material: COTS
+    description: inherited third hip-column 6805 bearing visual
+  servo_body:
+    quantity: 18
+    material: COTS
+    description: STS3215 servo envelope visual
+  hip_clamp_cap_ovh:
+    quantity: 6
+    material: PETG
+    description: inherited outboard hip cap and yaw-bearing pedestal arm
+  yaw_servo_retainer:
+    quantity: 6
+    material: PETG
+    description: inherited yaw-servo retaining strap
+  chorn_drive_frame_cnc:
+    quantity: 12
+    material: 6061-T6 aluminum
+    description: driven horn plate plus full-height web and tongue receiver
+  chorn_passive_plate_cnc:
+    quantity: 12
+    material: 6061-T6 aluminum
+    description: passive horn plate, widened lower web foot, locating tongue
+  femur_ovh_body:
+    quantity: 6
+    material: PETG
+    description: inherited overhead knee block and clamp-web receiver
+  knee_clamp_cap_ovh:
+    quantity: 6
+    material: PETG
+    description: inherited wedge-clearanced knee servo cap
+  tibia_ovh_socket:
+    quantity: 6
+    material: PETG
+    description: inherited clamp-web flange and shortened CF-tube socket
+  tibia_tube_ovh:
+    quantity: 6
+    material: carbon-fibre tube
+    description: inherited shortened tibia tube visual
+  foot_boot:
+    quantity: 6
+    material: TPU
+    description: inherited production foot boot
+
+split_joint:
+  plane_z: -6.37
+  tongue:
+    width_x: 2.8
+    length_y: 24.0
+    height_z: 2.0
+    pocket_clearance_per_wall: 0.15
+    purpose: carries in-plane shear and makes the two plates self-locating
+  retention:
+    quantity: 2
+    fastener: M2.5x6 DIN 7984 low-head SHCS
+    access: passive outer face at the far web; no horn-hole alignment involved
+  mass:
+    drive_frame_g: 32.5
+    passive_plate_g: 16.8
+    assembled_g: 49.3
+    one_piece_baseline_g: 48.0
+    delta_g: 1.3
+
+assembly_order:
+  - Bolt the drive frame to the driven horn; only one four-hole pattern is live.
+  - Bolt the passive plate to the passive horn; only that pattern is live.
+  - Seat the broad tongue into the drive-frame receiver.
+  - Install the two M2.5x6 split screws from the passive outer face.
+  - Attach the printed femur/tibia part to Datum A using the inherited web joint.
+
+service_intent:
+  - Peripheral horn screws are a one-time installation and can remain in place.
+  - Repeated joint separation uses the two centre horn-retention screws and the two split screws.
+  - No eight-hole simultaneous clocking step remains.
+
+verification:
+  part_checks:
+    - both BREP parts heal to watertight closed volumes
+    - zero seated overlap between split parts
+    - driven and passive horn bolt patterns are independently open
+    - tongue is present and receiver pocket is clear
+    - split screw axes and metal cover are open
+    - passive plate has a straight axial assembly path
+  inherited_robot_checks:
+    - hip clamp clear from -112.5 through +35 deg
+    - knee clamp and socket clear from -50 through +40 deg
+    - full yaw range at least +/-40 deg; software remains +/-35 deg
+    - adjacent legs remain at least 5 mm apart
+    - printed web joint, caps, plate descent and hatch removal unchanged
+
+needs_before_release:
+  - FEA or physical proof-load test of tongue root and split-screw peel loading
+  - add/quote a generous tongue-root fillet and matching pocket tool radius
+  - bench-fit the 0.15 mm pocket clearance and 38.04 mm horn span
+  - verify low-head screw grip and thread engagement on machined coupons
+  - repeated teardown test with threadlocker policy and torque specification
+  - do not send the current STEP bundle for machining as a production release

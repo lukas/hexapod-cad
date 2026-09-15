@@ -1,0 +1,461 @@
+{
+ "name": "coxa dovetail quick-release \u2014 concept",
+ "source": "make_split_coxa_concept.py",
+ "designSpecUrl": "design_spec.yaml",
+ "units": "mm",
+ "center": [
+  0,
+  0,
+  0
+ ],
+ "meshes": [
+  {
+   "id": "stl:hub",
+   "name": "coxa_hub_qr.stl",
+   "url": "stl/coxa_hub_qr.stl"
+  },
+  {
+   "id": "stl:leg",
+   "name": "coxa_leg_qr.stl",
+   "url": "stl/coxa_leg_qr.stl"
+  },
+  {
+   "id": "stl:pin",
+   "name": "coxa_qr_pin.stl",
+   "url": "stl/coxa_qr_pin.stl"
+  },
+  {
+   "id": "stl:orig",
+   "name": "coxa_link_original.stl",
+   "url": "stl/coxa_link_original.stl"
+  },
+  {
+   "id": "stl:cmale",
+   "name": "dovetail_male_nominal.stl",
+   "url": "stl/dovetail_male_nominal.stl"
+  },
+  {
+   "id": "stl:cpin",
+   "name": "pin_d4x22.stl",
+   "url": "stl/pin_d4x22.stl"
+  },
+  {
+   "id": "stl:cf10",
+   "name": "dovetail_female_c10.stl",
+   "url": "stl/dovetail_female_c10.stl"
+  },
+  {
+   "id": "stl:cf20",
+   "name": "dovetail_female_c20.stl",
+   "url": "stl/dovetail_female_c20.stl"
+  },
+  {
+   "id": "stl:cf30",
+   "name": "dovetail_female_c30.stl",
+   "url": "stl/dovetail_female_c30.stl"
+  }
+ ],
+ "instances": [
+  {
+   "id": "hub-qr",
+   "meshId": "stl:hub",
+   "name": "hub side \u2014 stays bolted to horn forever",
+   "partType": "coxa_hub_qr",
+   "role": "concept",
+   "leg": null,
+   "joint": null,
+   "cots": false,
+   "color": "#4878b0",
+   "transform": [
+    1,
+    0,
+    0,
+    0,
+    0,
+    1,
+    0,
+    0,
+    0,
+    0,
+    1,
+    0,
+    0.0,
+    0.0,
+    0.0,
+    1
+   ]
+  },
+  {
+   "id": "leg-qr",
+   "meshId": "stl:leg",
+   "name": "leg side \u2014 whole leg slides off",
+   "partType": "coxa_leg_qr",
+   "role": "concept",
+   "leg": null,
+   "joint": null,
+   "cots": false,
+   "color": "#c44e52",
+   "transform": [
+    1,
+    0,
+    0,
+    0,
+    0,
+    1,
+    0,
+    0,
+    0,
+    0,
+    1,
+    0,
+    0.0,
+    0.0,
+    0.0,
+    1
+   ]
+  },
+  {
+   "id": "pin-qr",
+   "meshId": "stl:pin",
+   "name": "phi4 lock pin",
+   "partType": "coxa_qr_pin",
+   "role": "concept",
+   "leg": null,
+   "joint": null,
+   "cots": false,
+   "color": "#404040",
+   "transform": [
+    1,
+    0,
+    0,
+    0,
+    0,
+    1,
+    0,
+    0,
+    0,
+    0,
+    1,
+    0,
+    -15.0,
+    0.0,
+    32.0,
+    1
+   ]
+  },
+  {
+   "id": "orig-compare",
+   "meshId": "stl:orig",
+   "name": "TODAY: one-piece coxa_link (comparison)",
+   "partType": "coxa_link_original",
+   "role": "concept",
+   "leg": null,
+   "joint": null,
+   "cots": false,
+   "color": "#9aa0a6",
+   "transform": [
+    1,
+    0,
+    0,
+    0,
+    0,
+    1,
+    0,
+    0,
+    0,
+    0,
+    1,
+    0,
+    0.0,
+    -130.0,
+    0.0,
+    1
+   ]
+  },
+  {
+   "id": "coupon-male",
+   "meshId": "stl:cmale",
+   "name": "coupon: male rail (nominal)",
+   "partType": "dovetail_male",
+   "role": "concept",
+   "leg": null,
+   "joint": null,
+   "cots": false,
+   "color": "#4878b0",
+   "transform": [
+    1,
+    0,
+    0,
+    0,
+    0,
+    1,
+    0,
+    0,
+    0,
+    0,
+    1,
+    0,
+    0.0,
+    150.0,
+    0.0,
+    1
+   ]
+  },
+  {
+   "id": "coupon-f10",
+   "meshId": "stl:cf10",
+   "name": "coupon: female c=0.10 (1 notch), seated",
+   "partType": "dovetail_female",
+   "role": "concept",
+   "leg": null,
+   "joint": null,
+   "cots": false,
+   "color": "#c44e52",
+   "transform": [
+    1,
+    0,
+    0,
+    0,
+    0,
+    1,
+    0,
+    0,
+    0,
+    0,
+    1,
+    0,
+    0.0,
+    150.0,
+    8.0,
+    1
+   ]
+  },
+  {
+   "id": "coupon-pin",
+   "meshId": "stl:cpin",
+   "name": "coupon: phi4 pin",
+   "partType": "coxa_qr_pin",
+   "role": "concept",
+   "leg": null,
+   "joint": null,
+   "cots": false,
+   "color": "#404040",
+   "transform": [
+    1,
+    0,
+    0,
+    0,
+    0,
+    1,
+    0,
+    0,
+    0,
+    0,
+    1,
+    0,
+    -4.0,
+    150.0,
+    11.0,
+    1
+   ]
+  },
+  {
+   "id": "coupon-f20",
+   "meshId": "stl:cf20",
+   "name": "coupon: female c=0.20 (2 notches)",
+   "partType": "dovetail_female",
+   "role": "concept",
+   "leg": null,
+   "joint": null,
+   "cots": false,
+   "color": "#dd8452",
+   "transform": [
+    1,
+    0,
+    0,
+    0,
+    0,
+    1,
+    0,
+    0,
+    0,
+    0,
+    1,
+    0,
+    70.0,
+    150.0,
+    0.0,
+    1
+   ]
+  },
+  {
+   "id": "coupon-f30",
+   "meshId": "stl:cf30",
+   "name": "coupon: female c=0.30 (3 notches)",
+   "partType": "dovetail_female",
+   "role": "concept",
+   "leg": null,
+   "joint": null,
+   "cots": false,
+   "color": "#e8b04c",
+   "transform": [
+    1,
+    0,
+    0,
+    0,
+    0,
+    1,
+    0,
+    0,
+    0,
+    0,
+    1,
+    0,
+    -70.0,
+    150.0,
+    0.0,
+    1
+   ]
+  }
+ ],
+ "joints": [
+  {
+   "id": "qr-pin",
+   "type": "prismatic",
+   "axis": [
+    0,
+    0,
+    1
+   ],
+   "origin": [
+    -15.0,
+    0.0,
+    23.0
+   ],
+   "instances": [
+    "pin-qr"
+   ],
+   "limits": {
+    "min": 0.0,
+    "max": 30.0
+   },
+   "home": 0,
+   "label": "lock pin (pull up)"
+  },
+  {
+   "id": "qr-slide",
+   "type": "prismatic",
+   "axis": [
+    1,
+    0,
+    0
+   ],
+   "origin": [
+    0.0,
+    0.0,
+    23.0
+   ],
+   "instances": [
+    "leg-qr"
+   ],
+   "limits": {
+    "min": 0.0,
+    "max": 70.0
+   },
+   "home": 0,
+   "label": "leg slide (outboard)"
+  }
+ ],
+ "poses": [
+  {
+   "id": "locked",
+   "name": "Locked (riding)",
+   "jointValues": {
+    "qr-pin": 0.0,
+    "qr-slide": 0.0
+   }
+  },
+  {
+   "id": "pin-pulled",
+   "name": "Pin pulled",
+   "jointValues": {
+    "qr-pin": 24.0,
+    "qr-slide": 0.0
+   }
+  },
+  {
+   "id": "leg-off",
+   "name": "Leg off",
+   "jointValues": {
+    "qr-pin": 24.0,
+    "qr-slide": 65.0
+   }
+  }
+ ],
+ "animations": [
+  {
+   "id": "remove-leg",
+   "name": "Remove leg (pull pin, slide off)",
+   "loop": true,
+   "duration": 6.0,
+   "keyframes": [
+    {
+     "t": 0.0,
+     "jointValues": {
+      "qr-pin": 0.0,
+      "qr-slide": 0.0
+     }
+    },
+    {
+     "t": 0.8,
+     "jointValues": {
+      "qr-pin": 24.0,
+      "qr-slide": 0.0
+     }
+    },
+    {
+     "t": 1.2,
+     "jointValues": {
+      "qr-pin": 24.0,
+      "qr-slide": 0.0
+     }
+    },
+    {
+     "t": 2.6,
+     "jointValues": {
+      "qr-pin": 24.0,
+      "qr-slide": 65.0
+     }
+    },
+    {
+     "t": 3.4,
+     "jointValues": {
+      "qr-pin": 24.0,
+      "qr-slide": 65.0
+     }
+    },
+    {
+     "t": 4.8,
+     "jointValues": {
+      "qr-pin": 24.0,
+      "qr-slide": 0.0
+     }
+    },
+    {
+     "t": 5.4,
+     "jointValues": {
+      "qr-pin": 0.0,
+      "qr-slide": 0.0
+     }
+    },
+    {
+     "t": 6.0,
+     "jointValues": {
+      "qr-pin": 0.0,
+      "qr-slide": 0.0
+     }
+    }
+   ]
+  }
+ ]
+}

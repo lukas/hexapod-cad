@@ -1,0 +1,440 @@
+{
+  "name": "STS3215 tibia/yoke reinforcement load-path test",
+  "source": "make_tibia_yoke_reinforcement_concept.py",
+  "buildId": "prototype_sts3215/tibia-yoke-reinforcement-test",
+  "designSpecUrl": "design_spec.yaml",
+  "units": "mm",
+  "center": [
+    86.0,
+    0.0,
+    28.0
+  ],
+  "meshes": [
+    {
+      "id": "stl:inspection_base",
+      "name": "inspection_base.stl",
+      "url": "stl/inspection_base.stl"
+    },
+    {
+      "id": "stl:current_printed_tibia_yoke",
+      "name": "current_printed_tibia_yoke.stl",
+      "url": "stl/current_printed_tibia_yoke.stl"
+    },
+    {
+      "id": "stl:current_spine_crack_marker",
+      "name": "current_spine_crack_marker.stl",
+      "url": "stl/current_spine_crack_marker.stl"
+    },
+    {
+      "id": "stl:chorn_aluminum_path_reference",
+      "name": "chorn_aluminum_path_reference.stl",
+      "url": "stl/chorn_aluminum_path_reference.stl"
+    },
+    {
+      "id": "stl:chorn_printed_tibia_socket",
+      "name": "chorn_printed_tibia_socket.stl",
+      "url": "stl/chorn_printed_tibia_socket.stl"
+    },
+    {
+      "id": "stl:carbon_tube_current",
+      "name": "carbon_tube_current.stl",
+      "url": "stl/carbon_tube_current.stl"
+    },
+    {
+      "id": "stl:carbon_tube_chorn",
+      "name": "carbon_tube_chorn.stl",
+      "url": "stl/carbon_tube_chorn.stl"
+    },
+    {
+      "id": "stl:foot_boot_current",
+      "name": "foot_boot_current.stl",
+      "url": "stl/foot_boot_current.stl"
+    },
+    {
+      "id": "stl:foot_boot_chorn",
+      "name": "foot_boot_chorn.stl",
+      "url": "stl/foot_boot_chorn.stl"
+    },
+    {
+      "id": "stl:load_fixture_current",
+      "name": "load_fixture_current.stl",
+      "url": "stl/load_fixture_current.stl"
+    },
+    {
+      "id": "stl:load_fixture_chorn",
+      "name": "load_fixture_chorn.stl",
+      "url": "stl/load_fixture_chorn.stl"
+    }
+  ],
+  "instances": [
+    {
+      "id": "fixture-inspection-base",
+      "meshId": "stl:inspection_base",
+      "name": "inspection base tying the two comparison load paths together",
+      "partType": "inspection_fixture",
+      "role": "fixture",
+      "focusGroup": "shared_test_fixture",
+      "joint": "knee",
+      "leg": 0,
+      "cots": false,
+      "color": "#59636e",
+      "transform": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0.0,
+        0.0,
+        0.0,
+        1
+      ]
+    },
+    {
+      "id": "current-printed-yoke",
+      "meshId": "stl:current_printed_tibia_yoke",
+      "name": "current printed tibia knee yoke with doubled spine/socket path",
+      "partType": "current_printed_tibia_yoke",
+      "role": "current_design",
+      "focusGroup": "current_printed_path",
+      "joint": "knee",
+      "leg": 0,
+      "cots": false,
+      "color": "#4d78a8",
+      "transform": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0.0,
+        0.0,
+        0.0,
+        1
+      ]
+    },
+    {
+      "id": "current-spine-crack-marker",
+      "meshId": "stl:current_spine_crack_marker",
+      "name": "documented vertical spine crack path markers",
+      "partType": "stress_marker",
+      "role": "analysis_marker",
+      "focusGroup": "current_printed_path",
+      "joint": "knee",
+      "leg": 0,
+      "cots": false,
+      "color": "#e0332f",
+      "transform": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0.0,
+        0.0,
+        0.0,
+        1
+      ]
+    },
+    {
+      "id": "current-carbon-tube",
+      "meshId": "stl:carbon_tube_current",
+      "name": "current tibia carbon tube",
+      "partType": "carbon_tube",
+      "role": "load_path",
+      "focusGroup": "current_printed_path",
+      "joint": "knee",
+      "leg": 0,
+      "cots": true,
+      "color": "#2e3a46",
+      "transform": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0.0,
+        0.0,
+        0.0,
+        1
+      ]
+    },
+    {
+      "id": "current-foot-boot",
+      "meshId": "stl:foot_boot_current",
+      "name": "current TPU foot boot where MuJoCo ground reaction enters",
+      "partType": "foot_boot",
+      "role": "load_input",
+      "focusGroup": "current_printed_path",
+      "joint": "knee",
+      "leg": 0,
+      "cots": false,
+      "color": "#6cb7cb",
+      "transform": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0.0,
+        0.0,
+        0.0,
+        1
+      ]
+    },
+    {
+      "id": "current-load-fixture",
+      "meshId": "stl:load_fixture_current",
+      "name": "walking peak load contact fixture: 44.6966 N single-foot normal",
+      "partType": "load_fixture",
+      "role": "fixture",
+      "focusGroup": "current_printed_path",
+      "joint": "knee",
+      "leg": 0,
+      "cots": false,
+      "color": "#f0a33a",
+      "transform": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0.0,
+        0.0,
+        0.0,
+        1
+      ]
+    },
+    {
+      "id": "chorn-aluminum-path",
+      "meshId": "stl:chorn_aluminum_path_reference",
+      "name": "bought aluminum C-horn load-path envelope",
+      "partType": "aluminum_c_horn_reference",
+      "role": "reinforcement",
+      "focusGroup": "c_horn_path",
+      "joint": "knee",
+      "leg": 0,
+      "cots": true,
+      "color": "#d9dde2",
+      "transform": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0.0,
+        0.0,
+        0.0,
+        1
+      ]
+    },
+    {
+      "id": "chorn-printed-socket",
+      "meshId": "stl:chorn_printed_tibia_socket",
+      "name": "printed C-horn tibia socket envelope, same tube mouth position",
+      "partType": "chorn_printed_tibia_socket",
+      "role": "reinforcement",
+      "focusGroup": "c_horn_path",
+      "joint": "knee",
+      "leg": 0,
+      "cots": false,
+      "color": "#2f65b7",
+      "transform": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0.0,
+        0.0,
+        0.0,
+        1
+      ]
+    },
+    {
+      "id": "chorn-carbon-tube",
+      "meshId": "stl:carbon_tube_chorn",
+      "name": "C-horn variant tibia carbon tube",
+      "partType": "carbon_tube",
+      "role": "load_path",
+      "focusGroup": "c_horn_path",
+      "joint": "knee",
+      "leg": 0,
+      "cots": true,
+      "color": "#2e3a46",
+      "transform": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0.0,
+        0.0,
+        0.0,
+        1
+      ]
+    },
+    {
+      "id": "chorn-foot-boot",
+      "meshId": "stl:foot_boot_chorn",
+      "name": "C-horn variant TPU foot boot, unchanged contact geometry",
+      "partType": "foot_boot",
+      "role": "load_input",
+      "focusGroup": "c_horn_path",
+      "joint": "knee",
+      "leg": 0,
+      "cots": false,
+      "color": "#6cb7cb",
+      "transform": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0.0,
+        0.0,
+        0.0,
+        1
+      ]
+    },
+    {
+      "id": "chorn-load-fixture",
+      "meshId": "stl:load_fixture_chorn",
+      "name": "walking peak load contact fixture: 44.6966 N single-foot normal",
+      "partType": "load_fixture",
+      "role": "fixture",
+      "focusGroup": "c_horn_path",
+      "joint": "knee",
+      "leg": 0,
+      "cots": false,
+      "color": "#f0a33a",
+      "transform": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0.0,
+        0.0,
+        0.0,
+        1
+      ]
+    }
+  ],
+  "checksConfig": {
+    "overlapMm3": 50.0,
+    "pitchMm": 0.25,
+    "partDensitiesGCm3": {
+      "inspection_fixture": 0.05,
+      "current_printed_tibia_yoke": 0.62,
+      "stress_marker": 0.05,
+      "carbon_tube": 1.55,
+      "foot_boot": 1.2,
+      "load_fixture": 0.05,
+      "aluminum_c_horn_reference": 2.7,
+      "chorn_printed_tibia_socket": 0.62
+    }
+  },
+  "analysis": {
+    "purpose": "Focus reinforcement work on the evidence-backed tibia/yoke/foot load path instead of the not-yet-proven chassis path.",
+    "loadSummary": {
+      "source": "artifacts/strength/onshape/onshape_mujoco_weak_spot_note_2026-08-25.md",
+      "available": false,
+      "standing_peak_single_foot_normal_N": 39.481,
+      "walking_peak_single_foot_normal_N": 44.6966,
+      "walking_peak_force_vector_N": [
+        -5.1222,
+        -1.5464,
+        44.6966
+      ],
+      "servo_torque_envelope_Nm": 2.2
+    },
+    "priority": [
+      "Highest risk: tibia load path at the knee-side printed socket/yoke transition.",
+      "Next: foot boot to carbon-tube interface where the MuJoCo ground reaction enters.",
+      "Then: hip/knee horn interfaces and clamp ears under the 2.2 N*m servo torque envelope.",
+      "Chassis/yaw pocket remains an FEA cleanup target, but current evidence does not make it the first reinforcement job."
+    ],
+    "conceptComparison": {
+      "current_printed_path": "Shows the current printed yoke/socket and marks the documented vertical spine split path around the socket tee.",
+      "c_horn_path": "Moves the clevis plates into bought aluminum and leaves a smaller printed socket/flange adapter at the same tube-mouth position."
+    }
+  }
+}

@@ -1,0 +1,332 @@
+{
+  "name": "STS3215 knee-yoke AprilTag push-on measurement flag",
+  "source": "build_buildviz.py",
+  "buildId": "prototype_sts3215/knee-yoke-apriltag-flag",
+  "designSpecUrl": "design_spec.yaml",
+  "units": "mm",
+  "center": [
+    60.0,
+    0.0,
+    27.0
+  ],
+  "meshes": [
+    {
+      "id": "stl:tibia_knee_yoke",
+      "name": "tibia_knee_yoke.stl",
+      "url": "stl/tibia_knee_yoke.stl"
+    },
+    {
+      "id": "stl:tibia_tube_reference",
+      "name": "tibia_tube_reference.stl",
+      "url": "stl/tibia_tube_reference.stl"
+    },
+    {
+      "id": "stl:m3x12_shcs_reference",
+      "name": "m3x12_shcs_reference.stl",
+      "url": "stl/m3x12_shcs_reference.stl"
+    },
+    {
+      "id": "stl:tag_holder_white",
+      "name": "tag_holder_white.stl",
+      "url": "stl/tag_holder_white.stl"
+    },
+    {
+      "id": "stl:tag_features_black",
+      "name": "tag_features_black.stl",
+      "url": "stl/tag_features_black.stl"
+    }
+  ],
+  "instances": [
+    {
+      "id": "knee-yoke",
+      "meshId": "stl:tibia_knee_yoke",
+      "name": "production tibia knee yoke",
+      "partType": "tibia_knee_yoke",
+      "role": "production_reference",
+      "focusGroup": "knee-tag",
+      "joint": "knee",
+      "leg": 0,
+      "cots": false,
+      "color": "#4385c6",
+      "transform": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0.0,
+        0.0,
+        0.0,
+        1
+      ]
+    },
+    {
+      "id": "tibia-tube",
+      "meshId": "stl:tibia_tube_reference",
+      "name": "carbon tibia tube reference",
+      "partType": "tibia_tube_reference",
+      "role": "context",
+      "focusGroup": "knee-tag",
+      "joint": "knee",
+      "leg": 0,
+      "cots": true,
+      "color": "#29333d",
+      "transform": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0.0,
+        0.0,
+        0.0,
+        1
+      ]
+    },
+    {
+      "id": "tag-holder",
+      "meshId": "stl:tag_holder_white",
+      "name": "white holder and four split grip cups",
+      "partType": "knee_yoke_apriltag_holder_white",
+      "role": "measurement_accessory",
+      "focusGroup": "knee-tag",
+      "joint": "knee",
+      "leg": 0,
+      "cots": false,
+      "color": "#f5f5f0",
+      "transform": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0.0,
+        0.0,
+        0.0,
+        1
+      ]
+    },
+    {
+      "id": "tag-black",
+      "meshId": "stl:tag_features_black",
+      "name": "black AprilTag cells and raised rear ID",
+      "partType": "knee_yoke_apriltag_features_black",
+      "role": "measurement_target",
+      "focusGroup": "knee-tag",
+      "joint": "knee",
+      "leg": 0,
+      "cots": false,
+      "color": "#111111",
+      "transform": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0.0,
+        0.0,
+        0.0,
+        1
+      ]
+    },
+    {
+      "id": "screw-0",
+      "meshId": "stl:m3x12_shcs_reference",
+      "name": "M3x12 SHCS 1",
+      "partType": "m3x12_shcs_reference",
+      "role": "existing_fastener",
+      "focusGroup": "knee-tag",
+      "joint": "knee",
+      "leg": 0,
+      "cots": true,
+      "color": "#b9c1c7",
+      "transform": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        19.5,
+        0.0,
+        45.3,
+        1
+      ]
+    },
+    {
+      "id": "screw-1",
+      "meshId": "stl:m3x12_shcs_reference",
+      "name": "M3x12 SHCS 2",
+      "partType": "m3x12_shcs_reference",
+      "role": "existing_fastener",
+      "focusGroup": "knee-tag",
+      "joint": "knee",
+      "leg": 0,
+      "cots": true,
+      "color": "#b9c1c7",
+      "transform": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        12.5,
+        7.0,
+        45.3,
+        1
+      ]
+    },
+    {
+      "id": "screw-2",
+      "meshId": "stl:m3x12_shcs_reference",
+      "name": "M3x12 SHCS 3",
+      "partType": "m3x12_shcs_reference",
+      "role": "existing_fastener",
+      "focusGroup": "knee-tag",
+      "joint": "knee",
+      "leg": 0,
+      "cots": true,
+      "color": "#b9c1c7",
+      "transform": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        5.5,
+        8.572527594031472e-16,
+        45.3,
+        1
+      ]
+    },
+    {
+      "id": "screw-3",
+      "meshId": "stl:m3x12_shcs_reference",
+      "name": "M3x12 SHCS 4",
+      "partType": "m3x12_shcs_reference",
+      "role": "existing_fastener",
+      "focusGroup": "knee-tag",
+      "joint": "knee",
+      "leg": 0,
+      "cots": true,
+      "color": "#b9c1c7",
+      "transform": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        12.499999999999998,
+        -7.0,
+        45.3,
+        1
+      ]
+    }
+  ],
+  "joints": [
+    {
+      "id": "remove-tag-flag",
+      "type": "prismatic",
+      "axis": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "origin": [
+        12.5,
+        0.0,
+        45.3
+      ],
+      "instances": [
+        "tag-holder",
+        "tag-black"
+      ],
+      "limits": {
+        "min": 0.0,
+        "max": 24.0
+      },
+      "home": 0.0,
+      "label": "Pull flag off screw heads"
+    }
+  ],
+  "poses": [
+    {
+      "id": "installed",
+      "name": "Installed",
+      "jointValues": {}
+    },
+    {
+      "id": "exploded",
+      "name": "Exploded cup/head view",
+      "jointValues": {
+        "remove-tag-flag": 24.0
+      }
+    }
+  ],
+  "metadata": {
+    "tagFamily": "tag36h11",
+    "tagId": 16,
+    "tagSizeMm": 34.0,
+    "plateSizeMm": 38.0,
+    "humanReadableId": "raised black material on rear/cup side only",
+    "cameraFace": "unobstructed tag and full white quiet zone",
+    "attachment": "four split cups over existing M3 SHCS heads",
+    "cupThroatDiameterMm": 5.5,
+    "explodedPoseTravelMm": 24.0
+  }
+}

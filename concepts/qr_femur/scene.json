@@ -1,0 +1,427 @@
+{
+ "name": "femur quick-release tenon \u2014 concept",
+ "source": "make_split_femur_concept.py",
+ "designSpecUrl": "design_spec.yaml",
+ "units": "mm",
+ "center": [
+  50,
+  24,
+  0
+ ],
+ "meshes": [
+  {
+   "id": "stl:hip",
+   "name": "femur_hip_qr.stl",
+   "url": "stl/femur_hip_qr.stl"
+  },
+  {
+   "id": "stl:knee",
+   "name": "femur_knee_qr.stl",
+   "url": "stl/femur_knee_qr.stl"
+  },
+  {
+   "id": "stl:pin",
+   "name": "femur_qr_pin.stl",
+   "url": "stl/femur_qr_pin.stl"
+  },
+  {
+   "id": "stl:orig",
+   "name": "femur_link_original.stl",
+   "url": "stl/femur_link_original.stl"
+  },
+  {
+   "id": "stl:cmale",
+   "name": "tenon_male_nominal.stl",
+   "url": "stl/tenon_male_nominal.stl"
+  },
+  {
+   "id": "stl:cf10",
+   "name": "tenon_female_c10.stl",
+   "url": "stl/tenon_female_c10.stl"
+  },
+  {
+   "id": "stl:cf20",
+   "name": "tenon_female_c20.stl",
+   "url": "stl/tenon_female_c20.stl"
+  },
+  {
+   "id": "stl:cf30",
+   "name": "tenon_female_c30.stl",
+   "url": "stl/tenon_female_c30.stl"
+  }
+ ],
+ "instances": [
+  {
+   "id": "hip-qr",
+   "meshId": "stl:hip",
+   "name": "hip yoke \u2014 stays bolted to the horns forever",
+   "partType": "femur_hip_qr",
+   "role": "concept",
+   "leg": null,
+   "joint": null,
+   "cots": false,
+   "color": "#4878b0",
+   "transform": [
+    1,
+    0,
+    0,
+    0,
+    0,
+    1,
+    0,
+    0,
+    0,
+    0,
+    1,
+    0,
+    0.0,
+    0.0,
+    0.0,
+    1
+   ]
+  },
+  {
+   "id": "knee-qr",
+   "meshId": "stl:knee",
+   "name": "knee + tibia side \u2014 pulls off outboard",
+   "partType": "femur_knee_qr",
+   "role": "concept",
+   "leg": null,
+   "joint": null,
+   "cots": false,
+   "color": "#c44e52",
+   "transform": [
+    1,
+    0,
+    0,
+    0,
+    0,
+    1,
+    0,
+    0,
+    0,
+    0,
+    1,
+    0,
+    0.0,
+    0.0,
+    0.0,
+    1
+   ]
+  },
+  {
+   "id": "pin-qr",
+   "meshId": "stl:pin",
+   "name": "phi4 drawbore detent pin",
+   "partType": "femur_qr_pin",
+   "role": "concept",
+   "leg": null,
+   "joint": null,
+   "cots": false,
+   "color": "#404040",
+   "transform": [
+    1,
+    0,
+    0,
+    0,
+    0,
+    1,
+    0,
+    0,
+    0,
+    0,
+    1,
+    0,
+    0.0,
+    0.0,
+    0.0,
+    1
+   ]
+  },
+  {
+   "id": "orig-compare",
+   "meshId": "stl:orig",
+   "name": "TODAY: one-piece femur_link (comparison)",
+   "partType": "femur_link_original",
+   "role": "concept",
+   "leg": null,
+   "joint": null,
+   "cots": false,
+   "color": "#9aa0a6",
+   "transform": [
+    1,
+    0,
+    0,
+    0,
+    0,
+    1,
+    0,
+    0,
+    0,
+    0,
+    1,
+    0,
+    0.0,
+    -80.0,
+    0.0,
+    1
+   ]
+  },
+  {
+   "id": "coupon-male",
+   "meshId": "stl:cmale",
+   "name": "coupon: male tenon (nominal)",
+   "partType": "tenon_male",
+   "role": "concept",
+   "leg": null,
+   "joint": null,
+   "cots": false,
+   "color": "#4878b0",
+   "transform": [
+    1,
+    0,
+    0,
+    0,
+    0,
+    1,
+    0,
+    0,
+    0,
+    0,
+    1,
+    0,
+    0.0,
+    110.0,
+    0.0,
+    1
+   ]
+  },
+  {
+   "id": "coupon-f10",
+   "meshId": "stl:cf10",
+   "name": "coupon: female c=0.10 (1 notch)",
+   "partType": "tenon_female",
+   "role": "concept",
+   "leg": null,
+   "joint": null,
+   "cots": false,
+   "color": "#c44e52",
+   "transform": [
+    1,
+    0,
+    0,
+    0,
+    0,
+    1,
+    0,
+    0,
+    0,
+    0,
+    1,
+    0,
+    50.0,
+    110.0,
+    0.0,
+    1
+   ]
+  },
+  {
+   "id": "coupon-f20",
+   "meshId": "stl:cf20",
+   "name": "coupon: female c=0.20 (2 notches)",
+   "partType": "tenon_female",
+   "role": "concept",
+   "leg": null,
+   "joint": null,
+   "cots": false,
+   "color": "#dd8452",
+   "transform": [
+    1,
+    0,
+    0,
+    0,
+    0,
+    1,
+    0,
+    0,
+    0,
+    0,
+    1,
+    0,
+    85.0,
+    110.0,
+    0.0,
+    1
+   ]
+  },
+  {
+   "id": "coupon-f30",
+   "meshId": "stl:cf30",
+   "name": "coupon: female c=0.30 (3 notches)",
+   "partType": "tenon_female",
+   "role": "concept",
+   "leg": null,
+   "joint": null,
+   "cots": false,
+   "color": "#e8b04c",
+   "transform": [
+    1,
+    0,
+    0,
+    0,
+    0,
+    1,
+    0,
+    0,
+    0,
+    0,
+    1,
+    0,
+    120.0,
+    110.0,
+    0.0,
+    1
+   ]
+  }
+ ],
+ "joints": [
+  {
+   "id": "qr-pin",
+   "type": "prismatic",
+   "axis": [
+    0,
+    0,
+    1
+   ],
+   "origin": [
+    41.0,
+    24.15,
+    0.0
+   ],
+   "instances": [
+    "pin-qr"
+   ],
+   "limits": {
+    "min": 0.0,
+    "max": 30.0
+   },
+   "home": 0,
+   "label": "detent pin (pull)"
+  },
+  {
+   "id": "qr-slide",
+   "type": "prismatic",
+   "axis": [
+    1,
+    0,
+    0
+   ],
+   "origin": [
+    45.8,
+    24.15,
+    0.0
+   ],
+   "instances": [
+    "knee-qr"
+   ],
+   "limits": {
+    "min": 0.0,
+    "max": 90.0
+   },
+   "home": 0,
+   "label": "leg slide (outboard)"
+  }
+ ],
+ "poses": [
+  {
+   "id": "locked",
+   "name": "Locked (walking)",
+   "jointValues": {
+    "qr-pin": 0.0,
+    "qr-slide": 0.0
+   }
+  },
+  {
+   "id": "pin-pulled",
+   "name": "Pin pulled",
+   "jointValues": {
+    "qr-pin": 28.0,
+    "qr-slide": 0.0
+   }
+  },
+  {
+   "id": "leg-off",
+   "name": "Leg off",
+   "jointValues": {
+    "qr-pin": 28.0,
+    "qr-slide": 85.0
+   }
+  }
+ ],
+ "animations": [
+  {
+   "id": "remove-leg",
+   "name": "Remove leg (pull pin, slide off)",
+   "loop": true,
+   "duration": 6.0,
+   "keyframes": [
+    {
+     "t": 0.0,
+     "jointValues": {
+      "qr-pin": 0.0,
+      "qr-slide": 0.0
+     }
+    },
+    {
+     "t": 0.8,
+     "jointValues": {
+      "qr-pin": 28.0,
+      "qr-slide": 0.0
+     }
+    },
+    {
+     "t": 1.2,
+     "jointValues": {
+      "qr-pin": 28.0,
+      "qr-slide": 0.0
+     }
+    },
+    {
+     "t": 2.6,
+     "jointValues": {
+      "qr-pin": 28.0,
+      "qr-slide": 85.0
+     }
+    },
+    {
+     "t": 3.4,
+     "jointValues": {
+      "qr-pin": 28.0,
+      "qr-slide": 85.0
+     }
+    },
+    {
+     "t": 4.8,
+     "jointValues": {
+      "qr-pin": 28.0,
+      "qr-slide": 0.0
+     }
+    },
+    {
+     "t": 5.4,
+     "jointValues": {
+      "qr-pin": 0.0,
+      "qr-slide": 0.0
+     }
+    },
+    {
+     "t": 6.0,
+     "jointValues": {
+      "qr-pin": 0.0,
+      "qr-slide": 0.0
+     }
+    }
+   ]
+  }
+ ]
+}

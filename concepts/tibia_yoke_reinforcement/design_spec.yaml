@@ -1,0 +1,60 @@
+build:
+  id: prototype_sts3215/tibia-yoke-reinforcement-test
+  name: "STS3215 tibia/yoke reinforcement load-path test"
+  status: "concept triage sidecar; does not change production CAD"
+  units: mm
+
+why_this_matters:
+  - "The MuJoCo/Onshape weak-spot note ranks the tibia load path at the knee-side transition first."
+  - "The walking load case records a 44.6966 N peak single-foot normal on leg 0 at t = 1.28 s."
+  - "The earlier beam report used a 14.2 N impact load; scaling that tibia case to the walking peak makes the printed tibia/yoke path the first thing to treat seriously."
+  - "The optional C-horn variant is already documented as replacing the printed moving clevises involved in the Aug 2026 field cracks."
+
+load_cases:
+  standing_peak_single_foot_normal_N: 39.481
+  walking_peak_single_foot_normal_N: 44.6966
+  walking_peak_force_vector_N: [-5.1222, -1.5464, 44.6966]
+  servo_torque_envelope_Nm: 2.2
+
+parts:
+  inspection_fixture:
+    description: "BuildViz-only base/contact fixtures tying both comparison lanes together for clean connectivity checks."
+    material: "analysis fixture"
+    print_or_buy: "do not print"
+  load_fixture:
+    description: "BuildViz-only contact platen showing where the 44.6966 N walking peak foot load is applied."
+    material: "analysis fixture"
+    print_or_buy: "do not print"
+  current_printed_tibia_yoke:
+    description: "Clean single-solid envelope of the current tibia knee yoke/socket load path: printed spine/arms plus tube socket region."
+    material: "PETG or PLA-family print, effective sparse-infill density for mass triage"
+    source_evidence: "design_spec.yaml tibia_knee_yoke spine_plate_doubler field-crack note"
+  stress_marker:
+    description: "Red marker plates on the documented vertical spine split path above and below the tube socket."
+    material: "analysis marker"
+    print_or_buy: "do not print"
+  aluminum_c_horn_reference:
+    description: "Clean single-solid envelope of the bought aluminum C-horn load path, derived from tools/make_chorn_variant.py constants."
+    material: "6061-style aluminum density for mass estimate"
+    source_evidence: "docs/CHORN_VARIANT.md"
+  chorn_printed_tibia_socket:
+    description: "Clean single-solid envelope of the printed C-horn tibia adapter: web flange plus tube socket region; same tube-mouth x position as current yoke."
+    material: "PETG or PLA-family print"
+    source_evidence: "cad_step_test/build_chorn_step.py and tools/make_chorn_variant.py"
+  carbon_tube:
+    description: "Ø8 mm carbon tube load member, shown in both current and C-horn comparison lanes."
+  foot_boot:
+    description: "TPU foot boot where the MuJoCo contact load enters the real robot."
+
+decision:
+  recommendation: "Treat tibia/yoke/foot load transfer as the first reinforcement target. Do not spend more design time on chassis reinforcement until the connected full robot FEA/contact setup is cleaned."
+  next_cad_action: "Convert the C-horn tibia socket path into the actual STEP-first part workflow, then run a single-leg load-path FEA/import check before converting all six legs."
+  chassis_status: "Not exonerated, but not the highest-evidence weak spot. The previous chassis reinforcement scene is a sandbox only."
+
+checks:
+  required_gate: "BuildViz check_build must pass before using this concept as a design reference."
+  caveats:
+    - "This is a load-path concept, not final manufacturing CAD."
+    - "The check meshes are clean envelopes for comparison; production STEP/STL remains in the STEP-first C-horn workflow."
+    - "The C-horn dimensions are still assumed until a real bought bracket is measured."
+    - "Onshape simulation still needs named mate connectors and a fresh non-stale force definition."

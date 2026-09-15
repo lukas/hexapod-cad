@@ -1,0 +1,132 @@
+build:
+  id: prototype_sts3215/fsr-sensor-foot
+  name: "STS3215 angle-tolerant guided RP-C10 sensor foot"
+  status: "printable one-foot prototype; bench calibration required"
+  units: mm
+
+sensor:
+  product: "MakerHawk RP-C10-ST thin-film force-sensitive resistor"
+  asin: B0CZ6L5NMM
+  listing_dimensions:
+    head_outer_diameter_mm: 10.0
+    active_area_diameter_mm: 8.0
+    overall_length_mm: 19.0
+    film_thickness_mm: 0.4
+    terminal_pitch_mm: 2.54
+    listed_force_range_g: [20, 2000]
+  behavior: "Variable resistance, not a binary switch; use a voltage divider, threshold, and hysteresis."
+
+robot_interface:
+  existing_tibia_tube: "Ø8 OD × Ø6 ID × 142 mm carbon-fibre tube"
+  tube_bore_diameter_mm: 8.30
+  tube_socket_depth_mm: 20.0
+  tube_end_to_ground_tip_mm: 8.0
+  preserved_knee_to_ground_tip_mm: 150.0
+  retention: "Tube bottoms on the housing deck; a split sleeve and 2.5 mm zip tie retain it."
+
+angled_contact:
+  measured_planted_tibia_from_ground_normal_deg: 40.0
+  verified_design_contact_angle_deg: 50.0
+  spherical_tread_edge_angle_deg: 54.0
+  operating_margin_beyond_normal_stance_deg: 10.0
+  axial_force_fraction_at_40_deg: 0.7660
+  lower_collar_ground_clearance_at_50_deg_mm: 0.316
+  main_housing_ground_clearance_at_50_deg_mm: 0.292
+  orientation: "Point the flat sensor tail and its protective lobe toward the chassis/uphill side. The tread is direction-independent, but the tail lobe is not."
+
+mechanism:
+  sequence:
+    - "The 1.0 mm TPU spherical tread supplies grip and conforms locally."
+    - "A rigid carriage directly behind it carries the contact force."
+    - "Three 1.8 mm rigid pins run in 2.5 mm bores over 6.7 mm of engagement, resisting side-load rocking while allowing axial motion."
+    - "After a nominal 0.10 mm approach, a 7.5 mm smooth disk begins loading the flat 8 mm FSR active area."
+    - "A 1.0 mm three-spoke TPU spring under the spreader flexes through the remaining 0.15 mm, rather than forcing that displacement into the sensor film."
+    - "At 0.25 mm carriage travel, a broad annular carriage flange reaches the housing stop and bypasses further impact around the FSR."
+  spherical_radius_mm: 13.4
+  tpu_tread_thickness_mm: 1.0
+  tread_edge_outer_diameter_mm: 21.682
+  tread_lock_carriage_rim_diameter_mm: 19.04
+  tread_lock_tpu_throat_diameter_mm: 18.04
+  tread_lock_radial_undercut_mm: 0.50
+  tread_lock_outer_clearance_in_housing_mm: 0.10
+  guide_count: 3
+  guide_pin_diameter_mm: 1.8
+  guide_bore_diameter_mm: 2.5
+  guide_diametral_clearance_mm: 0.7
+  engaged_guide_length_mm: 6.7
+  nominal_first_sensor_contact_gap_mm: 0.10
+  nominal_positive_stop_travel_mm: 0.25
+  post_contact_tpu_spring_deflection_mm: 0.15
+  tpu_spring_downward_relief_mm: 0.60
+  carriage_retention: "The 19.6 mm rigid flange snaps through the 19.2 mm split lower collar. The lip only retains the unloaded shoe; it is not the stance load path."
+  tread_retention: "A TPU return lip stretches over the 19.04 mm carriage rim and relaxes to an 18.04 mm throat behind it. The seated lock has a 0.50 mm radial undercut and requires no adhesive."
+
+load_path:
+  robot_mass_kg: 1.30
+  static_tripod_average_per_foot_N: 4.2495
+  recorded_walking_peak_single_foot_N: 44.6966
+  listed_sensor_ceiling_N: 19.6133
+  peak_to_sensor_ceiling_ratio: 2.28
+  protection: "The FSR detects onset only. The carriage flange, annular housing stop, guide towers, and tube seat carry the structural load."
+
+parts:
+  fsr_foot_housing:
+    material: "PETG, PA, or similarly tough rigid filament"
+    description: "Tube socket, flat FSR pocket, three guide towers, split carriage-retention collar, and annular overload stop."
+    file: stl/fsr_foot_housing.stl
+  fsr_guided_carriage:
+    material: "PETG or PA; print the guide pins for maximum layer strength"
+    description: "Rigid spherical shoe core with three long guide pins and the overload-stop flange."
+    file: stl/fsr_guided_carriage.stl
+  fsr_tpu_tread:
+    material: "TPU 95A"
+    description: "1.0 mm spherical grip skin with a captive return lip; 50 degrees is backed by the rigid core and the final 4 degrees protect the rigid rim."
+    file: stl/fsr_tpu_tread.stl
+  fsr_tpu_sensing_spring:
+    material: "TPU 95A"
+    description: "Three-spoke 1.0 mm flexure under the force spreader; supplies sensing compliance and helps the spreader release."
+    file: stl/fsr_tpu_sensing_spring.stl
+  fsr_force_spreader:
+    material: "Smooth 0.25 mm PET shim preferred; printed PETG prototype supplied"
+    description: "7.5 mm disk that spreads load over nearly all of the 8 mm active sensor circle."
+    file: stl/fsr_force_spreader.stl
+  makerhawk_rpc10_fsr:
+    material: "Bought polyester-film variable resistor"
+    description: "BuildViz reference for the 10 mm head, flat tail, and terminal pair; buy rather than print."
+  carbon_tube_reference:
+    material: "Existing Ø8 OD × Ø6 ID carbon-fibre tibia tube"
+    description: "BuildViz uses a shortened visual stub; the real tube remains 142 mm long."
+  inspection_fixture:
+    material: "BuildViz-only reference"
+    description: "Tilted ground plane tangent to the tread at the robot's 40 degree planted angle; do not print."
+  load_vector:
+    material: "BuildViz-only reference"
+    description: "Arrow showing the ground-reaction direction in the 40 degree load-path view; do not print."
+
+assembly_constraints:
+  order: "Snap the carriage into the housing before stretching on the wide TPU tread; the tread is intentionally too large to pass through the lower collar."
+  tail: "Keep the complete sensor film flat and point its tail uphill/toward the chassis. Only the soldered wires turn upward."
+  guides: "All three guide pins must fall under their own weight through the empty housing before installing the sensor. Polish pins or open bores if needed; never force a sticky carriage against the FSR."
+  sensing_spring: "Seat only the outer TPU ring on the carriage shelf. The center and spokes must remain free over the 0.60 mm relief pocket."
+  sensor_gap: "The 0.10 mm approach is below ordinary FDM accuracy. Set it using smooth PET/Kapton shims while watching raw ADC."
+  stop: "Confirm the annular hard stop engages before applying more than 2 kg directly through the sensor."
+  tread: "Stretch the 18.04 mm TPU throat over the 19.04 mm rigid rim until the return lip seats in the recessed neck. Do not glue the first prototype; the snap must retain the tread by itself."
+
+rollout:
+  first: "Print and instrument one foot only. Test straight and at 40/50 degrees with known weights while logging raw ADC."
+  full_robot: "Do not fit six until the one-foot trace shows repeatable touchdown and release without guide sticking."
+  stop_conditions:
+    - "carriage fails to return under its own light preload"
+    - "one guide pin visibly binds or scrapes"
+    - "housing or tail lobe touches the test plane before the TPU tread"
+    - "sensor reading fails to recover after unloading"
+    - "hard stop cannot be felt before heavy load"
+
+checks:
+  required:
+    - "All five printable meshes are watertight and positive-volume."
+    - "Existing 142 mm tube plus 8 mm foot extension preserves the 150 mm knee-to-tip station."
+    - "A 50 degree tangent plane clears both rigid housing diameters."
+    - "The sensor remains flat and its tail lobe is installed uphill."
+    - "The rigid carriage slides freely before the FSR is installed."
+    - "Bench threshold repeats at 0, 40, and 50 degrees before walking."

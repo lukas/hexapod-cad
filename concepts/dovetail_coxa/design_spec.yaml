@@ -1,0 +1,137 @@
+# Design spec — dovetail-coxa-concept (CONCEPT BUILD, not production).
+#
+# Aug 2026 travel/disassembly review: removing a leg today means opening
+# the bearing cap (3x M3x8) and horn-bolt stack — slow, and it disturbs
+# precision interfaces.  This concept re-splits the merged coxa_link at
+# its historical Part A / Part B platform plane (z = +23 coxa-local) with
+# a tapered dovetail + one vertical phi4 pin, so the whole leg slides off
+# tool-free while the horn bolts become install-once-and-forget.
+# Rejected alternatives: quarter-turn bayonet (weaker in bending),
+# magnets (no shear stiffness), thumbscrews (still a tool-ish fiddle,
+# loosens under vibration).
+
+parts:
+  coxa_hub_qr:
+    label: "Coxa hub, quick-release (concept)"
+    aliases: ["hub side", "yaw hub QR", "permanent side"]
+    description: >-
+      The real coxa_link below the +23 platform plane, plus a tapered
+      male dovetail rail across the platform top.  Keeps every precision
+      interface: disc-horn bolt stack (M3x20 x4 + centre screw), 6805
+      bearing seats, dust lip.  Never leaves the robot — horn bolts are
+      torqued ONCE with the leg off, with full top-down access.  The 5
+      head-access shafts stay open through the rail for exactly that.
+    generated_by:
+      file: "concepts/dovetail_coxa/make_split_coxa_concept.py"
+      function: "main"
+      output_stl: "stl/coxa_hub_qr.stl"
+    local_frame:
+      origin: "Yaw axis at the disc-horn top (coxa-local, as coxa_link)"
+      axes:
+        x: "Outboard along the leg (dovetail slide direction)"
+        y: "Hip-pitch axis"
+        z: "Up"
+    features:
+      dovetail_rail:
+        label: "Tapered male dovetail rail"
+        aliases: ["rail", "male dovetail"]
+        kind: "boss"
+        purpose: >-
+          Carries the leg's bending moment across the old bolted joint.
+          Flanks overhang 2 mm per side (~22 deg) so the leg cannot lift
+          off; a 2 deg/flank taper along X wedges the fit snug at full
+          seat (no chopstick play — the failure mode of the old 4-bolt
+          joint when preload was lost).
+        llm_context: >-
+          Rail profile must stay identical to the female slot minus the
+          fit clearance (see the coupon parts).  Height 5 of the 8 mm
+          foot plate; roof left = 3 mm — thicken the plate before
+          deepening the rail.
+        dimensions:
+          rail_height:
+            label: "Rail height"
+            value: 5.0
+            axis: z
+            code_name: RAIL_H
+            description: "Rail rise above the platform plane."
+            llm_hint: "Deeper = stronger flanks but thinner leg-side roof."
+          rail_base_width:
+            label: "Rail base width"
+            value: 20.0
+            axis: y
+            code_name: RAIL_W_BOT
+            description: "Trapezoid base width at the platform."
+          taper_per_flank:
+            label: "Slide taper per flank"
+            value: 2.0
+            code_name: TAPER_DEG
+            description: "Deg per flank along the slide; wedges when seated."
+            llm_hint: "More taper = easier start / harder final seat."
+
+  coxa_leg_qr:
+    label: "Coxa leg side, quick-release (concept)"
+    aliases: ["leg side", "removable side", "hip bracket QR"]
+    description: >-
+      Everything above the +23 platform plane — foot plate, hip cradle,
+      688 housing — with the female dovetail socket carved into the foot
+      plate underside (5 mm slot, 3 mm roof).  Socket exits outboard, so
+      the complete leg (both servos, femur, tibia, boot) slides on/off
+      radially.  Concept-grade: socket roof strength and femur-swing
+      clearance along the slide path are unverified.
+    generated_by:
+      file: "concepts/dovetail_coxa/make_split_coxa_concept.py"
+      function: "main"
+      output_stl: "stl/coxa_leg_qr.stl"
+    features:
+      dovetail_socket:
+        label: "Female dovetail socket"
+        kind: "pocket"
+        purpose: "Mates the hub rail at 0.20 mm/side clearance (mid coupon)."
+        llm_context: >-
+          Clearance is a PLACEHOLDER until the print-fit coupons pick the
+          real value for this printer/material.
+      pin_bore:
+        label: "Vertical phi4.2 pin bore"
+        kind: "pocket"
+        purpose: >-
+          Passes the lock pin through roof + rail; pin takes slide-out
+          load in pure shear.  Placed inboard of the horn-bolt circle so
+          it never fouls the head-access shafts.
+
+  coxa_qr_pin:
+    label: "phi4 lock pin"
+    aliases: ["lock pin", "quick-release pin"]
+    description: >-
+      Plain phi4 steel dowel (or M4 bolt shank / detent pin).  Blocks the
+      only unconstrained DOF (outboard slide).  Pull it and the leg
+      slides off; nothing else restrains removal.  A production version
+      would want head + lanyard hole or a spring detent.
+
+  coxa_link_original:
+    label: "Today's one-piece coxa_link (comparison)"
+    description: >-
+      The current production part, shown untouched for comparison.  The
+      QR concept = this part split at z=+23 with rail/socket/pin added.
+
+  dovetail_male:
+    label: "Print-fit coupon: male rail block"
+    description: >-
+      Bench coupon carrying the same rail profile at nominal size on a
+      simple block — NOT a robot part.  Print flat; flanks come out as
+      clean vertical-ish walls.
+    generated_by:
+      file: "concepts/dovetail_coxa/make_dovetail_coupons.py"
+      function: "make_male"
+      output_stl: "stl/dovetail_male_nominal.stl"
+
+  dovetail_female:
+    label: "Print-fit coupon: female sliders (c = 0.10/0.20/0.30)"
+    description: >-
+      Three sockets at 0.10 / 0.20 / 0.30 mm per-side clearance, edge
+      notch count 1/2/3 identifies them.  Slide-test on the male block;
+      the snuggest one that seats by hand becomes the real clearance
+      constant for coxa_leg_qr.
+    generated_by:
+      file: "concepts/dovetail_coxa/make_dovetail_coupons.py"
+      function: "make_female"
+      output_stl: "stl/dovetail_female_c20.stl"

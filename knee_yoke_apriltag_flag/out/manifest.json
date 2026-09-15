@@ -1,0 +1,61 @@
+{
+  "schema_version": 1,
+  "name": "STS3215 knee-yoke AprilTag snap flag",
+  "tag_family": "tag36h11",
+  "tag_id": 16,
+  "attachment": "four split friction cups over M3 SHCS heads",
+  "camera_face": "tag and full white quiet zone only; black human-readable ID is on back",
+  "print_orientation": "tag face on build plate; cups and black raised ID upward; no supports",
+  "colour_assignment": {
+    "white": "holder plate and four grip cups",
+    "black": "AprilTag cells and raised rear ID"
+  },
+  "dimensions": {
+    "plate_size_mm": 38.0,
+    "tag_size_mm": 34.0,
+    "plate_thickness_mm": 1.6,
+    "cup_height_mm": 3.25,
+    "total_height_mm": 4.85,
+    "head_diameter_mm": 5.5,
+    "head_height_mm": 3.0,
+    "cup_throat_diameter_mm": 5.5,
+    "cup_back_diameter_mm": 5.75,
+    "bolt_circle_diameter_mm": 14.0,
+    "back_label_height_mm": 0.5
+  },
+  "bolt_centres_mm": [
+    [
+      7.0,
+      0.0
+    ],
+    [
+      0.0,
+      7.0
+    ],
+    [
+      -7.0,
+      8.572527594031472e-16
+    ],
+    [
+      -1.7763568394002505e-15,
+      -7.0
+    ]
+  ],
+  "holder": {
+    "watertight": true,
+    "connected_components": 1,
+    "volume_mm3": 2641.736,
+    "mass_g_at_1_24_g_cm3": 3.276
+  },
+  "outputs": {
+    "portable_3mf": "tag36h11_16_knee_yoke_snap_flag.3mf",
+    "bambu_project": "tag36h11_16_knee_yoke_snap_flag_BambuStudio.3mf",
+    "plain_stl": "tag36h11_16_knee_yoke_snap_flag_plain.stl",
+    "aligned_colour_stls": [
+      "tag36h11_16_knee_yoke_snap_flag_WHITE.stl",
+      "tag36h11_16_knee_yoke_snap_flag_BLACK.stl"
+    ],
+    "paper_tag_svg": "tag36h11_16_34mm.svg",
+    "preview": "preview.png"
+  }
+}

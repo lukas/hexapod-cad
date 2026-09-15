@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "poses": 176,
+  "pair_tests": 704,
+  "ranges_deg": {
+    "yaw": [
+      -35.0,
+      35.0
+    ],
+    "hip": [
+      -80.0,
+      40.0
+    ],
+    "knee": [
+      -20.0,
+      80.0
+    ]
+  },
+  "exact_intersections": [],
+  "critical_pose_deg": [
+    0.0,
+    -60.0,
+    -20.0
+  ],
+  "critical_vertex_surface_clearance_mm": 0.4716,
+  "required_critical_clearance_mm": 0.4,
+  "includes_flush_m3_head_envelopes": true,
+  "pass": true
+}

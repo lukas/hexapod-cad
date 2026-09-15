@@ -1,0 +1,1022 @@
+{
+  "schemaVersion": 1,
+  "name": "TT-motor kid 4x4 classic pickup truck",
+  "source": "build_tt_truck.py",
+  "designSpecUrl": "design_spec.yaml",
+  "assetsBaseUrl": "./",
+  "units": "mm",
+  "center": [
+    0.0,
+    0.0,
+    48.0
+  ],
+  "checksConfig": {
+    "toleranceMm": 0.35,
+    "clearanceMm": 0.8,
+    "minWallMm": 1.5,
+    "matingToleranceMm": 1.1
+  },
+  "meshes": [
+    {
+      "id": "stl:chassis",
+      "name": "chassis.stl",
+      "url": "stl/chassis.stl"
+    },
+    {
+      "id": "stl:motor_clamp",
+      "name": "motor_clamp.stl",
+      "url": "stl/motor_clamp.stl"
+    },
+    {
+      "id": "stl:electronics_deck",
+      "name": "electronics_deck.stl",
+      "url": "stl/electronics_deck.stl"
+    },
+    {
+      "id": "stl:truck_body_lower",
+      "name": "truck_body_lower.stl",
+      "url": "stl/truck_body_lower.stl"
+    },
+    {
+      "id": "stl:truck_hood",
+      "name": "truck_hood.stl",
+      "url": "stl/truck_hood.stl"
+    },
+    {
+      "id": "stl:truck_roof",
+      "name": "truck_roof.stl",
+      "url": "stl/truck_roof.stl"
+    },
+    {
+      "id": "stl:windshield",
+      "name": "windshield_DO_NOT_PRINT.stl",
+      "url": "stl/windshield_DO_NOT_PRINT.stl"
+    },
+    {
+      "id": "stl:rear_window",
+      "name": "rear_window_DO_NOT_PRINT.stl",
+      "url": "stl/rear_window_DO_NOT_PRINT.stl"
+    },
+    {
+      "id": "stl:side_window",
+      "name": "side_window_DO_NOT_PRINT.stl",
+      "url": "stl/side_window_DO_NOT_PRINT.stl"
+    },
+    {
+      "id": "stl:truck_grille",
+      "name": "truck_grille_DO_NOT_PRINT.stl",
+      "url": "stl/truck_grille_DO_NOT_PRINT.stl"
+    },
+    {
+      "id": "stl:headlight",
+      "name": "headlight_DO_NOT_PRINT.stl",
+      "url": "stl/headlight_DO_NOT_PRINT.stl"
+    },
+    {
+      "id": "stl:taillight",
+      "name": "taillight_DO_NOT_PRINT.stl",
+      "url": "stl/taillight_DO_NOT_PRINT.stl"
+    },
+    {
+      "id": "stl:tt_motor",
+      "name": "tt_motor_DO_NOT_PRINT.stl",
+      "url": "stl/tt_motor_DO_NOT_PRINT.stl"
+    },
+    {
+      "id": "stl:wheel",
+      "name": "wheel_DO_NOT_PRINT.stl",
+      "url": "stl/wheel_DO_NOT_PRINT.stl"
+    },
+    {
+      "id": "stl:l298n_board",
+      "name": "l298n_board_DO_NOT_PRINT.stl",
+      "url": "stl/l298n_board_DO_NOT_PRINT.stl"
+    }
+  ],
+  "instances": [
+    {
+      "id": "chassis",
+      "meshId": "stl:chassis",
+      "name": "Lower truck chassis",
+      "partType": "chassis",
+      "role": "3D printed part",
+      "cots": false,
+      "color": "#4f86c6",
+      "transform": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        -0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "centroid": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "focusGroup": "printable"
+    },
+    {
+      "id": "electronics-deck",
+      "meshId": "stl:electronics_deck",
+      "name": "Electronics + battery deck",
+      "partType": "electronics_deck",
+      "role": "3D printed part",
+      "cots": false,
+      "color": "#7aa6d8",
+      "transform": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        -0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        34.0,
+        1.0
+      ],
+      "centroid": [
+        0.0,
+        0.0,
+        34.0
+      ],
+      "focusGroup": "printable"
+    },
+    {
+      "id": "truck-body-lower",
+      "meshId": "stl:truck_body_lower",
+      "name": "Classic pickup lower body",
+      "partType": "truck_body_lower",
+      "role": "3D printed part",
+      "cots": false,
+      "color": "#d64b3c",
+      "transform": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        -0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        42.0,
+        1.0
+      ],
+      "centroid": [
+        0.0,
+        0.0,
+        42.0
+      ],
+      "focusGroup": "printable"
+    },
+    {
+      "id": "truck-hood",
+      "meshId": "stl:truck_hood",
+      "name": "Removable pickup hood",
+      "partType": "truck_hood",
+      "role": "3D printed part",
+      "cots": false,
+      "color": "#e05243",
+      "transform": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        -0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        42.0,
+        0.0,
+        76.0,
+        1.0
+      ],
+      "centroid": [
+        42.0,
+        0.0,
+        76.0
+      ],
+      "focusGroup": "printable"
+    },
+    {
+      "id": "truck-roof",
+      "meshId": "stl:truck_roof",
+      "name": "Removable cab roof",
+      "partType": "truck_roof",
+      "role": "3D printed part",
+      "cots": false,
+      "color": "#c83f34",
+      "transform": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        -0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        -6.0,
+        0.0,
+        104.0,
+        1.0
+      ],
+      "centroid": [
+        -6.0,
+        0.0,
+        104.0
+      ],
+      "focusGroup": "printable"
+    },
+    {
+      "id": "truck-windshield",
+      "meshId": "stl:windshield",
+      "name": "Dark windshield insert",
+      "partType": "truck_glazing",
+      "role": "visual appearance only",
+      "cots": false,
+      "color": "#182b3d",
+      "transform": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        -0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        7.2,
+        0.0,
+        80.0,
+        1.0
+      ],
+      "centroid": [
+        7.2,
+        0.0,
+        80.0
+      ],
+      "focusGroup": "pickup-body"
+    },
+    {
+      "id": "truck-rear-window",
+      "meshId": "stl:rear_window",
+      "name": "Dark rear-window insert",
+      "partType": "truck_glazing",
+      "role": "visual appearance only",
+      "cots": false,
+      "color": "#182b3d",
+      "transform": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        -0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        -19.2,
+        0.0,
+        80.0,
+        1.0
+      ],
+      "centroid": [
+        -19.2,
+        0.0,
+        80.0
+      ],
+      "focusGroup": "pickup-body"
+    },
+    {
+      "id": "truck-window-left",
+      "meshId": "stl:side_window",
+      "name": "Dark side-window insert left",
+      "partType": "truck_glazing",
+      "role": "visual appearance only",
+      "cots": false,
+      "color": "#182b3d",
+      "transform": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        -0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        -6.0,
+        51.2,
+        80.0,
+        1.0
+      ],
+      "centroid": [
+        -6.0,
+        51.2,
+        80.0
+      ],
+      "focusGroup": "pickup-body"
+    },
+    {
+      "id": "truck-window-right",
+      "meshId": "stl:side_window",
+      "name": "Dark side-window insert right",
+      "partType": "truck_glazing",
+      "role": "visual appearance only",
+      "cots": false,
+      "color": "#182b3d",
+      "transform": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        -0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        -6.0,
+        -51.2,
+        80.0,
+        1.0
+      ],
+      "centroid": [
+        -6.0,
+        -51.2,
+        80.0
+      ],
+      "focusGroup": "pickup-body"
+    },
+    {
+      "id": "truck-grille",
+      "meshId": "stl:truck_grille",
+      "name": "Front grille insert",
+      "partType": "truck_grille",
+      "role": "visual appearance only",
+      "cots": false,
+      "color": "#26313a",
+      "transform": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        -0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        76.8,
+        0.0,
+        51.0,
+        1.0
+      ],
+      "centroid": [
+        76.8,
+        0.0,
+        51.0
+      ],
+      "focusGroup": "pickup-body"
+    },
+    {
+      "id": "headlight-left",
+      "meshId": "stl:headlight",
+      "name": "Headlight left",
+      "partType": "headlight",
+      "role": "visual appearance only",
+      "cots": false,
+      "color": "#ffd166",
+      "transform": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        -0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        76.8,
+        39.0,
+        63.0,
+        1.0
+      ],
+      "centroid": [
+        76.8,
+        39.0,
+        63.0
+      ],
+      "focusGroup": "pickup-body"
+    },
+    {
+      "id": "taillight-left",
+      "meshId": "stl:taillight",
+      "name": "Tail light left",
+      "partType": "taillight",
+      "role": "visual appearance only",
+      "cots": false,
+      "color": "#9f1d2d",
+      "transform": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        -0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        -76.8,
+        42.0,
+        50.0,
+        1.0
+      ],
+      "centroid": [
+        -76.8,
+        42.0,
+        50.0
+      ],
+      "focusGroup": "pickup-body"
+    },
+    {
+      "id": "headlight-right",
+      "meshId": "stl:headlight",
+      "name": "Headlight right",
+      "partType": "headlight",
+      "role": "visual appearance only",
+      "cots": false,
+      "color": "#ffd166",
+      "transform": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        -0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        76.8,
+        -39.0,
+        63.0,
+        1.0
+      ],
+      "centroid": [
+        76.8,
+        -39.0,
+        63.0
+      ],
+      "focusGroup": "pickup-body"
+    },
+    {
+      "id": "taillight-right",
+      "meshId": "stl:taillight",
+      "name": "Tail light right",
+      "partType": "taillight",
+      "role": "visual appearance only",
+      "cots": false,
+      "color": "#9f1d2d",
+      "transform": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        -0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        -76.8,
+        -42.0,
+        50.0,
+        1.0
+      ],
+      "centroid": [
+        -76.8,
+        -42.0,
+        50.0
+      ],
+      "focusGroup": "pickup-body"
+    },
+    {
+      "id": "clamp-rear-left",
+      "meshId": "stl:motor_clamp",
+      "name": "Motor clamp rear-left",
+      "partType": "motor_clamp",
+      "role": "3D printed part",
+      "cots": false,
+      "color": "#efc65a",
+      "transform": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        -0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        -48.0,
+        40.0,
+        25.7,
+        1.0
+      ],
+      "centroid": [
+        -48.0,
+        40.0,
+        25.7
+      ],
+      "focusGroup": "printable"
+    },
+    {
+      "id": "motor-rear-left",
+      "meshId": "stl:tt_motor",
+      "name": "TT motor rear-left",
+      "partType": "tt_motor",
+      "role": "purchased component",
+      "cots": true,
+      "color": "#f2c400",
+      "transform": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        -0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        -58.0,
+        40.0,
+        3.2,
+        1.0
+      ],
+      "centroid": [
+        -58.0,
+        40.0,
+        3.2
+      ],
+      "focusGroup": "hardware"
+    },
+    {
+      "id": "wheel-rear-left",
+      "meshId": "stl:wheel",
+      "name": "65 mm wheel rear-left",
+      "partType": "wheel",
+      "role": "purchased component",
+      "cots": true,
+      "color": "#20242b",
+      "transform": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        -0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        -58.0,
+        76.5,
+        14.45,
+        1.0
+      ],
+      "centroid": [
+        -58.0,
+        76.5,
+        14.45
+      ],
+      "focusGroup": "hardware"
+    },
+    {
+      "id": "clamp-rear-right",
+      "meshId": "stl:motor_clamp",
+      "name": "Motor clamp rear-right",
+      "partType": "motor_clamp",
+      "role": "3D printed part",
+      "cots": false,
+      "color": "#efc65a",
+      "transform": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        -0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        -48.0,
+        -40.0,
+        25.7,
+        1.0
+      ],
+      "centroid": [
+        -48.0,
+        -40.0,
+        25.7
+      ],
+      "focusGroup": "printable"
+    },
+    {
+      "id": "motor-rear-right",
+      "meshId": "stl:tt_motor",
+      "name": "TT motor rear-right",
+      "partType": "tt_motor",
+      "role": "purchased component",
+      "cots": true,
+      "color": "#f2c400",
+      "transform": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        -0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        -58.0,
+        -40.0,
+        3.2,
+        1.0
+      ],
+      "centroid": [
+        -58.0,
+        -40.0,
+        3.2
+      ],
+      "focusGroup": "hardware"
+    },
+    {
+      "id": "wheel-rear-right",
+      "meshId": "stl:wheel",
+      "name": "65 mm wheel rear-right",
+      "partType": "wheel",
+      "role": "purchased component",
+      "cots": true,
+      "color": "#20242b",
+      "transform": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        -0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        -58.0,
+        -76.5,
+        14.45,
+        1.0
+      ],
+      "centroid": [
+        -58.0,
+        -76.5,
+        14.45
+      ],
+      "focusGroup": "hardware"
+    },
+    {
+      "id": "clamp-front-left",
+      "meshId": "stl:motor_clamp",
+      "name": "Motor clamp front-left",
+      "partType": "motor_clamp",
+      "role": "3D printed part",
+      "cots": false,
+      "color": "#efc65a",
+      "transform": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        -0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        48.0,
+        40.0,
+        25.7,
+        1.0
+      ],
+      "centroid": [
+        48.0,
+        40.0,
+        25.7
+      ],
+      "focusGroup": "printable"
+    },
+    {
+      "id": "motor-front-left",
+      "meshId": "stl:tt_motor",
+      "name": "TT motor front-left",
+      "partType": "tt_motor",
+      "role": "purchased component",
+      "cots": true,
+      "color": "#f2c400",
+      "transform": [
+        -1.0,
+        1.2246467991473532e-16,
+        0.0,
+        0.0,
+        -1.2246467991473532e-16,
+        -1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        58.0,
+        40.0,
+        3.2,
+        1.0
+      ],
+      "centroid": [
+        58.0,
+        40.0,
+        3.2
+      ],
+      "focusGroup": "hardware"
+    },
+    {
+      "id": "wheel-front-left",
+      "meshId": "stl:wheel",
+      "name": "65 mm wheel front-left",
+      "partType": "wheel",
+      "role": "purchased component",
+      "cots": true,
+      "color": "#20242b",
+      "transform": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        -0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        58.0,
+        76.5,
+        14.45,
+        1.0
+      ],
+      "centroid": [
+        58.0,
+        76.5,
+        14.45
+      ],
+      "focusGroup": "hardware"
+    },
+    {
+      "id": "clamp-front-right",
+      "meshId": "stl:motor_clamp",
+      "name": "Motor clamp front-right",
+      "partType": "motor_clamp",
+      "role": "3D printed part",
+      "cots": false,
+      "color": "#efc65a",
+      "transform": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        -0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        48.0,
+        -40.0,
+        25.7,
+        1.0
+      ],
+      "centroid": [
+        48.0,
+        -40.0,
+        25.7
+      ],
+      "focusGroup": "printable"
+    },
+    {
+      "id": "motor-front-right",
+      "meshId": "stl:tt_motor",
+      "name": "TT motor front-right",
+      "partType": "tt_motor",
+      "role": "purchased component",
+      "cots": true,
+      "color": "#f2c400",
+      "transform": [
+        -1.0,
+        1.2246467991473532e-16,
+        0.0,
+        0.0,
+        -1.2246467991473532e-16,
+        -1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        58.0,
+        -40.0,
+        3.2,
+        1.0
+      ],
+      "centroid": [
+        58.0,
+        -40.0,
+        3.2
+      ],
+      "focusGroup": "hardware"
+    },
+    {
+      "id": "wheel-front-right",
+      "meshId": "stl:wheel",
+      "name": "65 mm wheel front-right",
+      "partType": "wheel",
+      "role": "purchased component",
+      "cots": true,
+      "color": "#20242b",
+      "transform": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        -0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        58.0,
+        -76.5,
+        14.45,
+        1.0
+      ],
+      "centroid": [
+        58.0,
+        -76.5,
+        14.45
+      ],
+      "focusGroup": "hardware"
+    },
+    {
+      "id": "l298n-a",
+      "meshId": "stl:l298n_board",
+      "name": "L298N motor board A",
+      "partType": "l298n_board",
+      "role": "purchased component",
+      "cots": true,
+      "color": "#c53b3b",
+      "transform": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        -0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        35.0,
+        -23.5,
+        43.0,
+        1.0
+      ],
+      "centroid": [
+        35.0,
+        -23.5,
+        43.0
+      ],
+      "focusGroup": "hardware"
+    },
+    {
+      "id": "l298n-b",
+      "meshId": "stl:l298n_board",
+      "name": "L298N motor board B",
+      "partType": "l298n_board",
+      "role": "purchased component",
+      "cots": true,
+      "color": "#c53b3b",
+      "transform": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        -0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        35.0,
+        23.5,
+        43.0,
+        1.0
+      ],
+      "centroid": [
+        35.0,
+        23.5,
+        43.0
+      ],
+      "focusGroup": "hardware"
+    }
+  ]
+}

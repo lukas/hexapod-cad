@@ -1,0 +1,190 @@
+# Design spec — qr-femur-concept (CONCEPT BUILD, not production).
+#
+# Aug 2026 maintenance/transport request: take the legs off without
+# disturbing calibrated interfaces.  This concept splits the one-piece
+# ``femur_link`` at the spar's inter-well gap (joint-local x in
+# [50, 58.3] — the only free span, whose phi 24 gusset-cone envelope is
+# already swept-clear) with a drawbored square tenon + one phi 4
+# quick-release detent pin.  The hip yoke stays bolted to its disc
+# horns forever (horn registration / per-joint trim never disturbed);
+# the knee servo + tibia + foot pull off outboard as one unit, no
+# tools.
+# Sizing loads at the split (from strength/load_cases.py): ~0.5 N-m
+# in-plane bending, ~1.8 N-m lateral-foot-catch torsion — both react
+# as bearing on the tenon flats at a few MPa, far under the ~12 MPa
+# PETG threshold used for the Aug 2026 crack-fix FEA.
+# Rejected alternatives: bolted face flange (no driver access in the
+# 8.3 mm gap; inboard is clevis airspace), threaded spar / bayonet
+# (loosens under walking's reversing torsion — rejected class, see
+# dovetail_coxa), dovetail at the spine face (full-height rail adds
+# swept bulk at the r~39.4-of-39.5 spine-corner budget; a compact one
+# leaves ~3 mm slot walls — the thin-hoop crack pattern of the retired
+# two-part femur), split clamp collar (friction-only torsion).
+# Production gates: _closed_yoke_diag sweep survey (boss mid-span +
+# pin head), femur torque FEA on both halves, coupon-tuned clearance.
+
+parts:
+  femur_hip_qr:
+    label: "Femur hip yoke, quick-release (concept)"
+    aliases: ["hip side", "yoke side", "permanent side"]
+    description: >-
+      The real femur_link's hip moving yoke (clevis arms + doubled 8 mm
+      spine), cut at the spine outer face (joint-local x = 50).  The
+      hip gusset cone is replaced by a phi 24 socket boss; the tenon
+      pocket is broached through boss + full 8 mm spine, opening at the
+      spine inner face (a hole adds no swept bulk).  Never leaves the
+      robot — the 8 hip disc-horn bolts (4 x M3 x 10 per horn) become
+      install-once, so horn registration / trim is preserved.
+    generated_by:
+      file: "concepts/qr_femur/make_split_femur_concept.py"
+      function: "main"
+      output_stl: "stl/femur_hip_qr.stl"
+    local_frame:
+      origin: "femur_link STL frame (hip disc-horn top on the hip axis)"
+      axes:
+        x: "Along the femur (hip axis at 0, knee axis at 90; tenon slide direction)"
+        y: "41.3 - joint-local z (leg motion plane)"
+        z: "Hip/knee pivot axis direction (pin axis)"
+    features:
+      socket_boss:
+        label: "Phi 24 socket boss"
+        aliases: ["boss", "female boss"]
+        kind: "boss"
+        purpose: >-
+          Replaces the hip gusset cone with a cylinder filling the same
+          phi 24 envelope (the hull of the two verified cone bases), so
+          almost no new swept territory.  Carries the tenon pocket with
+          >= 5 mm walls at the pocket corners — NOT the 3 mm hoop that
+          cracked on the retired two-part design.
+        llm_context: >-
+          Boss OD is capped by the swept-clear cone envelope; do not
+          grow past phi 24 without re-running the _closed_yoke_diag
+          survey.  The mid-span annulus (between the old cone surfaces)
+          is new material — survey gate before production.
+        dimensions:
+          boss_od:
+            label: "Boss outer diameter"
+            value: 24.0
+            code_name: BOSS_OD
+            description: "= the verified gusset-cone base diameter."
+          engagement:
+            label: "Tenon engagement depth"
+            value: 15.3
+            axis: x
+            description: "Pocket nose (STL x 30.0) to boss face (45.3): boss + full 8 mm spine."
+            llm_hint: "Longer engagement = lower bearing stress; capped by the spine inner face (clevis airspace beyond)."
+          face_gap:
+            label: "Seated face gap"
+            value: 0.5
+            axis: x
+            code_name: FACE_GAP
+            description: "Boss outer face to knee wall face as drawn; the drawbore closes it so the faces preload in bending."
+
+  femur_knee_qr:
+    label: "Femur knee + tibia side, quick-release (concept)"
+    aliases: ["knee side", "removable side", "leg-outer side"]
+    description: >-
+      The real femur_link's knee bracket (servo well, clamp cap pilots,
+      far-wall buttress pad), cut at the knee well wall outer face
+      (joint-local x = 58.3), plus the tapered tenon.  With the knee
+      servo, tibia and foot boot attached this whole unit pulls off
+      outboard; the knee servo's bus lead unplugs at its case
+      connector and the knee-cradle zip-tie post travels with it.
+    generated_by:
+      file: "concepts/qr_femur/make_split_femur_concept.py"
+      function: "main"
+      output_stl: "stl/femur_knee_qr.stl"
+    features:
+      tenon:
+        label: "Tapered rounded-square tenon"
+        aliases: ["male tenon", "spigot"]
+        kind: "boss"
+        purpose: >-
+          Carries the femur's bending and torsion across the joint as
+          bearing on the flats (~3-4 MPa at the design loads).  Square
+          section = positive anti-rotation; corner r2 rounds kill the
+          sharp-corner layer-seam starter AND keep the boss pocket
+          corner walls >= 5 mm.  1 deg/flank taper wedges snug at full
+          seat — the chopstick-play killer, same trick as the
+          dovetail_coxa rail.
+        llm_context: >-
+          Prints in the femur's existing orientation (spar horizontal)
+          so layers run along the tenon — the strong direction.  The
+          root bites 1 mm into the knee wall; a production version
+          should add a small collar flare at the root (mirror of the
+          retired gusset cone).
+        dimensions:
+          tenon_w:
+            label: "Tenon flat-to-flat at the root"
+            value: 11.0
+            code_name: TENON_W
+            description: "11 x 11 rounded square, corner r 2."
+            llm_hint: "Bigger = stronger tenon but thinner pocket-corner walls (phi 24 boss cap); 11 keeps ~5 mm."
+          taper_per_flank:
+            label: "Taper per flank"
+            value: 1.0
+            code_name: TAPER_DEG
+            description: "Deg per flank along the slide; wedges when seated."
+          tenon_len:
+            label: "Tenon length"
+            value: 16.8
+            axis: x
+            code_name: TENON_LEN
+            description: "Root (1 mm buried in the knee wall) to nose (0.5 mm sub-flush at the spine inner face)."
+
+  femur_qr_pin:
+    label: "phi4 drawbore detent pin"
+    aliases: ["lock pin", "quick-release pin", "drawbore pin"]
+    description: >-
+      Phi 4 ball-detent quick-release pin (button head), inserted along
+      the pivot-axis direction through boss walls + tenon (double
+      shear).  Blocks the only unconstrained DOF (outboard pull-out —
+      tens of N from a foot snag; everything else is carried by the
+      tenon flats).  DRAWBORE: print the TENON's bore offset 0.2 mm
+      deeper (inboard) than the boss bore so seating the pin pulls the
+      taper snug and preloads the boss/knee-wall face contact.  Pin
+      runs along STL z because a y-axis pin's button head clips the
+      tall spine plate (measured, 5.4 mm^3); on +z the boss face is the
+      outermost surface.  Side access through the 8.3 mm inter-well
+      slot; nothing occludes laterally.
+    generated_by:
+      file: "concepts/qr_femur/make_split_femur_concept.py"
+      function: "main"
+      output_stl: "stl/femur_qr_pin.stl"
+    features:
+      drawbore_offset:
+        label: "Drawbore offset"
+        kind: "dimension_note"
+        purpose: "Documented print-time parameter (0.2 mm); NOT modeled in the STLs so the seated viz stays clean."
+
+  femur_link_original:
+    label: "Today's one-piece femur_link (comparison)"
+    description: >-
+      The current production part, shown untouched for comparison.  The
+      QR concept = this part cut at joint-local x 50 / 58.3 (the
+      exposed spar + gusset cones in between are discarded) with
+      boss/tenon/pin added.
+
+  tenon_male:
+    label: "Print-fit coupon: male tenon block"
+    description: >-
+      Bench coupon carrying the nominal tenon on a simple block — NOT a
+      robot part.  Prints flat with the tenon horizontal, matching the
+      real part's layer direction.
+    generated_by:
+      file: "concepts/qr_femur/make_split_femur_concept.py"
+      function: "_coupon_male"
+      output_stl: "stl/tenon_male_nominal.stl"
+
+  tenon_female:
+    label: "Print-fit coupon: female sockets (c = 0.10/0.20/0.30)"
+    description: >-
+      Three through-pockets at 0.10 / 0.20 / 0.30 mm per-side
+      clearance, edge notch count 1/2/3 identifies them.  Slide-test on
+      the male block; the snuggest one that seats by hand becomes the
+      real clearance constant (CLEAR) for femur_hip_qr — same
+      methodology as the dovetail_coxa coupons.
+    generated_by:
+      file: "concepts/qr_femur/make_split_femur_concept.py"
+      function: "_coupon_female"
+      output_stl: "stl/tenon_female_c20.stl"

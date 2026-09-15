@@ -1,0 +1,233 @@
+{
+  "build_id": "prototype_sts3215/premade-chorn-56",
+  "assumptions": {
+    "outside_span_mm": 56.0,
+    "plate_thickness_mm": 2.1,
+    "axis_to_front_outer_mm": 51.0,
+    "blade_width_mm_assumed": 25.0,
+    "front_extra_holes": "y=0, 9.5 mm from top/bottom outside edges; 37.0 mm centre span derived from 34.0 mm inner-edge and 40.0 mm outer-edge measurements",
+    "front_extra_hole_physical_diameter_mm": 3.0,
+    "front_receiver_m3_clearance_diameter_mm": 3.4,
+    "brackets_installed": 12,
+    "brackets_owned": 16,
+    "spares": 4
+  },
+  "fit": {
+    "horn_face_span_mm": 38.03999999999999,
+    "two_spacers_mm": 14.0,
+    "assembled_inner_span_mm": 52.03999999999999,
+    "nominal_bracket_inner_span_mm": 51.8,
+    "nominal_total_spread_mm": 0.23999999999999488,
+    "tube_shorter_than_overhead_mm": 5.200000000000003,
+    "tube_shorter_than_production_mm": 21.799999999999997,
+    "tube_engagement_depth_mm": 30.0,
+    "unsupported_tube_span_reduction_vs_original_mm": 16.0,
+    "socket_mouth_outboard_vs_overhead_mm": 21.200000000000003
+  },
+  "chassis_bottom": {
+    "former_trunk_hole_closed": true,
+    "former_trunk_hole_x_mm": 14.0,
+    "former_trunk_hole_y_mm": 22.0,
+    "solid_probes": 60,
+    "centre_strap_passage_retained": true
+  },
+  "masses": {
+    "premade_bracket_reference_g": 23.0,
+    "driven_spacer_g": 2.5,
+    "passive_spacer_g": 2.2,
+    "femur_body_g": 37.8,
+    "tibia_socket_g": 19.2,
+    "flat_coxa_link_with_integral_tower_g": 80.4,
+    "screw_on_lower_yaw_hub_g": 10.2,
+    "flat_hip_clamp_cap_g": 31.3,
+    "screw_on_hip_bearing_carrier_g": 11.2,
+    "driven_spacer_nominal_preload_overlap_mm3": 31.15,
+    "passive_spacer_nominal_preload_overlap_mm3": 30.21
+  },
+  "clamp_cap_captive_nuts": {
+    "converted_joints_per_robot": 12,
+    "captive_m3_nuts_per_hip": 2,
+    "captive_m3_nuts_per_knee": 1,
+    "captive_m3_nuts_per_robot": 18,
+    "screw": "M3x8 SHCS",
+    "nut_pocket_across_flats_mm": 5.8,
+    "nut_pocket_depth_mm": 2.7,
+    "minimum_lateral_shell_each_side_mm": 1.6,
+    "conservative_thread_beyond_nut_mm": 3.3,
+    "minimum_upper_bearing_to_clamp_head_edge_mm": 4.35,
+    "servo_case_self_tapping_screws_changed": false,
+    "knee_vertical_retention_screw_changed": false
+  },
+  "femur_servo_fit": {
+    "servo_receiver_overlap_mm3": 0.0,
+    "cap_receiver_overlap_mm3": 0.0004,
+    "cap_bracket_overlap_mm3": 0.0,
+    "cap_servo_intentional_press_mm3": 791.95,
+    "receiver_thickness_mm": 3.6,
+    "retention": "6x front-loaded ordinary captive M3 hex nuts",
+    "screw": "M3x5",
+    "nut_pocket_across_flats_mm": 5.8,
+    "nut_pocket_depth_mm": 2.7,
+    "pocket_back_skin_mm": 0.9,
+    "servo_side_skin_mm": 0.5,
+    "thread_beyond_nut_mm": 0.5,
+    "center_to_nut_flat_web_mm": 0.1
+  },
+  "split_lower_yaw_hub": {
+    "interface_z_mm": 4.0,
+    "main_flat_print_face_z_mm": 4.0,
+    "carrier_collar_z_range_mm": [
+      4.0,
+      12.0
+    ],
+    "carrier_collar_radii_mm": [
+      13.0,
+      16.6
+    ],
+    "coxa_socket_radii_mm": [
+      16.9,
+      19.0
+    ],
+    "radial_assembly_clearance_mm": 0.29999999999999716,
+    "interface_overlap_mm3": 0.0,
+    "attachment": "3x radial M3x6 low-profile SHCS into captive nuts",
+    "radial_screw_angles_deg": [
+      120.0,
+      180.0,
+      240.0
+    ],
+    "nut_pocket_across_flats_mm": 5.8,
+    "nut_pocket_depth_mm": 2.7,
+    "minimum_nut_back_shell_mm": 0.9,
+    "minimum_nut_vertical_shell_mm": 1.1,
+    "head_seat_shoulder_mm": 1.1,
+    "thread_beyond_nut_mm": 1.9,
+    "bearing_press_overlap_mm3": 49.72
+  },
+  "split_hip_bearing": {
+    "cap_flat_face_y_mm": 21.9,
+    "carrier_flat_face_y_mm": 21.9,
+    "cap_carrier_overlap_mm3": 0.0,
+    "bearing_press_overlap_mm3": 0.146,
+    "attachment": "4x M3x8 countersunk screws into captive M3 nuts",
+    "nut_pocket_across_flats_mm": 5.8,
+    "nut_pocket_depth_mm": 2.7,
+    "minimum_nut_to_outer_shell_mm": 0.6,
+    "mount_radius_mm": 19.0
+  },
+  "tibia_screw_access": {
+    "accessible_screw_sites": 6,
+    "radial_u_windows": 4,
+    "naturally_exposed_outer_pockets": 2,
+    "window_width_mm": 6.8,
+    "window_x_range_mm": [
+      67.3,
+      71.85
+    ],
+    "tube_engagement_depth_mm": 30.0,
+    "unsupported_tube_span_reduction_vs_original_mm": 16.0,
+    "complete_mouth_collar_length_mm": 21.95,
+    "root_flare_outer_diameter_mm": 24.0,
+    "root_flare_length_mm": 10.0,
+    "diagonal_root_ribs": 4,
+    "root_rib_outer_radius_mm": 13.0
+  },
+  "servo_serviceability": {
+    "holder_slot_width_mm": 24.0,
+    "fitted_horn_diameter_mm": 20.0,
+    "checked_radial_clearance_mm": 1.5,
+    "extraction_direction": "+Y through open clamp mouth",
+    "obstruction_volume_mm3": {
+      "hip": 0.0,
+      "knee": 0.0
+    },
+    "stations_checked": [
+      "hip",
+      "knee"
+    ]
+  },
+  "coxa_support_tower": {
+    "integrated_into_coxa": true,
+    "footprint": "rear circular segment matching lower coxa",
+    "outer_envelope_radius_mm": 19.0,
+    "front_chord_x_mm": -10.5,
+    "height_mm": 42.25,
+    "cap_coxa_overlap_mm3": 0.0,
+    "cap_seat_gap_mm": 0.05,
+    "top_entry_m3_screws_per_leg": 2,
+    "top_captive_nuts_per_leg": 2,
+    "top_nut_pocket_across_flats_mm": 5.8,
+    "top_nut_pocket_depth_mm": 2.7,
+    "minimum_top_nut_to_outer_shell_mm": 0.87,
+    "yaw_driver_envelope_diameter_mm": 5.9,
+    "rear_yaw_driver_extra_radial_clearance_mm": 2.0,
+    "reinforcement": "solid positive-Y servo-tab block, two negative-Y arms, and two rear upper-bearing root buttresses",
+    "reinforcement_arm_count": 3,
+    "upper_arm_screw_access_diameter_mm": 6.5,
+    "servo_holder_foot_y_range_mm": [
+      -23.65,
+      24.25
+    ],
+    "servo_holder_foot_center_y_mm": 0.3,
+    "servo_center_y_mm": 0.5,
+    "servo_holder_center_error_mm": 0.2,
+    "positive_tab_block_inside_holder_outline_mm": 0.35,
+    "positive_tab_block_x_range_mm": [
+      -0.5,
+      23.8
+    ],
+    "positive_tab_block_y_range_mm": [
+      15.65,
+      23.9
+    ],
+    "positive_tab_block_z_range_mm": [
+      4.0,
+      36.7
+    ],
+    "positive_tab_driver_diameter_mm": 6.8,
+    "lower_rail_z_range_mm": [
+      4.0,
+      10.0
+    ],
+    "upper_rail_z_range_mm": [
+      27.5,
+      35.8
+    ],
+    "upper_bearing_buttress_z_range_mm": [
+      34.5,
+      44.0
+    ],
+    "upper_bearing_buttress_outer_radius_mm": 25.1,
+    "upper_bearing_buttress_front_x_mm": -7.5,
+    "reinforcement_volume_mm3": 17467.5
+  },
+  "sweep": {
+    "limit_deg": -110.0,
+    "contact_vs_own_stack": {
+      "deg": -125.0,
+      "part": "chorn_clamp_cnc"
+    },
+    "contact_vs_plate_by_yaw": {
+      "-35.0": {
+        "deg": -117.5,
+        "part": "chorn_clamp_cnc"
+      },
+      "-20.0": {
+        "deg": -117.5,
+        "part": "chorn_clamp_cnc"
+      },
+      "0.0": {
+        "deg": -117.5,
+        "part": "chorn_clamp_cnc"
+      },
+      "20.0": {
+        "deg": -117.5,
+        "part": "chorn_clamp_cnc"
+      },
+      "35.0": {
+        "deg": -117.5,
+        "part": "chorn_clamp_cnc"
+      }
+    }
+  }
+}

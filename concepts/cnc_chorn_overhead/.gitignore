@@ -1,0 +1,4 @@
+# STEP-first pipeline outputs (regenerate with build_cnc_chorn_step.py,
+# which make_cnc_chorn_variant.py runs for you)
+/step/
+__pycache__/

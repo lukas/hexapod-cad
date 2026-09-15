@@ -1,0 +1,213 @@
+{
+ "name": "dovetail coxa quick-release \u2014 fit coupons",
+ "source": "make_dovetail_coupons.py",
+ "units": "mm",
+ "center": [
+  0,
+  0,
+  0
+ ],
+ "meshes": [
+  {
+   "id": "stl:male",
+   "name": "dovetail_male_nominal.stl",
+   "url": "stl/dovetail_male_nominal.stl"
+  },
+  {
+   "id": "stl:pin",
+   "name": "pin_d4x22.stl",
+   "url": "stl/pin_d4x22.stl"
+  },
+  {
+   "id": "stl:female10",
+   "name": "dovetail_female_c10.stl",
+   "url": "stl/dovetail_female_c10.stl"
+  },
+  {
+   "id": "stl:female20",
+   "name": "dovetail_female_c20.stl",
+   "url": "stl/dovetail_female_c20.stl"
+  },
+  {
+   "id": "stl:female30",
+   "name": "dovetail_female_c30.stl",
+   "url": "stl/dovetail_female_c30.stl"
+  }
+ ],
+ "instances": [
+  {
+   "id": "male-assembled",
+   "meshId": "stl:male",
+   "name": "hub side (stays bolted to horn)",
+   "partType": "dovetail_male",
+   "role": "concept",
+   "leg": null,
+   "joint": null,
+   "cots": false,
+   "color": "#4878b0",
+   "transform": [
+    1,
+    0,
+    0,
+    0,
+    0,
+    1,
+    0,
+    0,
+    0,
+    0,
+    1,
+    0,
+    0.0,
+    0.0,
+    0.0,
+    1
+   ]
+  },
+  {
+   "id": "female-assembled",
+   "meshId": "stl:female10",
+   "name": "leg side, seated (c=0.10)",
+   "partType": "dovetail_female",
+   "role": "concept",
+   "leg": null,
+   "joint": null,
+   "cots": false,
+   "color": "#c44e52",
+   "transform": [
+    1,
+    0,
+    0,
+    0,
+    0,
+    1,
+    0,
+    0,
+    0,
+    0,
+    1,
+    0,
+    0.0,
+    0.0,
+    8.0,
+    1
+   ]
+  },
+  {
+   "id": "pin-assembled",
+   "meshId": "stl:pin",
+   "name": "phi4 lock pin",
+   "partType": "pin",
+   "role": "concept",
+   "leg": null,
+   "joint": null,
+   "cots": false,
+   "color": "#9aa0a6",
+   "transform": [
+    1,
+    0,
+    0,
+    0,
+    0,
+    1,
+    0,
+    0,
+    0,
+    0,
+    1,
+    0,
+    -4.0,
+    0.0,
+    12.0,
+    1
+   ]
+  },
+  {
+   "id": "female-c20",
+   "meshId": "stl:female20",
+   "name": "fit coupon c=0.20 (2 notches)",
+   "partType": "dovetail_female",
+   "role": "concept",
+   "leg": null,
+   "joint": null,
+   "cots": false,
+   "color": "#dd8452",
+   "transform": [
+    1,
+    0,
+    0,
+    0,
+    0,
+    1,
+    0,
+    0,
+    0,
+    0,
+    1,
+    0,
+    0.0,
+    60.0,
+    0.0,
+    1
+   ]
+  },
+  {
+   "id": "female-c30",
+   "meshId": "stl:female30",
+   "name": "fit coupon c=0.30 (3 notches)",
+   "partType": "dovetail_female",
+   "role": "concept",
+   "leg": null,
+   "joint": null,
+   "cots": false,
+   "color": "#e8b04c",
+   "transform": [
+    1,
+    0,
+    0,
+    0,
+    0,
+    1,
+    0,
+    0,
+    0,
+    0,
+    1,
+    0,
+    0.0,
+    -60.0,
+    0.0,
+    1
+   ]
+  },
+  {
+   "id": "pin-spare",
+   "meshId": "stl:pin",
+   "name": "spare pin",
+   "partType": "pin",
+   "role": "concept",
+   "leg": null,
+   "joint": null,
+   "cots": false,
+   "color": "#9aa0a6",
+   "transform": [
+    1,
+    0,
+    0,
+    0,
+    0,
+    1,
+    0,
+    0,
+    0,
+    0,
+    1,
+    0,
+    40.0,
+    0.0,
+    11.0,
+    1
+   ]
+  }
+ ]
+}

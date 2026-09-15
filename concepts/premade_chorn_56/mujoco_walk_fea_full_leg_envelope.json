@@ -1,0 +1,635 @@
+{
+  "build": "prototype_sts3215/premade-chorn-56",
+  "forceN": 92.2,
+  "impactG": 3.0,
+  "material": {
+    "name": "PETG 25% infill",
+    "youngMPa": 900.0,
+    "poisson": 0.36,
+    "yieldMPa": 22.66
+  },
+  "materialMap": {
+    "path": "/Users/lukas/hexapod/hexapod_walker/prototype_sts3215/concepts/premade_chorn_56/fea_materials.json",
+    "rules": [
+      {
+        "parts": "^chorn_clamp_cnc$",
+        "elementMm": 0.7,
+        "meshStrategy": "auto",
+        "firstOrder": false,
+        "mujocoAxis": "knee",
+        "material": {
+          "name": "unknown aluminum C-horn; conservative allowable",
+          "youngMPa": 69000.0,
+          "poisson": 0.33,
+          "yieldMPa": 110.0,
+          "assumption": "Alloy and temper are unverified; 110 MPa is used instead of 6061-T6 yield."
+        }
+      },
+      {
+        "parts": "^tibia_tube_ovh$",
+        "elementMm": 0.8,
+        "meshStrategy": "auto",
+        "firstOrder": false,
+        "material": {
+          "name": "carbon tube isotropic bending proxy",
+          "youngMPa": 55000.0,
+          "poisson": 0.25,
+          "yieldMPa": 300.0,
+          "assumption": "Conservative longitudinal bending allowable for an unverified 8 mm OD / 6 mm ID tube; not a laminate or socket-crush model."
+        }
+      },
+      {
+        "parts": "^foot_boot$",
+        "elementMm": 0.8,
+        "meshStrategy": "auto",
+        "firstOrder": false,
+        "material": {
+          "name": "TPU 95A linear secant proxy",
+          "youngMPa": 25.0,
+          "poisson": 0.45,
+          "yieldMPa": 7.0,
+          "assumption": "Linear small-strain proxy for a hyperelastic printed boot; stress utilization is screening-only and displacement is approximate."
+        }
+      }
+    ]
+  },
+  "mujocoReport": {
+    "path": [
+      "/Users/lukas/hexapod/hexapod_walker/prototype_sts3215/concepts/premade_chorn_56/mujoco_walk_loads.json",
+      "fea/reports/onshape_study_loads.json"
+    ],
+    "stat": "max",
+    "axes": {
+      "yaw": {
+        "bend_nm": 2.856,
+        "tau_nm": 2.2,
+        "force_n": 50.7152
+      },
+      "pitch": {
+        "bend_nm": 3.291,
+        "tau_nm": 2.2,
+        "force_n": 50.7152
+      },
+      "knee": {
+        "bend_nm": 3.757,
+        "tau_nm": 2.2,
+        "force_n": 50.7152
+      }
+    },
+    "footN": 50.7152,
+    "meta": {
+      "ckpt": "ppo_goal_cw_walk_longdist_r2.zip",
+      "vx_cmd": null,
+      "mass_kg": 3.708,
+      "dr_scale": 0.0,
+      "variant": "rigid_hip",
+      "seeds": [
+        0
+      ],
+      "study": "artifacts/strength/onshape/mujoco_onshape_study_manifest.json"
+    }
+  },
+  "parts": [
+    {
+      "partType": "chorn_clamp_cnc",
+      "instances": 12,
+      "measured": true,
+      "maxVonMisesMPa": 127.57,
+      "maxDeflectionMm": 0.227,
+      "safetyFactor": 0.86,
+      "verdict": "FAILS",
+      "material": {
+        "name": "unknown aluminum C-horn; conservative allowable",
+        "youngMPa": 69000.0,
+        "poisson": 0.33,
+        "yieldMPa": 110.0,
+        "assumption": "Alloy and temper are unverified; 110 MPa is used instead of 6061-T6 yield."
+      },
+      "loadDescription": "78 N mj walk bend scrub [knee 3.76 N*m max] at L0 femur six-hole receiver + clamp nut traps (NEW) joint",
+      "cases": [
+        {
+          "name": "mj walk bend lift [knee 3.76 N*m max]",
+          "forceN": 77.6,
+          "maxVonMisesMPa": 17.85,
+          "maxDeflectionMm": 0.009,
+          "safetyFactor": 6.16
+        },
+        {
+          "name": "mj walk bend scrub [knee 3.76 N*m max]",
+          "forceN": 77.6,
+          "maxVonMisesMPa": 127.57,
+          "maxDeflectionMm": 0.227,
+          "safetyFactor": 0.86
+        },
+        {
+          "name": "mj rise/lower tau [knee 2.20 N*m max]",
+          "forceN": 45.4,
+          "maxVonMisesMPa": 10.45,
+          "maxDeflectionMm": 0.005,
+          "safetyFactor": 10.53
+        },
+        {
+          "name": "mj walk/rise joint force [51 N max]",
+          "forceN": 50.7,
+          "maxVonMisesMPa": 12.0,
+          "maxDeflectionMm": 0.014,
+          "safetyFactor": 9.16
+        }
+      ],
+      "hotspots": [
+        {
+          "node": 21127,
+          "positionMm": [
+            131.26,
+            103.96,
+            43.89
+          ],
+          "vonMisesMPa": 127.57
+        },
+        {
+          "node": 4795,
+          "positionMm": [
+            157.53,
+            59.31,
+            42.54
+          ],
+          "vonMisesMPa": 109.52
+        },
+        {
+          "node": 8989,
+          "positionMm": [
+            163.06,
+            113.94,
+            61.67
+          ],
+          "vonMisesMPa": 56.28
+        },
+        {
+          "node": 8569,
+          "positionMm": [
+            182.48,
+            82.78,
+            59.02
+          ],
+          "vonMisesMPa": 48.69
+        },
+        {
+          "node": 68801,
+          "positionMm": [
+            183.59,
+            74.36,
+            65.45
+          ],
+          "vonMisesMPa": 42.69
+        }
+      ]
+    },
+    {
+      "partType": "femur_ovh_body",
+      "instances": 6,
+      "measured": true,
+      "maxVonMisesMPa": 23.93,
+      "maxDeflectionMm": 2.272,
+      "safetyFactor": 0.95,
+      "verdict": "FAILS",
+      "material": {
+        "name": "PETG 25% infill",
+        "youngMPa": 900.0,
+        "poisson": 0.36,
+        "yieldMPa": 22.66
+      },
+      "loadDescription": "85 N mj walk bend lift [knee 3.76 N*m max] at L0 knee driven 7 mm spacer (NEW) joint",
+      "cases": [
+        {
+          "name": "mj walk bend lift [knee 3.76 N*m max]",
+          "forceN": 85.3,
+          "maxVonMisesMPa": 23.93,
+          "maxDeflectionMm": 2.272,
+          "safetyFactor": 0.95
+        },
+        {
+          "name": "mj walk bend scrub [knee 3.76 N*m max]",
+          "forceN": 85.3,
+          "maxVonMisesMPa": 9.53,
+          "maxDeflectionMm": 1.821,
+          "safetyFactor": 2.38
+        },
+        {
+          "name": "mj rise/lower tau [knee 2.20 N*m max]",
+          "forceN": 50.0,
+          "maxVonMisesMPa": 14.01,
+          "maxDeflectionMm": 1.331,
+          "safetyFactor": 1.62
+        },
+        {
+          "name": "mj walk/rise joint force [51 N max]",
+          "forceN": 50.7,
+          "maxVonMisesMPa": 12.03,
+          "maxDeflectionMm": 1.097,
+          "safetyFactor": 1.88
+        }
+      ],
+      "hotspots": [
+        {
+          "node": 15041,
+          "positionMm": [
+            211.02,
+            99.83,
+            64.18
+          ],
+          "vonMisesMPa": 23.93
+        },
+        {
+          "node": 9392,
+          "positionMm": [
+            179.08,
+            121.91,
+            49.63
+          ],
+          "vonMisesMPa": 6.96
+        },
+        {
+          "node": 10097,
+          "positionMm": [
+            188.3,
+            82.26,
+            76.87
+          ],
+          "vonMisesMPa": 6.94
+        },
+        {
+          "node": 14809,
+          "positionMm": [
+            208.87,
+            108.39,
+            58.08
+          ],
+          "vonMisesMPa": 4.59
+        },
+        {
+          "node": 17015,
+          "positionMm": [
+            221.15,
+            105.68,
+            69.21
+          ],
+          "vonMisesMPa": 4.59
+        }
+      ]
+    },
+    {
+      "partType": "foot_boot",
+      "instances": 6,
+      "measured": true,
+      "maxVonMisesMPa": 5.01,
+      "maxDeflectionMm": 0.629,
+      "safetyFactor": 1.4,
+      "verdict": "MARGINAL",
+      "material": {
+        "name": "TPU 95A linear secant proxy",
+        "youngMPa": 25.0,
+        "poisson": 0.45,
+        "yieldMPa": 7.0,
+        "assumption": "Linear small-strain proxy for a hyperelastic printed boot; stress utilization is screening-only and displacement is approximate."
+      },
+      "loadDescription": "51 N mj foot ground force [51 N max] at free end",
+      "cases": [
+        {
+          "name": "mj foot ground force [51 N max]",
+          "forceN": 50.7,
+          "maxVonMisesMPa": 5.01,
+          "maxDeflectionMm": 0.629,
+          "safetyFactor": 1.4
+        }
+      ],
+      "hotspots": [
+        {
+          "node": 17523,
+          "positionMm": [
+            303.12,
+            173.55,
+            -52.39
+          ],
+          "vonMisesMPa": 5.01
+        },
+        {
+          "node": 855,
+          "positionMm": [
+            306.99,
+            170.46,
+            -58.0
+          ],
+          "vonMisesMPa": 3.54
+        },
+        {
+          "node": 714,
+          "positionMm": [
+            302.0,
+            173.35,
+            -61.31
+          ],
+          "vonMisesMPa": 2.68
+        },
+        {
+          "node": 17744,
+          "positionMm": [
+            302.98,
+            169.91,
+            -54.36
+          ],
+          "vonMisesMPa": 2.56
+        },
+        {
+          "node": 17922,
+          "positionMm": [
+            299.68,
+            174.53,
+            -54.85
+          ],
+          "vonMisesMPa": 2.53
+        }
+      ]
+    },
+    {
+      "partType": "tibia_ovh_socket",
+      "instances": 6,
+      "measured": true,
+      "maxVonMisesMPa": 15.48,
+      "maxDeflectionMm": 0.147,
+      "safetyFactor": 1.46,
+      "verdict": "MARGINAL",
+      "material": {
+        "name": "PETG 25% infill",
+        "youngMPa": 900.0,
+        "poisson": 0.36,
+        "yieldMPa": 22.66
+      },
+      "loadDescription": "244 N mj walk bend lift [knee 3.76 N*m max] at L0 tibia tube (shortened) joint",
+      "cases": [
+        {
+          "name": "mj walk bend lift [knee 3.76 N*m max]",
+          "forceN": 244.0,
+          "maxVonMisesMPa": 15.48,
+          "maxDeflectionMm": 0.147,
+          "safetyFactor": 1.46
+        },
+        {
+          "name": "mj walk bend scrub [knee 3.76 N*m max]",
+          "forceN": 244.0,
+          "maxVonMisesMPa": 15.36,
+          "maxDeflectionMm": 0.154,
+          "safetyFactor": 1.48
+        },
+        {
+          "name": "mj rise/lower tau [knee 2.20 N*m max]",
+          "forceN": 142.9,
+          "maxVonMisesMPa": 9.06,
+          "maxDeflectionMm": 0.086,
+          "safetyFactor": 2.5
+        },
+        {
+          "name": "mj walk/rise joint force [51 N max]",
+          "forceN": 50.7,
+          "maxVonMisesMPa": 2.68,
+          "maxDeflectionMm": 0.021,
+          "safetyFactor": 8.45
+        }
+      ],
+      "hotspots": [
+        {
+          "node": 10518,
+          "positionMm": [
+            244.79,
+            138.79,
+            38.37
+          ],
+          "vonMisesMPa": 15.48
+        },
+        {
+          "node": 25105,
+          "positionMm": [
+            240.81,
+            126.83,
+            30.25
+          ],
+          "vonMisesMPa": 15.36
+        },
+        {
+          "node": 9831,
+          "positionMm": [
+            235.71,
+            144.86,
+            34.32
+          ],
+          "vonMisesMPa": 14.9
+        },
+        {
+          "node": 24918,
+          "positionMm": [
+            232.08,
+            131.42,
+            26.24
+          ],
+          "vonMisesMPa": 13.81
+        },
+        {
+          "node": 10927,
+          "positionMm": [
+            231.31,
+            141.51,
+            28.34
+          ],
+          "vonMisesMPa": 6.51
+        }
+      ]
+    },
+    {
+      "partType": "coxa_link_ovh",
+      "instances": 6,
+      "measured": true,
+      "maxVonMisesMPa": 14.6,
+      "maxDeflectionMm": 3.933,
+      "safetyFactor": 1.55,
+      "verdict": "MARGINAL",
+      "material": {
+        "name": "PETG 25% infill",
+        "youngMPa": 900.0,
+        "poisson": 0.36,
+        "yieldMPa": 22.66
+      },
+      "loadDescription": "54 N mj walk bend lift [pitch 3.29 N*m max] at L0 hip driven 7 mm spacer (NEW), L0 hip servo joint",
+      "cases": [
+        {
+          "name": "mj walk bend lift [pitch 3.29 N*m max]",
+          "forceN": 54.4,
+          "maxVonMisesMPa": 14.6,
+          "maxDeflectionMm": 3.933,
+          "safetyFactor": 1.55
+        },
+        {
+          "name": "mj walk bend scrub [pitch 3.29 N*m max]",
+          "forceN": 54.4,
+          "maxVonMisesMPa": 12.07,
+          "maxDeflectionMm": 2.504,
+          "safetyFactor": 1.88
+        },
+        {
+          "name": "mj rise/lower tau [pitch 2.20 N*m max]",
+          "forceN": 36.4,
+          "maxVonMisesMPa": 9.76,
+          "maxDeflectionMm": 2.629,
+          "safetyFactor": 2.32
+        },
+        {
+          "name": "mj walk/rise joint force [51 N max]",
+          "forceN": 50.7,
+          "maxVonMisesMPa": 13.74,
+          "maxDeflectionMm": 3.595,
+          "safetyFactor": 1.65
+        }
+      ],
+      "hotspots": [
+        {
+          "node": 3758,
+          "positionMm": [
+            69.78,
+            59.22,
+            52.73
+          ],
+          "vonMisesMPa": 14.6
+        },
+        {
+          "node": 3003,
+          "positionMm": [
+            86.18,
+            30.82,
+            52.73
+          ],
+          "vonMisesMPa": 13.44
+        },
+        {
+          "node": 271,
+          "positionMm": [
+            69.87,
+            40.34,
+            59.76
+          ],
+          "vonMisesMPa": 10.45
+        },
+        {
+          "node": 731,
+          "positionMm": [
+            66.78,
+            48.02,
+            51.56
+          ],
+          "vonMisesMPa": 7.08
+        },
+        {
+          "node": 3269,
+          "positionMm": [
+            81.49,
+            38.94,
+            59.76
+          ],
+          "vonMisesMPa": 6.97
+        }
+      ]
+    },
+    {
+      "partType": "tibia_tube_ovh",
+      "instances": 6,
+      "measured": true,
+      "maxVonMisesMPa": 188.63,
+      "maxDeflectionMm": 1.02,
+      "safetyFactor": 1.59,
+      "verdict": "MARGINAL",
+      "material": {
+        "name": "carbon tube isotropic bending proxy",
+        "youngMPa": 55000.0,
+        "poisson": 0.25,
+        "yieldMPa": 300.0,
+        "assumption": "Conservative longitudinal bending allowable for an unverified 8 mm OD / 6 mm ID tube; not a laminate or socket-crush model."
+      },
+      "loadDescription": "42 N mj walk bend lift [knee 3.76 N*m max] at L0 foot boot joint",
+      "cases": [
+        {
+          "name": "mj walk bend lift [knee 3.76 N*m max]",
+          "forceN": 42.1,
+          "maxVonMisesMPa": 188.63,
+          "maxDeflectionMm": 1.02,
+          "safetyFactor": 1.59
+        },
+        {
+          "name": "mj walk bend scrub [knee 3.76 N*m max]",
+          "forceN": 42.1,
+          "maxVonMisesMPa": 186.35,
+          "maxDeflectionMm": 1.02,
+          "safetyFactor": 1.61
+        },
+        {
+          "name": "mj rise/lower tau [knee 2.20 N*m max]",
+          "forceN": 24.6,
+          "maxVonMisesMPa": 110.46,
+          "maxDeflectionMm": 0.597,
+          "safetyFactor": 2.72
+        },
+        {
+          "name": "mj walk/rise joint force [51 N max]",
+          "forceN": 50.7,
+          "maxVonMisesMPa": 142.03,
+          "maxDeflectionMm": 0.79,
+          "safetyFactor": 2.11
+        }
+      ],
+      "hotspots": [
+        {
+          "node": 9955,
+          "positionMm": [
+            248.78,
+            141.52,
+            11.74
+          ],
+          "vonMisesMPa": 188.63
+        },
+        {
+          "node": 17986,
+          "positionMm": [
+            258.01,
+            147.23,
+            11.18
+          ],
+          "vonMisesMPa": 80.52
+        },
+        {
+          "node": 3372,
+          "positionMm": [
+            257.0,
+            146.57,
+            0.22
+          ],
+          "vonMisesMPa": 71.02
+        },
+        {
+          "node": 18204,
+          "positionMm": [
+            266.53,
+            151.97,
+            -0.42
+          ],
+          "vonMisesMPa": 61.67
+        },
+        {
+          "node": 6327,
+          "positionMm": [
+            265.39,
+            151.25,
+            -11.21
+          ],
+          "vonMisesMPa": 52.79
+        }
+      ]
+    }
+  ],
+  "failures": []
+}

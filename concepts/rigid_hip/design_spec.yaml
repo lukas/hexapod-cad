@@ -1,0 +1,901 @@
+# Design spec — prototype_sts3215/rigid-hip (CONCEPT BUILD, not
+# production; standalone sts3215-rigid-hip id retired 2026-08-27).
+#
+# User idea, Aug 2026: the production yaw joint rides a 6805-2RS pair in
+# chassis_bottom's tower, but the coxa link + hip servo above it are a
+# cantilever — leg loads twist the hip about the bearing pair.  This
+# variant adds a THIRD 6805 per leg above the hip: the hip clamp cap is
+# extended up along the yaw axis into an inner-race press boss, and a
+# second full-size (200 mm flat-to-flat) hex plate pockets all six outer
+# races from below.  Each yaw axis becomes simply-supported; the hip
+# servo is held rigidly between the two plates.
+#
+# Every fit reuses a bench-tuned production constant (YAW_HUB_BOSS_OD
+# press boss, YAW_TOWER_BORE_OD race pocket, YAW_TOWER_SHOULDER_OD
+# retaining lip, YAW_TOWER_WALL ring wall).
+#
+# Measured trade-off (build-time sweep in make_rigid_hip_variant.py):
+# the plate caps femur up-swing at -47.5 deg (production workspace
+# allowed -80).  Walking near STANCE_FEMUR_DEG = -25 keeps ~22 deg of
+# headroom; deep tucks (stand-up belly curl) must be re-checked before
+# this goes on the robot.
+#
+# Bearing count (user, Aug 24: "one bearing on the bottom -- simplify"):
+# ONE bottom bearing per leg, seated in the tower's phi 37.15 press
+# bore.  The bolt-on yaw_bearing_cap is DELETED (-6 prints, -18 M3
+# screws): its radial-housing job moves to the tower press band, its
+# retention job splits by direction (hanging loads: hub seat ring ->
+# inner race -> outer race -> deck-level tower ledge; standing loads:
+# up through the TOP bearing into the plate shoulder).  The coxa hub
+# grows a phi 29 seat ring down to the relocated race top (the coxa
+# is already a variant print).  Bearing couple ~56 mm mid-plane to
+# mid-plane (invariant: both races drop together).  Net 12 bearings
+# per robot, same as production.
+#
+# BEARING ON THE DECK (user, Aug 25: "why cant the bearing come down
+# even more and be right on top of the servo?  Worry about the screws
+# last -- I can buy any type of screw and shorter ones would be
+# better").  The Aug 24 build kept the race at the production seat
+# (world 15.75) believing the spinning inner ring had to clear a
+# static horn below -- but the horn ROTATES with the coxa (the
+# static/rotating boundary is outer race + tower vs everything
+# inside) and the real phi 20 disc is recessed BELOW the deck (world
+# 4.25..6.25).  The race now sits with its bottom 0.5 mm over the
+# servo-mount deck top / servo case top (world 10.75..17.75): the
+# inner race presses on the SAME bench-tuned phi 25.15 hub boss band,
+# just 5 mm lower on the same cylinder (no new collar -- production
+# already runs that boss to the deck plane), and the outer race sits
+# on a 0.5 mm-proud phi 34/phi 37.15 ledge (the production shoulder
+# relief, bored out above) standing directly on the 4 mm deck.  The
+# tower's phi 44 column now ends at world 17.75 (7.5 mm tall above
+# the deck).  A small phi 38 DUST BRIM hovers 0.5 above the rim/race
+# plane, stepped 3 mm inside the tower OD.  Stack (world z): deck /
+# case top 10.25 -> race seat ledge 10.75 -> race + rim top 17.75 ->
+# brim 18.25..20.25 -> coxa hub above.  Non-contact everywhere.  The
+# floor is physical: to go lower the servo must sink into the
+# chassis.
+#
+# Coxa column shortened (user, Aug 24 rev 3: the band ~25..40 above
+# the deck was "largely unnecessary"; rev 4: "shorten the screws
+# thats fine, that middle section is pointless"; Aug 25: screws are
+# a free variable -- shortest wins): the production coxa's phi 52.4
+# dust-lip skirt + 6 mm platform disc (world ~29..39 -- a dust guard
+# for the vacated production upper-bearing position) are DELETED,
+# the yaw-horn screws swap M3x30 -> M3x20 (PURCHASED-HARDWARE
+# CHANGE, 30x per robot; every seat plane 10 mm deeper so tip depth
+# / horn thread engagement is production-identical), the hub boss is
+# truncated at coxa-local 4.75, and the cradle slab + hip servo drop
+# COL_DROP = 14 mm as one rigid body.  The well floor lands 1.25 mm
+# over the M3x20 heads (head tops world 26.0) -- the minimum for
+# this screw stack; M3x16 would put the rotating slab below the
+# static tower rim.  Stack (world z, production -> variant): slab
+# underside 33.25 -> 19.25 (1.5 over the rim), well floor
+# 41.25 -> 27.25, hip axis 53.65 -> 39.65, cap face 75.55 -> 61.55,
+# top-plate race seat 81.05 -> 67.05, top sheet
+# 88.05..92.05 -> 74.05..80.05 (sheet underside pinned to the race
+# top; 6 mm thick since the Aug-26 thickening).  The femur
+# up-limit is unchanged (-47.5, re-swept): plate and femur pivot
+# dropped together.
+#
+# NO PILLARS (user, Aug 26 pm: "I actually think its sturdy enough
+# without the columns and the columns can be removed"): the six
+# Aug-23 rim columns, their 18 printed foot holes and the dedicated
+# frame screws are deleted.  The top-to-bottom tie is the bearing
+# sandwich itself (each hip's two 6805s + the other five legs'
+# towers) plus the four central standoffs through the hatch.  The
+# hatch screws moved to rho 78 and thread into M3 heat-set inserts
+# in six phi 10 bosses under the frame sheet, installed from below.
+# With the pillars gone the plate alone carries the hip-moment
+# couple, so it thickened 50% (user, Aug 26 pm): 4 -> 6 mm, growing
+# UP from the pinned 74.05 underside (deck face 78.05 -> 80.05).
+# The dust roof scaled with it (1.6 -> 2.4) and the hatch screws
+# grew M3x14 -> M3x16; the hatch lid stays 4 mm (not in the bearing
+# load path).
+#
+# Chassis variant (user, Aug 24: "round the corners on the chassis
+# bottom below where the bearings go"; rev 2: "the multiple curves
+# should all match"): chassis_bottom_rigid trims the six square tower
+# platforms to the tower's own phi 44 cylinder (one matching curve
+# from belly to bearing pocket), raises the six tower rims to the
+# race-top plane, and shaves the dead cap-bolt ear lugs
+# (outboard + tangential; the inboard one stays merged with the well
+# collar).  All remaining
+# functional surfaces stay production geometry.
+#
+# Wire corridors + cradle shells flattened (rev 5 user, Aug 24: "that
+# CRADLE WALL isnt doing shit, just flatten it out and its fine" /
+# "its flatening random bumps in the top of the chassis plate that
+# serve no purpose"; rev 6 user, Aug 25: "how are there still these
+# two gray things from the waygo sticking up on each side of the
+# column"): rev 5 cut the wago-era apparatus inboard of each seated
+# yaw servo -- the cradle end wall (leg-frame x 61.5..64.5, full
+# height, 0.3 mm off the servo end face, wire notch at |y| <= 3.5),
+# the porch canopy skin over the floorless harness corridor, and the
+# inboard side-wall stubs -- back to the bare sheet with a box ending
+# at x 64.65.  Rev 6 extends the box to the yaw axis minus the tower
+# keep cylinder (x 50..100, |y| <= 20.5, z 2 -> 12, keep r 21.95),
+# removing the remaining cradle-shell run whose ends stood at each
+# corner flat: 5.6 mm side walls at |y| 13.2..18.9
+# (0.85 mm off the case flanks) plus the 2.2 mm deck-skin roof they
+# carried (hovering 1.8 mm above the real case top at z 6.25 --
+# measured: nothing bears on it, it registers nothing).  The servo is
+# registered by the sheet-level well (z 0..2, 0.75 mm/side), the
+# belly-bolted yaw_servo_retainer (plate pilots at x 71/87.5, |y| 21,
+# z -2..1 -- outside the cut in every axis) and the shell inside the
+# keep cylinder, which also carries the 6805 seat's inboard arc over
+# the servo tunnel.
+#
+# ABOVE-SHEET WHITELIST (rev 8 user, Aug 25: "get rid of these L
+# shaped bumps I circled in red ... all of them, not just the ones i
+# circled"): every earlier pass was a blacklist and every pass left
+# something standing (rev 8's L-stubs were the STEP sidecar's stale
+# two-bay WAGO3 tray side walls, which the WAGO5-sized tray-delete
+# cutter missed at all six corners; the mesh pipeline was already
+# clean).  The rule is now a whitelist: above the bare sheet top
+# (z 2) the ONLY material allowed is the six tower cylinders
+# (r <= 22.02 about each yaw axis) -- the deck-plateau category
+# measured degenerate (the functional deck lives inside the tower
+# keep cylinder) and the mates category measured empty (retainer
+# bolts from below; wago block is taped; nothing else stands on the
+# plate since the pillars were deleted).  One global cut enforces it in BOTH
+# pipelines, and a vertex census (chassis_whitelist_violations)
+# asserts it on every mesh build and on the STEP-derived STL.
+#
+# PIPELINE (STEP-FIRST, user Aug 25: "the official way is to make step
+# files"): the six variant printables are authored as build123d /
+# OpenCascade BREP solids in build_rigid_hip_step.py, which exports
+# .step (the editable CAD truth) + tessellated .stl into step/.
+# make_rigid_hip_variant.py is the assembly/check driver: it runs the
+# exporter, loads the tessellations, runs the geometric check suite,
+# copies the printables into the print set (stl/) and writes the
+# BuildViz scene.  The trimesh twins of the printables are RETIRED;
+# references to "both pipelines" in the history notes above date from
+# the dual-pipeline era.  generated_by.function below names the BREP
+# builder for each part.
+
+parts:
+  hip_clamp_cap_rigid:
+    label: "Hip clamp cap + yaw-axis bearing boss (concept)"
+    aliases: ["rigid hip cap", "extended cap", "boss cap"]
+    description: >-
+      The stock make_servo_clamp_cap() hip clamshell lid grown UP along
+      the yaw axis: a phi 29 pedestal (inner-race seat shoulder, same
+      role as the yaw hub's flange) and a phi 25.15 press boss that the
+      third 6805-2RS presses onto, with a phi 24 x 0.8 stepped lead-in.
+      The stack is coaxial with the YAW axis (cap-local x = 0,
+      z = 15.65), landing on solid flange-bar material >9 mm clear of
+      the two M3 counterbores.  Same 2x M3 mounting into the same coxa
+      cradle pilots; knee caps stay stock.  6 per robot.
+    generated_by:
+      file: "concepts/rigid_hip/build_rigid_hip_step.py"
+      function: "make_hip_clamp_cap_rigid"
+      output_stl: "stl/hip_clamp_cap_rigid.stl"
+    local_frame:
+      origin: "Hip servo well frame (body back-face centre)"
+      axes:
+        x: "Servo body long axis (radial, outboard = +x)"
+        y: "Out of the open well face — world UP at the hip"
+        z: "Hip servo output (pitch) axis direction"
+    features:
+      pedestal:
+        label: "Phi 29 inner-race seat pedestal"
+        kind: "boss"
+        purpose: >-
+          Axial seat for the bearing inner race (phi 29 = the 6805
+          inner-race outer diameter, so the race is fully backed).
+          Height 5.5 mm sets the whole stack; its top face is the race
+          seat plane at world z 67.05 (dropped 14 mm with the
+          shortened coxa column).
+        llm_context: >-
+          Taller pedestal = higher plate = more femur up-range but a
+          longer cantilever inside the bearing and taller standoffs.
+          The build-time sweep prices this trade; re-run it before
+          changing PED_H.
+        dimensions:
+          ped_od:
+            label: "Pedestal OD"
+            value: 29.0
+            code_name: PED_OD
+            description: "= YAW_BEARING_INNER_OD (full inner-race backing)."
+          ped_h:
+            label: "Pedestal height above the cap face"
+            value: 5.5
+            code_name: PED_H
+      press_boss:
+        label: "Phi 25.15 inner-race press boss"
+        kind: "boss"
+        purpose: >-
+          Presses into the 6805 bore with the same +0.15 diametral
+          interference the production yaw hub boss uses
+          (YAW_HUB_BOSS_OD); 6.2 mm press band + 0.8 mm stepped lead-in
+          tip at phi 24.
+        llm_context: >-
+          Print the boss as a VERTICAL cylinder (rest the cap on its
+          tongue face) or the press band gets support scars; the +0.15
+          constant assumes the production boss's bench history.
+        dimensions:
+          boss_od:
+            label: "Press boss OD"
+            value: 25.15
+            code_name: BOSS_OD
+            description: "= YAW_HUB_BOSS_OD, bench-tuned +0.15 press."
+      puller_notches:
+        label: "2x pry slots under the inner race (last resort only)"
+        kind: "relief"
+        purpose: >-
+          The cap is a CAPTIVE BEARING CARRIER: its 6805 is pressed on
+          once and normal service never separates it (the cap unbolts
+          from the coxa instead, via the plate's driver access holes).
+          These two 8 mm-wide, 2.2 mm-deep notches at +/-x expose
+          1.5 mm of the inner race's underside (r 13.0..14.5) purely as
+          last-resort insurance so a worn bearing can still be walked
+          off non-destructively.  Notch floor stays 0.4 mm clear of the
+          phi 25.15 boss root; the remaining seat annulus carries the
+          race with ample area.
+        dimensions:
+          notch_w:
+            label: "Notch width"
+            value: 8.0
+            code_name: PULLER_NOTCH_W
+          notch_depth:
+            label: "Notch depth below the race seat"
+            value: 2.2
+            code_name: PULLER_NOTCH_DEPTH
+
+  chassis_top_rigid:
+    label: "Full-size top chassis FRAME with bearing pockets (concept)"
+    aliases: ["top plate", "second chassis", "bearing plate", "frame"]
+    description: >-
+      A second 200 mm flat-to-flat, 6 mm hex sheet (chassis_bottom's
+      footprint, 50% thicker than its 4 mm sheet since the Aug-26
+      pillar delete left the plate alone in the load path) at world
+      z 74.05..80.05 (underside pinned to the race-top plane; the
+      thickening grew upward).  Six phi 44 full-height
+      bosses — one per yaw axis, half-bulging outboard exactly like the
+      bottom towers — pocket the third bearings' outer races from BELOW
+      at phi 37.15, each retained by a complete 360-deg phi 34
+      shoulder and sealed from above by a thin integral dust roof
+      flush with the deck.  Six phi 10 insert bosses hang under the
+      sheet at the hatch-screw stations (rho 78, vertex azimuths) --
+      M3 heat-set inserts install from below (pillars deleted
+      Aug 26).  The standoff pattern, electronics-deck pattern and
+      centre hole all fell inside the hatch opening and live on the
+      lid.  Replaces the 140 mm chassis_top deck.  1 per robot.
+    generated_by:
+      file: "concepts/rigid_hip/build_rigid_hip_step.py"
+      function: "make_chassis_top_rigid"
+      output_stl: "stl/chassis_top_rigid.stl"
+    local_frame:
+      origin: "World/chassis frame (chassis_bottom sheet mid-plane z=0)"
+      axes:
+        x: "Chassis +x"
+        y: "Chassis +y"
+        z: "Up"
+    features:
+      race_pocket:
+        label: "Phi 37.15 outer-race pocket (x6)"
+        kind: "bore"
+        purpose: >-
+          Downward-opening pocket; the race presses up until its top
+          face hits the phi 34 shoulder (= sheet bottom plane).  0.8 mm
+          lead-in ring at the mouth; ring bottom sits 0.5 mm above the
+          race seat so the shoulder always contacts first.
+        dimensions:
+          pocket_bore:
+            label: "Pocket bore"
+            value: 37.15
+            code_name: POCKET_BORE
+            description: "= YAW_TOWER_BORE_OD, bench-tuned firm finger-press."
+          shoulder_od:
+            label: "Race shoulder bore"
+            value: 34.0
+            code_name: SHOULDER_OD
+            description: "= YAW_TOWER_SHOULDER_OD: retains the outer race, clears the spinning inner race."
+          ring_od:
+            label: "Pocket boss OD"
+            value: 44.0
+            code_name: RING_OD
+            description: "= bearing OD + 2x YAW_TOWER_WALL, same wall as the bottom tower."
+      dust_roof:
+        label: "2.4 mm integral dust roof over each bearing (x6)"
+        kind: "boss"
+        purpose: >-
+          The phi 34 shoulder bore used to run through the sheet,
+          leaving the bearing open to falling dirt (user, Aug 26).
+          The bore now stops 2.4 mm short of the deck, leaving a thin
+          integral roof whose top is FLUSH with the deck face (the
+          whole ring top is one continuous surface).  Thinner than
+          the 6 mm sheet on purpose: the rotating boss lead-in tip
+          stops at the sheet bottom plane, so 3.6 mm of air sits
+          between it and the roof underside (asserted >= 0.5 mm on
+          every rebuild, plus solid/air probes over all six
+          bearings).  Scaled 1.6 -> 2.4 with the Aug-26 sheet
+          thickening.  Printed deck-face down, the roof is bed
+          layers -- no bridging.
+        dimensions:
+          roof_t:
+            label: "Roof thickness"
+            value: 2.4
+            code_name: BR_ROOF_T
+          roof_min_clearance:
+            label: "Min rotating-vs-roof air gap"
+            value: 0.5
+            code_name: BR_ROOF_MIN_CL
+      cap_bolt_access:
+        label: "Phi 7 driver pass-through above each inboard cap bolt (x6)"
+        kind: "bore"
+        purpose: >-
+          With legs at yaw 0 (+/-2 deg) a hex driver reaches the hip
+          cap's INBOARD clamp bolt through the plate (the outboard bolt
+          sits beyond the hex edge under open sky), so the cap + its
+          pressed bearing unbolt from the coxa as one captive unit and
+          the plate lifts off with all six cap/bearing assemblies
+          attached -- no press fit is ever separated in service.
+          Positions derive from hp.servo_clamp_bolt_centres() through
+          the leg placement transforms; build-time checks assert
+          >= 1.74 mm web to the bearing ring, >= 1.5 mm to every other
+          plate hole, and a clear phi 6.5 driver line-of-sight down to
+          the cap counterbore.
+        dimensions:
+          access_hole_d:
+            label: "Access hole diameter"
+            value: 7.0
+            code_name: ACCESS_HOLE_D
+      hatch_opening:
+        label: "Service-hatch opening (hex, 128 across flats)"
+        kind: "cutout"
+        purpose: >-
+          A large hex chunk of the plate middle is removed so the
+          interior stays serviceable (electronics, wiring, the central
+          splice block).  Flats face the bearing rings, keeping a 14 mm web at
+          every ring; vertices reach toward the inter-leg directions
+          where the frame is widest.  The standoff, electronics-deck
+          and centre holes all fell inside the opening and moved onto
+          the removable top_hatch_rigid lid.  The six lid screws pass
+          THROUGH the frame (phi 3.4 clearance) into M3 heat-set
+          inserts in phi 10 bosses hanging under the frame sheet
+          (pillars deleted Aug 26; the opening cutter trims each boss
+          flush at the opening wall so the lid lip keeps its drop-in
+          clearance, and the insert installs from below so screw
+          tension loads it in compression against the sheet).
+        dimensions:
+          opening_apothem:
+            label: "Opening apothem"
+            value: 64.0
+            code_name: HATCH_OPEN_APO
+          screw_rho:
+            label: "Lid screw radius (corner azimuths 0/60/...)"
+            value: 78.0
+            code_name: HATCH_SCREW_RHO
+          frame_boss_od:
+            label: "Under-sheet insert boss diameter"
+            value: 10.0
+            code_name: FRAME_BOSS_OD
+          frame_boss_h:
+            label: "Boss drop below the sheet (= insert bore depth)"
+            value: 6.0
+            code_name: FRAME_BOSS_H
+
+  top_hatch_rigid:
+    label: "Removable service hatch (concept)"
+    aliases: ["hatch", "lid", "access panel", "service cover"]
+    description: >-
+      A 4 mm hex lid (136 across flats) over the frame opening, sitting
+      ON the deck face with a 1.5 mm registration lip dropping just
+      inside the opening (0.3 mm/side clearance; straight drop-in
+      verified at build time).  Held by 6x M3 x 16 button-heads that
+      pass through lid AND the 6 mm frame into brass HEAT-SET INSERTS
+      in phi 10 bosses under the frame sheet (user, Aug 26: the lid
+      cycles on/off constantly, so no screw may cycle a printed
+      thread -- inserts keep full screw clamp preload, i.e. the plate
+      stiffness; the pillar tops that used to host them are deleted),
+      plus the 4 chassis standoff screws (standoff stacks grow to
+      ~78 mm so they anchor the hatch; chassis-hang loads run
+      standoffs -> hatch -> deck face -> frame in pure
+      compression).  Carries the standoff pattern, the electronics-deck
+      pattern and the phi 40 centre hole, so the electronics deck lifts
+      out WITH the lid: 10 screws open the whole interior without
+      touching the frame, bearings or legs.
+    geometry_source:
+      function: "make_top_hatch_rigid"   # concepts/rigid_hip/build_rigid_hip_step.py
+      output_stl: "stl/top_hatch_rigid.stl"
+    local_frame:
+      origin: "World/chassis frame (chassis_bottom sheet mid-plane z=0)"
+      axes:
+        x: "Chassis +x"
+        y: "Chassis +y"
+        z: "Up"
+    features:
+      registration_lip:
+        label: "1.5 mm hex lip into the frame opening"
+        kind: "boss"
+        purpose: >-
+          Registers the lid in shear against the frame opening walls
+          (0.3 mm/side clearance) so the screws only clamp; restores
+          some in-plane panel stiffness to the opened frame.
+        dimensions:
+          lip_h:
+            label: "Lip height"
+            value: 1.5
+            code_name: HATCH_LIP_H
+          lid_apothem:
+            label: "Lid apothem"
+            value: 68.0
+            code_name: HATCH_APO
+
+  centre_wago_block:
+    label: "Central power-splice block (concept)"
+    aliases: ["wago block", "splice block", "power block"]
+    description: >-
+      The six corner Wago trays are deleted (buried under the frame,
+      no lever access; the corner pillars that briefly reused the
+      vacated bays were themselves deleted Aug 26), so the power
+      tree consolidates: 4x 5-port Wago 221-415 in one printed
+      press-fit block at the chassis centre, replacing the 6 corner +
+      2 trunk nuts (8 -> 4).  Two back-to-back rows share the middle wall
+      (north pair = V+, south pair = GND; each net's two nuts are
+      jumpered, leaving battery-in + 6 leg branches + a spare port).
+      Bays reuse the bench-tuned production tray constants (0.15 mm
+      wedge across the port width, 2.4 mm walls stopping ~1.9 mm below
+      the nut top); wire entries face outward so the leg pigtails fan
+      in radially.  Footprint 66.9 x 44.1 mm centred on the origin --
+      probed/asserted on solid sheet between the battery strap slots
+      (2 mm shy of their inner edge y=24), 6+ mm from the standoff
+      posts, west of the battery trunk pass whose leads land in the
+      east ports.  Entirely under the 64 mm hatch opening, levers up;
+      an open lever (z ~22) tops the rotating band floor (slab bottom
+      19.25) but clears every yaw rotating envelope by 21.7 mm
+      RADIALLY (envelopes reach inboard only to r 61.8 -- asserted).
+      Mounted on a VHB pad (the production corner trays' original,
+      bench-proven scheme).  2 mm floor, walls 6.5 above it.  1 per
+      robot, ~11 g.
+    generated_by:
+      file: "concepts/rigid_hip/build_rigid_hip_step.py"
+      function: "make_centre_wago_block"
+      output_stl: "stl/centre_wago_block.stl"
+    local_frame:
+      origin: "World/chassis frame; floor bottom on the sheet top face (z 2)"
+      axes:
+        x: "Chassis +x (rows run along x)"
+        y: "Chassis +y (rows separated in y; entries face +/-y)"
+        z: "Up"
+    features:
+      bays:
+        label: "4x 221-415 press-fit bays"
+        kind: "pocket"
+        purpose: >-
+          Production tray press: bay width WAGO5_W - 0.15 wedges the
+          nut across its ports; back face butts the shared middle
+          wall.  Cross walls run past the bay fronts as ledges, like
+          the production corner trays.
+        dimensions:
+          bay_width:
+            label: "Bay width (block X)"
+            value: 29.85
+            code_name: WBLK_BAY_W
+          bay_depth:
+            label: "Bay depth (block Y)"
+            value: 18.45
+            code_name: WBLK_BAY_D
+
+  wago5:
+    label: "Wago 221-415 5-port lever nut — COTS"
+    description: >-
+      Visual stand-in (30 x 18.6 x 8.4 box), 4 per robot in this
+      variant (was 8: 6 corner + 2 trunk).
+
+  bearing_6805:
+    label: "Top-plate 6805-2RS (25x37x7) — COTS, not printed"
+    description: >-
+      Same bearing as the production yaw joint; it is the 6 upper yaw
+      bearings RELOCATED up to the top plate (2 per leg, 12 per robot,
+      unchanged total).  Modeled with its bore at phi 25.15 (= the boss
+      OD) so the seated scene has zero mesh overlap; the real bore is
+      phi 25 and the 0.15 is the press.
+
+  chassis_bottom:
+    label: "chassis_bottom_rigid — tower-trimmed platforms, deck-level bearing pockets, ears shaved, foot holes, trays deleted, corridors + cradle shells flattened, tower flanks smoothed, above-sheet whitelist (concept)"
+    aliases: ["rigid chassis", "chassis bottom rigid", "rounded chassis"]
+    description: >-
+      The production chassis_bottom with eight variant edits (user,
+      Aug 24: "round the corners on the chassis bottom below where the
+      bearings go"; rev 2: "the multiple curves should all match";
+      rev 3: "remove the wago slots"; rev 4: "the bearing should be
+      just above the horn and the motor should sit just above that").
+      (1) PLATFORM CORNERS: the square outboard platform under each
+      yaw tower (face x 121.2 in the leg frame, half-width 21.25 above
+      the sheet / 18.9 for the belly skirt) poked 8.4 mm diagonally
+      past the phi 44 tower; everything outboard of the hex edge in
+      the platform + skirt band is now TRIMMED to the tower's own
+      cylinder (r 22.02 about the yaw axis, 0.02 proud so the cut
+      never grazes the tower wall).  Every height shows the tower's
+      one curve -- production already had that curve bulging through
+      the platform band, so no new crease appears -- and pocket, seat,
+      well walls and slots are untouched production geometry
+      (asserted every rebuild).  (2) DEAD EARS -- all three: the
+      yaw_bearing_cap is deleted in this variant, so its three M3 ear
+      lugs per tower had no job; the outboard one (which sat ON the
+      trimmed corner) is shaved flush to the tower cylinder, the
+      tangential one flush to the rim-wall face, and the inboard
+      (az 210) column flush to the servo-mount deck top (z 10.25);
+      its below-deck root, once left merged with the deck-skin roof,
+      goes with the rev-6 shell flatten (the ear centre is at r 23.5,
+      outside the tower keep cylinder).  Above the deck nothing pokes
+      past the tower cylinder at any azimuth (asserted).  (3) LOWERED POCKET (Aug 25): the old tower
+      band above the new seat plane -- phi 34 shoulder relief, old
+      pocket, old 15.75 seat -- is cut away, leaving a 0.5 mm-proud
+      phi 34/phi 37.15 step over the deck as the new outer-race seat
+      ledge (world 10.75, standing directly on the 4 mm deck), and a
+      fresh full-wrap phi 44/phi 37.15 ring is unioned from the deck
+      band to the new race-top plane (world 17.75) -- the single
+      bearing is FULLY housed (7 mm outer-race wrap) with its bottom
+      0.5 mm over the servo case top, and the chassis column ends
+      exactly at the bearing top, so the stack reads deck -> bearing
+      -> coxa.  (4) WAGO
+      TRAYS DELETED: the six corner tray wall sets (2.4 mm U-walls,
+      6.5 tall) are dead geometry once the splices consolidated into
+      centre_wago_block, so everything above the sheet top is cut
+      away (the 1 mm embed band inside the sheet stays); the vacated
+      bays are bare sheet (the corner pillars that briefly stood
+      there, with their 18 printed foot holes, were deleted Aug 26).
+      (5+6) WIRE CORRIDORS + CRADLE SHELLS
+      FLATTENED (rev 5 + rev 6, both user decisions overruling
+      keep-verdicts): rev 5 cut the wago-era apparatus inboard of
+      each seated yaw servo (cradle end wall, porch canopy skin,
+      side-wall stubs) back to the bare sheet up to x 64.65; rev 6
+      extends the box to the yaw axis minus the tower keep cylinder
+      (leg-frame x 50..100, |y| <= 20.5, z 2..12, keep r 21.95),
+      removing the cradle-shell walls + deck-skin roof whose ends
+      were the "two gray things" at each corner flat --
+      measured to carry and register nothing.  The servo is
+      registered by the sheet-level well (0.75 mm/side), the
+      belly-bolted retainer and the in-keep shell (which also
+      carries the 6805 seat's inboard arc).  Net -67 cm3 (268 vs
+      335).  (7) TOWER FLANK SMOOTHED (rev 7 user, Aug 25: "remove
+      this weird bump outside the bottom chassis in the part that
+      holds the bearing and make it vertically smooth"): the
+      production +X swing relief spares a protect cylinder 1.5 mm
+      fatter than the tower (r 23.5), which left two phi 47
+      ring-sector arcs per leg on the outboard flank across the
+      mount-plate band (z 6.25..10.25) after the ear/flatten cuts.
+      They carry nothing (working wall, seat and deck all inside
+      r 22; the cap bolts that justified r 23.5 are deleted here),
+      so they are shaved to the corner-trim cylinder: the tower
+      outer profile is ONE vertical cylinder (r 22.00..22.02) from
+      the sheet top to the rim, asserted per rebuild on all six
+      legs.  (8) ABOVE-SHEET WHITELIST (rev 8 user, Aug 25: "get rid
+      of these L shaped bumps ... all of them, not just the ones i
+      circled"): one global cut -- a box from the bare sheet top
+      (z 2) to above the rim, minus the six tower cylinders --
+      removes EVERYTHING standing on the plate outside the towers,
+      at every azimuth, whether or not an earlier blacklist pass
+      named it; applied identically in the mesh and STEP pipelines
+      and enforced by a vertex census asserted on every build.  The
+      whitelist's deck-plateau category is degenerate (the
+      functional deck lives inside the keep cylinder) and its mates
+      category measured empty (retainer bolts from below, wago block
+      taped, nothing else stands on the plate).
+      The Aug-25 lowered pocket makes a stock-print bench mod
+      impractical (it needs the shoulder relief bored out and the
+      tower cut 5 mm shorter); reprint for this variant.
+    generated_by:
+      file: "concepts/rigid_hip/build_rigid_hip_step.py"
+      function: "make_chassis_bottom_rigid"
+      output_stl: "stl/chassis_bottom_rigid.stl"
+    features:
+      corner_trim:
+        label: "Tower-cylinder corner trim (x6 platforms)"
+        kind: "chamfer"
+        purpose: >-
+          Cosmetic cleanup of the square tower platforms (user
+          request, rev 2): the trim IS the tower cylinder continued
+          down through the platform and belly skirt, so all corner
+          curves match at every height.
+        dimensions:
+          radius:
+            label: "Trim radius about the yaw axis (tower r22 + 0.02)"
+            value: 22.02
+            code_name: CHB_TRIM_R
+      lowered_pocket:
+        label: "Deck-level bearing pocket + full-wrap rim (x6)"
+        kind: "boss"
+        purpose: >-
+          The rebuilt phi 44 / phi 37.15 tower ring wraps the full
+          7 mm outer-race width from the deck-level seat ledge (world
+          10.75, a 0.5 mm-proud phi 34 step on the 4 mm deck) to the
+          rim at exactly the race-top plane (world 17.75): nothing
+          stands proud, the bearing sits 0.5 mm over the servo case,
+          the coxa sits directly above the bearing.  Unioned after
+          all variant cuts so the ear shaves never nick it.
+        dimensions:
+          seat_z_world:
+            label: "Seat ledge plane (world z) = race bottom"
+            value: 10.75
+            code_name: CHB_SEAT_W
+          rim_z_world:
+            label: "Rim plane (world z) = bearing top"
+            value: 17.75
+            code_name: CHB_RIM_W
+      flank_shave:
+        label: "Tower-flank bump shave (x6, rev 7)"
+        kind: "cut"
+        purpose: >-
+          Removes the production swing-relief protect ring's leftover
+          arcs (r up to 23.5, z 6.25..10.25) from the tower's
+          outboard flank so the outer profile is one vertical
+          cylinder from the sheet top to the rim.  Same trim radius
+          as the corner trim; the working wall (r <= 22), seat ledge
+          and deck are untouched.  Cylindricity asserted per rebuild
+          (check_chassis_variant, all six legs).
+        dimensions:
+          trim_radius:
+            label: "Flank radius after the shave (= corner trim)"
+            value: 22.02
+            code_name: CHB_TRIM_R
+          band_z0:
+            label: "Bump band bottom (world z, mount-plate underside)"
+            value: 6.25
+            code_name: CHB_PLATE_TOP
+          band_z1:
+            label: "Bump band top (world z, servo-mount deck top)"
+            value: 10.25
+            code_name: CHB_DECK_TOP
+      corridor_flatten:
+        label: "Wire-corridor + cradle-shell flatten (x6, box minus tower keep)"
+        kind: "cut"
+        purpose: >-
+          Removes the purposeless standing material around each
+          seated yaw servo back to the bare sheet: the wago-era
+          corridor bumps (cradle end wall + porch canopy + side-wall
+          stubs -- user decision, Aug 24 rev 5) AND the cradle-shell
+          run outboard of them (5.6 mm side walls 0.85 mm off the
+          case flanks + the 2.2 mm deck-skin roof hovering 1.8 mm
+          over the real case top, whose ends were the "two gray
+          things" at each corner flat -- user decision,
+          Aug 25 rev 6).  Nothing below the sheet-top plane is
+          touched; the servo stays registered by the sheet-level
+          well, the belly retainer (pilots x 71/87.5, |y| 21,
+          in-sheet) and the shell inside the tower keep cylinder.
+          Asserted per rebuild: cut band all air outside the keep,
+          below-plane keeps solid, in-keep shell + pocket floor
+          solid.
+        llm_context: >-
+          The cut is one box per leg MINUS the tower keep cylinder
+          (r CHB_KEEP_R = 21.95 about the yaw axis at x 100).  The
+          keep is structural, not styling: the shell inside it roofs
+          the servo tunnel and carries the inboard arc of the 6805
+          seat ledge (world 10.75).  Shrinking the keep radius would
+          undercut the bearing seat; lowering Z0 below 2.0 would
+          gouge the sheet the servo well passes through.
+        dimensions:
+          x0:
+            label: "Cut inboard face (leg-frame x)"
+            value: 50.0
+            code_name: CHB_FLAT_X0
+          x1:
+            label: "Cut box outboard face (the yaw axis; keep bounds the cut)"
+            value: 100.0
+            code_name: CHB_FLAT_X1
+          half_y:
+            label: "Cut tangential half-width"
+            value: 20.5
+            code_name: CHB_FLAT_HALF_Y
+          z1:
+            label: "Cut top (clears the deck top 10.25)"
+            value: 12.0
+            code_name: CHB_FLAT_Z1
+          keep_r:
+            label: "Tower keep-cylinder radius (6805 seat's inboard-arc support)"
+            value: 21.95
+            code_name: CHB_KEEP_R
+      above_sheet_whitelist:
+        label: "Above-sheet whitelist cut (global, rev 8)"
+        kind: "cut"
+        purpose: >-
+          Structural enforcement of the rev-8 rule: above the bare
+          sheet top (z 2) the ONLY material allowed is the six yaw
+          towers (r <= 22.02 about each yaw axis).  One box from the
+          sheet top to above the rim, minus six keep cylinders,
+          applied in BOTH pipelines before the rim re-union --
+          removes every stub/wall/lip at every azimuth whether or
+          not a blacklist pass ever named it (this is what killed
+          the STEP sidecar's stale two-bay WAGO3 tray walls, the
+          L-shapes in the user's drawing).  A vertex census
+          (chassis_whitelist_violations: no vertex above z 2.05
+          outside every tower cylinder + tolerance) is asserted on
+          every mesh build and on the STEP-derived STL.
+        dimensions:
+          sheet_top_z:
+            label: "Cut bottom (world z, bare sheet top)"
+            value: 2.0
+            code_name: CHB_FLAT_Z0
+          cutter_top_z:
+            label: "Cut top (world z, clears the rim 17.75)"
+            value: 26.0
+            code_name: CHB_WL_Z1
+          keep_r:
+            label: "Whitelist keep radius (trim cylinder + 0.01 air gap)"
+            value: 22.03
+            code_name: CHB_WL_KEEP_R
+          census_tol:
+            label: "Census tolerance over CHB_TRIM_R"
+            value: 0.03
+            code_name: CHB_WL_TOL
+  coxa_link:
+    label: "coxa_link_rigid — rounded corners + seat ring + dust brim + short column (concept)"
+    aliases: ["rigid coxa", "rounded coxa", "coxa link rigid", "servo holder"]
+    description: >-
+      The production coxa_link with four variant edits.  (1) ENVELOPE
+      ROUND: its two servo-cradle corner edges are rounded to a
+      38.2 mm arc about its own yaw axis (ROT_ENVELOPE_R): boolean
+      intersection with the envelope cylinder removes at most 2.16 mm
+      from corners that used to reach 40.36 mm.  Introduced to clear
+      the since-deleted corner pillars (the user chose rounding the
+      servo holder over scalloping the pillar); KEPT after the
+      Aug-26 pillar delete -- it costs nothing, and any future rim
+      furniture inherits the >= 5 mm clearance guarantee (still
+      asserted).  (2) HUB SEAT RING: a phi 29 ring from coxa-local z 2.5
+      (the top of the single bottom bearing, now seated on the
+      chassis tower's deck-level ledge -- Aug 25) up to z 5.0, 1 mm
+      inside the dropped cradle slab; it bears only on the
+      phi 25..29 inner-race land, the same contact the production
+      uflange made higher up, and replaces the deleted
+      yaw_bearing_cap's retention.  The PRESS onto the inner race is
+      the production phi 25.15 wide boss itself, which already spans
+      the relocated race band down to the deck plane -- no new
+      collar, no wall-thickness risk.  (3) DUST BRIM (user, Aug 24
+      rev 2: the earlier phi 44 skirt+curtain continued the tower
+      cylinder and made the joint read as one tall chassis column --
+      deleted): with the tower rim at the race-top plane the
+      bearing is fully housed, so all that remains coxa-side is a
+      phi 38 x 2 mm brim hovering 0.5 above the rim/race plane,
+      stepped 3 mm inside the tower phi 44.  It roofs the 2RS seal +
+      outer-race band and touches nothing; the 0.5 gap rides out
+      print tolerance and bearing play.  (4) SHORT COLUMN (user,
+      Aug 24 rev 3: the band ~25..40 above the deck was "largely
+      unnecessary"; rev 4: "shorten the screws thats fine, that
+      middle section is pointless"; Aug 25: shortest screw wins):
+      the production phi 52.4 dust-lip skirt + 6 mm platform disc
+      are deleted (they guarded the vacated upper-race position),
+      the yaw-horn screws swap M3x30 -> M3x20 with every seat plane
+      10 mm deeper (tip planes and horn thread engagement
+      production-identical -- asserted), the hub boss is truncated
+      at coxa-local 4.75, and the cradle slab + hip servo drop 14 mm
+      as one rigid body, so the servo well floor sits 1.25 mm over
+      the M3x20 heads -- the minimum for this screw stack (M3x16
+      would sink the rotating slab below the static tower rim).
+      Horn drive AT the horn (bolt pattern + tip depths), cradle
+      pilots and cap seat are untouched; the screw head-access
+      shafts and shank clearances are re-cut through the dropped
+      slab from the deeper seat planes.  NOTE: this makes the coxa a
+      VARIANT print (6x) AND a purchased-hardware change (30x M3x20
+      SHCS replace the M3x30s; M3x30s and M3x25s no longer fit),
+      replacing the stock coxa_link on this build.
+    generated_by:
+      file: "concepts/rigid_hip/build_rigid_hip_step.py"
+      function: "make_coxa_link_rigid"
+      output_stl: "stl/coxa_link_rigid.stl"
+    features:
+      envelope_round:
+        label: "Cradle-corner rounding arc"
+        kind: "fillet"
+        purpose: >-
+          Caps the coxa's reach from its yaw axis; kept after the
+          pillar delete as the standing rotating-envelope guarantee.
+        dimensions:
+          envelope_radius:
+            label: "Yaw-axis envelope radius"
+            value: 38.2
+            code_name: ROT_ENVELOPE_R
+      hub_seat_ring:
+        label: "Phi 29 bottom-race seat ring"
+        kind: "boss"
+        purpose: >-
+          Runs from the ledge-seated race top (coxa-local z 2.5) up
+          into the dropped cradle slab (z 5.0, 1 mm past the slab
+          underside) so hanging-leg loads run cradle -> ring -> inner
+          race -> outer race -> deck ledge with no bolt-on cap.  ID 24
+          merges the ring into the boss wall; OD 29 = the inner-race
+          land, 2 mm clear of the phi 33 outer-race band and its seal.
+        dimensions:
+          ring_od:
+            label: "Ring OD (inner-race land)"
+            value: 29.0
+            code_name: HUB_RING_OD
+          ring_z0:
+            label: "Ring underside (coxa-local z) = race top"
+            value: 2.5
+            code_name: HUB_RING_Z0
+      short_column:
+        label: "Shortened hub column (skirt + platform deleted, M3x20 screws, slab dropped)"
+        kind: "cut"
+        purpose: >-
+          Deletes the production phi 52.4 dust-lip skirt + platform
+          disc (a dust guard for the vacated production upper-race
+          position -- the phi 38 brim already roofs the relocated
+          race), swaps the horn screws M3x30 -> M3x20 with the seat
+          planes 10 mm deeper (tips + horn engagement unchanged --
+          check_coxa_column asserts seat drop == length delta),
+          truncates the hub boss 0.75 into the slab, and drops the
+          entire slab + cradle + hip servo unit 14 mm so the well
+          floor sits COL_HEAD_CL over the M3x20 heads.  Lowers the
+          hip axis, cap, top plate and hatch by the same
+          14 mm (shorter, stiffer sandwich).  Verified by
+          check_coxa_column on every rebuild.
+        dimensions:
+          col_drop:
+            label: "Column shrink (whole stack drops by this)"
+            value: 14.0
+            code_name: COL_DROP
+          horn_bolt_len:
+            label: "Yaw-horn screw length (M3x20 SHCS, was M3x30 -- hardware change)"
+            value: 20.0
+            code_name: HORN_BOLT_LEN
+          head_seat_z:
+            label: "Drive-screw head seat (coxa-local z, 10 mm deeper)"
+            value: 7.75
+            code_name: HORN_HEAD_SEAT_Z
+          head_clearance:
+            label: "Well floor clearance over the M3x20 heads"
+            value: 1.25
+            code_name: COL_HEAD_CL
+      dust_brim:
+        label: "Phi 38 non-contact dust brim over the housed race"
+        kind: "shroud"
+        purpose: >-
+          Roofs the 2RS seal + outer-race band, hovering 0.5 above the
+          race-top / tower-rim plane.  Touches neither chassis nor
+          race -- a contact wiper would drag, squeak and wear.  OD 38
+          (race OD + 2x gap) stops 3 mm inside the tower phi 44, so
+          the brim reads as part of the rotating coxa, not as a
+          continuation of the chassis column (the old phi 44 curtain
+          did exactly that and was deleted).
+        dimensions:
+          brim_od:
+            label: "Brim OD (race OD 37 + 2x gap)"
+            value: 38.0
+            code_name: BRIM_OD
+          gap:
+            label: "Running gap over rim and race, axial"
+            value: 0.5
+            code_name: BRIM_GAP
+          brim_bottom_z:
+            label: "Brim underside (coxa-local z; rim/race top at 2.5)"
+            value: 3.0
+            code_name: BRIM_BOT_Z
+  femur_link:
+    label: "Production femur_link (unchanged, reference)"
+    description: "Print from the main stl_prototype/ — unchanged by this variant."
+  tibia_knee_yoke:
+    label: "Production tibia_knee_yoke (unchanged, reference)"
+    description: "Print from the main stl_prototype/ — unchanged by this variant."
+  foot_boot:
+    label: "Production foot_boot (unchanged, reference)"
+    description: "Print from the main stl_prototype/ — unchanged by this variant."
+  knee_clamp_cap:
+    label: "Production servo clamp cap at the KNEE (unchanged)"
+    description: >-
+      The knee keeps the stock cap; only the six HIP caps become
+      hip_clamp_cap_rigid.
+  yaw_servo_retainer:
+    label: "Production yaw servo retainer (unchanged, reference)"
+    description: "Print from the main stl_prototype/ — unchanged by this variant."
+  servo_body:
+    label: "STS3215 servo body — COTS"
+    description: "Visual stand-in, 18 per robot."
+  yaw_bearing_upper:
+    label: "Bottom yaw 6805 — COTS, deck-seated (cap deleted)"
+    description: >-
+      The single bottom bearing per leg, seated in chassis_bottom's
+      phi 37.15 press bore with its bottom 0.5 mm over the servo-mount
+      deck / servo case top (coxa-local z -4.5..2.5, world
+      10.75..17.75; the mesh is the production upper-race model
+      instanced 12 mm down).  Inner race pressed on the hub's
+      phi 25.15 wide boss against the coxa's phi 29 seat ring; outer
+      race radially housed over its FULL 7 mm width by the rebuilt
+      tower ring (rim = race-top plane) and seated on the deck-level
+      phi 34 ledge.  The production yaw_bearing_cap that used to
+      house it is deleted in this variant.
+  tibia_tube:
+    label: "Phi 8 carbon tibia tube — COTS"
+    description: "Unchanged production part."

@@ -1,0 +1,207 @@
+{
+  "schema": 1,
+  "buildId": "prototype_ak40",
+  "branch": "main",
+  "updatedAt": "2026-08-19T21:03:43.864Z",
+  "indexed": [
+    {
+      "name": "main",
+      "sceneSha1": "0449465134b04764797f287b4420aee4cc6a48a6",
+      "pushedAt": "2026-08-14T01:40:27.237Z"
+    }
+  ],
+  "parts": {
+    "chassis_bottom": [
+      {
+        "version": "main",
+        "pushedAt": "2026-08-14T01:40:27.237Z",
+        "changes": [
+          "added"
+        ],
+        "meshKey": "stl/chassis_bottom.stl",
+        "instanceCount": 1,
+        "description": "260 mm flat-to-flat hex deck, 5 mm PETG. Six Ø44 yaw wells at the hex vertices; each AK40 stands on the plate output-DOWN, bolted by 3x M2.5x8 from below into its front-case taps on Ø47.5. Also carries the M3x50 standoff square, per-leg harness slots, battery strap slots, XT90 pass-through. Prints flat, no supports."
+      }
+    ],
+    "chassis_top": [
+      {
+        "version": "main",
+        "pushedAt": "2026-08-14T01:40:27.237Z",
+        "changes": [
+          "added"
+        ],
+        "meshKey": "stl/chassis_top.stl",
+        "instanceCount": 1,
+        "description": "260 mm hex top plate, 4 mm PETG: Ø80 centre access hole, standoff square, Pi 5 mount pattern east of centre."
+      }
+    ],
+    "standoff": [
+      {
+        "version": "main",
+        "pushedAt": "2026-08-14T01:40:27.237Z",
+        "changes": [
+          "added"
+        ],
+        "meshKey": "stl/standoff_m3x50.stl",
+        "instanceCount": 4,
+        "description": "M3 x 50 F-F brass standoff at (+-40, +-40) carrying the plate stack across the 50 mm gap. COTS."
+      }
+    ],
+    "screw_m3x8": [
+      {
+        "version": "main",
+        "pushedAt": "2026-08-14T01:40:27.237Z",
+        "changes": [
+          "added"
+        ],
+        "meshKey": "stl/screw_m3x8.stl",
+        "instanceCount": 8,
+        "description": "Plate-stack screw into the M3x50 F-F standoffs: 4 from below the bottom plate, 4 from above the top plate. COTS."
+      }
+    ],
+    "battery": [
+      {
+        "version": "main",
+        "pushedAt": "2026-08-14T01:40:27.237Z",
+        "changes": [
+          "added"
+        ],
+        "meshKey": "stl/battery_6s.stl",
+        "instanceCount": 1,
+        "description": "6S 5000 mAh LiPo (~155 x 48 x 55) velcro'd under the belly; must stay inside r~95 mm of centre or the swinging hip actuators find it. COTS."
+      }
+    ],
+    "pi5": [
+      {
+        "version": "main",
+        "pushedAt": "2026-08-14T01:40:27.237Z",
+        "changes": [
+          "added"
+        ],
+        "meshKey": "stl/pi5.stl",
+        "instanceCount": 1,
+        "description": "Pi 5 8 GB + active cooler on the top plate; 3x CANable 2.0 USB-CAN hang off it (one bus per leg pair). COTS."
+      }
+    ],
+    "screw_m25x12": [
+      {
+        "version": "main",
+        "pushedAt": "2026-08-14T01:40:27.237Z",
+        "changes": [
+          "added"
+        ],
+        "meshKey": "stl/screw_m25x12.stl",
+        "instanceCount": 4,
+        "description": "Raspberry Pi 5 mount: up through the top plate into the Pi standoff stack (58 x 49 mm hole pattern). COTS."
+      }
+    ],
+    "actuator": [
+      {
+        "version": "main",
+        "pushedAt": "2026-08-14T01:40:27.237Z",
+        "changes": [
+          "added"
+        ],
+        "meshKey": "stl/ak40_actuator.stl",
+        "instanceCount": 18,
+        "description": "CubeMars AK40-10 KV170 QDD: Ø53 x 40.2, 190 g, 1.3/4.1 N*m rated/peak, CAN + MIT mode. Mock cylinder in the viz (with output pilot bore); real interface dims from the official 2D drawing, caliper verification pending."
+      }
+    ],
+    "coxa_link": [
+      {
+        "version": "main",
+        "pushedAt": "2026-08-14T01:40:27.237Z",
+        "changes": [
+          "added"
+        ],
+        "meshKey": "stl/coxa_link.stl",
+        "instanceCount": 6,
+        "description": "One print per leg: Ø40 yaw-output hub (turns inside the chassis Ø44 well, 3x M2.5x6 + Ø14.85 pilot boss into the flange) + arm plate + hip rear-mount wall (Ø37 boss recess, 4x M2.5x8, side gussets). The hip body hangs 1.5 mm below the arm plate -- that clearance set HIP_AXIS_DROP=66."
+      }
+    ],
+    "femur_link": [
+      {
+        "version": "main",
+        "pushedAt": "2026-08-14T01:40:27.237Z",
+        "changes": [
+          "added"
+        ],
+        "meshKey": "stl/femur_link.stl",
+        "instanceCount": 6,
+        "description": "Flat 6 mm plate: hip-flange hub (pilot boss + 3x M2.5x6 counterbored) on one end, knee rear mount (Ø37 recess + 4x M2.5x8) on the other. Actuator bodies alternate sides of the plate, Mini-Cheetah style."
+      }
+    ],
+    "tibia_yoke": [
+      {
+        "version": "main",
+        "pushedAt": "2026-08-14T01:40:27.237Z",
+        "changes": [
+          "added"
+        ],
+        "meshKey": "stl/tibia_yoke.stl",
+        "instanceCount": 6,
+        "description": "Knee-flange hub + web + Ø12 CF tube socket (30 mm epoxied bore, 2x Ø2.5 roll-pin cross-holes). Socket top sits below the Ø53 knee body sweep."
+      }
+    ],
+    "tibia_tube": [
+      {
+        "version": "main",
+        "pushedAt": "2026-08-14T01:40:27.237Z",
+        "changes": [
+          "added"
+        ],
+        "meshKey": "stl/tibia_tube.stl",
+        "instanceCount": 6,
+        "description": "Ø12 x Ø10 roll-wrapped CF tube, 102 mm cut. Epoxied 30 mm into the yoke socket, pinned twice. COTS stock."
+      }
+    ],
+    "foot_boot": [
+      {
+        "version": "main",
+        "pushedAt": "2026-08-14T01:40:27.237Z",
+        "changes": [
+          "added"
+        ],
+        "meshKey": "stl/foot_boot.stl",
+        "instanceCount": 6,
+        "description": "TPU 95A boot pressed over the tube end; Ø11.7 bore = 0.3 mm interference, 18 mm solid rounded tip."
+      }
+    ],
+    "screw_m25x6": [
+      {
+        "version": "main",
+        "pushedAt": "2026-08-14T01:40:27.237Z",
+        "changes": [
+          "added"
+        ],
+        "meshKey": "stl/screw_m25x6.stl",
+        "instanceCount": 54,
+        "description": "Flange-hub screw: 3 per output flange (Ø27 PCD, M2.5 tapped x3 deep). 6 mm length gives 3.0 mm grip through the printed hub cb + full 3.0 mm tap engagement. Blue threadlocker. COTS."
+      }
+    ],
+    "screw_m25x8": [
+      {
+        "version": "main",
+        "pushedAt": "2026-08-14T01:40:27.237Z",
+        "changes": [
+          "added"
+        ],
+        "meshKey": "stl/screw_m25x8.stl",
+        "instanceCount": 66,
+        "description": "Case-mount screw: 3x front case ring per yaw (Ø47.5 PCD, chassis well) + 4x rear case ring per hip/knee (Ø47 PCD, coxa wall / femur plate). 4.5-4.7 mm into 5 mm deep case taps. Blue threadlocker. COTS."
+      }
+    ],
+    "pin_25x22": [
+      {
+        "version": "main",
+        "pushedAt": "2026-08-14T01:40:27.237Z",
+        "changes": [
+          "added"
+        ],
+        "meshKey": "stl/pin_25x22.stl",
+        "instanceCount": 12,
+        "description": "Tibia retention: 2 cross pins per leg through yoke socket + CF tube, backing up the epoxy bond against axial pull-out. COTS."
+      }
+    ]
+  }
+}

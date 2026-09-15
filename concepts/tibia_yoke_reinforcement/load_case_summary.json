@@ -1,0 +1,12 @@
+{
+  "source": "artifacts/strength/onshape/onshape_mujoco_weak_spot_note_2026-08-25.md",
+  "available": false,
+  "standing_peak_single_foot_normal_N": 39.481,
+  "walking_peak_single_foot_normal_N": 44.6966,
+  "walking_peak_force_vector_N": [
+    -5.1222,
+    -1.5464,
+    44.6966
+  ],
+  "servo_torque_envelope_Nm": 2.2
+}

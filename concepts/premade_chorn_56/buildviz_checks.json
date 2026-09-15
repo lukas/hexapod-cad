@@ -1,0 +1,4509 @@
+{
+  "generatedAt": "2026-09-05T19:25:09.692Z",
+  "build": {
+    "id": "premade_chorn_56",
+    "name": "STS3215 experimental premade 56 mm C-horns + rigid top/bottom bearings"
+  },
+  "checksConfig": {
+    "toleranceMm": 0.2,
+    "minPenetrationMm": 0.25,
+    "clearanceMm": 0,
+    "minWallMm": 0.8,
+    "minThreadEngagementMm": 2,
+    "expectedMeshComponents": {
+      "stl:servo_body": 3,
+      "stl:yaw_bearing_upper": 2
+    },
+    "allowedInterferences": [
+      {
+        "kind": "press_fit",
+        "instances": [
+          "000-chassis_bottom RIGID",
+          "014-L0 yaw servo"
+        ],
+        "reason": "L0 yaw servo body is deliberately captured by its chassis cradle",
+        "maxPenetrationMm": 2.1
+      },
+      {
+        "kind": "press_fit",
+        "instances": [
+          "014-L0 yaw servo",
+          "098-L0 deep lower yaw carrier"
+        ],
+        "reason": "L0 yaw output boss deliberately engages the coaxial screw-on driven coxa hub",
+        "maxPenetrationMm": 2.25
+      },
+      {
+        "kind": "bearing_seat",
+        "instances": [
+          "098-L0 deep lower yaw carrier",
+          "009-L0 yaw bearing (tower-seated)"
+        ],
+        "reason": "L0 screw-on lower hub deliberately press-seats the tower 6805 inner race",
+        "maxPenetrationMm": 0.35
+      },
+      {
+        "kind": "press_fit",
+        "instances": [
+          "010-L0 hip servo",
+          "011-L0 hip cap OVH + yaw pedestal (NEW)"
+        ],
+        "reason": "L0 hip cap tongue has the documented 0.5 mm servo body preload",
+        "maxPenetrationMm": 0.75
+      },
+      {
+        "kind": "press_fit",
+        "instances": [
+          "017-L0 knee servo",
+          "018-L0 knee cap OVH (NEW)"
+        ],
+        "reason": "L0 knee cap tongue has the documented 0.5 mm servo body preload",
+        "maxPenetrationMm": 0.75
+      },
+      {
+        "kind": "bearing_seat",
+        "instances": [
+          "099-L0 screw-on upper bearing carrier",
+          "012-L0 third 6805"
+        ],
+        "reason": "L0 screw-on carrier deliberately press-seats the upper 6805 inner race",
+        "maxPenetrationMm": 0.35
+      },
+      {
+        "kind": "press_fit",
+        "instances": [
+          "000-chassis_bottom RIGID",
+          "029-L1 yaw servo"
+        ],
+        "reason": "L1 yaw servo body is deliberately captured by its chassis cradle",
+        "maxPenetrationMm": 2.1
+      },
+      {
+        "kind": "press_fit",
+        "instances": [
+          "029-L1 yaw servo",
+          "104-L1 deep lower yaw carrier"
+        ],
+        "reason": "L1 yaw output boss deliberately engages the coaxial screw-on driven coxa hub",
+        "maxPenetrationMm": 2.25
+      },
+      {
+        "kind": "bearing_seat",
+        "instances": [
+          "104-L1 deep lower yaw carrier",
+          "024-L1 yaw bearing (tower-seated)"
+        ],
+        "reason": "L1 screw-on lower hub deliberately press-seats the tower 6805 inner race",
+        "maxPenetrationMm": 0.35
+      },
+      {
+        "kind": "press_fit",
+        "instances": [
+          "025-L1 hip servo",
+          "026-L1 hip cap OVH + yaw pedestal (NEW)"
+        ],
+        "reason": "L1 hip cap tongue has the documented 0.5 mm servo body preload",
+        "maxPenetrationMm": 0.75
+      },
+      {
+        "kind": "press_fit",
+        "instances": [
+          "032-L1 knee servo",
+          "033-L1 knee cap OVH (NEW)"
+        ],
+        "reason": "L1 knee cap tongue has the documented 0.5 mm servo body preload",
+        "maxPenetrationMm": 0.75
+      },
+      {
+        "kind": "bearing_seat",
+        "instances": [
+          "105-L1 screw-on upper bearing carrier",
+          "027-L1 third 6805"
+        ],
+        "reason": "L1 screw-on carrier deliberately press-seats the upper 6805 inner race",
+        "maxPenetrationMm": 0.35
+      },
+      {
+        "kind": "press_fit",
+        "instances": [
+          "000-chassis_bottom RIGID",
+          "044-L2 yaw servo"
+        ],
+        "reason": "L2 yaw servo body is deliberately captured by its chassis cradle",
+        "maxPenetrationMm": 2.1
+      },
+      {
+        "kind": "press_fit",
+        "instances": [
+          "044-L2 yaw servo",
+          "110-L2 deep lower yaw carrier"
+        ],
+        "reason": "L2 yaw output boss deliberately engages the coaxial screw-on driven coxa hub",
+        "maxPenetrationMm": 2.25
+      },
+      {
+        "kind": "bearing_seat",
+        "instances": [
+          "110-L2 deep lower yaw carrier",
+          "039-L2 yaw bearing (tower-seated)"
+        ],
+        "reason": "L2 screw-on lower hub deliberately press-seats the tower 6805 inner race",
+        "maxPenetrationMm": 0.35
+      },
+      {
+        "kind": "press_fit",
+        "instances": [
+          "040-L2 hip servo",
+          "041-L2 hip cap OVH + yaw pedestal (NEW)"
+        ],
+        "reason": "L2 hip cap tongue has the documented 0.5 mm servo body preload",
+        "maxPenetrationMm": 0.75
+      },
+      {
+        "kind": "press_fit",
+        "instances": [
+          "047-L2 knee servo",
+          "048-L2 knee cap OVH (NEW)"
+        ],
+        "reason": "L2 knee cap tongue has the documented 0.5 mm servo body preload",
+        "maxPenetrationMm": 0.75
+      },
+      {
+        "kind": "bearing_seat",
+        "instances": [
+          "111-L2 screw-on upper bearing carrier",
+          "042-L2 third 6805"
+        ],
+        "reason": "L2 screw-on carrier deliberately press-seats the upper 6805 inner race",
+        "maxPenetrationMm": 0.35
+      },
+      {
+        "kind": "press_fit",
+        "instances": [
+          "000-chassis_bottom RIGID",
+          "059-L3 yaw servo"
+        ],
+        "reason": "L3 yaw servo body is deliberately captured by its chassis cradle",
+        "maxPenetrationMm": 2.1
+      },
+      {
+        "kind": "press_fit",
+        "instances": [
+          "059-L3 yaw servo",
+          "116-L3 deep lower yaw carrier"
+        ],
+        "reason": "L3 yaw output boss deliberately engages the coaxial screw-on driven coxa hub",
+        "maxPenetrationMm": 2.25
+      },
+      {
+        "kind": "bearing_seat",
+        "instances": [
+          "116-L3 deep lower yaw carrier",
+          "054-L3 yaw bearing (tower-seated)"
+        ],
+        "reason": "L3 screw-on lower hub deliberately press-seats the tower 6805 inner race",
+        "maxPenetrationMm": 0.35
+      },
+      {
+        "kind": "press_fit",
+        "instances": [
+          "055-L3 hip servo",
+          "056-L3 hip cap OVH + yaw pedestal (NEW)"
+        ],
+        "reason": "L3 hip cap tongue has the documented 0.5 mm servo body preload",
+        "maxPenetrationMm": 0.75
+      },
+      {
+        "kind": "press_fit",
+        "instances": [
+          "062-L3 knee servo",
+          "063-L3 knee cap OVH (NEW)"
+        ],
+        "reason": "L3 knee cap tongue has the documented 0.5 mm servo body preload",
+        "maxPenetrationMm": 0.75
+      },
+      {
+        "kind": "bearing_seat",
+        "instances": [
+          "117-L3 screw-on upper bearing carrier",
+          "057-L3 third 6805"
+        ],
+        "reason": "L3 screw-on carrier deliberately press-seats the upper 6805 inner race",
+        "maxPenetrationMm": 0.35
+      },
+      {
+        "kind": "press_fit",
+        "instances": [
+          "000-chassis_bottom RIGID",
+          "074-L4 yaw servo"
+        ],
+        "reason": "L4 yaw servo body is deliberately captured by its chassis cradle",
+        "maxPenetrationMm": 2.1
+      },
+      {
+        "kind": "press_fit",
+        "instances": [
+          "074-L4 yaw servo",
+          "122-L4 deep lower yaw carrier"
+        ],
+        "reason": "L4 yaw output boss deliberately engages the coaxial screw-on driven coxa hub",
+        "maxPenetrationMm": 2.25
+      },
+      {
+        "kind": "bearing_seat",
+        "instances": [
+          "122-L4 deep lower yaw carrier",
+          "069-L4 yaw bearing (tower-seated)"
+        ],
+        "reason": "L4 screw-on lower hub deliberately press-seats the tower 6805 inner race",
+        "maxPenetrationMm": 0.35
+      },
+      {
+        "kind": "press_fit",
+        "instances": [
+          "070-L4 hip servo",
+          "071-L4 hip cap OVH + yaw pedestal (NEW)"
+        ],
+        "reason": "L4 hip cap tongue has the documented 0.5 mm servo body preload",
+        "maxPenetrationMm": 0.75
+      },
+      {
+        "kind": "press_fit",
+        "instances": [
+          "077-L4 knee servo",
+          "078-L4 knee cap OVH (NEW)"
+        ],
+        "reason": "L4 knee cap tongue has the documented 0.5 mm servo body preload",
+        "maxPenetrationMm": 0.75
+      },
+      {
+        "kind": "bearing_seat",
+        "instances": [
+          "123-L4 screw-on upper bearing carrier",
+          "072-L4 third 6805"
+        ],
+        "reason": "L4 screw-on carrier deliberately press-seats the upper 6805 inner race",
+        "maxPenetrationMm": 0.35
+      },
+      {
+        "kind": "press_fit",
+        "instances": [
+          "000-chassis_bottom RIGID",
+          "089-L5 yaw servo"
+        ],
+        "reason": "L5 yaw servo body is deliberately captured by its chassis cradle",
+        "maxPenetrationMm": 2.1
+      },
+      {
+        "kind": "press_fit",
+        "instances": [
+          "089-L5 yaw servo",
+          "128-L5 deep lower yaw carrier"
+        ],
+        "reason": "L5 yaw output boss deliberately engages the coaxial screw-on driven coxa hub",
+        "maxPenetrationMm": 2.25
+      },
+      {
+        "kind": "bearing_seat",
+        "instances": [
+          "128-L5 deep lower yaw carrier",
+          "084-L5 yaw bearing (tower-seated)"
+        ],
+        "reason": "L5 screw-on lower hub deliberately press-seats the tower 6805 inner race",
+        "maxPenetrationMm": 0.35
+      },
+      {
+        "kind": "press_fit",
+        "instances": [
+          "085-L5 hip servo",
+          "086-L5 hip cap OVH + yaw pedestal (NEW)"
+        ],
+        "reason": "L5 hip cap tongue has the documented 0.5 mm servo body preload",
+        "maxPenetrationMm": 0.75
+      },
+      {
+        "kind": "press_fit",
+        "instances": [
+          "092-L5 knee servo",
+          "093-L5 knee cap OVH (NEW)"
+        ],
+        "reason": "L5 knee cap tongue has the documented 0.5 mm servo body preload",
+        "maxPenetrationMm": 0.75
+      },
+      {
+        "kind": "bearing_seat",
+        "instances": [
+          "129-L5 screw-on upper bearing carrier",
+          "087-L5 third 6805"
+        ],
+        "reason": "L5 screw-on carrier deliberately press-seats the upper 6805 inner race",
+        "maxPenetrationMm": 0.35
+      }
+    ]
+  },
+  "summary": {
+    "total": 78,
+    "pass": 78,
+    "warn": 0,
+    "fail": 0,
+    "byKind": {
+      "scene_meta": {
+        "pass": 3,
+        "warn": 0,
+        "fail": 0
+      },
+      "mesh_overlap": {
+        "pass": 18,
+        "warn": 0,
+        "fail": 0
+      },
+      "declared_interference": {
+        "pass": 36,
+        "warn": 0,
+        "fail": 0
+      },
+      "disconnected_components": {
+        "pass": 21,
+        "warn": 0,
+        "fail": 0
+      }
+    }
+  },
+  "checks": [
+    {
+      "id": "scene_meta-units",
+      "kind": "scene_meta",
+      "status": "pass",
+      "label": "units = mm"
+    },
+    {
+      "id": "scene_meta-mesh-refs",
+      "kind": "scene_meta",
+      "status": "pass",
+      "label": "all 134 instances resolve to a mesh"
+    },
+    {
+      "id": "scene_meta-unique-ids",
+      "kind": "scene_meta",
+      "status": "pass",
+      "label": "instance ids are unique"
+    },
+    {
+      "id": "mesh_overlap-0",
+      "kind": "mesh_overlap",
+      "status": "pass",
+      "label": "servo_body ∩ coxa_yaw_hub_carrier_ovh = 2mm penetration (allowed: press_fit — L4 yaw output boss deliberately engages the coaxial screw-on driven coxa hub)",
+      "instances": [
+        "074-L4 yaw servo",
+        "122-L4 deep lower yaw carrier"
+      ],
+      "point": [
+        -5.97,
+        -104.725,
+        8.25
+      ],
+      "region": {
+        "min": [
+          -9.644,
+          -109.288,
+          7.25
+        ],
+        "max": [
+          9.644,
+          -90.125,
+          10.25
+        ]
+      }
+    },
+    {
+      "id": "mesh_overlap-1",
+      "kind": "mesh_overlap",
+      "status": "pass",
+      "label": "servo_body ∩ coxa_yaw_hub_carrier_ovh = 2mm penetration (allowed: press_fit — L1 yaw output boss deliberately engages the coaxial screw-on driven coxa hub)",
+      "instances": [
+        "029-L1 yaw servo",
+        "104-L1 deep lower yaw carrier"
+      ],
+      "point": [
+        -5.97,
+        94.688,
+        8.25
+      ],
+      "region": {
+        "min": [
+          -9.644,
+          90.125,
+          7.25
+        ],
+        "max": [
+          9.644,
+          109.288,
+          10.25
+        ]
+      }
+    },
+    {
+      "id": "mesh_overlap-2",
+      "kind": "mesh_overlap",
+      "status": "pass",
+      "label": "servo_body ∩ chassis_bottom = 1.806mm penetration (allowed: press_fit — L4 yaw servo body is deliberately captured by its chassis cradle)",
+      "instances": [
+        "074-L4 yaw servo",
+        "000-chassis_bottom RIGID"
+      ],
+      "point": [
+        -9.093,
+        -88.341,
+        8.444
+      ],
+      "region": {
+        "min": [
+          -10.747,
+          -110.2,
+          6.639
+        ],
+        "max": [
+          10.747,
+          -78.252,
+          10.25
+        ]
+      }
+    },
+    {
+      "id": "mesh_overlap-3",
+      "kind": "mesh_overlap",
+      "status": "pass",
+      "label": "servo_body ∩ chassis_bottom = 1.806mm penetration (allowed: press_fit — L1 yaw servo body is deliberately captured by its chassis cradle)",
+      "instances": [
+        "029-L1 yaw servo",
+        "000-chassis_bottom RIGID"
+      ],
+      "point": [
+        -9.093,
+        83.296,
+        8.444
+      ],
+      "region": {
+        "min": [
+          -12.4,
+          78.252,
+          6.639
+        ],
+        "max": [
+          10.747,
+          110.2,
+          10.25
+        ]
+      }
+    },
+    {
+      "id": "mesh_overlap-4",
+      "kind": "mesh_overlap",
+      "status": "pass",
+      "label": "servo_body ∩ chassis_bottom = 1.679mm penetration (allowed: press_fit — L2 yaw servo body is deliberately captured by its chassis cradle)",
+      "instances": [
+        "044-L2 yaw servo",
+        "000-chassis_bottom RIGID"
+      ],
+      "point": [
+        -84.397,
+        36.387,
+        7.929
+      ],
+      "region": {
+        "min": [
+          -99.481,
+          32.18,
+          7.929
+        ],
+        "max": [
+          -65.003,
+          63.735,
+          10.25
+        ]
+      }
+    },
+    {
+      "id": "mesh_overlap-5",
+      "kind": "mesh_overlap",
+      "status": "pass",
+      "label": "servo_body ∩ chassis_bottom = 1.679mm penetration (allowed: press_fit — L3 yaw servo body is deliberately captured by its chassis cradle)",
+      "instances": [
+        "059-L3 yaw servo",
+        "000-chassis_bottom RIGID"
+      ],
+      "point": [
+        -84.397,
+        -36.387,
+        7.929
+      ],
+      "region": {
+        "min": [
+          -99.481,
+          -63.735,
+          7.929
+        ],
+        "max": [
+          -65.003,
+          -32.18,
+          10.25
+        ]
+      }
+    },
+    {
+      "id": "mesh_overlap-6",
+      "kind": "mesh_overlap",
+      "status": "pass",
+      "label": "servo_body ∩ chassis_bottom = 1.679mm penetration (allowed: press_fit — L5 yaw servo body is deliberately captured by its chassis cradle)",
+      "instances": [
+        "089-L5 yaw servo",
+        "000-chassis_bottom RIGID"
+      ],
+      "point": [
+        67.158,
+        -51.113,
+        7.929
+      ],
+      "region": {
+        "min": [
+          65.003,
+          -63.735,
+          7.929
+        ],
+        "max": [
+          99.481,
+          -32.18,
+          10.25
+        ]
+      }
+    },
+    {
+      "id": "mesh_overlap-7",
+      "kind": "mesh_overlap",
+      "status": "pass",
+      "label": "servo_body ∩ chassis_bottom = 1.679mm penetration (allowed: press_fit — L0 yaw servo body is deliberately captured by its chassis cradle)",
+      "instances": [
+        "014-L0 yaw servo",
+        "000-chassis_bottom RIGID"
+      ],
+      "point": [
+        67.158,
+        44.802,
+        7.929
+      ],
+      "region": {
+        "min": [
+          65.003,
+          32.18,
+          7.929
+        ],
+        "max": [
+          99.481,
+          63.735,
+          10.25
+        ]
+      }
+    },
+    {
+      "id": "mesh_overlap-8",
+      "kind": "mesh_overlap",
+      "status": "pass",
+      "label": "servo_body ∩ coxa_yaw_hub_carrier_ovh = 1.333mm penetration (allowed: press_fit — L2 yaw output boss deliberately engages the coaxial screw-on driven coxa hub)",
+      "instances": [
+        "044-L2 yaw servo",
+        "110-L2 deep lower yaw carrier"
+      ],
+      "point": [
+        -94.403,
+        46.734,
+        8.917
+      ],
+      "region": {
+        "min": [
+          -95.609,
+          40.764,
+          7.583
+        ],
+        "max": [
+          -77.526,
+          59.869,
+          10.25
+        ]
+      }
+    },
+    {
+      "id": "mesh_overlap-9",
+      "kind": "mesh_overlap",
+      "status": "pass",
+      "label": "servo_body ∩ coxa_yaw_hub_carrier_ovh = 1.333mm penetration (allowed: press_fit — L3 yaw output boss deliberately engages the coaxial screw-on driven coxa hub)",
+      "instances": [
+        "059-L3 yaw servo",
+        "116-L3 deep lower yaw carrier"
+      ],
+      "point": [
+        -94.403,
+        -50.316,
+        8.917
+      ],
+      "region": {
+        "min": [
+          -95.609,
+          -59.869,
+          7.583
+        ],
+        "max": [
+          -77.526,
+          -40.764,
+          10.25
+        ]
+      }
+    },
+    {
+      "id": "mesh_overlap-10",
+      "kind": "mesh_overlap",
+      "status": "pass",
+      "label": "coxa_yaw_hub_carrier_ovh ∩ servo_body = 1.333mm penetration (allowed: press_fit — L5 yaw output boss deliberately engages the coaxial screw-on driven coxa hub)",
+      "instances": [
+        "128-L5 deep lower yaw carrier",
+        "089-L5 yaw servo"
+      ],
+      "point": [
+        78.732,
+        -52.704,
+        8.917
+      ],
+      "region": {
+        "min": [
+          77.526,
+          -59.869,
+          7.583
+        ],
+        "max": [
+          95.609,
+          -40.764,
+          10.25
+        ]
+      }
+    },
+    {
+      "id": "mesh_overlap-11",
+      "kind": "mesh_overlap",
+      "status": "pass",
+      "label": "coxa_yaw_hub_carrier_ovh ∩ servo_body = 1.333mm penetration (allowed: press_fit — L0 yaw output boss deliberately engages the coaxial screw-on driven coxa hub)",
+      "instances": [
+        "098-L0 deep lower yaw carrier",
+        "014-L0 yaw servo"
+      ],
+      "point": [
+        78.732,
+        49.122,
+        8.917
+      ],
+      "region": {
+        "min": [
+          77.526,
+          40.764,
+          7.583
+        ],
+        "max": [
+          95.609,
+          59.869,
+          10.25
+        ]
+      }
+    },
+    {
+      "id": "mesh_overlap-12",
+      "kind": "mesh_overlap",
+      "status": "pass",
+      "label": "servo_body ∩ hip_clamp_cap_ovh = 0.419mm penetration (allowed: press_fit — L1 hip cap tongue has the documented 0.5 mm servo body preload)",
+      "instances": [
+        "025-L1 hip servo",
+        "026-L1 hip cap OVH + yaw pedestal (NEW)"
+      ],
+      "point": [
+        -15.231,
+        161.673,
+        50.57
+      ],
+      "region": {
+        "min": [
+          -15.231,
+          119.3,
+          49.09
+        ],
+        "max": [
+          18.65,
+          164.7,
+          52.05
+        ]
+      }
+    },
+    {
+      "id": "mesh_overlap-13",
+      "kind": "mesh_overlap",
+      "status": "pass",
+      "label": "servo_body ∩ hip_clamp_cap_ovh = 0.419mm penetration (allowed: press_fit — L4 hip cap tongue has the documented 0.5 mm servo body preload)",
+      "instances": [
+        "070-L4 hip servo",
+        "071-L4 hip cap OVH + yaw pedestal (NEW)"
+      ],
+      "point": [
+        15.231,
+        -163.187,
+        50.57
+      ],
+      "region": {
+        "min": [
+          -18.65,
+          -164.7,
+          49.09
+        ],
+        "max": [
+          15.231,
+          -119.3,
+          52.05
+        ]
+      }
+    },
+    {
+      "id": "mesh_overlap-14",
+      "kind": "mesh_overlap",
+      "status": "pass",
+      "label": "servo_body ∩ hip_clamp_cap_ovh = 0.364mm penetration (allowed: press_fit — L3 hip cap tongue has the documented 0.5 mm servo body preload)",
+      "instances": [
+        "055-L3 hip servo",
+        "056-L3 hip cap OVH + yaw pedestal (NEW)"
+      ],
+      "point": [
+        -131.861,
+        -93.781,
+        50.2
+      ],
+      "region": {
+        "min": [
+          -150.132,
+          -93.781,
+          50.2
+        ],
+        "max": [
+          -97.146,
+          -45.361,
+          52.05
+        ]
+      }
+    },
+    {
+      "id": "mesh_overlap-15",
+      "kind": "mesh_overlap",
+      "status": "pass",
+      "label": "servo_body ∩ hip_clamp_cap_ovh = 0.364mm penetration (allowed: press_fit — L0 hip cap tongue has the documented 0.5 mm servo body preload)",
+      "instances": [
+        "010-L0 hip servo",
+        "011-L0 hip cap OVH + yaw pedestal (NEW)"
+      ],
+      "point": [
+        131.861,
+        93.781,
+        50.2
+      ],
+      "region": {
+        "min": [
+          97.146,
+          45.361,
+          50.2
+        ],
+        "max": [
+          150.132,
+          93.781,
+          52.05
+        ]
+      }
+    },
+    {
+      "id": "mesh_overlap-16",
+      "kind": "mesh_overlap",
+      "status": "pass",
+      "label": "servo_body ∩ hip_clamp_cap_ovh = 0.253mm penetration (allowed: press_fit — L2 hip cap tongue has the documented 0.5 mm servo body preload)",
+      "instances": [
+        "040-L2 hip servo",
+        "041-L2 hip cap OVH + yaw pedestal (NEW)"
+      ],
+      "point": [
+        -148.805,
+        68.705,
+        50.2
+      ],
+      "region": {
+        "min": [
+          -148.805,
+          48.219,
+          50.2
+        ],
+        "max": [
+          -95.819,
+          96.639,
+          52.05
+        ]
+      }
+    },
+    {
+      "id": "mesh_overlap-17",
+      "kind": "mesh_overlap",
+      "status": "pass",
+      "label": "servo_body ∩ hip_clamp_cap_ovh = 0.253mm penetration (allowed: press_fit — L5 hip cap tongue has the documented 0.5 mm servo body preload)",
+      "instances": [
+        "085-L5 hip servo",
+        "086-L5 hip cap OVH + yaw pedestal (NEW)"
+      ],
+      "point": [
+        148.805,
+        -68.705,
+        50.2
+      ],
+      "region": {
+        "min": [
+          95.819,
+          -96.639,
+          50.2
+        ],
+        "max": [
+          148.805,
+          -48.219,
+          52.05
+        ]
+      }
+    },
+    {
+      "id": "declared_interference-0",
+      "kind": "declared_interference",
+      "status": "pass",
+      "label": "000-chassis_bottom RIGID ∩ 014-L0 yaw servo (press_fit): interference present, 1.679mm (≤ 2.1mm cap) — L0 yaw servo body is deliberately captured by its chassis cradle",
+      "instances": [
+        "000-chassis_bottom RIGID",
+        "014-L0 yaw servo"
+      ],
+      "point": [
+        67.158,
+        44.802,
+        7.929
+      ]
+    },
+    {
+      "id": "declared_interference-1",
+      "kind": "declared_interference",
+      "status": "pass",
+      "label": "014-L0 yaw servo ∩ 098-L0 deep lower yaw carrier (press_fit): interference present, 1.333mm (≤ 2.25mm cap) — L0 yaw output boss deliberately engages the coaxial screw-on driven coxa hub",
+      "instances": [
+        "014-L0 yaw servo",
+        "098-L0 deep lower yaw carrier"
+      ],
+      "point": [
+        78.732,
+        49.122,
+        8.917
+      ]
+    },
+    {
+      "id": "declared_interference-2",
+      "kind": "declared_interference",
+      "status": "pass",
+      "label": "098-L0 deep lower yaw carrier ∩ 009-L0 yaw bearing (tower-seated) (bearing_seat): interference present, 0mm (≤ 0.35mm cap) — L0 screw-on lower hub deliberately press-seats the tower 6805 inner race",
+      "instances": [
+        "098-L0 deep lower yaw carrier",
+        "009-L0 yaw bearing (tower-seated)"
+      ]
+    },
+    {
+      "id": "declared_interference-3",
+      "kind": "declared_interference",
+      "status": "pass",
+      "label": "010-L0 hip servo ∩ 011-L0 hip cap OVH + yaw pedestal (NEW) (press_fit): interference present, 0.364mm (≤ 0.75mm cap) — L0 hip cap tongue has the documented 0.5 mm servo body preload",
+      "instances": [
+        "010-L0 hip servo",
+        "011-L0 hip cap OVH + yaw pedestal (NEW)"
+      ],
+      "point": [
+        131.861,
+        93.781,
+        50.2
+      ]
+    },
+    {
+      "id": "declared_interference-4",
+      "kind": "declared_interference",
+      "status": "pass",
+      "label": "017-L0 knee servo ∩ 018-L0 knee cap OVH (NEW) (press_fit): interference present, 0.248mm (≤ 0.75mm cap) — L0 knee cap tongue has the documented 0.5 mm servo body preload",
+      "instances": [
+        "017-L0 knee servo",
+        "018-L0 knee cap OVH (NEW)"
+      ],
+      "point": [
+        183.736,
+        86.26,
+        75.324
+      ]
+    },
+    {
+      "id": "declared_interference-5",
+      "kind": "declared_interference",
+      "status": "pass",
+      "label": "099-L0 screw-on upper bearing carrier ∩ 012-L0 third 6805 (bearing_seat): interference present, 0mm (≤ 0.35mm cap) — L0 screw-on carrier deliberately press-seats the upper 6805 inner race",
+      "instances": [
+        "099-L0 screw-on upper bearing carrier",
+        "012-L0 third 6805"
+      ]
+    },
+    {
+      "id": "declared_interference-6",
+      "kind": "declared_interference",
+      "status": "pass",
+      "label": "000-chassis_bottom RIGID ∩ 029-L1 yaw servo (press_fit): interference present, 1.806mm (≤ 2.1mm cap) — L1 yaw servo body is deliberately captured by its chassis cradle",
+      "instances": [
+        "000-chassis_bottom RIGID",
+        "029-L1 yaw servo"
+      ],
+      "point": [
+        -9.093,
+        83.296,
+        8.444
+      ]
+    },
+    {
+      "id": "declared_interference-7",
+      "kind": "declared_interference",
+      "status": "pass",
+      "label": "029-L1 yaw servo ∩ 104-L1 deep lower yaw carrier (press_fit): interference present, 2mm (≤ 2.25mm cap) — L1 yaw output boss deliberately engages the coaxial screw-on driven coxa hub",
+      "instances": [
+        "029-L1 yaw servo",
+        "104-L1 deep lower yaw carrier"
+      ],
+      "point": [
+        -5.97,
+        94.688,
+        8.25
+      ]
+    },
+    {
+      "id": "declared_interference-8",
+      "kind": "declared_interference",
+      "status": "pass",
+      "label": "104-L1 deep lower yaw carrier ∩ 024-L1 yaw bearing (tower-seated) (bearing_seat): interference present, 0mm (≤ 0.35mm cap) — L1 screw-on lower hub deliberately press-seats the tower 6805 inner race",
+      "instances": [
+        "104-L1 deep lower yaw carrier",
+        "024-L1 yaw bearing (tower-seated)"
+      ]
+    },
+    {
+      "id": "declared_interference-9",
+      "kind": "declared_interference",
+      "status": "pass",
+      "label": "025-L1 hip servo ∩ 026-L1 hip cap OVH + yaw pedestal (NEW) (press_fit): interference present, 0.419mm (≤ 0.75mm cap) — L1 hip cap tongue has the documented 0.5 mm servo body preload",
+      "instances": [
+        "025-L1 hip servo",
+        "026-L1 hip cap OVH + yaw pedestal (NEW)"
+      ],
+      "point": [
+        -15.231,
+        161.673,
+        50.57
+      ]
+    },
+    {
+      "id": "declared_interference-10",
+      "kind": "declared_interference",
+      "status": "pass",
+      "label": "032-L1 knee servo ∩ 033-L1 knee cap OVH (NEW) (press_fit): interference present, 0.213mm (≤ 0.75mm cap) — L1 knee cap tongue has the documented 0.5 mm servo body preload",
+      "instances": [
+        "032-L1 knee servo",
+        "033-L1 knee cap OVH (NEW)"
+      ],
+      "point": [
+        -14.863,
+        238.26,
+        90.792
+      ]
+    },
+    {
+      "id": "declared_interference-11",
+      "kind": "declared_interference",
+      "status": "pass",
+      "label": "105-L1 screw-on upper bearing carrier ∩ 027-L1 third 6805 (bearing_seat): interference present, 0mm (≤ 0.35mm cap) — L1 screw-on carrier deliberately press-seats the upper 6805 inner race",
+      "instances": [
+        "105-L1 screw-on upper bearing carrier",
+        "027-L1 third 6805"
+      ]
+    },
+    {
+      "id": "declared_interference-12",
+      "kind": "declared_interference",
+      "status": "pass",
+      "label": "000-chassis_bottom RIGID ∩ 044-L2 yaw servo (press_fit): interference present, 1.679mm (≤ 2.1mm cap) — L2 yaw servo body is deliberately captured by its chassis cradle",
+      "instances": [
+        "000-chassis_bottom RIGID",
+        "044-L2 yaw servo"
+      ],
+      "point": [
+        -84.397,
+        36.387,
+        7.929
+      ]
+    },
+    {
+      "id": "declared_interference-13",
+      "kind": "declared_interference",
+      "status": "pass",
+      "label": "044-L2 yaw servo ∩ 110-L2 deep lower yaw carrier (press_fit): interference present, 1.333mm (≤ 2.25mm cap) — L2 yaw output boss deliberately engages the coaxial screw-on driven coxa hub",
+      "instances": [
+        "044-L2 yaw servo",
+        "110-L2 deep lower yaw carrier"
+      ],
+      "point": [
+        -94.403,
+        46.734,
+        8.917
+      ]
+    },
+    {
+      "id": "declared_interference-14",
+      "kind": "declared_interference",
+      "status": "pass",
+      "label": "110-L2 deep lower yaw carrier ∩ 039-L2 yaw bearing (tower-seated) (bearing_seat): interference present, 0mm (≤ 0.35mm cap) — L2 screw-on lower hub deliberately press-seats the tower 6805 inner race",
+      "instances": [
+        "110-L2 deep lower yaw carrier",
+        "039-L2 yaw bearing (tower-seated)"
+      ]
+    },
+    {
+      "id": "declared_interference-15",
+      "kind": "declared_interference",
+      "status": "pass",
+      "label": "040-L2 hip servo ∩ 041-L2 hip cap OVH + yaw pedestal (NEW) (press_fit): interference present, 0.253mm (≤ 0.75mm cap) — L2 hip cap tongue has the documented 0.5 mm servo body preload",
+      "instances": [
+        "040-L2 hip servo",
+        "041-L2 hip cap OVH + yaw pedestal (NEW)"
+      ],
+      "point": [
+        -148.805,
+        68.705,
+        50.2
+      ]
+    },
+    {
+      "id": "declared_interference-16",
+      "kind": "declared_interference",
+      "status": "pass",
+      "label": "047-L2 knee servo ∩ 048-L2 knee cap OVH (NEW) (press_fit): interference present, 0.246mm (≤ 0.75mm cap) — L2 knee cap tongue has the documented 0.5 mm servo body preload",
+      "instances": [
+        "047-L2 knee servo",
+        "048-L2 knee cap OVH (NEW)"
+      ],
+      "point": [
+        -202.482,
+        117.835,
+        90.25
+      ]
+    },
+    {
+      "id": "declared_interference-17",
+      "kind": "declared_interference",
+      "status": "pass",
+      "label": "111-L2 screw-on upper bearing carrier ∩ 042-L2 third 6805 (bearing_seat): interference present, 0mm (≤ 0.35mm cap) — L2 screw-on carrier deliberately press-seats the upper 6805 inner race",
+      "instances": [
+        "111-L2 screw-on upper bearing carrier",
+        "042-L2 third 6805"
+      ]
+    },
+    {
+      "id": "declared_interference-18",
+      "kind": "declared_interference",
+      "status": "pass",
+      "label": "000-chassis_bottom RIGID ∩ 059-L3 yaw servo (press_fit): interference present, 1.679mm (≤ 2.1mm cap) — L3 yaw servo body is deliberately captured by its chassis cradle",
+      "instances": [
+        "000-chassis_bottom RIGID",
+        "059-L3 yaw servo"
+      ],
+      "point": [
+        -84.397,
+        -36.387,
+        7.929
+      ]
+    },
+    {
+      "id": "declared_interference-19",
+      "kind": "declared_interference",
+      "status": "pass",
+      "label": "059-L3 yaw servo ∩ 116-L3 deep lower yaw carrier (press_fit): interference present, 1.333mm (≤ 2.25mm cap) — L3 yaw output boss deliberately engages the coaxial screw-on driven coxa hub",
+      "instances": [
+        "059-L3 yaw servo",
+        "116-L3 deep lower yaw carrier"
+      ],
+      "point": [
+        -94.403,
+        -50.316,
+        8.917
+      ]
+    },
+    {
+      "id": "declared_interference-20",
+      "kind": "declared_interference",
+      "status": "pass",
+      "label": "116-L3 deep lower yaw carrier ∩ 054-L3 yaw bearing (tower-seated) (bearing_seat): interference present, 0mm (≤ 0.35mm cap) — L3 screw-on lower hub deliberately press-seats the tower 6805 inner race",
+      "instances": [
+        "116-L3 deep lower yaw carrier",
+        "054-L3 yaw bearing (tower-seated)"
+      ]
+    },
+    {
+      "id": "declared_interference-21",
+      "kind": "declared_interference",
+      "status": "pass",
+      "label": "055-L3 hip servo ∩ 056-L3 hip cap OVH + yaw pedestal (NEW) (press_fit): interference present, 0.364mm (≤ 0.75mm cap) — L3 hip cap tongue has the documented 0.5 mm servo body preload",
+      "instances": [
+        "055-L3 hip servo",
+        "056-L3 hip cap OVH + yaw pedestal (NEW)"
+      ],
+      "point": [
+        -131.861,
+        -93.781,
+        50.2
+      ]
+    },
+    {
+      "id": "declared_interference-22",
+      "kind": "declared_interference",
+      "status": "pass",
+      "label": "062-L3 knee servo ∩ 063-L3 knee cap OVH (NEW) (press_fit): interference present, 0.248mm (≤ 0.75mm cap) — L3 knee cap tongue has the documented 0.5 mm servo body preload",
+      "instances": [
+        "062-L3 knee servo",
+        "063-L3 knee cap OVH (NEW)"
+      ],
+      "point": [
+        -183.736,
+        -86.26,
+        75.324
+      ]
+    },
+    {
+      "id": "declared_interference-23",
+      "kind": "declared_interference",
+      "status": "pass",
+      "label": "117-L3 screw-on upper bearing carrier ∩ 057-L3 third 6805 (bearing_seat): interference present, 0mm (≤ 0.35mm cap) — L3 screw-on carrier deliberately press-seats the upper 6805 inner race",
+      "instances": [
+        "117-L3 screw-on upper bearing carrier",
+        "057-L3 third 6805"
+      ]
+    },
+    {
+      "id": "declared_interference-24",
+      "kind": "declared_interference",
+      "status": "pass",
+      "label": "000-chassis_bottom RIGID ∩ 074-L4 yaw servo (press_fit): interference present, 1.806mm (≤ 2.1mm cap) — L4 yaw servo body is deliberately captured by its chassis cradle",
+      "instances": [
+        "000-chassis_bottom RIGID",
+        "074-L4 yaw servo"
+      ],
+      "point": [
+        -9.093,
+        -88.341,
+        8.444
+      ]
+    },
+    {
+      "id": "declared_interference-25",
+      "kind": "declared_interference",
+      "status": "pass",
+      "label": "074-L4 yaw servo ∩ 122-L4 deep lower yaw carrier (press_fit): interference present, 2mm (≤ 2.25mm cap) — L4 yaw output boss deliberately engages the coaxial screw-on driven coxa hub",
+      "instances": [
+        "074-L4 yaw servo",
+        "122-L4 deep lower yaw carrier"
+      ],
+      "point": [
+        -5.97,
+        -104.725,
+        8.25
+      ]
+    },
+    {
+      "id": "declared_interference-26",
+      "kind": "declared_interference",
+      "status": "pass",
+      "label": "122-L4 deep lower yaw carrier ∩ 069-L4 yaw bearing (tower-seated) (bearing_seat): interference present, 0mm (≤ 0.35mm cap) — L4 screw-on lower hub deliberately press-seats the tower 6805 inner race",
+      "instances": [
+        "122-L4 deep lower yaw carrier",
+        "069-L4 yaw bearing (tower-seated)"
+      ]
+    },
+    {
+      "id": "declared_interference-27",
+      "kind": "declared_interference",
+      "status": "pass",
+      "label": "070-L4 hip servo ∩ 071-L4 hip cap OVH + yaw pedestal (NEW) (press_fit): interference present, 0.419mm (≤ 0.75mm cap) — L4 hip cap tongue has the documented 0.5 mm servo body preload",
+      "instances": [
+        "070-L4 hip servo",
+        "071-L4 hip cap OVH + yaw pedestal (NEW)"
+      ],
+      "point": [
+        15.231,
+        -163.187,
+        50.57
+      ]
+    },
+    {
+      "id": "declared_interference-28",
+      "kind": "declared_interference",
+      "status": "pass",
+      "label": "077-L4 knee servo ∩ 078-L4 knee cap OVH (NEW) (press_fit): interference present, 0.213mm (≤ 0.75mm cap) — L4 knee cap tongue has the documented 0.5 mm servo body preload",
+      "instances": [
+        "077-L4 knee servo",
+        "078-L4 knee cap OVH (NEW)"
+      ],
+      "point": [
+        14.863,
+        -240.719,
+        90.792
+      ]
+    },
+    {
+      "id": "declared_interference-29",
+      "kind": "declared_interference",
+      "status": "pass",
+      "label": "123-L4 screw-on upper bearing carrier ∩ 072-L4 third 6805 (bearing_seat): interference present, 0mm (≤ 0.35mm cap) — L4 screw-on carrier deliberately press-seats the upper 6805 inner race",
+      "instances": [
+        "123-L4 screw-on upper bearing carrier",
+        "072-L4 third 6805"
+      ]
+    },
+    {
+      "id": "declared_interference-30",
+      "kind": "declared_interference",
+      "status": "pass",
+      "label": "000-chassis_bottom RIGID ∩ 089-L5 yaw servo (press_fit): interference present, 1.679mm (≤ 2.1mm cap) — L5 yaw servo body is deliberately captured by its chassis cradle",
+      "instances": [
+        "000-chassis_bottom RIGID",
+        "089-L5 yaw servo"
+      ],
+      "point": [
+        67.158,
+        -51.113,
+        7.929
+      ]
+    },
+    {
+      "id": "declared_interference-31",
+      "kind": "declared_interference",
+      "status": "pass",
+      "label": "089-L5 yaw servo ∩ 128-L5 deep lower yaw carrier (press_fit): interference present, 1.333mm (≤ 2.25mm cap) — L5 yaw output boss deliberately engages the coaxial screw-on driven coxa hub",
+      "instances": [
+        "089-L5 yaw servo",
+        "128-L5 deep lower yaw carrier"
+      ],
+      "point": [
+        78.732,
+        -52.704,
+        8.917
+      ]
+    },
+    {
+      "id": "declared_interference-32",
+      "kind": "declared_interference",
+      "status": "pass",
+      "label": "128-L5 deep lower yaw carrier ∩ 084-L5 yaw bearing (tower-seated) (bearing_seat): interference present, 0mm (≤ 0.35mm cap) — L5 screw-on lower hub deliberately press-seats the tower 6805 inner race",
+      "instances": [
+        "128-L5 deep lower yaw carrier",
+        "084-L5 yaw bearing (tower-seated)"
+      ]
+    },
+    {
+      "id": "declared_interference-33",
+      "kind": "declared_interference",
+      "status": "pass",
+      "label": "085-L5 hip servo ∩ 086-L5 hip cap OVH + yaw pedestal (NEW) (press_fit): interference present, 0.253mm (≤ 0.75mm cap) — L5 hip cap tongue has the documented 0.5 mm servo body preload",
+      "instances": [
+        "085-L5 hip servo",
+        "086-L5 hip cap OVH + yaw pedestal (NEW)"
+      ],
+      "point": [
+        148.805,
+        -68.705,
+        50.2
+      ]
+    },
+    {
+      "id": "declared_interference-34",
+      "kind": "declared_interference",
+      "status": "pass",
+      "label": "092-L5 knee servo ∩ 093-L5 knee cap OVH (NEW) (press_fit): interference present, 0.246mm (≤ 0.75mm cap) — L5 knee cap tongue has the documented 0.5 mm servo body preload",
+      "instances": [
+        "092-L5 knee servo",
+        "093-L5 knee cap OVH (NEW)"
+      ],
+      "point": [
+        202.482,
+        -117.835,
+        90.25
+      ]
+    },
+    {
+      "id": "declared_interference-35",
+      "kind": "declared_interference",
+      "status": "pass",
+      "label": "129-L5 screw-on upper bearing carrier ∩ 087-L5 third 6805 (bearing_seat): interference present, 0mm (≤ 0.35mm cap) — L5 screw-on carrier deliberately press-seats the upper 6805 inner race",
+      "instances": [
+        "129-L5 screw-on upper bearing carrier",
+        "087-L5 third 6805"
+      ]
+    },
+    {
+      "id": "disconnected_components-0",
+      "kind": "disconnected_components",
+      "status": "pass",
+      "label": "premade_chorn_56_DO_NOT_PRINT.stl: single connected body",
+      "instances": [
+        "015-L0 hip C-clamp (CNC 6061, NEW)",
+        "019-L0 knee C-clamp (CNC 6061, NEW)",
+        "030-L1 hip C-clamp (CNC 6061, NEW)",
+        "034-L1 knee C-clamp (CNC 6061, NEW)",
+        "045-L2 hip C-clamp (CNC 6061, NEW)",
+        "049-L2 knee C-clamp (CNC 6061, NEW)",
+        "060-L3 hip C-clamp (CNC 6061, NEW)",
+        "064-L3 knee C-clamp (CNC 6061, NEW)",
+        "075-L4 hip C-clamp (CNC 6061, NEW)",
+        "079-L4 knee C-clamp (CNC 6061, NEW)",
+        "090-L5 hip C-clamp (CNC 6061, NEW)",
+        "094-L5 knee C-clamp (CNC 6061, NEW)"
+      ]
+    },
+    {
+      "id": "disconnected_components-1",
+      "kind": "disconnected_components",
+      "status": "pass",
+      "label": "driven_spacer_7mm.stl: single connected body",
+      "instances": [
+        "100-L0 hip driven 7 mm spacer",
+        "102-L0 knee driven 7 mm spacer",
+        "106-L1 hip driven 7 mm spacer",
+        "108-L1 knee driven 7 mm spacer",
+        "112-L2 hip driven 7 mm spacer",
+        "114-L2 knee driven 7 mm spacer",
+        "118-L3 hip driven 7 mm spacer",
+        "120-L3 knee driven 7 mm spacer",
+        "124-L4 hip driven 7 mm spacer",
+        "126-L4 knee driven 7 mm spacer",
+        "130-L5 hip driven 7 mm spacer",
+        "132-L5 knee driven 7 mm spacer"
+      ]
+    },
+    {
+      "id": "disconnected_components-2",
+      "kind": "disconnected_components",
+      "status": "pass",
+      "label": "passive_spacer_7mm.stl: single connected body",
+      "instances": [
+        "101-L0 hip passive 7 mm spacer",
+        "103-L0 knee passive 7 mm spacer",
+        "107-L1 hip passive 7 mm spacer",
+        "109-L1 knee passive 7 mm spacer",
+        "113-L2 hip passive 7 mm spacer",
+        "115-L2 knee passive 7 mm spacer",
+        "119-L3 hip passive 7 mm spacer",
+        "121-L3 knee passive 7 mm spacer",
+        "125-L4 hip passive 7 mm spacer",
+        "127-L4 knee passive 7 mm spacer",
+        "131-L5 hip passive 7 mm spacer",
+        "133-L5 knee passive 7 mm spacer"
+      ]
+    },
+    {
+      "id": "disconnected_components-3",
+      "kind": "disconnected_components",
+      "status": "pass",
+      "label": "femur_body_premade_chorn.stl: single connected body",
+      "instances": [
+        "016-L0 femur body OVH (NEW)",
+        "031-L1 femur body OVH (NEW)",
+        "046-L2 femur body OVH (NEW)",
+        "061-L3 femur body OVH (NEW)",
+        "076-L4 femur body OVH (NEW)",
+        "091-L5 femur body OVH (NEW)"
+      ]
+    },
+    {
+      "id": "disconnected_components-4",
+      "kind": "disconnected_components",
+      "status": "pass",
+      "label": "tibia_socket_premade_chorn.stl: single connected body",
+      "instances": [
+        "020-L0 tibia socket OVH (NEW)",
+        "035-L1 tibia socket OVH (NEW)",
+        "050-L2 tibia socket OVH (NEW)",
+        "065-L3 tibia socket OVH (NEW)",
+        "080-L4 tibia socket OVH (NEW)",
+        "095-L5 tibia socket OVH (NEW)"
+      ]
+    },
+    {
+      "id": "disconnected_components-5",
+      "kind": "disconnected_components",
+      "status": "pass",
+      "label": "tibia_tube_premade_chorn_DO_NOT_PRINT.stl: single connected body",
+      "instances": [
+        "021-L0 tibia tube (shortened)",
+        "036-L1 tibia tube (shortened)",
+        "051-L2 tibia tube (shortened)",
+        "066-L3 tibia tube (shortened)",
+        "081-L4 tibia tube (shortened)",
+        "096-L5 tibia tube (shortened)"
+      ]
+    },
+    {
+      "id": "disconnected_components-6",
+      "kind": "disconnected_components",
+      "status": "pass",
+      "label": "knee_clamp_cap_ovh.stl: single connected body",
+      "instances": [
+        "018-L0 knee cap OVH (NEW)",
+        "033-L1 knee cap OVH (NEW)",
+        "048-L2 knee cap OVH (NEW)",
+        "063-L3 knee cap OVH (NEW)",
+        "078-L4 knee cap OVH (NEW)",
+        "093-L5 knee cap OVH (NEW)"
+      ]
+    },
+    {
+      "id": "disconnected_components-7",
+      "kind": "disconnected_components",
+      "status": "pass",
+      "label": "coxa_link_ovh.stl: single connected body",
+      "instances": [
+        "008-L0 coxa OVH outboard arm (NEW)",
+        "023-L1 coxa OVH outboard arm (NEW)",
+        "038-L2 coxa OVH outboard arm (NEW)",
+        "053-L3 coxa OVH outboard arm (NEW)",
+        "068-L4 coxa OVH outboard arm (NEW)",
+        "083-L5 coxa OVH outboard arm (NEW)"
+      ]
+    },
+    {
+      "id": "disconnected_components-8",
+      "kind": "disconnected_components",
+      "status": "pass",
+      "label": "coxa_yaw_hub_carrier_ovh.stl: single connected body",
+      "instances": [
+        "098-L0 deep lower yaw carrier",
+        "104-L1 deep lower yaw carrier",
+        "110-L2 deep lower yaw carrier",
+        "116-L3 deep lower yaw carrier",
+        "122-L4 deep lower yaw carrier",
+        "128-L5 deep lower yaw carrier"
+      ]
+    },
+    {
+      "id": "disconnected_components-9",
+      "kind": "disconnected_components",
+      "status": "pass",
+      "label": "hip_clamp_cap_ovh.stl: single connected body",
+      "instances": [
+        "011-L0 hip cap OVH + yaw pedestal (NEW)",
+        "026-L1 hip cap OVH + yaw pedestal (NEW)",
+        "041-L2 hip cap OVH + yaw pedestal (NEW)",
+        "056-L3 hip cap OVH + yaw pedestal (NEW)",
+        "071-L4 hip cap OVH + yaw pedestal (NEW)",
+        "086-L5 hip cap OVH + yaw pedestal (NEW)"
+      ]
+    },
+    {
+      "id": "disconnected_components-10",
+      "kind": "disconnected_components",
+      "status": "pass",
+      "label": "hip_bearing_carrier_ovh.stl: single connected body",
+      "instances": [
+        "099-L0 screw-on upper bearing carrier",
+        "105-L1 screw-on upper bearing carrier",
+        "111-L2 screw-on upper bearing carrier",
+        "117-L3 screw-on upper bearing carrier",
+        "123-L4 screw-on upper bearing carrier",
+        "129-L5 screw-on upper bearing carrier"
+      ]
+    },
+    {
+      "id": "disconnected_components-11",
+      "kind": "disconnected_components",
+      "status": "pass",
+      "label": "chassis_top_rigid.stl: single connected body",
+      "instances": [
+        "001-chassis_top_rigid FRAME"
+      ]
+    },
+    {
+      "id": "disconnected_components-12",
+      "kind": "disconnected_components",
+      "status": "pass",
+      "label": "top_hatch_rigid.stl: single connected body",
+      "instances": [
+        "002-top_hatch (removable)"
+      ]
+    },
+    {
+      "id": "disconnected_components-13",
+      "kind": "disconnected_components",
+      "status": "pass",
+      "label": "centre_wago_block.stl: single connected body",
+      "instances": [
+        "003-central splice block"
+      ]
+    },
+    {
+      "id": "disconnected_components-14",
+      "kind": "disconnected_components",
+      "status": "pass",
+      "label": "chassis_bottom_rigid.stl: single connected body",
+      "instances": [
+        "000-chassis_bottom RIGID"
+      ]
+    },
+    {
+      "id": "disconnected_components-15",
+      "kind": "disconnected_components",
+      "status": "pass",
+      "label": "foot_boot.stl: single connected body",
+      "instances": [
+        "022-L0 foot boot",
+        "037-L1 foot boot",
+        "052-L2 foot boot",
+        "067-L3 foot boot",
+        "082-L4 foot boot",
+        "097-L5 foot boot"
+      ]
+    },
+    {
+      "id": "disconnected_components-16",
+      "kind": "disconnected_components",
+      "status": "pass",
+      "label": "yaw_servo_retainer.stl: single connected body",
+      "instances": [
+        "013-L0 yaw retainer",
+        "028-L1 yaw retainer",
+        "043-L2 yaw retainer",
+        "058-L3 yaw retainer",
+        "073-L4 yaw retainer",
+        "088-L5 yaw retainer"
+      ]
+    },
+    {
+      "id": "disconnected_components-17",
+      "kind": "disconnected_components",
+      "status": "pass",
+      "label": "servo_body_DO_NOT_PRINT.stl: 3 bodies (expected 3)",
+      "instances": [
+        "010-L0 hip servo",
+        "014-L0 yaw servo",
+        "017-L0 knee servo",
+        "025-L1 hip servo",
+        "029-L1 yaw servo",
+        "032-L1 knee servo",
+        "040-L2 hip servo",
+        "044-L2 yaw servo",
+        "047-L2 knee servo",
+        "055-L3 hip servo",
+        "059-L3 yaw servo",
+        "062-L3 knee servo",
+        "070-L4 hip servo",
+        "074-L4 yaw servo",
+        "077-L4 knee servo",
+        "085-L5 hip servo",
+        "089-L5 yaw servo",
+        "092-L5 knee servo"
+      ]
+    },
+    {
+      "id": "disconnected_components-18",
+      "kind": "disconnected_components",
+      "status": "pass",
+      "label": "yaw_bearing_upper_DO_NOT_PRINT.stl: 2 bodies (expected 2)",
+      "instances": [
+        "009-L0 yaw bearing (tower-seated)",
+        "024-L1 yaw bearing (tower-seated)",
+        "039-L2 yaw bearing (tower-seated)",
+        "054-L3 yaw bearing (tower-seated)",
+        "069-L4 yaw bearing (tower-seated)",
+        "084-L5 yaw bearing (tower-seated)"
+      ]
+    },
+    {
+      "id": "disconnected_components-19",
+      "kind": "disconnected_components",
+      "status": "pass",
+      "label": "bearing_6805_DO_NOT_PRINT.stl: single connected body",
+      "instances": [
+        "012-L0 third 6805",
+        "027-L1 third 6805",
+        "042-L2 third 6805",
+        "057-L3 third 6805",
+        "072-L4 third 6805",
+        "087-L5 third 6805"
+      ]
+    },
+    {
+      "id": "disconnected_components-20",
+      "kind": "disconnected_components",
+      "status": "pass",
+      "label": "wago5_DO_NOT_PRINT.stl: single connected body",
+      "instances": [
+        "004-221-415 V+ west",
+        "005-221-415 V+ east",
+        "006-221-415 GND west",
+        "007-221-415 GND east"
+      ]
+    }
+  ],
+  "highlights": {
+    "parts": [],
+    "points": [],
+    "regions": []
+  },
+  "report": {
+    "passed": false,
+    "problemCount": 72,
+    "toleranceMm": 0.2,
+    "minPenetrationMm": 0.25,
+    "instanceCount": 134,
+    "meshCount": 21,
+    "missingMeshes": [],
+    "fastenersExcluded": 0,
+    "fastenersIncluded": false,
+    "broadPhasePairs": 340,
+    "narrowPhasePairs": 340,
+    "capped": false,
+    "collisions": [
+      {
+        "a": {
+          "instanceId": "074-L4 yaw servo",
+          "partType": "servo_body",
+          "name": "L4 yaw servo"
+        },
+        "b": {
+          "instanceId": "122-L4 deep lower yaw carrier",
+          "partType": "coxa_yaw_hub_carrier_ovh",
+          "name": "L4 deep lower yaw hub carrier + 3 radial screws (NEW)"
+        },
+        "penetrationMm": 2,
+        "point": [
+          -5.97,
+          -104.725,
+          8.25
+        ],
+        "region": {
+          "min": [
+            -9.644,
+            -109.288,
+            7.25
+          ],
+          "max": [
+            9.644,
+            -90.125,
+            10.25
+          ]
+        },
+        "allowed": true,
+        "allowance": {
+          "allowed": true,
+          "source": "declared",
+          "kind": "press_fit",
+          "reason": "L4 yaw output boss deliberately engages the coaxial screw-on driven coxa hub",
+          "maxPenetrationMm": 2.25
+        }
+      },
+      {
+        "a": {
+          "instanceId": "029-L1 yaw servo",
+          "partType": "servo_body",
+          "name": "L1 yaw servo"
+        },
+        "b": {
+          "instanceId": "104-L1 deep lower yaw carrier",
+          "partType": "coxa_yaw_hub_carrier_ovh",
+          "name": "L1 deep lower yaw hub carrier + 3 radial screws (NEW)"
+        },
+        "penetrationMm": 2,
+        "point": [
+          -5.97,
+          94.688,
+          8.25
+        ],
+        "region": {
+          "min": [
+            -9.644,
+            90.125,
+            7.25
+          ],
+          "max": [
+            9.644,
+            109.288,
+            10.25
+          ]
+        },
+        "allowed": true,
+        "allowance": {
+          "allowed": true,
+          "source": "declared",
+          "kind": "press_fit",
+          "reason": "L1 yaw output boss deliberately engages the coaxial screw-on driven coxa hub",
+          "maxPenetrationMm": 2.25
+        }
+      },
+      {
+        "a": {
+          "instanceId": "074-L4 yaw servo",
+          "partType": "servo_body",
+          "name": "L4 yaw servo"
+        },
+        "b": {
+          "instanceId": "000-chassis_bottom RIGID",
+          "partType": "chassis_bottom",
+          "name": "chassis_bottom RIGID"
+        },
+        "penetrationMm": 1.806,
+        "point": [
+          -9.093,
+          -88.341,
+          8.444
+        ],
+        "region": {
+          "min": [
+            -10.747,
+            -110.2,
+            6.639
+          ],
+          "max": [
+            10.747,
+            -78.252,
+            10.25
+          ]
+        },
+        "allowed": true,
+        "allowance": {
+          "allowed": true,
+          "source": "declared",
+          "kind": "press_fit",
+          "reason": "L4 yaw servo body is deliberately captured by its chassis cradle",
+          "maxPenetrationMm": 2.1
+        }
+      },
+      {
+        "a": {
+          "instanceId": "029-L1 yaw servo",
+          "partType": "servo_body",
+          "name": "L1 yaw servo"
+        },
+        "b": {
+          "instanceId": "000-chassis_bottom RIGID",
+          "partType": "chassis_bottom",
+          "name": "chassis_bottom RIGID"
+        },
+        "penetrationMm": 1.806,
+        "point": [
+          -9.093,
+          83.296,
+          8.444
+        ],
+        "region": {
+          "min": [
+            -12.4,
+            78.252,
+            6.639
+          ],
+          "max": [
+            10.747,
+            110.2,
+            10.25
+          ]
+        },
+        "allowed": true,
+        "allowance": {
+          "allowed": true,
+          "source": "declared",
+          "kind": "press_fit",
+          "reason": "L1 yaw servo body is deliberately captured by its chassis cradle",
+          "maxPenetrationMm": 2.1
+        }
+      },
+      {
+        "a": {
+          "instanceId": "044-L2 yaw servo",
+          "partType": "servo_body",
+          "name": "L2 yaw servo"
+        },
+        "b": {
+          "instanceId": "000-chassis_bottom RIGID",
+          "partType": "chassis_bottom",
+          "name": "chassis_bottom RIGID"
+        },
+        "penetrationMm": 1.679,
+        "point": [
+          -84.397,
+          36.387,
+          7.929
+        ],
+        "region": {
+          "min": [
+            -99.481,
+            32.18,
+            7.929
+          ],
+          "max": [
+            -65.003,
+            63.735,
+            10.25
+          ]
+        },
+        "allowed": true,
+        "allowance": {
+          "allowed": true,
+          "source": "declared",
+          "kind": "press_fit",
+          "reason": "L2 yaw servo body is deliberately captured by its chassis cradle",
+          "maxPenetrationMm": 2.1
+        }
+      },
+      {
+        "a": {
+          "instanceId": "059-L3 yaw servo",
+          "partType": "servo_body",
+          "name": "L3 yaw servo"
+        },
+        "b": {
+          "instanceId": "000-chassis_bottom RIGID",
+          "partType": "chassis_bottom",
+          "name": "chassis_bottom RIGID"
+        },
+        "penetrationMm": 1.679,
+        "point": [
+          -84.397,
+          -36.387,
+          7.929
+        ],
+        "region": {
+          "min": [
+            -99.481,
+            -63.735,
+            7.929
+          ],
+          "max": [
+            -65.003,
+            -32.18,
+            10.25
+          ]
+        },
+        "allowed": true,
+        "allowance": {
+          "allowed": true,
+          "source": "declared",
+          "kind": "press_fit",
+          "reason": "L3 yaw servo body is deliberately captured by its chassis cradle",
+          "maxPenetrationMm": 2.1
+        }
+      },
+      {
+        "a": {
+          "instanceId": "089-L5 yaw servo",
+          "partType": "servo_body",
+          "name": "L5 yaw servo"
+        },
+        "b": {
+          "instanceId": "000-chassis_bottom RIGID",
+          "partType": "chassis_bottom",
+          "name": "chassis_bottom RIGID"
+        },
+        "penetrationMm": 1.679,
+        "point": [
+          67.158,
+          -51.113,
+          7.929
+        ],
+        "region": {
+          "min": [
+            65.003,
+            -63.735,
+            7.929
+          ],
+          "max": [
+            99.481,
+            -32.18,
+            10.25
+          ]
+        },
+        "allowed": true,
+        "allowance": {
+          "allowed": true,
+          "source": "declared",
+          "kind": "press_fit",
+          "reason": "L5 yaw servo body is deliberately captured by its chassis cradle",
+          "maxPenetrationMm": 2.1
+        }
+      },
+      {
+        "a": {
+          "instanceId": "014-L0 yaw servo",
+          "partType": "servo_body",
+          "name": "L0 yaw servo"
+        },
+        "b": {
+          "instanceId": "000-chassis_bottom RIGID",
+          "partType": "chassis_bottom",
+          "name": "chassis_bottom RIGID"
+        },
+        "penetrationMm": 1.679,
+        "point": [
+          67.158,
+          44.802,
+          7.929
+        ],
+        "region": {
+          "min": [
+            65.003,
+            32.18,
+            7.929
+          ],
+          "max": [
+            99.481,
+            63.735,
+            10.25
+          ]
+        },
+        "allowed": true,
+        "allowance": {
+          "allowed": true,
+          "source": "declared",
+          "kind": "press_fit",
+          "reason": "L0 yaw servo body is deliberately captured by its chassis cradle",
+          "maxPenetrationMm": 2.1
+        }
+      },
+      {
+        "a": {
+          "instanceId": "044-L2 yaw servo",
+          "partType": "servo_body",
+          "name": "L2 yaw servo"
+        },
+        "b": {
+          "instanceId": "110-L2 deep lower yaw carrier",
+          "partType": "coxa_yaw_hub_carrier_ovh",
+          "name": "L2 deep lower yaw hub carrier + 3 radial screws (NEW)"
+        },
+        "penetrationMm": 1.333,
+        "point": [
+          -94.403,
+          46.734,
+          8.917
+        ],
+        "region": {
+          "min": [
+            -95.609,
+            40.764,
+            7.583
+          ],
+          "max": [
+            -77.526,
+            59.869,
+            10.25
+          ]
+        },
+        "allowed": true,
+        "allowance": {
+          "allowed": true,
+          "source": "declared",
+          "kind": "press_fit",
+          "reason": "L2 yaw output boss deliberately engages the coaxial screw-on driven coxa hub",
+          "maxPenetrationMm": 2.25
+        }
+      },
+      {
+        "a": {
+          "instanceId": "059-L3 yaw servo",
+          "partType": "servo_body",
+          "name": "L3 yaw servo"
+        },
+        "b": {
+          "instanceId": "116-L3 deep lower yaw carrier",
+          "partType": "coxa_yaw_hub_carrier_ovh",
+          "name": "L3 deep lower yaw hub carrier + 3 radial screws (NEW)"
+        },
+        "penetrationMm": 1.333,
+        "point": [
+          -94.403,
+          -50.316,
+          8.917
+        ],
+        "region": {
+          "min": [
+            -95.609,
+            -59.869,
+            7.583
+          ],
+          "max": [
+            -77.526,
+            -40.764,
+            10.25
+          ]
+        },
+        "allowed": true,
+        "allowance": {
+          "allowed": true,
+          "source": "declared",
+          "kind": "press_fit",
+          "reason": "L3 yaw output boss deliberately engages the coaxial screw-on driven coxa hub",
+          "maxPenetrationMm": 2.25
+        }
+      },
+      {
+        "a": {
+          "instanceId": "128-L5 deep lower yaw carrier",
+          "partType": "coxa_yaw_hub_carrier_ovh",
+          "name": "L5 deep lower yaw hub carrier + 3 radial screws (NEW)"
+        },
+        "b": {
+          "instanceId": "089-L5 yaw servo",
+          "partType": "servo_body",
+          "name": "L5 yaw servo"
+        },
+        "penetrationMm": 1.333,
+        "point": [
+          78.732,
+          -52.704,
+          8.917
+        ],
+        "region": {
+          "min": [
+            77.526,
+            -59.869,
+            7.583
+          ],
+          "max": [
+            95.609,
+            -40.764,
+            10.25
+          ]
+        },
+        "allowed": true,
+        "allowance": {
+          "allowed": true,
+          "source": "declared",
+          "kind": "press_fit",
+          "reason": "L5 yaw output boss deliberately engages the coaxial screw-on driven coxa hub",
+          "maxPenetrationMm": 2.25
+        }
+      },
+      {
+        "a": {
+          "instanceId": "098-L0 deep lower yaw carrier",
+          "partType": "coxa_yaw_hub_carrier_ovh",
+          "name": "L0 deep lower yaw hub carrier + 3 radial screws (NEW)"
+        },
+        "b": {
+          "instanceId": "014-L0 yaw servo",
+          "partType": "servo_body",
+          "name": "L0 yaw servo"
+        },
+        "penetrationMm": 1.333,
+        "point": [
+          78.732,
+          49.122,
+          8.917
+        ],
+        "region": {
+          "min": [
+            77.526,
+            40.764,
+            7.583
+          ],
+          "max": [
+            95.609,
+            59.869,
+            10.25
+          ]
+        },
+        "allowed": true,
+        "allowance": {
+          "allowed": true,
+          "source": "declared",
+          "kind": "press_fit",
+          "reason": "L0 yaw output boss deliberately engages the coaxial screw-on driven coxa hub",
+          "maxPenetrationMm": 2.25
+        }
+      },
+      {
+        "a": {
+          "instanceId": "025-L1 hip servo",
+          "partType": "servo_body",
+          "name": "L1 hip servo"
+        },
+        "b": {
+          "instanceId": "026-L1 hip cap OVH + yaw pedestal (NEW)",
+          "partType": "hip_clamp_cap_ovh",
+          "name": "L1 flat hip clamp cap (NEW)"
+        },
+        "penetrationMm": 0.419,
+        "point": [
+          -15.231,
+          161.673,
+          50.57
+        ],
+        "region": {
+          "min": [
+            -15.231,
+            119.3,
+            49.09
+          ],
+          "max": [
+            18.65,
+            164.7,
+            52.05
+          ]
+        },
+        "allowed": true,
+        "allowance": {
+          "allowed": true,
+          "source": "declared",
+          "kind": "press_fit",
+          "reason": "L1 hip cap tongue has the documented 0.5 mm servo body preload",
+          "maxPenetrationMm": 0.75
+        }
+      },
+      {
+        "a": {
+          "instanceId": "070-L4 hip servo",
+          "partType": "servo_body",
+          "name": "L4 hip servo"
+        },
+        "b": {
+          "instanceId": "071-L4 hip cap OVH + yaw pedestal (NEW)",
+          "partType": "hip_clamp_cap_ovh",
+          "name": "L4 flat hip clamp cap (NEW)"
+        },
+        "penetrationMm": 0.419,
+        "point": [
+          15.231,
+          -163.187,
+          50.57
+        ],
+        "region": {
+          "min": [
+            -18.65,
+            -164.7,
+            49.09
+          ],
+          "max": [
+            15.231,
+            -119.3,
+            52.05
+          ]
+        },
+        "allowed": true,
+        "allowance": {
+          "allowed": true,
+          "source": "declared",
+          "kind": "press_fit",
+          "reason": "L4 hip cap tongue has the documented 0.5 mm servo body preload",
+          "maxPenetrationMm": 0.75
+        }
+      },
+      {
+        "a": {
+          "instanceId": "055-L3 hip servo",
+          "partType": "servo_body",
+          "name": "L3 hip servo"
+        },
+        "b": {
+          "instanceId": "056-L3 hip cap OVH + yaw pedestal (NEW)",
+          "partType": "hip_clamp_cap_ovh",
+          "name": "L3 flat hip clamp cap (NEW)"
+        },
+        "penetrationMm": 0.364,
+        "point": [
+          -131.861,
+          -93.781,
+          50.2
+        ],
+        "region": {
+          "min": [
+            -150.132,
+            -93.781,
+            50.2
+          ],
+          "max": [
+            -97.146,
+            -45.361,
+            52.05
+          ]
+        },
+        "allowed": true,
+        "allowance": {
+          "allowed": true,
+          "source": "declared",
+          "kind": "press_fit",
+          "reason": "L3 hip cap tongue has the documented 0.5 mm servo body preload",
+          "maxPenetrationMm": 0.75
+        }
+      },
+      {
+        "a": {
+          "instanceId": "010-L0 hip servo",
+          "partType": "servo_body",
+          "name": "L0 hip servo"
+        },
+        "b": {
+          "instanceId": "011-L0 hip cap OVH + yaw pedestal (NEW)",
+          "partType": "hip_clamp_cap_ovh",
+          "name": "L0 flat hip clamp cap (NEW)"
+        },
+        "penetrationMm": 0.364,
+        "point": [
+          131.861,
+          93.781,
+          50.2
+        ],
+        "region": {
+          "min": [
+            97.146,
+            45.361,
+            50.2
+          ],
+          "max": [
+            150.132,
+            93.781,
+            52.05
+          ]
+        },
+        "allowed": true,
+        "allowance": {
+          "allowed": true,
+          "source": "declared",
+          "kind": "press_fit",
+          "reason": "L0 hip cap tongue has the documented 0.5 mm servo body preload",
+          "maxPenetrationMm": 0.75
+        }
+      },
+      {
+        "a": {
+          "instanceId": "040-L2 hip servo",
+          "partType": "servo_body",
+          "name": "L2 hip servo"
+        },
+        "b": {
+          "instanceId": "041-L2 hip cap OVH + yaw pedestal (NEW)",
+          "partType": "hip_clamp_cap_ovh",
+          "name": "L2 flat hip clamp cap (NEW)"
+        },
+        "penetrationMm": 0.253,
+        "point": [
+          -148.805,
+          68.705,
+          50.2
+        ],
+        "region": {
+          "min": [
+            -148.805,
+            48.219,
+            50.2
+          ],
+          "max": [
+            -95.819,
+            96.639,
+            52.05
+          ]
+        },
+        "allowed": true,
+        "allowance": {
+          "allowed": true,
+          "source": "declared",
+          "kind": "press_fit",
+          "reason": "L2 hip cap tongue has the documented 0.5 mm servo body preload",
+          "maxPenetrationMm": 0.75
+        }
+      },
+      {
+        "a": {
+          "instanceId": "085-L5 hip servo",
+          "partType": "servo_body",
+          "name": "L5 hip servo"
+        },
+        "b": {
+          "instanceId": "086-L5 hip cap OVH + yaw pedestal (NEW)",
+          "partType": "hip_clamp_cap_ovh",
+          "name": "L5 flat hip clamp cap (NEW)"
+        },
+        "penetrationMm": 0.253,
+        "point": [
+          148.805,
+          -68.705,
+          50.2
+        ],
+        "region": {
+          "min": [
+            95.819,
+            -96.639,
+            50.2
+          ],
+          "max": [
+            148.805,
+            -48.219,
+            52.05
+          ]
+        },
+        "allowed": true,
+        "allowance": {
+          "allowed": true,
+          "source": "declared",
+          "kind": "press_fit",
+          "reason": "L5 hip cap tongue has the documented 0.5 mm servo body preload",
+          "maxPenetrationMm": 0.75
+        }
+      }
+    ],
+    "floating": [
+      {
+        "instanceId": "015-L0 hip C-clamp (CNC 6061, NEW)",
+        "partType": "chorn_clamp_cnc",
+        "name": "L0 hip premade 56 mm C-horn (NEW)",
+        "componentId": 101,
+        "componentSize": 6,
+        "nearestGapMm": null,
+        "nearestInstanceId": null
+      },
+      {
+        "instanceId": "016-L0 femur body OVH (NEW)",
+        "partType": "femur_ovh_body",
+        "name": "L0 femur six-hole receiver + clamp nut traps (NEW)",
+        "componentId": 101,
+        "componentSize": 6,
+        "nearestGapMm": null,
+        "nearestInstanceId": null
+      },
+      {
+        "instanceId": "017-L0 knee servo",
+        "partType": "servo_body",
+        "name": "L0 knee servo",
+        "componentId": 101,
+        "componentSize": 6,
+        "nearestGapMm": null,
+        "nearestInstanceId": null
+      },
+      {
+        "instanceId": "018-L0 knee cap OVH (NEW)",
+        "partType": "knee_clamp_cap_ovh",
+        "name": "L0 knee cap OVH (NEW)",
+        "componentId": 101,
+        "componentSize": 6,
+        "nearestGapMm": null,
+        "nearestInstanceId": null
+      },
+      {
+        "instanceId": "019-L0 knee C-clamp (CNC 6061, NEW)",
+        "partType": "chorn_clamp_cnc",
+        "name": "L0 knee premade 56 mm C-horn (NEW)",
+        "componentId": 103,
+        "componentSize": 6,
+        "nearestGapMm": null,
+        "nearestInstanceId": null
+      },
+      {
+        "instanceId": "020-L0 tibia socket OVH (NEW)",
+        "partType": "tibia_ovh_socket",
+        "name": "L0 tibia six-hole receiver/socket (NEW)",
+        "componentId": 103,
+        "componentSize": 6,
+        "nearestGapMm": null,
+        "nearestInstanceId": null
+      },
+      {
+        "instanceId": "021-L0 tibia tube (shortened)",
+        "partType": "tibia_tube_ovh",
+        "name": "L0 tibia tube (shortened)",
+        "componentId": 103,
+        "componentSize": 6,
+        "nearestGapMm": null,
+        "nearestInstanceId": null
+      },
+      {
+        "instanceId": "022-L0 foot boot",
+        "partType": "foot_boot",
+        "name": "L0 foot boot",
+        "componentId": 103,
+        "componentSize": 6,
+        "nearestGapMm": null,
+        "nearestInstanceId": null
+      },
+      {
+        "instanceId": "030-L1 hip C-clamp (CNC 6061, NEW)",
+        "partType": "chorn_clamp_cnc",
+        "name": "L1 hip premade 56 mm C-horn (NEW)",
+        "componentId": 31,
+        "componentSize": 6,
+        "nearestGapMm": null,
+        "nearestInstanceId": null
+      },
+      {
+        "instanceId": "031-L1 femur body OVH (NEW)",
+        "partType": "femur_ovh_body",
+        "name": "L1 femur six-hole receiver + clamp nut traps (NEW)",
+        "componentId": 31,
+        "componentSize": 6,
+        "nearestGapMm": null,
+        "nearestInstanceId": null
+      },
+      {
+        "instanceId": "032-L1 knee servo",
+        "partType": "servo_body",
+        "name": "L1 knee servo",
+        "componentId": 31,
+        "componentSize": 6,
+        "nearestGapMm": null,
+        "nearestInstanceId": null
+      },
+      {
+        "instanceId": "033-L1 knee cap OVH (NEW)",
+        "partType": "knee_clamp_cap_ovh",
+        "name": "L1 knee cap OVH (NEW)",
+        "componentId": 31,
+        "componentSize": 6,
+        "nearestGapMm": null,
+        "nearestInstanceId": null
+      },
+      {
+        "instanceId": "034-L1 knee C-clamp (CNC 6061, NEW)",
+        "partType": "chorn_clamp_cnc",
+        "name": "L1 knee premade 56 mm C-horn (NEW)",
+        "componentId": 35,
+        "componentSize": 6,
+        "nearestGapMm": null,
+        "nearestInstanceId": null
+      },
+      {
+        "instanceId": "035-L1 tibia socket OVH (NEW)",
+        "partType": "tibia_ovh_socket",
+        "name": "L1 tibia six-hole receiver/socket (NEW)",
+        "componentId": 35,
+        "componentSize": 6,
+        "nearestGapMm": null,
+        "nearestInstanceId": null
+      },
+      {
+        "instanceId": "036-L1 tibia tube (shortened)",
+        "partType": "tibia_tube_ovh",
+        "name": "L1 tibia tube (shortened)",
+        "componentId": 35,
+        "componentSize": 6,
+        "nearestGapMm": null,
+        "nearestInstanceId": null
+      },
+      {
+        "instanceId": "037-L1 foot boot",
+        "partType": "foot_boot",
+        "name": "L1 foot boot",
+        "componentId": 35,
+        "componentSize": 6,
+        "nearestGapMm": null,
+        "nearestInstanceId": null
+      },
+      {
+        "instanceId": "045-L2 hip C-clamp (CNC 6061, NEW)",
+        "partType": "chorn_clamp_cnc",
+        "name": "L2 hip premade 56 mm C-horn (NEW)",
+        "componentId": 48,
+        "componentSize": 6,
+        "nearestGapMm": null,
+        "nearestInstanceId": null
+      },
+      {
+        "instanceId": "046-L2 femur body OVH (NEW)",
+        "partType": "femur_ovh_body",
+        "name": "L2 femur six-hole receiver + clamp nut traps (NEW)",
+        "componentId": 48,
+        "componentSize": 6,
+        "nearestGapMm": null,
+        "nearestInstanceId": null
+      },
+      {
+        "instanceId": "047-L2 knee servo",
+        "partType": "servo_body",
+        "name": "L2 knee servo",
+        "componentId": 48,
+        "componentSize": 6,
+        "nearestGapMm": null,
+        "nearestInstanceId": null
+      },
+      {
+        "instanceId": "048-L2 knee cap OVH (NEW)",
+        "partType": "knee_clamp_cap_ovh",
+        "name": "L2 knee cap OVH (NEW)",
+        "componentId": 48,
+        "componentSize": 6,
+        "nearestGapMm": null,
+        "nearestInstanceId": null
+      },
+      {
+        "instanceId": "049-L2 knee C-clamp (CNC 6061, NEW)",
+        "partType": "chorn_clamp_cnc",
+        "name": "L2 knee premade 56 mm C-horn (NEW)",
+        "componentId": 51,
+        "componentSize": 6,
+        "nearestGapMm": null,
+        "nearestInstanceId": null
+      },
+      {
+        "instanceId": "050-L2 tibia socket OVH (NEW)",
+        "partType": "tibia_ovh_socket",
+        "name": "L2 tibia six-hole receiver/socket (NEW)",
+        "componentId": 51,
+        "componentSize": 6,
+        "nearestGapMm": null,
+        "nearestInstanceId": null
+      },
+      {
+        "instanceId": "051-L2 tibia tube (shortened)",
+        "partType": "tibia_tube_ovh",
+        "name": "L2 tibia tube (shortened)",
+        "componentId": 51,
+        "componentSize": 6,
+        "nearestGapMm": null,
+        "nearestInstanceId": null
+      },
+      {
+        "instanceId": "052-L2 foot boot",
+        "partType": "foot_boot",
+        "name": "L2 foot boot",
+        "componentId": 51,
+        "componentSize": 6,
+        "nearestGapMm": null,
+        "nearestInstanceId": null
+      },
+      {
+        "instanceId": "060-L3 hip C-clamp (CNC 6061, NEW)",
+        "partType": "chorn_clamp_cnc",
+        "name": "L3 hip premade 56 mm C-horn (NEW)",
+        "componentId": 63,
+        "componentSize": 6,
+        "nearestGapMm": null,
+        "nearestInstanceId": null
+      },
+      {
+        "instanceId": "061-L3 femur body OVH (NEW)",
+        "partType": "femur_ovh_body",
+        "name": "L3 femur six-hole receiver + clamp nut traps (NEW)",
+        "componentId": 63,
+        "componentSize": 6,
+        "nearestGapMm": null,
+        "nearestInstanceId": null
+      },
+      {
+        "instanceId": "062-L3 knee servo",
+        "partType": "servo_body",
+        "name": "L3 knee servo",
+        "componentId": 63,
+        "componentSize": 6,
+        "nearestGapMm": null,
+        "nearestInstanceId": null
+      },
+      {
+        "instanceId": "063-L3 knee cap OVH (NEW)",
+        "partType": "knee_clamp_cap_ovh",
+        "name": "L3 knee cap OVH (NEW)",
+        "componentId": 63,
+        "componentSize": 6,
+        "nearestGapMm": null,
+        "nearestInstanceId": null
+      },
+      {
+        "instanceId": "064-L3 knee C-clamp (CNC 6061, NEW)",
+        "partType": "chorn_clamp_cnc",
+        "name": "L3 knee premade 56 mm C-horn (NEW)",
+        "componentId": 66,
+        "componentSize": 6,
+        "nearestGapMm": null,
+        "nearestInstanceId": null
+      },
+      {
+        "instanceId": "065-L3 tibia socket OVH (NEW)",
+        "partType": "tibia_ovh_socket",
+        "name": "L3 tibia six-hole receiver/socket (NEW)",
+        "componentId": 66,
+        "componentSize": 6,
+        "nearestGapMm": null,
+        "nearestInstanceId": null
+      },
+      {
+        "instanceId": "066-L3 tibia tube (shortened)",
+        "partType": "tibia_tube_ovh",
+        "name": "L3 tibia tube (shortened)",
+        "componentId": 66,
+        "componentSize": 6,
+        "nearestGapMm": null,
+        "nearestInstanceId": null
+      },
+      {
+        "instanceId": "067-L3 foot boot",
+        "partType": "foot_boot",
+        "name": "L3 foot boot",
+        "componentId": 66,
+        "componentSize": 6,
+        "nearestGapMm": null,
+        "nearestInstanceId": null
+      },
+      {
+        "instanceId": "075-L4 hip C-clamp (CNC 6061, NEW)",
+        "partType": "chorn_clamp_cnc",
+        "name": "L4 hip premade 56 mm C-horn (NEW)",
+        "componentId": 75,
+        "componentSize": 6,
+        "nearestGapMm": null,
+        "nearestInstanceId": null
+      },
+      {
+        "instanceId": "076-L4 femur body OVH (NEW)",
+        "partType": "femur_ovh_body",
+        "name": "L4 femur six-hole receiver + clamp nut traps (NEW)",
+        "componentId": 75,
+        "componentSize": 6,
+        "nearestGapMm": null,
+        "nearestInstanceId": null
+      },
+      {
+        "instanceId": "077-L4 knee servo",
+        "partType": "servo_body",
+        "name": "L4 knee servo",
+        "componentId": 75,
+        "componentSize": 6,
+        "nearestGapMm": null,
+        "nearestInstanceId": null
+      },
+      {
+        "instanceId": "078-L4 knee cap OVH (NEW)",
+        "partType": "knee_clamp_cap_ovh",
+        "name": "L4 knee cap OVH (NEW)",
+        "componentId": 75,
+        "componentSize": 6,
+        "nearestGapMm": null,
+        "nearestInstanceId": null
+      },
+      {
+        "instanceId": "079-L4 knee C-clamp (CNC 6061, NEW)",
+        "partType": "chorn_clamp_cnc",
+        "name": "L4 knee premade 56 mm C-horn (NEW)",
+        "componentId": 79,
+        "componentSize": 6,
+        "nearestGapMm": null,
+        "nearestInstanceId": null
+      },
+      {
+        "instanceId": "080-L4 tibia socket OVH (NEW)",
+        "partType": "tibia_ovh_socket",
+        "name": "L4 tibia six-hole receiver/socket (NEW)",
+        "componentId": 79,
+        "componentSize": 6,
+        "nearestGapMm": null,
+        "nearestInstanceId": null
+      },
+      {
+        "instanceId": "081-L4 tibia tube (shortened)",
+        "partType": "tibia_tube_ovh",
+        "name": "L4 tibia tube (shortened)",
+        "componentId": 79,
+        "componentSize": 6,
+        "nearestGapMm": null,
+        "nearestInstanceId": null
+      },
+      {
+        "instanceId": "082-L4 foot boot",
+        "partType": "foot_boot",
+        "name": "L4 foot boot",
+        "componentId": 79,
+        "componentSize": 6,
+        "nearestGapMm": null,
+        "nearestInstanceId": null
+      },
+      {
+        "instanceId": "090-L5 hip C-clamp (CNC 6061, NEW)",
+        "partType": "chorn_clamp_cnc",
+        "name": "L5 hip premade 56 mm C-horn (NEW)",
+        "componentId": 130,
+        "componentSize": 6,
+        "nearestGapMm": null,
+        "nearestInstanceId": null
+      },
+      {
+        "instanceId": "091-L5 femur body OVH (NEW)",
+        "partType": "femur_ovh_body",
+        "name": "L5 femur six-hole receiver + clamp nut traps (NEW)",
+        "componentId": 130,
+        "componentSize": 6,
+        "nearestGapMm": null,
+        "nearestInstanceId": null
+      },
+      {
+        "instanceId": "092-L5 knee servo",
+        "partType": "servo_body",
+        "name": "L5 knee servo",
+        "componentId": 130,
+        "componentSize": 6,
+        "nearestGapMm": null,
+        "nearestInstanceId": null
+      },
+      {
+        "instanceId": "093-L5 knee cap OVH (NEW)",
+        "partType": "knee_clamp_cap_ovh",
+        "name": "L5 knee cap OVH (NEW)",
+        "componentId": 130,
+        "componentSize": 6,
+        "nearestGapMm": null,
+        "nearestInstanceId": null
+      },
+      {
+        "instanceId": "094-L5 knee C-clamp (CNC 6061, NEW)",
+        "partType": "chorn_clamp_cnc",
+        "name": "L5 knee premade 56 mm C-horn (NEW)",
+        "componentId": 132,
+        "componentSize": 6,
+        "nearestGapMm": null,
+        "nearestInstanceId": null
+      },
+      {
+        "instanceId": "095-L5 tibia socket OVH (NEW)",
+        "partType": "tibia_ovh_socket",
+        "name": "L5 tibia six-hole receiver/socket (NEW)",
+        "componentId": 132,
+        "componentSize": 6,
+        "nearestGapMm": null,
+        "nearestInstanceId": null
+      },
+      {
+        "instanceId": "096-L5 tibia tube (shortened)",
+        "partType": "tibia_tube_ovh",
+        "name": "L5 tibia tube (shortened)",
+        "componentId": 132,
+        "componentSize": 6,
+        "nearestGapMm": null,
+        "nearestInstanceId": null
+      },
+      {
+        "instanceId": "097-L5 foot boot",
+        "partType": "foot_boot",
+        "name": "L5 foot boot",
+        "componentId": 132,
+        "componentSize": 6,
+        "nearestGapMm": null,
+        "nearestInstanceId": null
+      },
+      {
+        "instanceId": "100-L0 hip driven 7 mm spacer",
+        "partType": "driven_spacer",
+        "name": "L0 hip driven 7 mm spacer (NEW)",
+        "componentId": 101,
+        "componentSize": 6,
+        "nearestGapMm": null,
+        "nearestInstanceId": null
+      },
+      {
+        "instanceId": "101-L0 hip passive 7 mm spacer",
+        "partType": "passive_spacer",
+        "name": "L0 hip passive 7 mm spacer (NEW)",
+        "componentId": 101,
+        "componentSize": 6,
+        "nearestGapMm": null,
+        "nearestInstanceId": null
+      },
+      {
+        "instanceId": "102-L0 knee driven 7 mm spacer",
+        "partType": "driven_spacer",
+        "name": "L0 knee driven 7 mm spacer (NEW)",
+        "componentId": 103,
+        "componentSize": 6,
+        "nearestGapMm": null,
+        "nearestInstanceId": null
+      },
+      {
+        "instanceId": "103-L0 knee passive 7 mm spacer",
+        "partType": "passive_spacer",
+        "name": "L0 knee passive 7 mm spacer (NEW)",
+        "componentId": 103,
+        "componentSize": 6,
+        "nearestGapMm": null,
+        "nearestInstanceId": null
+      },
+      {
+        "instanceId": "106-L1 hip driven 7 mm spacer",
+        "partType": "driven_spacer",
+        "name": "L1 hip driven 7 mm spacer (NEW)",
+        "componentId": 31,
+        "componentSize": 6,
+        "nearestGapMm": null,
+        "nearestInstanceId": null
+      },
+      {
+        "instanceId": "107-L1 hip passive 7 mm spacer",
+        "partType": "passive_spacer",
+        "name": "L1 hip passive 7 mm spacer (NEW)",
+        "componentId": 31,
+        "componentSize": 6,
+        "nearestGapMm": null,
+        "nearestInstanceId": null
+      },
+      {
+        "instanceId": "108-L1 knee driven 7 mm spacer",
+        "partType": "driven_spacer",
+        "name": "L1 knee driven 7 mm spacer (NEW)",
+        "componentId": 35,
+        "componentSize": 6,
+        "nearestGapMm": null,
+        "nearestInstanceId": null
+      },
+      {
+        "instanceId": "109-L1 knee passive 7 mm spacer",
+        "partType": "passive_spacer",
+        "name": "L1 knee passive 7 mm spacer (NEW)",
+        "componentId": 35,
+        "componentSize": 6,
+        "nearestGapMm": null,
+        "nearestInstanceId": null
+      },
+      {
+        "instanceId": "112-L2 hip driven 7 mm spacer",
+        "partType": "driven_spacer",
+        "name": "L2 hip driven 7 mm spacer (NEW)",
+        "componentId": 48,
+        "componentSize": 6,
+        "nearestGapMm": null,
+        "nearestInstanceId": null
+      },
+      {
+        "instanceId": "113-L2 hip passive 7 mm spacer",
+        "partType": "passive_spacer",
+        "name": "L2 hip passive 7 mm spacer (NEW)",
+        "componentId": 48,
+        "componentSize": 6,
+        "nearestGapMm": null,
+        "nearestInstanceId": null
+      },
+      {
+        "instanceId": "114-L2 knee driven 7 mm spacer",
+        "partType": "driven_spacer",
+        "name": "L2 knee driven 7 mm spacer (NEW)",
+        "componentId": 51,
+        "componentSize": 6,
+        "nearestGapMm": null,
+        "nearestInstanceId": null
+      },
+      {
+        "instanceId": "115-L2 knee passive 7 mm spacer",
+        "partType": "passive_spacer",
+        "name": "L2 knee passive 7 mm spacer (NEW)",
+        "componentId": 51,
+        "componentSize": 6,
+        "nearestGapMm": null,
+        "nearestInstanceId": null
+      },
+      {
+        "instanceId": "118-L3 hip driven 7 mm spacer",
+        "partType": "driven_spacer",
+        "name": "L3 hip driven 7 mm spacer (NEW)",
+        "componentId": 63,
+        "componentSize": 6,
+        "nearestGapMm": null,
+        "nearestInstanceId": null
+      },
+      {
+        "instanceId": "119-L3 hip passive 7 mm spacer",
+        "partType": "passive_spacer",
+        "name": "L3 hip passive 7 mm spacer (NEW)",
+        "componentId": 63,
+        "componentSize": 6,
+        "nearestGapMm": null,
+        "nearestInstanceId": null
+      },
+      {
+        "instanceId": "120-L3 knee driven 7 mm spacer",
+        "partType": "driven_spacer",
+        "name": "L3 knee driven 7 mm spacer (NEW)",
+        "componentId": 66,
+        "componentSize": 6,
+        "nearestGapMm": null,
+        "nearestInstanceId": null
+      },
+      {
+        "instanceId": "121-L3 knee passive 7 mm spacer",
+        "partType": "passive_spacer",
+        "name": "L3 knee passive 7 mm spacer (NEW)",
+        "componentId": 66,
+        "componentSize": 6,
+        "nearestGapMm": null,
+        "nearestInstanceId": null
+      },
+      {
+        "instanceId": "124-L4 hip driven 7 mm spacer",
+        "partType": "driven_spacer",
+        "name": "L4 hip driven 7 mm spacer (NEW)",
+        "componentId": 75,
+        "componentSize": 6,
+        "nearestGapMm": null,
+        "nearestInstanceId": null
+      },
+      {
+        "instanceId": "125-L4 hip passive 7 mm spacer",
+        "partType": "passive_spacer",
+        "name": "L4 hip passive 7 mm spacer (NEW)",
+        "componentId": 75,
+        "componentSize": 6,
+        "nearestGapMm": null,
+        "nearestInstanceId": null
+      },
+      {
+        "instanceId": "126-L4 knee driven 7 mm spacer",
+        "partType": "driven_spacer",
+        "name": "L4 knee driven 7 mm spacer (NEW)",
+        "componentId": 79,
+        "componentSize": 6,
+        "nearestGapMm": null,
+        "nearestInstanceId": null
+      },
+      {
+        "instanceId": "127-L4 knee passive 7 mm spacer",
+        "partType": "passive_spacer",
+        "name": "L4 knee passive 7 mm spacer (NEW)",
+        "componentId": 79,
+        "componentSize": 6,
+        "nearestGapMm": null,
+        "nearestInstanceId": null
+      },
+      {
+        "instanceId": "130-L5 hip driven 7 mm spacer",
+        "partType": "driven_spacer",
+        "name": "L5 hip driven 7 mm spacer (NEW)",
+        "componentId": 130,
+        "componentSize": 6,
+        "nearestGapMm": null,
+        "nearestInstanceId": null
+      },
+      {
+        "instanceId": "131-L5 hip passive 7 mm spacer",
+        "partType": "passive_spacer",
+        "name": "L5 hip passive 7 mm spacer (NEW)",
+        "componentId": 130,
+        "componentSize": 6,
+        "nearestGapMm": null,
+        "nearestInstanceId": null
+      },
+      {
+        "instanceId": "132-L5 knee driven 7 mm spacer",
+        "partType": "driven_spacer",
+        "name": "L5 knee driven 7 mm spacer (NEW)",
+        "componentId": 132,
+        "componentSize": 6,
+        "nearestGapMm": null,
+        "nearestInstanceId": null
+      },
+      {
+        "instanceId": "133-L5 knee passive 7 mm spacer",
+        "partType": "passive_spacer",
+        "name": "L5 knee passive 7 mm spacer (NEW)",
+        "componentId": 132,
+        "componentSize": 6,
+        "nearestGapMm": null,
+        "nearestInstanceId": null
+      }
+    ],
+    "gaps": [],
+    "declaredInterferences": [
+      {
+        "kind": "press_fit",
+        "instances": [
+          "000-chassis_bottom RIGID",
+          "014-L0 yaw servo"
+        ],
+        "reason": "L0 yaw servo body is deliberately captured by its chassis cradle",
+        "feature": null,
+        "maxPenetrationMm": 2.1,
+        "outcome": "overlapping",
+        "penetrationMm": 1.679,
+        "gapMm": null,
+        "point": [
+          67.158,
+          44.802,
+          7.929
+        ],
+        "region": {
+          "min": [
+            65.003,
+            32.18,
+            7.929
+          ],
+          "max": [
+            99.481,
+            63.735,
+            10.25
+          ]
+        },
+        "reportedAsCollision": true
+      },
+      {
+        "kind": "press_fit",
+        "instances": [
+          "014-L0 yaw servo",
+          "098-L0 deep lower yaw carrier"
+        ],
+        "reason": "L0 yaw output boss deliberately engages the coaxial screw-on driven coxa hub",
+        "feature": null,
+        "maxPenetrationMm": 2.25,
+        "outcome": "overlapping",
+        "penetrationMm": 1.333,
+        "gapMm": null,
+        "point": [
+          78.732,
+          49.122,
+          8.917
+        ],
+        "region": {
+          "min": [
+            77.526,
+            40.764,
+            7.583
+          ],
+          "max": [
+            95.609,
+            59.869,
+            10.25
+          ]
+        },
+        "reportedAsCollision": true
+      },
+      {
+        "kind": "bearing_seat",
+        "instances": [
+          "098-L0 deep lower yaw carrier",
+          "009-L0 yaw bearing (tower-seated)"
+        ],
+        "reason": "L0 screw-on lower hub deliberately press-seats the tower 6805 inner race",
+        "feature": null,
+        "maxPenetrationMm": 0.35,
+        "outcome": "overlapping",
+        "penetrationMm": 0,
+        "gapMm": null,
+        "point": null,
+        "region": null,
+        "reportedAsCollision": false
+      },
+      {
+        "kind": "press_fit",
+        "instances": [
+          "010-L0 hip servo",
+          "011-L0 hip cap OVH + yaw pedestal (NEW)"
+        ],
+        "reason": "L0 hip cap tongue has the documented 0.5 mm servo body preload",
+        "feature": null,
+        "maxPenetrationMm": 0.75,
+        "outcome": "overlapping",
+        "penetrationMm": 0.364,
+        "gapMm": null,
+        "point": [
+          131.861,
+          93.781,
+          50.2
+        ],
+        "region": {
+          "min": [
+            97.146,
+            45.361,
+            50.2
+          ],
+          "max": [
+            150.132,
+            93.781,
+            52.05
+          ]
+        },
+        "reportedAsCollision": true
+      },
+      {
+        "kind": "press_fit",
+        "instances": [
+          "017-L0 knee servo",
+          "018-L0 knee cap OVH (NEW)"
+        ],
+        "reason": "L0 knee cap tongue has the documented 0.5 mm servo body preload",
+        "feature": null,
+        "maxPenetrationMm": 0.75,
+        "outcome": "overlapping",
+        "penetrationMm": 0.248,
+        "gapMm": null,
+        "point": [
+          183.736,
+          86.26,
+          75.324
+        ],
+        "region": {
+          "min": [
+            168.531,
+            86.26,
+            72.339
+          ],
+          "max": [
+            211.105,
+            127.548,
+            90.25
+          ]
+        },
+        "reportedAsCollision": false
+      },
+      {
+        "kind": "bearing_seat",
+        "instances": [
+          "099-L0 screw-on upper bearing carrier",
+          "012-L0 third 6805"
+        ],
+        "reason": "L0 screw-on carrier deliberately press-seats the upper 6805 inner race",
+        "feature": null,
+        "maxPenetrationMm": 0.35,
+        "outcome": "overlapping",
+        "penetrationMm": 0,
+        "gapMm": null,
+        "point": null,
+        "region": null,
+        "reportedAsCollision": false
+      },
+      {
+        "kind": "press_fit",
+        "instances": [
+          "000-chassis_bottom RIGID",
+          "029-L1 yaw servo"
+        ],
+        "reason": "L1 yaw servo body is deliberately captured by its chassis cradle",
+        "feature": null,
+        "maxPenetrationMm": 2.1,
+        "outcome": "overlapping",
+        "penetrationMm": 1.806,
+        "gapMm": null,
+        "point": [
+          -9.093,
+          83.296,
+          8.444
+        ],
+        "region": {
+          "min": [
+            -12.4,
+            78.252,
+            6.639
+          ],
+          "max": [
+            10.747,
+            110.2,
+            10.25
+          ]
+        },
+        "reportedAsCollision": true
+      },
+      {
+        "kind": "press_fit",
+        "instances": [
+          "029-L1 yaw servo",
+          "104-L1 deep lower yaw carrier"
+        ],
+        "reason": "L1 yaw output boss deliberately engages the coaxial screw-on driven coxa hub",
+        "feature": null,
+        "maxPenetrationMm": 2.25,
+        "outcome": "overlapping",
+        "penetrationMm": 2,
+        "gapMm": null,
+        "point": [
+          -5.97,
+          94.688,
+          8.25
+        ],
+        "region": {
+          "min": [
+            -9.644,
+            90.125,
+            7.25
+          ],
+          "max": [
+            9.644,
+            109.288,
+            10.25
+          ]
+        },
+        "reportedAsCollision": true
+      },
+      {
+        "kind": "bearing_seat",
+        "instances": [
+          "104-L1 deep lower yaw carrier",
+          "024-L1 yaw bearing (tower-seated)"
+        ],
+        "reason": "L1 screw-on lower hub deliberately press-seats the tower 6805 inner race",
+        "feature": null,
+        "maxPenetrationMm": 0.35,
+        "outcome": "overlapping",
+        "penetrationMm": 0,
+        "gapMm": null,
+        "point": null,
+        "region": null,
+        "reportedAsCollision": false
+      },
+      {
+        "kind": "press_fit",
+        "instances": [
+          "025-L1 hip servo",
+          "026-L1 hip cap OVH + yaw pedestal (NEW)"
+        ],
+        "reason": "L1 hip cap tongue has the documented 0.5 mm servo body preload",
+        "feature": null,
+        "maxPenetrationMm": 0.75,
+        "outcome": "overlapping",
+        "penetrationMm": 0.419,
+        "gapMm": null,
+        "point": [
+          -15.231,
+          161.673,
+          50.57
+        ],
+        "region": {
+          "min": [
+            -15.231,
+            119.3,
+            49.09
+          ],
+          "max": [
+            18.65,
+            164.7,
+            52.05
+          ]
+        },
+        "reportedAsCollision": true
+      },
+      {
+        "kind": "press_fit",
+        "instances": [
+          "032-L1 knee servo",
+          "033-L1 knee cap OVH (NEW)"
+        ],
+        "reason": "L1 knee cap tongue has the documented 0.5 mm servo body preload",
+        "feature": null,
+        "maxPenetrationMm": 0.75,
+        "outcome": "overlapping",
+        "penetrationMm": 0.213,
+        "gapMm": null,
+        "point": [
+          -14.863,
+          238.26,
+          90.792
+        ],
+        "region": {
+          "min": [
+            -14.863,
+            203.842,
+            76.138
+          ],
+          "max": [
+            18.65,
+            240.719,
+            90.792
+          ]
+        },
+        "reportedAsCollision": false
+      },
+      {
+        "kind": "bearing_seat",
+        "instances": [
+          "105-L1 screw-on upper bearing carrier",
+          "027-L1 third 6805"
+        ],
+        "reason": "L1 screw-on carrier deliberately press-seats the upper 6805 inner race",
+        "feature": null,
+        "maxPenetrationMm": 0.35,
+        "outcome": "overlapping",
+        "penetrationMm": 0,
+        "gapMm": null,
+        "point": null,
+        "region": null,
+        "reportedAsCollision": false
+      },
+      {
+        "kind": "press_fit",
+        "instances": [
+          "000-chassis_bottom RIGID",
+          "044-L2 yaw servo"
+        ],
+        "reason": "L2 yaw servo body is deliberately captured by its chassis cradle",
+        "feature": null,
+        "maxPenetrationMm": 2.1,
+        "outcome": "overlapping",
+        "penetrationMm": 1.679,
+        "gapMm": null,
+        "point": [
+          -84.397,
+          36.387,
+          7.929
+        ],
+        "region": {
+          "min": [
+            -99.481,
+            32.18,
+            7.929
+          ],
+          "max": [
+            -65.003,
+            63.735,
+            10.25
+          ]
+        },
+        "reportedAsCollision": true
+      },
+      {
+        "kind": "press_fit",
+        "instances": [
+          "044-L2 yaw servo",
+          "110-L2 deep lower yaw carrier"
+        ],
+        "reason": "L2 yaw output boss deliberately engages the coaxial screw-on driven coxa hub",
+        "feature": null,
+        "maxPenetrationMm": 2.25,
+        "outcome": "overlapping",
+        "penetrationMm": 1.333,
+        "gapMm": null,
+        "point": [
+          -94.403,
+          46.734,
+          8.917
+        ],
+        "region": {
+          "min": [
+            -95.609,
+            40.764,
+            7.583
+          ],
+          "max": [
+            -77.526,
+            59.869,
+            10.25
+          ]
+        },
+        "reportedAsCollision": true
+      },
+      {
+        "kind": "bearing_seat",
+        "instances": [
+          "110-L2 deep lower yaw carrier",
+          "039-L2 yaw bearing (tower-seated)"
+        ],
+        "reason": "L2 screw-on lower hub deliberately press-seats the tower 6805 inner race",
+        "feature": null,
+        "maxPenetrationMm": 0.35,
+        "outcome": "overlapping",
+        "penetrationMm": 0,
+        "gapMm": null,
+        "point": null,
+        "region": null,
+        "reportedAsCollision": false
+      },
+      {
+        "kind": "press_fit",
+        "instances": [
+          "040-L2 hip servo",
+          "041-L2 hip cap OVH + yaw pedestal (NEW)"
+        ],
+        "reason": "L2 hip cap tongue has the documented 0.5 mm servo body preload",
+        "feature": null,
+        "maxPenetrationMm": 0.75,
+        "outcome": "overlapping",
+        "penetrationMm": 0.253,
+        "gapMm": null,
+        "point": [
+          -148.805,
+          68.705,
+          50.2
+        ],
+        "region": {
+          "min": [
+            -148.805,
+            48.219,
+            50.2
+          ],
+          "max": [
+            -95.819,
+            96.639,
+            52.05
+          ]
+        },
+        "reportedAsCollision": true
+      },
+      {
+        "kind": "press_fit",
+        "instances": [
+          "047-L2 knee servo",
+          "048-L2 knee cap OVH (NEW)"
+        ],
+        "reason": "L2 knee cap tongue has the documented 0.5 mm servo body preload",
+        "feature": null,
+        "maxPenetrationMm": 0.75,
+        "outcome": "overlapping",
+        "penetrationMm": 0.246,
+        "gapMm": null,
+        "point": [
+          -202.482,
+          117.835,
+          90.25
+        ],
+        "region": {
+          "min": [
+            -214.646,
+            91.293,
+            75.324
+          ],
+          "max": [
+            -169.031,
+            132.58,
+            90.25
+          ]
+        },
+        "reportedAsCollision": false
+      },
+      {
+        "kind": "bearing_seat",
+        "instances": [
+          "111-L2 screw-on upper bearing carrier",
+          "042-L2 third 6805"
+        ],
+        "reason": "L2 screw-on carrier deliberately press-seats the upper 6805 inner race",
+        "feature": null,
+        "maxPenetrationMm": 0.35,
+        "outcome": "overlapping",
+        "penetrationMm": 0,
+        "gapMm": null,
+        "point": null,
+        "region": null,
+        "reportedAsCollision": false
+      },
+      {
+        "kind": "press_fit",
+        "instances": [
+          "000-chassis_bottom RIGID",
+          "059-L3 yaw servo"
+        ],
+        "reason": "L3 yaw servo body is deliberately captured by its chassis cradle",
+        "feature": null,
+        "maxPenetrationMm": 2.1,
+        "outcome": "overlapping",
+        "penetrationMm": 1.679,
+        "gapMm": null,
+        "point": [
+          -84.397,
+          -36.387,
+          7.929
+        ],
+        "region": {
+          "min": [
+            -99.481,
+            -63.735,
+            7.929
+          ],
+          "max": [
+            -65.003,
+            -32.18,
+            10.25
+          ]
+        },
+        "reportedAsCollision": true
+      },
+      {
+        "kind": "press_fit",
+        "instances": [
+          "059-L3 yaw servo",
+          "116-L3 deep lower yaw carrier"
+        ],
+        "reason": "L3 yaw output boss deliberately engages the coaxial screw-on driven coxa hub",
+        "feature": null,
+        "maxPenetrationMm": 2.25,
+        "outcome": "overlapping",
+        "penetrationMm": 1.333,
+        "gapMm": null,
+        "point": [
+          -94.403,
+          -50.316,
+          8.917
+        ],
+        "region": {
+          "min": [
+            -95.609,
+            -59.869,
+            7.583
+          ],
+          "max": [
+            -77.526,
+            -40.764,
+            10.25
+          ]
+        },
+        "reportedAsCollision": true
+      },
+      {
+        "kind": "bearing_seat",
+        "instances": [
+          "116-L3 deep lower yaw carrier",
+          "054-L3 yaw bearing (tower-seated)"
+        ],
+        "reason": "L3 screw-on lower hub deliberately press-seats the tower 6805 inner race",
+        "feature": null,
+        "maxPenetrationMm": 0.35,
+        "outcome": "overlapping",
+        "penetrationMm": 0,
+        "gapMm": null,
+        "point": null,
+        "region": null,
+        "reportedAsCollision": false
+      },
+      {
+        "kind": "press_fit",
+        "instances": [
+          "055-L3 hip servo",
+          "056-L3 hip cap OVH + yaw pedestal (NEW)"
+        ],
+        "reason": "L3 hip cap tongue has the documented 0.5 mm servo body preload",
+        "feature": null,
+        "maxPenetrationMm": 0.75,
+        "outcome": "overlapping",
+        "penetrationMm": 0.364,
+        "gapMm": null,
+        "point": [
+          -131.861,
+          -93.781,
+          50.2
+        ],
+        "region": {
+          "min": [
+            -150.132,
+            -93.781,
+            50.2
+          ],
+          "max": [
+            -97.146,
+            -45.361,
+            52.05
+          ]
+        },
+        "reportedAsCollision": true
+      },
+      {
+        "kind": "press_fit",
+        "instances": [
+          "062-L3 knee servo",
+          "063-L3 knee cap OVH (NEW)"
+        ],
+        "reason": "L3 knee cap tongue has the documented 0.5 mm servo body preload",
+        "feature": null,
+        "maxPenetrationMm": 0.75,
+        "outcome": "overlapping",
+        "penetrationMm": 0.248,
+        "gapMm": null,
+        "point": [
+          -183.736,
+          -86.26,
+          75.324
+        ],
+        "region": {
+          "min": [
+            -211.105,
+            -127.548,
+            72.339
+          ],
+          "max": [
+            -168.531,
+            -86.26,
+            90.25
+          ]
+        },
+        "reportedAsCollision": false
+      },
+      {
+        "kind": "bearing_seat",
+        "instances": [
+          "117-L3 screw-on upper bearing carrier",
+          "057-L3 third 6805"
+        ],
+        "reason": "L3 screw-on carrier deliberately press-seats the upper 6805 inner race",
+        "feature": null,
+        "maxPenetrationMm": 0.35,
+        "outcome": "overlapping",
+        "penetrationMm": 0,
+        "gapMm": null,
+        "point": null,
+        "region": null,
+        "reportedAsCollision": false
+      },
+      {
+        "kind": "press_fit",
+        "instances": [
+          "000-chassis_bottom RIGID",
+          "074-L4 yaw servo"
+        ],
+        "reason": "L4 yaw servo body is deliberately captured by its chassis cradle",
+        "feature": null,
+        "maxPenetrationMm": 2.1,
+        "outcome": "overlapping",
+        "penetrationMm": 1.806,
+        "gapMm": null,
+        "point": [
+          -9.093,
+          -88.341,
+          8.444
+        ],
+        "region": {
+          "min": [
+            -10.747,
+            -110.2,
+            6.639
+          ],
+          "max": [
+            10.747,
+            -78.252,
+            10.25
+          ]
+        },
+        "reportedAsCollision": true
+      },
+      {
+        "kind": "press_fit",
+        "instances": [
+          "074-L4 yaw servo",
+          "122-L4 deep lower yaw carrier"
+        ],
+        "reason": "L4 yaw output boss deliberately engages the coaxial screw-on driven coxa hub",
+        "feature": null,
+        "maxPenetrationMm": 2.25,
+        "outcome": "overlapping",
+        "penetrationMm": 2,
+        "gapMm": null,
+        "point": [
+          -5.97,
+          -104.725,
+          8.25
+        ],
+        "region": {
+          "min": [
+            -9.644,
+            -109.288,
+            7.25
+          ],
+          "max": [
+            9.644,
+            -90.125,
+            10.25
+          ]
+        },
+        "reportedAsCollision": true
+      },
+      {
+        "kind": "bearing_seat",
+        "instances": [
+          "122-L4 deep lower yaw carrier",
+          "069-L4 yaw bearing (tower-seated)"
+        ],
+        "reason": "L4 screw-on lower hub deliberately press-seats the tower 6805 inner race",
+        "feature": null,
+        "maxPenetrationMm": 0.35,
+        "outcome": "overlapping",
+        "penetrationMm": 0,
+        "gapMm": null,
+        "point": null,
+        "region": null,
+        "reportedAsCollision": false
+      },
+      {
+        "kind": "press_fit",
+        "instances": [
+          "070-L4 hip servo",
+          "071-L4 hip cap OVH + yaw pedestal (NEW)"
+        ],
+        "reason": "L4 hip cap tongue has the documented 0.5 mm servo body preload",
+        "feature": null,
+        "maxPenetrationMm": 0.75,
+        "outcome": "overlapping",
+        "penetrationMm": 0.419,
+        "gapMm": null,
+        "point": [
+          15.231,
+          -163.187,
+          50.57
+        ],
+        "region": {
+          "min": [
+            -18.65,
+            -164.7,
+            49.09
+          ],
+          "max": [
+            15.231,
+            -119.3,
+            52.05
+          ]
+        },
+        "reportedAsCollision": true
+      },
+      {
+        "kind": "press_fit",
+        "instances": [
+          "077-L4 knee servo",
+          "078-L4 knee cap OVH (NEW)"
+        ],
+        "reason": "L4 knee cap tongue has the documented 0.5 mm servo body preload",
+        "feature": null,
+        "maxPenetrationMm": 0.75,
+        "outcome": "overlapping",
+        "penetrationMm": 0.213,
+        "gapMm": null,
+        "point": [
+          14.863,
+          -240.719,
+          90.792
+        ],
+        "region": {
+          "min": [
+            -16.256,
+            -240.719,
+            76.138
+          ],
+          "max": [
+            14.863,
+            -203.842,
+            90.792
+          ]
+        },
+        "reportedAsCollision": false
+      },
+      {
+        "kind": "bearing_seat",
+        "instances": [
+          "123-L4 screw-on upper bearing carrier",
+          "072-L4 third 6805"
+        ],
+        "reason": "L4 screw-on carrier deliberately press-seats the upper 6805 inner race",
+        "feature": null,
+        "maxPenetrationMm": 0.35,
+        "outcome": "overlapping",
+        "penetrationMm": 0,
+        "gapMm": null,
+        "point": null,
+        "region": null,
+        "reportedAsCollision": false
+      },
+      {
+        "kind": "press_fit",
+        "instances": [
+          "000-chassis_bottom RIGID",
+          "089-L5 yaw servo"
+        ],
+        "reason": "L5 yaw servo body is deliberately captured by its chassis cradle",
+        "feature": null,
+        "maxPenetrationMm": 2.1,
+        "outcome": "overlapping",
+        "penetrationMm": 1.679,
+        "gapMm": null,
+        "point": [
+          67.158,
+          -51.113,
+          7.929
+        ],
+        "region": {
+          "min": [
+            65.003,
+            -63.735,
+            7.929
+          ],
+          "max": [
+            99.481,
+            -32.18,
+            10.25
+          ]
+        },
+        "reportedAsCollision": true
+      },
+      {
+        "kind": "press_fit",
+        "instances": [
+          "089-L5 yaw servo",
+          "128-L5 deep lower yaw carrier"
+        ],
+        "reason": "L5 yaw output boss deliberately engages the coaxial screw-on driven coxa hub",
+        "feature": null,
+        "maxPenetrationMm": 2.25,
+        "outcome": "overlapping",
+        "penetrationMm": 1.333,
+        "gapMm": null,
+        "point": [
+          78.732,
+          -52.704,
+          8.917
+        ],
+        "region": {
+          "min": [
+            77.526,
+            -59.869,
+            7.583
+          ],
+          "max": [
+            95.609,
+            -40.764,
+            10.25
+          ]
+        },
+        "reportedAsCollision": true
+      },
+      {
+        "kind": "bearing_seat",
+        "instances": [
+          "128-L5 deep lower yaw carrier",
+          "084-L5 yaw bearing (tower-seated)"
+        ],
+        "reason": "L5 screw-on lower hub deliberately press-seats the tower 6805 inner race",
+        "feature": null,
+        "maxPenetrationMm": 0.35,
+        "outcome": "overlapping",
+        "penetrationMm": 0,
+        "gapMm": null,
+        "point": null,
+        "region": null,
+        "reportedAsCollision": false
+      },
+      {
+        "kind": "press_fit",
+        "instances": [
+          "085-L5 hip servo",
+          "086-L5 hip cap OVH + yaw pedestal (NEW)"
+        ],
+        "reason": "L5 hip cap tongue has the documented 0.5 mm servo body preload",
+        "feature": null,
+        "maxPenetrationMm": 0.75,
+        "outcome": "overlapping",
+        "penetrationMm": 0.253,
+        "gapMm": null,
+        "point": [
+          148.805,
+          -68.705,
+          50.2
+        ],
+        "region": {
+          "min": [
+            95.819,
+            -96.639,
+            50.2
+          ],
+          "max": [
+            148.805,
+            -48.219,
+            52.05
+          ]
+        },
+        "reportedAsCollision": true
+      },
+      {
+        "kind": "press_fit",
+        "instances": [
+          "092-L5 knee servo",
+          "093-L5 knee cap OVH (NEW)"
+        ],
+        "reason": "L5 knee cap tongue has the documented 0.5 mm servo body preload",
+        "feature": null,
+        "maxPenetrationMm": 0.75,
+        "outcome": "overlapping",
+        "penetrationMm": 0.246,
+        "gapMm": null,
+        "point": [
+          202.482,
+          -117.835,
+          90.25
+        ],
+        "region": {
+          "min": [
+            169.031,
+            -132.58,
+            75.324
+          ],
+          "max": [
+            214.646,
+            -91.293,
+            90.25
+          ]
+        },
+        "reportedAsCollision": false
+      },
+      {
+        "kind": "bearing_seat",
+        "instances": [
+          "129-L5 screw-on upper bearing carrier",
+          "087-L5 third 6805"
+        ],
+        "reason": "L5 screw-on carrier deliberately press-seats the upper 6805 inner race",
+        "feature": null,
+        "maxPenetrationMm": 0.35,
+        "outcome": "overlapping",
+        "penetrationMm": 0,
+        "gapMm": null,
+        "point": null,
+        "region": null,
+        "reportedAsCollision": false
+      }
+    ],
+    "printability": [
+      {
+        "meshId": "stl:chorn_clamp_cnc",
+        "meshName": "premade_chorn_56_DO_NOT_PRINT.stl",
+        "instanceIds": [
+          "015-L0 hip C-clamp (CNC 6061, NEW)",
+          "019-L0 knee C-clamp (CNC 6061, NEW)",
+          "030-L1 hip C-clamp (CNC 6061, NEW)",
+          "034-L1 knee C-clamp (CNC 6061, NEW)",
+          "045-L2 hip C-clamp (CNC 6061, NEW)",
+          "049-L2 knee C-clamp (CNC 6061, NEW)",
+          "060-L3 hip C-clamp (CNC 6061, NEW)",
+          "064-L3 knee C-clamp (CNC 6061, NEW)",
+          "075-L4 hip C-clamp (CNC 6061, NEW)",
+          "079-L4 knee C-clamp (CNC 6061, NEW)",
+          "090-L5 hip C-clamp (CNC 6061, NEW)",
+          "094-L5 knee C-clamp (CNC 6061, NEW)"
+        ],
+        "triangleCount": 7016,
+        "openEdges": null,
+        "nonManifoldEdges": null,
+        "inconsistentWinding": false,
+        "degenerateTriangles": null,
+        "selfIntersections": null,
+        "selfIntersectionPoint": null,
+        "componentCount": 1,
+        "smallestComponent": null,
+        "volumeMm3": 8529.855,
+        "minWallMm": null,
+        "thinPoint": null
+      },
+      {
+        "meshId": "stl:driven_spacer",
+        "meshName": "driven_spacer_7mm.stl",
+        "instanceIds": [
+          "100-L0 hip driven 7 mm spacer",
+          "102-L0 knee driven 7 mm spacer",
+          "106-L1 hip driven 7 mm spacer",
+          "108-L1 knee driven 7 mm spacer",
+          "112-L2 hip driven 7 mm spacer",
+          "114-L2 knee driven 7 mm spacer",
+          "118-L3 hip driven 7 mm spacer",
+          "120-L3 knee driven 7 mm spacer",
+          "124-L4 hip driven 7 mm spacer",
+          "126-L4 knee driven 7 mm spacer",
+          "130-L5 hip driven 7 mm spacer",
+          "132-L5 knee driven 7 mm spacer"
+        ],
+        "triangleCount": 2704,
+        "openEdges": null,
+        "nonManifoldEdges": null,
+        "inconsistentWinding": false,
+        "degenerateTriangles": null,
+        "selfIntersections": null,
+        "selfIntersectionPoint": null,
+        "componentCount": 1,
+        "smallestComponent": null,
+        "volumeMm3": 1940.432,
+        "minWallMm": null,
+        "thinPoint": null
+      },
+      {
+        "meshId": "stl:passive_spacer",
+        "meshName": "passive_spacer_7mm.stl",
+        "instanceIds": [
+          "101-L0 hip passive 7 mm spacer",
+          "103-L0 knee passive 7 mm spacer",
+          "107-L1 hip passive 7 mm spacer",
+          "109-L1 knee passive 7 mm spacer",
+          "113-L2 hip passive 7 mm spacer",
+          "115-L2 knee passive 7 mm spacer",
+          "119-L3 hip passive 7 mm spacer",
+          "121-L3 knee passive 7 mm spacer",
+          "125-L4 hip passive 7 mm spacer",
+          "127-L4 knee passive 7 mm spacer",
+          "131-L5 hip passive 7 mm spacer",
+          "133-L5 knee passive 7 mm spacer"
+        ],
+        "triangleCount": 2320,
+        "openEdges": null,
+        "nonManifoldEdges": null,
+        "inconsistentWinding": false,
+        "degenerateTriangles": null,
+        "selfIntersections": null,
+        "selfIntersectionPoint": null,
+        "componentCount": 1,
+        "smallestComponent": null,
+        "volumeMm3": 1762.431,
+        "minWallMm": null,
+        "thinPoint": null
+      },
+      {
+        "meshId": "stl:femur_ovh_body",
+        "meshName": "femur_body_premade_chorn.stl",
+        "instanceIds": [
+          "016-L0 femur body OVH (NEW)",
+          "031-L1 femur body OVH (NEW)",
+          "046-L2 femur body OVH (NEW)",
+          "061-L3 femur body OVH (NEW)",
+          "076-L4 femur body OVH (NEW)",
+          "091-L5 femur body OVH (NEW)"
+        ],
+        "triangleCount": 11090,
+        "openEdges": null,
+        "nonManifoldEdges": null,
+        "inconsistentWinding": false,
+        "degenerateTriangles": null,
+        "selfIntersections": null,
+        "selfIntersectionPoint": null,
+        "componentCount": 1,
+        "smallestComponent": null,
+        "volumeMm3": 29772.628,
+        "minWallMm": null,
+        "thinPoint": null
+      },
+      {
+        "meshId": "stl:tibia_ovh_socket",
+        "meshName": "tibia_socket_premade_chorn.stl",
+        "instanceIds": [
+          "020-L0 tibia socket OVH (NEW)",
+          "035-L1 tibia socket OVH (NEW)",
+          "050-L2 tibia socket OVH (NEW)",
+          "065-L3 tibia socket OVH (NEW)",
+          "080-L4 tibia socket OVH (NEW)",
+          "095-L5 tibia socket OVH (NEW)"
+        ],
+        "triangleCount": 7602,
+        "openEdges": null,
+        "nonManifoldEdges": null,
+        "inconsistentWinding": false,
+        "degenerateTriangles": null,
+        "selfIntersections": null,
+        "selfIntersectionPoint": null,
+        "componentCount": 1,
+        "smallestComponent": null,
+        "volumeMm3": 15083.542,
+        "minWallMm": null,
+        "thinPoint": null
+      },
+      {
+        "meshId": "stl:tibia_tube_ovh",
+        "meshName": "tibia_tube_premade_chorn_DO_NOT_PRINT.stl",
+        "instanceIds": [
+          "021-L0 tibia tube (shortened)",
+          "036-L1 tibia tube (shortened)",
+          "051-L2 tibia tube (shortened)",
+          "066-L3 tibia tube (shortened)",
+          "081-L4 tibia tube (shortened)",
+          "096-L5 tibia tube (shortened)"
+        ],
+        "triangleCount": 384,
+        "openEdges": null,
+        "nonManifoldEdges": null,
+        "inconsistentWinding": false,
+        "degenerateTriangles": null,
+        "selfIntersections": null,
+        "selfIntersectionPoint": null,
+        "componentCount": 1,
+        "smallestComponent": null,
+        "volumeMm3": 2635.794,
+        "minWallMm": null,
+        "thinPoint": null
+      },
+      {
+        "meshId": "stl:knee_clamp_cap_ovh",
+        "meshName": "knee_clamp_cap_ovh.stl",
+        "instanceIds": [
+          "018-L0 knee cap OVH (NEW)",
+          "033-L1 knee cap OVH (NEW)",
+          "048-L2 knee cap OVH (NEW)",
+          "063-L3 knee cap OVH (NEW)",
+          "078-L4 knee cap OVH (NEW)",
+          "093-L5 knee cap OVH (NEW)"
+        ],
+        "triangleCount": 1186,
+        "openEdges": null,
+        "nonManifoldEdges": null,
+        "inconsistentWinding": false,
+        "degenerateTriangles": null,
+        "selfIntersections": null,
+        "selfIntersectionPoint": null,
+        "componentCount": 1,
+        "smallestComponent": null,
+        "volumeMm3": 19191.083,
+        "minWallMm": null,
+        "thinPoint": null
+      },
+      {
+        "meshId": "stl:coxa_link_ovh",
+        "meshName": "coxa_link_ovh.stl",
+        "instanceIds": [
+          "008-L0 coxa OVH outboard arm (NEW)",
+          "023-L1 coxa OVH outboard arm (NEW)",
+          "038-L2 coxa OVH outboard arm (NEW)",
+          "053-L3 coxa OVH outboard arm (NEW)",
+          "068-L4 coxa OVH outboard arm (NEW)",
+          "083-L5 coxa OVH outboard arm (NEW)"
+        ],
+        "triangleCount": 12300,
+        "openEdges": null,
+        "nonManifoldEdges": null,
+        "inconsistentWinding": false,
+        "degenerateTriangles": null,
+        "selfIntersections": null,
+        "selfIntersectionPoint": null,
+        "componentCount": 1,
+        "smallestComponent": null,
+        "volumeMm3": 63338.637,
+        "minWallMm": null,
+        "thinPoint": null
+      },
+      {
+        "meshId": "stl:coxa_yaw_hub_carrier_ovh",
+        "meshName": "coxa_yaw_hub_carrier_ovh.stl",
+        "instanceIds": [
+          "098-L0 deep lower yaw carrier",
+          "104-L1 deep lower yaw carrier",
+          "110-L2 deep lower yaw carrier",
+          "116-L3 deep lower yaw carrier",
+          "122-L4 deep lower yaw carrier",
+          "128-L5 deep lower yaw carrier"
+        ],
+        "triangleCount": 7700,
+        "openEdges": null,
+        "nonManifoldEdges": null,
+        "inconsistentWinding": false,
+        "degenerateTriangles": null,
+        "selfIntersections": null,
+        "selfIntersectionPoint": null,
+        "componentCount": 1,
+        "smallestComponent": null,
+        "volumeMm3": 8003.205,
+        "minWallMm": null,
+        "thinPoint": null
+      },
+      {
+        "meshId": "stl:hip_clamp_cap_ovh",
+        "meshName": "hip_clamp_cap_ovh.stl",
+        "instanceIds": [
+          "011-L0 hip cap OVH + yaw pedestal (NEW)",
+          "026-L1 hip cap OVH + yaw pedestal (NEW)",
+          "041-L2 hip cap OVH + yaw pedestal (NEW)",
+          "056-L3 hip cap OVH + yaw pedestal (NEW)",
+          "071-L4 hip cap OVH + yaw pedestal (NEW)",
+          "086-L5 hip cap OVH + yaw pedestal (NEW)"
+        ],
+        "triangleCount": 6662,
+        "openEdges": null,
+        "nonManifoldEdges": null,
+        "inconsistentWinding": false,
+        "degenerateTriangles": null,
+        "selfIntersections": null,
+        "selfIntersectionPoint": null,
+        "componentCount": 1,
+        "smallestComponent": null,
+        "volumeMm3": 24655.195,
+        "minWallMm": null,
+        "thinPoint": null
+      },
+      {
+        "meshId": "stl:hip_bearing_carrier_ovh",
+        "meshName": "hip_bearing_carrier_ovh.stl",
+        "instanceIds": [
+          "099-L0 screw-on upper bearing carrier",
+          "105-L1 screw-on upper bearing carrier",
+          "111-L2 screw-on upper bearing carrier",
+          "117-L3 screw-on upper bearing carrier",
+          "123-L4 screw-on upper bearing carrier",
+          "129-L5 screw-on upper bearing carrier"
+        ],
+        "triangleCount": 4698,
+        "openEdges": null,
+        "nonManifoldEdges": null,
+        "inconsistentWinding": false,
+        "degenerateTriangles": null,
+        "selfIntersections": null,
+        "selfIntersectionPoint": null,
+        "componentCount": 1,
+        "smallestComponent": null,
+        "volumeMm3": 8792.924,
+        "minWallMm": null,
+        "thinPoint": null
+      },
+      {
+        "meshId": "stl:chassis_top_rigid",
+        "meshName": "chassis_top_rigid.stl",
+        "instanceIds": [
+          "001-chassis_top_rigid FRAME"
+        ],
+        "triangleCount": 27120,
+        "openEdges": null,
+        "nonManifoldEdges": null,
+        "inconsistentWinding": false,
+        "degenerateTriangles": null,
+        "selfIntersections": null,
+        "selfIntersectionPoint": null,
+        "componentCount": 1,
+        "smallestComponent": null,
+        "volumeMm3": 133196.539,
+        "minWallMm": null,
+        "thinPoint": null
+      },
+      {
+        "meshId": "stl:top_hatch_rigid",
+        "meshName": "top_hatch_rigid.stl",
+        "instanceIds": [
+          "002-top_hatch (removable)"
+        ],
+        "triangleCount": 9608,
+        "openEdges": null,
+        "nonManifoldEdges": null,
+        "inconsistentWinding": false,
+        "degenerateTriangles": null,
+        "selfIntersections": null,
+        "selfIntersectionPoint": null,
+        "componentCount": 1,
+        "smallestComponent": null,
+        "volumeMm3": 61206.456,
+        "minWallMm": null,
+        "thinPoint": null
+      },
+      {
+        "meshId": "stl:centre_wago_block",
+        "meshName": "centre_wago_block.stl",
+        "instanceIds": [
+          "003-central splice block"
+        ],
+        "triangleCount": 76,
+        "openEdges": null,
+        "nonManifoldEdges": null,
+        "inconsistentWinding": false,
+        "degenerateTriangles": null,
+        "selfIntersections": null,
+        "selfIntersectionPoint": null,
+        "componentCount": 1,
+        "smallestComponent": null,
+        "volumeMm3": 8895.781,
+        "minWallMm": null,
+        "thinPoint": null
+      },
+      {
+        "meshId": "stl:chassis_bottom",
+        "meshName": "chassis_bottom_rigid.stl",
+        "instanceIds": [
+          "000-chassis_bottom RIGID"
+        ],
+        "triangleCount": 31516,
+        "openEdges": null,
+        "nonManifoldEdges": null,
+        "inconsistentWinding": false,
+        "degenerateTriangles": null,
+        "selfIntersections": null,
+        "selfIntersectionPoint": null,
+        "componentCount": 1,
+        "smallestComponent": null,
+        "volumeMm3": 271403.353,
+        "minWallMm": null,
+        "thinPoint": null
+      },
+      {
+        "meshId": "stl:foot_boot",
+        "meshName": "foot_boot.stl",
+        "instanceIds": [
+          "022-L0 foot boot",
+          "037-L1 foot boot",
+          "052-L2 foot boot",
+          "067-L3 foot boot",
+          "082-L4 foot boot",
+          "097-L5 foot boot"
+        ],
+        "triangleCount": 3584,
+        "openEdges": null,
+        "nonManifoldEdges": null,
+        "inconsistentWinding": false,
+        "degenerateTriangles": null,
+        "selfIntersections": null,
+        "selfIntersectionPoint": null,
+        "componentCount": 1,
+        "smallestComponent": null,
+        "volumeMm3": 2825.467,
+        "minWallMm": null,
+        "thinPoint": null
+      },
+      {
+        "meshId": "stl:yaw_servo_retainer",
+        "meshName": "yaw_servo_retainer.stl",
+        "instanceIds": [
+          "013-L0 yaw retainer",
+          "028-L1 yaw retainer",
+          "043-L2 yaw retainer",
+          "058-L3 yaw retainer",
+          "073-L4 yaw retainer",
+          "088-L5 yaw retainer"
+        ],
+        "triangleCount": 5648,
+        "openEdges": null,
+        "nonManifoldEdges": null,
+        "inconsistentWinding": false,
+        "degenerateTriangles": null,
+        "selfIntersections": null,
+        "selfIntersectionPoint": null,
+        "componentCount": 1,
+        "smallestComponent": null,
+        "volumeMm3": 20031.206,
+        "minWallMm": null,
+        "thinPoint": null
+      },
+      {
+        "meshId": "stl:servo_body",
+        "meshName": "servo_body_DO_NOT_PRINT.stl",
+        "instanceIds": [
+          "010-L0 hip servo",
+          "014-L0 yaw servo",
+          "017-L0 knee servo",
+          "025-L1 hip servo",
+          "029-L1 yaw servo",
+          "032-L1 knee servo",
+          "040-L2 hip servo",
+          "044-L2 yaw servo",
+          "047-L2 knee servo",
+          "055-L3 hip servo",
+          "059-L3 yaw servo",
+          "062-L3 knee servo",
+          "070-L4 hip servo",
+          "074-L4 yaw servo",
+          "077-L4 knee servo",
+          "085-L5 hip servo",
+          "089-L5 yaw servo",
+          "092-L5 knee servo"
+        ],
+        "triangleCount": 230,
+        "openEdges": null,
+        "nonManifoldEdges": null,
+        "inconsistentWinding": false,
+        "degenerateTriangles": null,
+        "selfIntersections": null,
+        "selfIntersectionPoint": null,
+        "componentCount": 3,
+        "smallestComponent": {
+          "triangleCount": 12,
+          "volumeMm3": 48,
+          "point": [
+            104.99,
+            82.151,
+            36.15
+          ]
+        },
+        "volumeMm3": 38810.209,
+        "minWallMm": null,
+        "thinPoint": null
+      },
+      {
+        "meshId": "stl:yaw_bearing_upper",
+        "meshName": "yaw_bearing_upper_DO_NOT_PRINT.stl",
+        "instanceIds": [
+          "009-L0 yaw bearing (tower-seated)",
+          "024-L1 yaw bearing (tower-seated)",
+          "039-L2 yaw bearing (tower-seated)",
+          "054-L3 yaw bearing (tower-seated)",
+          "069-L4 yaw bearing (tower-seated)",
+          "084-L5 yaw bearing (tower-seated)"
+        ],
+        "triangleCount": 768,
+        "openEdges": null,
+        "nonManifoldEdges": null,
+        "inconsistentWinding": false,
+        "degenerateTriangles": null,
+        "selfIntersections": null,
+        "selfIntersectionPoint": null,
+        "componentCount": 2,
+        "smallestComponent": {
+          "triangleCount": 384,
+          "volumeMm3": 1184.134,
+          "point": [
+            86.603,
+            50,
+            14.25
+          ]
+        },
+        "volumeMm3": 2719.121,
+        "minWallMm": null,
+        "thinPoint": null
+      },
+      {
+        "meshId": "stl:bearing_6805",
+        "meshName": "bearing_6805_DO_NOT_PRINT.stl",
+        "instanceIds": [
+          "012-L0 third 6805",
+          "027-L1 third 6805",
+          "042-L2 third 6805",
+          "057-L3 third 6805",
+          "072-L4 third 6805",
+          "087-L5 third 6805"
+        ],
+        "triangleCount": 1024,
+        "openEdges": null,
+        "nonManifoldEdges": null,
+        "inconsistentWinding": false,
+        "degenerateTriangles": null,
+        "selfIntersections": null,
+        "selfIntersectionPoint": null,
+        "componentCount": 1,
+        "smallestComponent": null,
+        "volumeMm3": 4047.372,
+        "minWallMm": null,
+        "thinPoint": null
+      },
+      {
+        "meshId": "stl:wago5",
+        "meshName": "wago5_DO_NOT_PRINT.stl",
+        "instanceIds": [
+          "004-221-415 V+ west",
+          "005-221-415 V+ east",
+          "006-221-415 GND west",
+          "007-221-415 GND east"
+        ],
+        "triangleCount": 12,
+        "openEdges": null,
+        "nonManifoldEdges": null,
+        "inconsistentWinding": false,
+        "degenerateTriangles": null,
+        "selfIntersections": null,
+        "selfIntersectionPoint": null,
+        "componentCount": 1,
+        "smallestComponent": null,
+        "volumeMm3": 4687.2,
+        "minWallMm": null,
+        "thinPoint": null
+      }
+    ],
+    "fasteners": [],
+    "access": [],
+    "mating": [],
+    "routing": [],
+    "minWallMm": 0.8,
+    "minThreadEngagementMm": 2,
+    "matingToleranceMm": 0.2,
+    "components": {
+      "count": 13,
+      "mainComponentSize": 62,
+      "floatingComponentCount": 12
+    },
+    "timings": {
+      "loadMs": 77,
+      "bvhMs": 2,
+      "broadMs": 1,
+      "narrowMs": 3518,
+      "connectivityMs": 9,
+      "printabilityMs": 207,
+      "threadMs": 0,
+      "accessMs": 0,
+      "matingMs": 0,
+      "routingMs": 0,
+      "totalMs": 3972
+    }
+  }
+}

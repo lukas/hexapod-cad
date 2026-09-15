@@ -1,0 +1,176 @@
+{
+  "schema_version": 1,
+  "name": "STS3215 knee-yoke AprilTag snap-flag tray",
+  "tag_family": "tag36h11",
+  "tag_ids": [
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32
+  ],
+  "part_count": 17,
+  "attachment": "four split friction cups over M3 SHCS heads",
+  "camera_face": "tag and full white quiet zone only; black human-readable ID is on back",
+  "print_orientation": "tag faces on build plate; cups and black raised IDs upward; no supports",
+  "colour_assignment": {
+    "white": "holder plate and four grip cups",
+    "black": "AprilTag cells and raised rear IDs"
+  },
+  "dimensions": {
+    "plate_size_mm": 38.0,
+    "tag_size_mm": 34.0,
+    "plate_thickness_mm": 1.6,
+    "cup_height_mm": 3.25,
+    "total_height_mm": 4.85,
+    "head_diameter_mm": 5.5,
+    "head_height_mm": 3.0,
+    "cup_throat_diameter_mm": 5.5,
+    "cup_back_diameter_mm": 5.75,
+    "bolt_circle_diameter_mm": 14.0,
+    "back_label_height_mm": 0.5
+  },
+  "opencv_decoded_tag_ids": [
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32
+  ],
+  "holders": [
+    {
+      "tag_id": 16,
+      "watertight": true,
+      "connected_components": 1,
+      "volume_mm3": 2641.736
+    },
+    {
+      "tag_id": 17,
+      "watertight": true,
+      "connected_components": 1,
+      "volume_mm3": 2641.336
+    },
+    {
+      "tag_id": 18,
+      "watertight": true,
+      "connected_components": 1,
+      "volume_mm3": 2641.816
+    },
+    {
+      "tag_id": 19,
+      "watertight": true,
+      "connected_components": 1,
+      "volume_mm3": 2641.736
+    },
+    {
+      "tag_id": 20,
+      "watertight": true,
+      "connected_components": 1,
+      "volume_mm3": 2641.976
+    },
+    {
+      "tag_id": 21,
+      "watertight": true,
+      "connected_components": 1,
+      "volume_mm3": 2641.656
+    },
+    {
+      "tag_id": 22,
+      "watertight": true,
+      "connected_components": 1,
+      "volume_mm3": 2641.896
+    },
+    {
+      "tag_id": 23,
+      "watertight": true,
+      "connected_components": 1,
+      "volume_mm3": 2641.896
+    },
+    {
+      "tag_id": 24,
+      "watertight": true,
+      "connected_components": 1,
+      "volume_mm3": 2641.736
+    },
+    {
+      "tag_id": 25,
+      "watertight": true,
+      "connected_components": 1,
+      "volume_mm3": 2641.896
+    },
+    {
+      "tag_id": 26,
+      "watertight": true,
+      "connected_components": 1,
+      "volume_mm3": 2641.976
+    },
+    {
+      "tag_id": 27,
+      "watertight": true,
+      "connected_components": 1,
+      "volume_mm3": 2641.576
+    },
+    {
+      "tag_id": 28,
+      "watertight": true,
+      "connected_components": 1,
+      "volume_mm3": 2642.056
+    },
+    {
+      "tag_id": 29,
+      "watertight": true,
+      "connected_components": 1,
+      "volume_mm3": 2641.976
+    },
+    {
+      "tag_id": 30,
+      "watertight": true,
+      "connected_components": 1,
+      "volume_mm3": 2641.976
+    },
+    {
+      "tag_id": 31,
+      "watertight": true,
+      "connected_components": 1,
+      "volume_mm3": 2641.656
+    },
+    {
+      "tag_id": 32,
+      "watertight": true,
+      "connected_components": 1,
+      "volume_mm3": 2641.896
+    }
+  ],
+  "outputs": {
+    "portable_3mf": "tag36h11_16-32_knee_yoke_snap_flags.3mf",
+    "bambu_project": "tag36h11_16-32_knee_yoke_snap_flags_BambuStudio.3mf",
+    "bambu_rear_plate_preview": "tag36h11_16-32_knee_yoke_snap_flags_rear_plate_preview.png",
+    "paper_tag_directory": "paper_tags",
+    "preview": "tag36h11_16-32_knee_yoke_snap_flags_preview.png"
+  },
+  "pass": true
+}

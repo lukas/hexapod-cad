@@ -1,0 +1,75 @@
+{
+ "status": "experimental_not_for_machining_release",
+ "split_clamp_mass": {
+  "drive_frame_g": 32.5,
+  "passive_plate_g": 16.8,
+  "assembled_g": 49.3,
+  "one_piece_baseline_g": 48.0,
+  "delta_g": 1.3
+ },
+ "sweep": {
+  "limit_deg": -110.0,
+  "contact_vs_own_stack": {
+   "deg": -125.0,
+   "part": "chorn_clamp_cnc"
+  },
+  "contact_vs_plate_by_yaw": {
+   "-35.0": {
+    "deg": -117.5,
+    "part": "femur_ovh_body"
+   },
+   "-20.0": {
+    "deg": -117.5,
+    "part": "femur_ovh_body"
+   },
+   "0.0": {
+    "deg": -117.5,
+    "part": "femur_ovh_body"
+   },
+   "20.0": {
+    "deg": -117.5,
+    "part": "femur_ovh_body"
+   },
+   "35.0": {
+    "deg": -117.5,
+    "part": "femur_ovh_body"
+   }
+  },
+  "margin_deg": 7.5,
+  "step_deg": 2.5
+ },
+ "masses": {
+  "chorn_clamp_cnc_g": 49.3,
+  "femur_ovh_body_g": 43.6,
+  "tibia_ovh_socket_g": 14.0,
+  "knee_clamp_cap_ovh_g": 24.7,
+  "coxa_link_ovh_g": 64.2,
+  "hip_clamp_cap_ovh_g": 41.3,
+  "old_femur_link_g": 77.8,
+  "old_tibia_knee_yoke_g": 29.4,
+  "old_knee_clamp_cap_g": 27.0,
+  "old_coxa_link_rigid_g": 62.1,
+  "old_hip_clamp_cap_rigid_g": 34.9,
+  "per_leg_delta_g": 55.1,
+  "robot_delta_g": 330.9
+ },
+ "outboard_geometry": {
+  "rigid_hip": {
+   "mass_g": 388.0,
+   "yaw_cg_lever_mm": 46.6,
+   "yaw_first_moment_gmm": 18084.0,
+   "yaw_inertia_gmm2": 1668838.0,
+   "stance_foot_lever_mm": 204.3,
+   "hip_axis_radial_mm": 115.4
+  },
+  "cnc_chorn_overhead": {
+   "mass_g": 441.9,
+   "yaw_cg_lever_mm": 87.3,
+   "yaw_first_moment_gmm": 38553.0,
+   "yaw_inertia_gmm2": 4685216.0,
+   "stance_foot_lever_mm": 246.3,
+   "hip_axis_radial_mm": 156.6
+  },
+  "coxa_ext_mm": 42.0
+ }
+}

@@ -1,0 +1,5 @@
+{
+  "devDependencies": {
+    "buildviz": "file:../../../buildviz"
+  }
+}

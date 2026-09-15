@@ -1,0 +1,85 @@
+schema_version: 1
+name: STS3215 knee-yoke AprilTag snap flag
+status: measurement_accessory
+
+purpose: >-
+  Rigidly follow the moving tibia knee yoke so camera tracking can compare its
+  physical angle with the knee-servo housing tag and encoder telemetry.
+
+mount:
+  target: driven/front face of tibia_knee_yoke
+  method: four split friction cups over exposed M3 socket-head cap screws
+  structural_fasteners_changed: false
+  enters_horn_clamp_stack: false
+  production_part_modified: false
+  source_bolt_pattern: hexapod_prototype._disc_horn_bolt_centres
+  bolt_circle_diameter_mm: 14.0
+  nominal_screw_head:
+    standard: ISO 4762 M3 SHCS
+    diameter_mm: 5.5
+    height_mm: 3.0
+
+geometry_mm:
+  plate: [38.0, 38.0, 1.6]
+  corner_radius: 2.5
+  tag_including_quiet_zone: [34.0, 34.0]
+  tag_black_square: 27.2
+  colour_skin: 0.6
+  grip_cup_outer_diameter: 8.2
+  grip_cup_throat_diameter: 5.5
+  grip_cup_back_diameter: 5.75
+  grip_cup_height: 3.25
+  raised_back_id_height: 0.5
+  total_installed_height_from_yoke_face: 4.85
+  estimated_mass_g_pla: 3.3
+
+tag:
+  family: tag36h11
+  id: 16
+  tray_ranges_inclusive:
+    - [16, 32]
+    - [33, 64]
+  reason: unused by the current robot and floor pose configuration
+  camera_face: full tag and white quiet zone only
+  human_readable_id: raised black material on the rear/cup side
+
+print:
+  orientation: tag face on build plate, grip cups upward
+  supports: none
+  preferred_material: PETG
+  colours: [white, black]
+  colour_assignment:
+    white: holder plate and four grip cups
+    black: camera-facing AprilTag cells and raised rear ID
+  note: >-
+    The first-layer tag should be matte and high contrast. Disable elephant-foot
+    compensation only if it visibly erodes the outer quiet zone.
+
+safety:
+  - This is a removable measurement flag, not a structural yoke component.
+  - Remove it before any run where it could strike the floor or another leg.
+  - Manually sweep the unpowered joint through its usable range after fitting.
+  - Do not force an undersized cup over a screw head; regenerate to the measured head.
+
+parts:
+  tibia_knee_yoke:
+    description: Production moving C-yoke at the knee, shown unchanged.
+    material: printed polymer
+  tibia_tube_reference:
+    description: Carbon-tube context showing the direction of the tibia and foot.
+    material: carbon-fiber tube
+  knee_yoke_apriltag_holder_white:
+    description: >-
+      One-piece 38 mm marker backer with four slotted friction cups. The cups
+      register on the existing screw heads without entering the clamp stack.
+      The rear ID is removed from this white component and supplied as a keyed
+      black material part, away from the camera face.
+    material: PETG recommended
+  knee_yoke_apriltag_inlay_black:
+    description: >-
+      Coplanar black first-layer cells forming tag36h11 ID 16, plus the raised
+      black human-readable ID on the rear/cup side.
+    material: matte black PETG or PLA
+  m3x12_shcs_reference:
+    description: Existing M3x12 socket-head screw used only as a fit reference.
+    material: steel

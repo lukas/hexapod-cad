@@ -1,0 +1,6 @@
+# STEP-first/generated outputs.  Regenerate with
+# make_two_piece_chorn_variant.py.
+/step/
+/stl/
+/preview.png
+__pycache__/

@@ -1,0 +1,10 @@
+{
+  "variant": "10 mm long x 5.5 mm OD horn compression spacers",
+  "samples": {
+    "yaw": 3,
+    "femur": 5,
+    "knee": 5
+  },
+  "posesChecked": 76,
+  "pass": true
+}

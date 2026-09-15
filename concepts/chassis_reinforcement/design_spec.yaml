@@ -1,0 +1,85 @@
+# Design spec — STS3215 chassis reinforcement test kit.
+#
+# BuildViz-only concept, not production CAD.  This project explores removable
+# aluminum reinforcement around the whole chassis load path after the MuJoCo
+# stand/walk/rise/lower loads showed ~50 N peak single-foot reactions during
+# rise/lower, higher than the scripted walk case.
+
+parts:
+  chassis_bottom_reference:
+    label: "Simplified lower chassis plate context"
+    material: "printed PETG/plastic reference only"
+    description: >-
+      A simplified hexagonal lower-plate envelope used only to place the
+      reinforcement kit in the same rough world frame as the robot. It is not a
+      replacement for the generated production chassis_bottom geometry.
+    purpose: "Context surface for bottom spreader and standoff-sleeve contact."
+
+  chassis_top_reference:
+    label: "Simplified upper chassis plate context"
+    material: "printed PETG/plastic reference only"
+    description: >-
+      A simplified hexagonal upper-plate envelope used only to visualize
+      removable doublers and yaw-pocket load sharing. It is intentionally plain
+      so the concept can pass BuildViz geometry checks before being ported into
+      the real CAD.
+    purpose: "Context surface for the top doubler, radial ribs, and yaw saddles."
+
+  aluminum_top_doubler_ring:
+    label: "6061 top doubler ring"
+    material: "6061-T6 aluminum, 2.0 mm sheet concept"
+    description: >-
+      Continuous annular sheet tying the six yaw-bearing stations together.
+      The intent is to move the chassis from six isolated local plastic pockets
+      toward a shared membrane/load-spreader, especially for rise/lower cases.
+    purpose: "Reduce local plate bending and yaw-pocket peel around high foot-load events."
+    manufacturing_note: "Waterjet/CNC sheet prototype; final outline should inherit real chassis cutouts and screw clearance."
+
+  aluminum_bottom_spreader_ring:
+    label: "6061 lower spreader ring"
+    material: "6061-T6 aluminum, 2.0 mm sheet concept"
+    description: >-
+      Lower-side counterpart to the top doubler. It spreads fixture/reaction
+      loads under the lower plate so standoff screws do less point-loading.
+    purpose: "Reduce stress concentration around the lower chassis and standoff screw stack."
+
+  aluminum_radial_rib:
+    label: "Radial rib strap"
+    material: "6061-T6 aluminum, 2.5 mm sheet/strap concept"
+    description: >-
+      Six removable radial straps from the central ring region to each yaw
+      saddle. These make the load path explicit in BuildViz and are a fast way
+      to test whether adding directional stiffness is worth carrying into CAD.
+    purpose: "Carry yaw-pocket reaction toward the central chassis/standoff ring."
+
+  aluminum_yaw_saddle_pad:
+    label: "Yaw saddle pad"
+    material: "6061-T6 aluminum, 2.0 mm local doubler concept"
+    description: >-
+      Local saddle/doubler over each yaw-bearing station. The pad is deliberately
+      simple in this concept; production geometry should clear bearing screws,
+      servo case sweep, and any top-side electronics.
+    purpose: "Lower bearing-seat contact pressure and delay pocket cracking at each leg station."
+
+  aluminum_standoff_sleeve:
+    label: "Standoff compression sleeve"
+    material: "6061-T6 aluminum tube/spacer concept"
+    description: >-
+      Four sleeves bridging the upper and lower plates at the chassis standoff
+      pattern. The sleeve is meant to turn the two plates into a spaced box
+      instead of letting the screw stack dish the plastic plates locally.
+    purpose: "Add plate-to-plate compression columns and improve whole-chassis bending stiffness."
+
+analysis_inputs:
+  mujoco_manifest: "artifacts/strength/onshape/mujoco_onshape_study_manifest.json"
+  critical_observation: >-
+    Rise/lower produced the largest single-foot normal reactions in the latest
+    repeatable load manifest, so chassis reinforcements should be judged on
+    stand, walk, rise, and lower rather than walking alone.
+
+production_gates:
+  - "Replace simplified plate envelopes with real chassis_top/chassis_bottom STEP/BREP geometry."
+  - "Add exact holes/slots for yaw screws, standoffs, wiring, and electronics clearance."
+  - "Run Onshape Simulation with MuJoCo rise/lower equivalent yaw-bearing loads."
+  - "Check BuildViz against the full robot scene for servo/electronics/screw clearance."
+  - "Decide whether this is a bolt-on aluminum kit or a geometry change to the printed chassis."

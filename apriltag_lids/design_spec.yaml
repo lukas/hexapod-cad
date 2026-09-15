@@ -1,0 +1,116 @@
+schema_version: 1
+name: STS3215 AprilTag motor-lid accessory set
+status: optional_accessory
+source: make_apriltag_lids.py
+
+scope:
+  production_part_mated_to: servo_clamp_cap
+  production_geometry_modified: false
+  applicable_joints: [hip, knee]
+  quantity: 16
+  tag_ids:
+    coxa_housings: [1, 2, 3, 4, 5, 6]
+    femur_housings: [7, 8, 9, 10, 11, 12]
+    extra_unassigned_covers: [13, 14, 15, 16]
+  note: >-
+    The six yaw servos use yaw_servo_retainer, not servo_clamp_cap; tag 0
+    therefore needs a separate body/chassis mount. Tags 13-18 belong on the
+    tibias and also need a different mount. IDs 13-16 in this tray are spare
+    clamp-cap covers rather than current pose-estimator assignments.
+
+additional_plate:
+  quantity: 20
+  tag_ids: [100, 101, 102, 103, 104, 105, 106, 107, 108, 109,
+            110, 111, 112, 113, 114, 115, 116, 117, 118, 119]
+  output: out/tag36h11_motor_lids_100-119_BambuStudio.3mf
+  assignment: additional marker IDs; not assigned in the current pose config
+
+geometry_mm:
+  overall: [61.8, 34.3, 1.4]
+  corner_radius: 2.0
+  white_structural_base: 0.6
+  coplanar_colour_skin: 0.8
+  colour_skin_body_half_width: 29.4
+  screw_skin_pad_radius: 3.0
+  artwork_orientation: portrait
+  portrait_mapping: portrait +V maps to print +X; portrait +U maps to print -Y
+  tag_outer_with_quiet_zone: 34.0
+  tag_black_square: 27.2
+  tag_cell: 3.4
+  tag_portrait_centre_v: 0.0
+  id_label:
+    style: separated 3x5 pixel-font black numerals
+    pixel_size: 0.6
+    pixel_gap: 0.12
+    digit_height: 3.48
+    portrait_centre_v: -20.5
+    note: positioned below the tag quiet zone and above the lower screw
+  family: tag36h11
+
+holes:
+  source: hexapod_prototype.servo_clamp_bolt_centres
+  centres_xy: [[-27.2, 0.0], [27.2, 0.0]]
+  through_diameter: 3.4
+  countersink_top_diameter: 6.0
+  countersink_angle_deg: 90
+  note: >-
+    Accessory print X maps to clamp-cap X. Accessory print Y=0 maps to
+    clamp-cap Z=17.15. Do not hardcode a different pattern.
+
+fasteners:
+  replace_per_lid: 2 x M3x10 90-degree flat-head/countersunk screws
+  maximum_head_diameter_mm: 6.0
+  reason: >-
+    The existing M3x8 socket heads are flush in 3 mm production-cap
+    counterbores. A face accessory moves the bearing plane outward, so a
+    flat head is required to keep the new outer face flush and M3x10 restores
+    thread engagement through the additional 1.4 mm stack.
+
+materials:
+  white_component: >-
+    Continuous 0.6 mm structural base plus all white top regions.
+  black_component: 0.8 mm top regions only.
+  surface: >-
+    Black and white finish coplanar at Z=1.4; no raised pixels and therefore
+    no tag-pattern or number shadowing at oblique camera angles.
+  recommended: matte PLA or matte PETG in true white and black
+
+functional_clearances:
+  - name: moving_yoke_sweep
+    rule: no material or screw-head volume may intersect the moving yokes
+    mitigation: >-
+      Overall width is inset 0.8 mm per side from the 63.4 mm production cap;
+      the full-height colour skin ends at |X|=29.4 except for small screw pads.
+    verification: >-
+      check_clearance.py performs exact manifold intersections for the hip
+      and knee accessory at 176 poses across yaw [-35,35], hip [-80,40], and
+      knee [-20,80], including both flush M3 head envelopes.
+    required_critical_clearance_mm: 0.40
+  - name: horn_opening
+    rule: do not cover the cap's horn-clearance opening
+    mitigation: accessory height ends at clamp-local Z=34.3, below the lip bore
+  - name: wire_and_plug_corridor
+    rule: do not intrude behind the production clamp cap
+    mitigation: accessory begins at the cap's outer +Y face and grows only outward
+  - name: cap_fastener_axes
+    rule: preserve both named M3 stations
+    mitigation: coordinates are imported from the production CAD function
+
+print:
+  orientation: back face on build plate, tag face up
+  supports: none
+  preferred_layer_height_mm: 0.2
+  two_colour_strategy: >-
+    Use the Bambu Studio 3MF: white is extruder/AMS slot 1 and black is slot 2.
+    The colour change begins at Z=0.6 and both colours finish at Z=1.4. The
+    16-cover tray places the prime tower in the open lower-left grid slot.
+  portable_strategy: >-
+    Import each aligned *_WHITE.stl and *_BLACK.stl pair as parts of one object,
+    keep original coordinates, and assign white/black materials respectively.
+
+installation:
+  - Power the robot off; this accessory never requires commanded motion.
+  - Replace the two M3x8 socket screws with the specified M3x10 flat-head screws.
+  - Orient the tag square upright in the calibrated frame before tightening.
+  - Tighten only until seated; the 1.4 mm cover is not a structural clamp member.
+  - Manually articulate the unpowered joint through its usable range and confirm no rub before operation.

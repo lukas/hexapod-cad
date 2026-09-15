@@ -1,0 +1,184 @@
+# Design spec — sts3215-cnc-chorn-overhead (CONCEPT BUILD, not production).
+#
+# User, Aug 2026: "make a version of this [rigid_hip] with metal CNCed
+# C clamps ... a little bigger so this hexapod can put its legs over
+# its head."  Course-corrected architecture (user, Aug 2026): the
+# variant COXA LINK positions the hip servo COXA_EXT = 42 mm further
+# outboard, so the up-swinging femur clears the plate rim because the
+# pivot sits beyond it; the CNC 6061 C-clamp is a PLAIN C (a previous
+# swan-neck/contact-map rev is superseded).  Femur sweeps to -110 deg
+# SAFE (first contact -117.5 at yaw 0/+-20/+-35 = the knee end vs the
+# plate's phi44 dust collar, the physics ceiling at ANY offset;
+# rigid_hip was -47.5, production -80).  Geometry truth:
+# build_cnc_chorn_step.py (constants from make_cnc_chorn_variant.py).
+# Verified by make_cnc_chorn_variant.py (all rigid_hip checks re-run
+# green + this concept's own suite + the overhead sweep).
+
+concept: cnc_chorn_overhead
+base: rigid_hip            # chassis/plate/hatch/COTS all inherited
+build_id: prototype_sts3215/cnc-chorn-overhead   # sibling build in the STS
+    # hub project (standalone cnc_chorn_overhead id retired 2026-08-27)
+
+architecture:
+  outboard_hip_pivot_mm: 42.0    # COXA_EXT -- sweep-derived minimum at
+    # which the saturating knee end (not the clamp) is the limiter:
+    # clamp low corners vs the yaw-tower collar recede past -117.5
+    # from ext 42 up; knee end saturates at -117.5 for ANY offset.
+  superseded: swan-neck clamp rev (contact-map notch + corridor + web
+    bevel + cap crown shave at the production hip station) -- dropped
+    for a plain C + outboard pivot; simpler machining, no thin blade
+    corridor in the load path.
+
+workspace:
+  femur_up_safe_deg: -110.0      # first grid contact -117.5 + 7.5 margin
+  femur_up_rigid_hip_deg: -47.5
+  femur_up_production_deg: -80.0
+  femur_down_deg: 30.0           # unchanged
+  first_contact_by_yaw:          # all -117.5, knee block vs plate collar
+    "-35": {deg: -117.5, part: femur_ovh_body}
+    "-20": {deg: -117.5, part: femur_ovh_body}
+    "0":   {deg: -117.5, part: femur_ovh_body}
+    "+20": {deg: -117.5, part: femur_ovh_body}
+    "+35": {deg: -117.5, part: femur_ovh_body}
+  physics_ceiling: -117.5        # knee-end dip window vs the phi44 dust
+    # collar saturates at ANY outboard offset -- -110 safe is the max
+    # this architecture reaches; the WEDGE chamfer on the printed knee
+    # parts is the one overhead relief no offset can replace.
+  own_stack_first_contact_deg: -125.0   # clamp vs yaw-axis 6805/pedestal
+  tibia_spin_checked_deg: [-50, 40]
+  hip_spin_checked_deg: [-112.5, 35]
+
+outboard_consequences:           # rigid_hip -> this concept, measured
+  hip_axis_radial_mm: [115.4, 156.6]
+  stance_foot_lever_mm: [204.3, 246.3]    # +21% tower-bearing bending
+  yaw_rotating_mass_g: [386.3, 438.6]
+  yaw_cg_lever_mm: [45.4, 86.1]
+  yaw_first_moment_gmm: [17543, 37743]    # 2.15x
+  yaw_point_inertia_kgcm2: [1.56, 4.50]   # 2.88x -- slower yaw ramps
+  stance_width_across_flats_delta_mm: 84
+  yaw_free_range_deg: [-60, 60]           # software limit +-35
+  adjacent_leg_min_gap_mm: 17.9           # +35/-35 convergence @ stance
+  wago_block_min_clearance_mm: 41.8
+  rot_envelope_note: rigid_hip's 38.2 mm full-circle envelope rule is
+    superseded (coxa plan reach 78.4); replacement guarantees measured
+    in check_yaw_envelope_ovh.
+
+parts:
+  chorn_clamp_cnc:
+    material: 6061-T6
+    process: cnc_3axis
+    qty_per_robot: 12            # same PLAIN C at hip and knee
+    mass_g: 48.0
+    blade_t_mm: 3.0
+    web_t_mm: 3.8
+    reach_axis_to_web_inner_mm: 42.0   # chorn experiment: 29.5
+    reach_axis_to_datum_a_mm: 45.8
+    pad_od_mm: 19.0
+    pad_span_mm: 38.04           # NOMINAL disc-face span -- see fits
+    z_span_mm: 52.54             # production printed yoke: 56.3
+    plan_profile: plain rectangle (y -20..+13 full length), R13 end
+      over the disc, R3 plan fillets -- no notch, no corridor, no web
+      bevel (superseded swan-neck features)
+    internal_radii_mm: {plan_fillets: 3.0, gussets: 2.5}
+    datums:
+      A: web outer face (x=58.3 link plane, mates the printed wall)
+      B: pad faces (disc span 38.04)
+      C: horn centre bore
+    threads: 2x M3-6H tapped (web upper row)
+    csk: 2x phi 3.4 + 90deg csk, web inner face (lower row)
+  coxa_link_ovh:
+    material: PETG
+    mass_g: 64.2
+    replaces: coxa_link_rigid
+    description: cradle arm (hip bracket + foot slab) moved 42 mm
+      outboard; yaw-axis interfaces (horn drive, hub boss, seat ring,
+      dust brim) byte-identical to rigid_hip (asserted).
+  hip_clamp_cap_ovh:
+    material: PETG
+    mass_g: 42.3
+    replaces: hip_clamp_cap_rigid
+    description: servo jaw moves out with the hip; yaw-axis pedestal +
+      6805 press boss + puller notches stay ON the yaw axis, tied to
+      the jaw crown by a two-step arm (full pedestal-chord section).
+      PETG cantilever in the plate load path -- bench-watch item.
+  femur_ovh_body:   {material: PETG, mass_g: 43.6, replaces: femur_link}
+  tibia_ovh_socket: {material: PETG, mass_g: 14.0, replaces: tibia_knee_yoke,
+                     tube_shorter_mm: 16.6}
+  tibia_tube_ovh:
+    description: production CF tibia tube shortened 16.6 mm -- the new
+      socket mouth sits outboard so the tube tip lands 0.3 off the
+      metal web (stiffer + lighter than production).
+  knee_clamp_cap_ovh:
+    material: PETG
+    mass_g: 25.7
+    replaces: knee_clamp_cap
+    retention: M3x25 SHCS up-screw from cradle underside into phi4x6
+      heat-set insert (boss/riser/strap under the tongue line; the
+      overhead wedge removed the old side-screw boss).  No crown shave
+      (the swan-neck rev's shave is unnecessary at the outboard pivot).
+  # --- inherited UNCHANGED from rigid_hip (purpose recorded there --
+  # see concepts/rigid_hip/design_spec.yaml for the full entries) ---
+  chassis_bottom:
+    description: inherited rigid_hip chassis_bottom_rigid, unchanged.
+  chassis_top_rigid:
+    description: inherited rigid_hip 6 mm top plate with dust roofs,
+      unchanged -- its yaw-tower collar is the overhead physics ceiling.
+  top_hatch_rigid:
+    description: inherited rigid_hip hatch on under-frame insert
+      bosses, unchanged.
+  centre_wago_block:
+    description: inherited rigid_hip centre splice block, unchanged.
+  wago5:
+    description: COTS Wago 221-415 levers in the centre block,
+      unchanged.
+  yaw_bearing_upper:
+    description: COTS 6805-2RS, tower-seated per rigid_hip, unchanged.
+  bearing_6805:
+    description: COTS 6805-2RS (third/top bearing), unchanged -- stays
+      on the yaw axis under the plate bore (the variant cap's pedestal
+      reaches back to it).
+  yaw_servo_retainer:
+    description: production yaw servo retainer, unchanged.
+  servo_body:
+    description: COTS STS3215 servo (yaw/hip/knee), unchanged.
+  foot_boot:
+    description: production printed foot boot, unchanged.
+
+mass:
+  per_leg_delta_g: 53.6          # 285.8 vs rigid_hip 232.2
+  robot_delta_g: 321.7
+  aluminum_total_g: 576.0
+  height_delta_mm: 0.0
+
+fasteners_per_joint:
+  - 2x M3x10 SHCS, printed wall -> tapped web (upper row, heads in the
+    open servo well)
+  - 2x M3x12 CSK, web inner face -> T-slot nyloc in the print (lower
+    row, under the cradle floor)
+  - 8x M3 disc bolts (4 per disc face, Ø14 PCD, into the discs'
+    factory-tapped holes; verify grip length -- blade+pad stack
+    7.0/7.5 mm)
+
+needs_bench_tuning:              # PETG values do NOT transfer to metal
+  - name: pad_span
+    nominal_mm: 38.04
+    note: production PETG yoke preloaded YOKE_SEAT_INTERF per side;
+      the rigid aluminum clamp is cut to the NOMINAL span so it must
+      NOT preload the horn.  Quote +-0.05; expect a shim/bench pass.
+  - name: disc_collar_recess
+    nominal_clearance_mm: 0.5
+    note: was a PETG drop-in fit; 0.5 radial clearance in metal is a
+      starting point only.
+  - name: cap_insert_press
+    note: phi4x6 heat-set stays in PETG (unchanged bench-tuned value);
+      NO heat-set inserts in aluminum anywhere -- tapped M3-6H instead.
+  - name: hip_cap_pedestal_arm
+    note: PETG cantilever now carries the plate->6805 load path across
+      the 42 mm offset (full pedestal-chord section); watch for creep
+      or flex on the bench before trusting stance loads.
+
+checks: make_cnc_chorn_variant.py     # rigid_hip suite re-run + parts /
+#   coxa OVH / hip cap OVH / clamp-joint spins / web joint / knee cap /
+#   down-swing + knee range / assembly paths / yaw envelope (free range,
+#   adjacent legs, wago) / masses + outboard geometry / overhead femur
+#   sweep; scene.json + preview.png + sweep_report.json are its outputs

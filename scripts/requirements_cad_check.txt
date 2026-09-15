@@ -1,0 +1,12 @@
+# Extra deps required by hexapod_walker/prototype/scripts/check_cad.py
+# beyond what the repo-root requirements.txt already installs.
+#
+# Install with:
+#   pip install -r hexapod_walker/prototype/scripts/requirements_cad_check.txt
+#
+# Or, if you prefer the shared repo venv:
+#   ./run.sh hexapod_walker/prototype/scripts/check_cad.py
+# (the helper venv at the repo root already includes trimesh, numpy,
+# scipy, shapely, pyvista, matplotlib — the only "new" requirement is
+# PyYAML for design_spec.yaml).
+PyYAML>=6.0
