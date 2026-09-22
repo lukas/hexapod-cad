@@ -3,24 +3,34 @@
   "parts": {
     "sensor_full_foot": {
       "kind": "printed",
-      "material": "PLA",
-      "notes": "Print flat sensor seat down, dome up. Three 2.4 mm blind sockets require only short bridges; no external supports expected. Physical fit untested."
-    },
-    "sensor_reference": {
-      "kind": "purchased",
-      "notes": "User-measured 10 mm OD, 8.5 mm inner diameter, 6.5 mm tab. Film thickness and tab length illustrative."
+      "material": "PETG",
+      "label": "Rounded moving foot with guide bores"
     },
     "mating_cylinder": {
       "kind": "printed",
-      "material": "PLA",
-      "notes": "Print unnotched rim on bed, pins up. Sloped internal supports avoid horizontal boss overhangs. Use the matching v5 foot."
+      "material": "PETG",
+      "label": "Rod socket, pressure web, guide pins and stop"
+    },
+    "return_collar_tpu": {
+      "kind": "printed",
+      "material": "TPU",
+      "label": "TPU snap-on return collar (unloaded)"
+    },
+    "contact_pad_tpu": {
+      "kind": "printed",
+      "material": "TPU",
+      "label": "TPU pressure pad, 6.5 mm diameter"
+    },
+    "sensor_reference": {
+      "kind": "purchased",
+      "label": "10 mm film sensor reference"
     }
   },
   "instructions": [
     {
       "id": "assembly",
-      "title": "Assembly",
-      "text": "Print both v5 parts. The cylinder pins enter sockets in the rounded bottom. Dry-fit, apply a small amount of glue, and slide together. Keep adhesive off sensor and wire tab."
+      "title": "Contact-sensing assembly",
+      "text": "Use all v8 parts. Stick sensor to foot without covering active area or vent. Attach TPU pad to cylinder web. Guides must slide freely; do not glue them. Stretch collar cuffs into both grooves with wire window aligned. Rod seats against closed web. Measure film plus adhesive and set pad gap with thin shims. Bench-test release, touch threshold, tilted contact and hard stop."
     }
   ]
 }

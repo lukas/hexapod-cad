@@ -1,11 +1,11 @@
 {
-  "name": "Rounded sensor foot and matching cylinder",
-  "units": "mm",
+  "name": "Ground-contact foot with TPU return and travel stop",
   "buildId": "prototype_sts3215/sensor-full-foot",
+  "units": "mm",
   "center": [
     0,
     0,
-    6.35
+    6.5
   ],
   "meshes": [
     {
@@ -13,12 +13,20 @@
       "url": "sensor_full_foot_print.stl"
     },
     {
-      "id": "sensor_reference",
-      "url": "sensor_reference.stl"
-    },
-    {
       "id": "mating_cylinder",
       "url": "mating_cylinder_print.stl"
+    },
+    {
+      "id": "return_collar_tpu",
+      "url": "return_collar_tpu_print.stl"
+    },
+    {
+      "id": "contact_pad_tpu",
+      "url": "contact_pad_tpu_print.stl"
+    },
+    {
+      "id": "sensor_reference",
+      "url": "sensor_reference.stl"
     }
   ],
   "instances": [
@@ -26,8 +34,60 @@
       "id": "sensor_full_foot",
       "meshId": "sensor_full_foot",
       "partType": "sensor_full_foot",
-      "name": "Rounded bottom with three glue sockets",
+      "name": "Rounded moving foot with guide bores",
       "color": "#e9a13d",
+      "cots": false,
+      "transform": [
+        1.0,
+        -0.0,
+        -0.0,
+        0.0,
+        0.0,
+        -1.0,
+        -1.2246467991473532e-16,
+        0.0,
+        0.0,
+        1.2246467991473532e-16,
+        -1.0,
+        0.0,
+        0.0,
+        -2.449293598294708e-16,
+        2.0000000000000013,
+        1.0
+      ]
+    },
+    {
+      "id": "mating_cylinder",
+      "meshId": "mating_cylinder",
+      "partType": "mating_cylinder",
+      "name": "Rod socket, pressure web, guide pins and stop",
+      "color": "#97aac3",
+      "cots": false,
+      "transform": [
+        1.0,
+        -0.0,
+        -0.0,
+        0.0,
+        0.0,
+        -1.0,
+        -1.2246467991473532e-16,
+        0.0,
+        0.0,
+        1.2246467991473532e-16,
+        -1.0,
+        0.0,
+        0.0,
+        -2.767701812789586e-15,
+        22.600000381469727,
+        1.0
+      ]
+    },
+    {
+      "id": "return_collar_tpu",
+      "meshId": "return_collar_tpu",
+      "partType": "return_collar_tpu",
+      "name": "TPU snap-on return collar (unloaded)",
+      "color": "#945dc7",
       "cots": false,
       "transform": [
         1.0,
@@ -35,16 +95,42 @@
         0.0,
         0.0,
         0.0,
-        -1.0,
-        1.2246467991473532e-16,
-        0.0,
-        0.0,
-        -1.2246467991473532e-16,
-        -1.0,
+        1.0,
         0.0,
         0.0,
         0.0,
-        2.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.4000000059604645,
+        1.0
+      ]
+    },
+    {
+      "id": "contact_pad_tpu",
+      "meshId": "contact_pad_tpu",
+      "partType": "contact_pad_tpu",
+      "name": "TPU pressure pad, 6.5 mm diameter",
+      "color": "#dd617c",
+      "cots": false,
+      "transform": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        2.4,
         1.0
       ]
     },
@@ -52,7 +138,7 @@
       "id": "sensor_reference",
       "meshId": "sensor_reference",
       "partType": "sensor_reference",
-      "name": "10 mm sensor; illustrative wire tab",
+      "name": "10 mm film sensor reference",
       "color": "#249796",
       "cots": true,
       "transform": [
@@ -71,32 +157,6 @@
         0.0,
         0.0,
         0.0,
-        1.0
-      ]
-    },
-    {
-      "id": "mating_cylinder",
-      "meshId": "mating_cylinder",
-      "partType": "mating_cylinder",
-      "name": "20 mm cylinder with downward pins and wire exit",
-      "color": "#97aac3",
-      "cots": false,
-      "transform": [
-        1.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        -1.0,
-        1.2246467991473532e-16,
-        0.0,
-        0.0,
-        -1.2246467991473532e-16,
-        -1.0,
-        0.0,
-        0.0,
-        0.0,
-        22.2,
         1.0
       ]
     }

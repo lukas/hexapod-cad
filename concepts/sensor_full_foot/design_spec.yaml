@@ -1,43 +1,60 @@
 build:
   id: prototype_sts3215/sensor-full-foot
-  name: Rounded sensor foot with bottom sockets and cylinder pins
+  name: Ground-contact foot with TPU return and travel stop
   units: mm
-  status: geometric prototype; physical fit and sensing untested
+  status: geometric bench prototype; trigger force and retention unvalidated
+intent: Detect ground contact; no calibrated force measurement.
 parts:
   sensor_full_foot:
-    purpose: Full flat sensor seat above a hemispherical bottom, with three blind glue sockets outside the sensor footprint.
+    purpose: Rigid rounded moving foot supports the sensor and provides guide bores, stop face and TPU retaining groove.
     manufacturing: 3D printed
+    material: PETG
     dimensions:
       diameter_mm: 19
       hemispherical_radius_mm: 9.5
-      seat_thickness_mm: 2
-      socket_diameter_mm: 2.4
-      socket_depth_mm: 5.1
-      socket_center_radius_mm: 7
-      sensor_socket_clearance_mm: 0.8
-      minimum_outer_socket_wall_mm: 0.78
+      guide_bore_diameter_mm: 2.4
+      guide_center_radius_mm: 7
   mating_cylinder:
-    purpose: Separate sleeve with three downward pins that slot into bottom sockets; sloped pin supports and wire exit.
+    purpose: Closed rod socket transmits load to central sensor pad. Pins guide motion; outer rim stops compression. No glued joint to foot.
     manufacturing: 3D printed
+    material: PETG
     dimensions:
-      bore_mm: 16
-      outer_diameter_mm: 19
-      straight_height_mm: 20
-      wall_mm: 1.5
+      bore_mm: 8.2
+      rod_nominal_od_mm: 8
+      outer_diameter_mm: 16
+      cylinder_height_mm: 20
+      rod_socket_depth_mm: 17.2
+      travel_stop_gap_mm: 0.6
       pin_diameter_mm: 2
-      pin_projection_mm: 5
-      engagement_mm: 4.8
-      radial_glue_gap_mm: 0.2
-      end_clearance_mm: 0.3
-      wire_exit_width_mm: 7.1
+      pin_tip_clearance_at_stop_mm: 0.1
+  return_collar_tpu:
+    purpose: Flexible snap-on collar retains and returns both rigid halves; wire window preserves tail route.
+    manufacturing: 3D printed
+    material: TPU
+    dimensions:
+      maximum_od_mm: 22.8
+      wire_window_width_mm: 7.1
+    assumptions: TPU printing availability assumed. Rest shape only; spring rate, deformation, retention and fatigue untested.
+  contact_pad_tpu:
+    purpose: Compliant central actuator loads only the assumed active sensing disk before the rigid travel stop engages.
+    manufacturing: 3D printed
+    material: TPU
+    dimensions:
+      diameter_mm: 6.5
+      thickness_mm: 1
+      initial_sensor_gap_mm: 0.2
+      compression_at_stop_mm: 0.4
   sensor_reference:
-    purpose: Purchased film sensor reference; exclude from printing.
+    purpose: Purchased film sensor reference; do not print.
     manufacturing: purchased
     dimensions:
       outside_diameter_mm: 10
-      inner_diameter_mm: 8.5
+      assumed_active_diameter_mm: 8.5
+      assumed_film_plus_adhesive_thickness_mm: 0.2
       tab_width_mm: 6.5
-    assumptions: Film thickness and tab length illustrative; inner diameter not assumed to be a hole.
+    assumptions: Active diameter is inferred from user inner-diameter measurement; not modeled as an actual hole. Tab length and film thickness are illustrative.
 limitations:
-  - No pressure applicator or calibrated force-transfer mechanism included.
-  - Print fit, bridging, adhesive retention, and loaded sensing untested.
+  - Rigid stop limits travel but does not establish a safe force limit.
+  - TPU return force and friction affect contact threshold; bench calibration required.
+  - Guides must slide; do not glue the moving joint.
+  - No robot motion or control software changes.
