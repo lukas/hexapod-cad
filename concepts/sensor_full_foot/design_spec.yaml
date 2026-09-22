@@ -23,6 +23,8 @@ parts:
       rod_nominal_od_mm: 8
       outer_diameter_mm: 16
       cylinder_height_mm: 20
+      wire_slot_start_y_mm: 3.8
+      pressure_pad_backing: full circular area
       rod_socket_depth_mm: 17.2
       travel_stop_gap_mm: 0.6
       pin_diameter_mm: 2

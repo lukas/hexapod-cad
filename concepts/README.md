@@ -19,7 +19,7 @@ evidence together so experimental assumptions do not leak into
 ## Sensing and contact
 
 - [`sensor_full_foot/`](sensor_full_foot/) — rounded 10 mm sensor backing with
-  sliding guides, TPU return collar, pressure pad and hard stop; BuildViz v8.
+  sliding guides, TPU return collar, pressure pad and hard stop; BuildViz v9.
 
 - [`fsr_sensor_foot/`](fsr_sensor_foot/) — force-sensitive-resistor foot and
   load-transfer stack.

@@ -1,4 +1,4 @@
-# Ground-contact foot — v8 bench prototype
+# Ground-contact foot — v9 bench prototype
 
 This replaces the bonded pin/socket joint with guided relative motion.
 The goal is ground-contact detection, not calibrated weight measurement.
@@ -41,7 +41,7 @@ no robot software or hardware was changed here.
 
 ## Print and assemble
 
-Use all v8 parts; previous glue-joint prints are incompatible.
+Use all v9 parts; previous glue-joint prints are incompatible.
 Print bottom flat seat down and cylinder unnotched rim down, pins up. Both
 rigid print-oriented STLs and 3MFs already have these orientations. The
 cylinder requires a bridge over its 8.2 mm rod bore. Print collar in TPU on
@@ -67,4 +67,4 @@ uv run --no-project --with trimesh --with manifold3d python \
   concepts/sensor_full_foot/make_foot.py
 ```
 
-[Cloud BuildViz v8](https://buildviz.cwd1f0-new-cluster.coreweave.app/?build=prototype_sts3215/sensor-full-foot&version=v8)
+[Cloud BuildViz v9](https://buildviz.cwd1f0-new-cluster.coreweave.app/?build=prototype_sts3215/sensor-full-foot&version=v9)

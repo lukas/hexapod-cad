@@ -29,9 +29,10 @@ def main():
  film=union([cyl(5,SEAT_Z,SEAT_Z+FILM_T),box([6.5,5,FILM_T],[0,6,SEAT_Z+FILM_T/2])])
  upper_groove=diff([cyl(8.2,4.6,5.6),cyl(7.55,4.5,5.7)])
  # Closed web supports the carbon rod; outer rim is the positive travel stop.
- body=diff([cyl(8,BODY_Z,TOP_Z),cyl(4.1,ROD_STOP_Z,TOP_Z+.1),cyl(5.3,BODY_Z-.1,PAD_TOP),box([7.1,20,2],[0,10,3]),upper_groove])
+ body=diff([cyl(8,BODY_Z,TOP_Z),cyl(4.1,ROD_STOP_Z,TOP_Z+.1),cyl(5.3,BODY_Z-.1,PAD_TOP),box([7.1,16.2,2],[0,11.9,3]),upper_groove])
  body=union([body,*[cyl(1,-2.4,BODY_Z+.2,x,y) for x,y in centers]])
  pad=cyl(3.25,PAD_BOTTOM,PAD_TOP)
+ assert overlap(cyl(3.25,PAD_TOP+.01,PAD_TOP+.1),body) > .99*np.pi*3.25**2*.09,'pressure pad backing incomplete'
  # Flexible snap cuffs in rigid grooves; bowed wall supplies return compliance.
  profile=np.array([[9.9,.4],[9.9,1.2],[10.4,1.6],[11.4,2.6],[10.4,3.6],[8.65,4.7],[8.65,5.5],[7.65,5.5],[7.65,4.8],[8.15,4.6],[9.8,3.0],[10.5,2.6],[9.8,2.2],[9.65,1.3],[8.95,1.1],[8.95,.4]])
  collar=tm.creation.revolve(np.vstack([profile,profile[0]]),sections=128)
@@ -81,7 +82,7 @@ def main():
  (HERE/'scene.json').write_text(json.dumps(scene,indent=2)+'\n')
  parts={name:dict(kind='purchased' if name=='sensor_reference' else 'printed',material='TPU' if name.endswith('_tpu') else 'PETG',label=names[name]) for name in meshes}
  parts['sensor_reference'].pop('material')
- workflow=dict(schema=1,parts=parts,instructions=[dict(id='assembly',title='Contact-sensing assembly',text='Use all v8 parts. Stick sensor to foot without covering active area or vent. Attach TPU pad to cylinder web. Guides must slide freely; do not glue them. Stretch collar cuffs into both grooves with wire window aligned. Rod seats against closed web. Measure film plus adhesive and set pad gap with thin shims. Bench-test release, touch threshold, tilted contact and hard stop.')])
+ workflow=dict(schema=1,parts=parts,instructions=[dict(id='assembly',title='Contact-sensing assembly',text='Use all v9 parts. Stick sensor to foot without covering active area or vent. Attach TPU pad to cylinder web. Guides must slide freely; do not glue them. Stretch collar cuffs into both grooves with wire window aligned. Rod seats against closed web. Measure film plus adhesive and set pad gap with thin shims. Bench-test release, touch threshold, tilted contact and hard stop.')])
  (HERE/'workflow.json').write_text(json.dumps(workflow,indent=2)+'\n')
  print(json.dumps(report,indent=2))
 
