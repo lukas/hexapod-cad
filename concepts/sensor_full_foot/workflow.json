@@ -1,0 +1,26 @@
+{
+  "schema": 1,
+  "parts": {
+    "sensor_full_foot": {
+      "kind": "printed",
+      "material": "PLA",
+      "notes": "Print flat sensor seat down, dome up. Three 2.4 mm blind sockets require only short bridges; no external supports expected. Physical fit untested."
+    },
+    "sensor_reference": {
+      "kind": "purchased",
+      "notes": "User-measured 10 mm OD, 8.5 mm inner diameter, 6.5 mm tab. Film thickness and tab length illustrative."
+    },
+    "mating_cylinder": {
+      "kind": "printed",
+      "material": "PLA",
+      "notes": "Print unnotched rim on bed, pins up. Sloped internal supports avoid horizontal boss overhangs. Use the matching v5 foot."
+    }
+  },
+  "instructions": [
+    {
+      "id": "assembly",
+      "title": "Assembly",
+      "text": "Print both v5 parts. The cylinder pins enter sockets in the rounded bottom. Dry-fit, apply a small amount of glue, and slide together. Keep adhesive off sensor and wire tab."
+    }
+  ]
+}

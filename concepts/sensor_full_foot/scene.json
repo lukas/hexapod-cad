@@ -1,0 +1,104 @@
+{
+  "name": "Rounded sensor foot and matching cylinder",
+  "units": "mm",
+  "buildId": "prototype_sts3215/sensor-full-foot",
+  "center": [
+    0,
+    0,
+    6.35
+  ],
+  "meshes": [
+    {
+      "id": "sensor_full_foot",
+      "url": "sensor_full_foot_print.stl"
+    },
+    {
+      "id": "sensor_reference",
+      "url": "sensor_reference.stl"
+    },
+    {
+      "id": "mating_cylinder",
+      "url": "mating_cylinder_print.stl"
+    }
+  ],
+  "instances": [
+    {
+      "id": "sensor_full_foot",
+      "meshId": "sensor_full_foot",
+      "partType": "sensor_full_foot",
+      "name": "Rounded bottom with three glue sockets",
+      "color": "#e9a13d",
+      "cots": false,
+      "transform": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        -1.0,
+        1.2246467991473532e-16,
+        0.0,
+        0.0,
+        -1.2246467991473532e-16,
+        -1.0,
+        0.0,
+        0.0,
+        0.0,
+        2.0,
+        1.0
+      ]
+    },
+    {
+      "id": "sensor_reference",
+      "meshId": "sensor_reference",
+      "partType": "sensor_reference",
+      "name": "10 mm sensor; illustrative wire tab",
+      "color": "#249796",
+      "cots": true,
+      "transform": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    },
+    {
+      "id": "mating_cylinder",
+      "meshId": "mating_cylinder",
+      "partType": "mating_cylinder",
+      "name": "20 mm cylinder with downward pins and wire exit",
+      "color": "#97aac3",
+      "cots": false,
+      "transform": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        -1.0,
+        1.2246467991473532e-16,
+        0.0,
+        0.0,
+        -1.2246467991473532e-16,
+        -1.0,
+        0.0,
+        0.0,
+        0.0,
+        22.2,
+        1.0
+      ]
+    }
+  ]
+}

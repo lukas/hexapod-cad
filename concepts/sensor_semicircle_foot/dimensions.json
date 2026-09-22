@@ -1,0 +1,26 @@
+{
+  "sensor_outside_diameter_mm": 10.0,
+  "sensor_inner_diameter_mm": 8.5,
+  "tab_width_mm": 6.5,
+  "backing_radius_mm": 6.0,
+  "backing_thickness_mm": 2.0,
+  "cylinder_inside_diameter_mm": 10.0,
+  "glue_post_diameter_mm": 1.9,
+  "glue_post_height_mm": 5.0,
+  "nominal_radial_glue_clearance_mm": 0.2,
+  "bounds_mm": [
+    [
+      -6.0,
+      -6.0,
+      0.0
+    ],
+    [
+      6.0,
+      0.0,
+      7.0
+    ]
+  ],
+  "watertight": true,
+  "connected_components": 1,
+  "volume_mm3": 155.56415540313438
+}

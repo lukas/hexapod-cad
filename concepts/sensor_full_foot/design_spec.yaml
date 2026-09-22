@@ -1,0 +1,43 @@
+build:
+  id: prototype_sts3215/sensor-full-foot
+  name: Rounded sensor foot with bottom sockets and cylinder pins
+  units: mm
+  status: geometric prototype; physical fit and sensing untested
+parts:
+  sensor_full_foot:
+    purpose: Full flat sensor seat above a hemispherical bottom, with three blind glue sockets outside the sensor footprint.
+    manufacturing: 3D printed
+    dimensions:
+      diameter_mm: 19
+      hemispherical_radius_mm: 9.5
+      seat_thickness_mm: 2
+      socket_diameter_mm: 2.4
+      socket_depth_mm: 5.1
+      socket_center_radius_mm: 7
+      sensor_socket_clearance_mm: 0.8
+      minimum_outer_socket_wall_mm: 0.78
+  mating_cylinder:
+    purpose: Separate sleeve with three downward pins that slot into bottom sockets; sloped pin supports and wire exit.
+    manufacturing: 3D printed
+    dimensions:
+      bore_mm: 16
+      outer_diameter_mm: 19
+      straight_height_mm: 20
+      wall_mm: 1.5
+      pin_diameter_mm: 2
+      pin_projection_mm: 5
+      engagement_mm: 4.8
+      radial_glue_gap_mm: 0.2
+      end_clearance_mm: 0.3
+      wire_exit_width_mm: 7.1
+  sensor_reference:
+    purpose: Purchased film sensor reference; exclude from printing.
+    manufacturing: purchased
+    dimensions:
+      outside_diameter_mm: 10
+      inner_diameter_mm: 8.5
+      tab_width_mm: 6.5
+    assumptions: Film thickness and tab length illustrative; inner diameter not assumed to be a hole.
+limitations:
+  - No pressure applicator or calibrated force-transfer mechanism included.
+  - Print fit, bridging, adhesive retention, and loaded sensing untested.

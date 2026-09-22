@@ -18,6 +18,9 @@ evidence together so experimental assumptions do not leak into
 
 ## Sensing and contact
 
+- [`sensor_full_foot/`](sensor_full_foot/) — rounded 10 mm sensor backing with
+  bottom glue sockets and a separate pinned 20 mm cylinder; BuildViz v5.
+
 - [`fsr_sensor_foot/`](fsr_sensor_foot/) — force-sensitive-resistor foot and
   load-transfer stack.
 
