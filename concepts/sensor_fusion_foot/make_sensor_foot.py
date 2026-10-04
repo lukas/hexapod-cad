@@ -153,10 +153,10 @@ def make_parts():
     return parts
 
 
-def optical_report(meshes):
+def optical_report(meshes, body_name="sensor_pod_carrier"):
     """Check sampled aperture rays and the actual pod/tread meshes, not boxes."""
     tip = meshes["hall_tpu_tread"]
-    body = meshes["sensor_pod_carrier"]
+    body = meshes[body_name]
     forward = POD_R @ [0, 0, -1]
     # Full package footprint is conservative for the unspecified Rx/Tx centers.
     origins, directions = [], []

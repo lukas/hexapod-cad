@@ -7,6 +7,7 @@ from __future__ import annotations
 
 import json
 from pathlib import Path
+import numpy as np
 
 from concepts.sensor_fusion_foot import make_sensor_foot as foot
 
@@ -67,6 +68,13 @@ def _validation_text(report):
         text += f" Maximum sampled cartridge-removal overlap: {removal:.4f} mm³."
     text += (" These are the generator's sampled geometric checks. Full robot sweep, "
              "material strength, actual mass, fit, sensing and durability remain unvalidated.")
+    if "buildviz" in report:
+        checks = report["buildviz"]
+        failures = [c for c in checks["checks"] if c["status"] == "fail"]
+        warnings = [c["label"] for c in checks["checks"] if c["status"] == "warn" and c["kind"] != "clearance"]
+        text += f" BuildViz reports {len(failures)} failed checks."
+        if warnings:
+            text += " Remaining warnings: " + "; ".join(warnings) + ". Refine and verify these before fabrication."
     return text
 
 
@@ -86,12 +94,13 @@ def write_presentation(out, scene, report, spec):
     if any(i["transform"] != identity for i in instances):
         raise ValueError("Part meshes must use the common foot frame; bake instance transforms before writing this presentation.")
     offsets = _service_offsets(scene)
+    pod_origin = np.asarray(scene["analysis"]["podOrigin"])
     elements = []
     for side, base in (("assembled", LEFT), ("service", RIGHT)):
         for instance in instances:
             part = instance["partType"]
             shift = offsets.get(instance["id"], [0, 0, 0]) if side == "service" else [0, 0, 0]
-            opacity = 0.16 if side == "service" and part == "printed_shank" else 1
+            opacity = 0.28 if side == "service" and part == "printed_shank" else 1
             if side == "service" and part == "hall_foot_housing":
                 opacity = 0.5
             elements.append({"id": f"{side}-{instance['id']}", "kind": "part",
@@ -115,7 +124,7 @@ def write_presentation(out, scene, report, spec):
     tip_z = pivot_z - float(report["axisToTipAxialMm"])
     elements.extend([
         {"id": "assembled-title", "kind": "text", "at": _add(LEFT, [0, 0, 207]),
-         "text": "ONE PRINTED LEG", "sizePx": 19, "color": INK},
+         "text": "ASSEMBLED", "sizePx": 19, "color": INK},
         {"id": "service-title", "kind": "text", "at": _add(RIGHT, [0, 0, 207]),
          "text": "OPEN FOR SERVICE", "sizePx": 19, "color": INK},
         {"id": "ground-reference", "kind": "box", "at": _add(LEFT, [10, 0, tip_z - 1]),
@@ -134,7 +143,7 @@ def write_presentation(out, scene, report, spec):
             "Existing knee mounting\nHorn holes and pads retained", [-180, -28], INK)
     callout("beam-note", LEFT, [0, -10, 107],
             "One printed shank\nHollow beam + solid knee root", [-180, -12], AMBER)
-    callout("sensor-note", LEFT, foot.POD_ORIGIN.tolist(),
+    callout("sensor-note", LEFT, pod_origin.tolist(),
             "Rigid IMU + laser bay\nPCB layout still to design", [-178, 5], BLUE)
     callout("contact-note", LEFT, [0, 0, 8],
             "Replaceable contact foot\nHall stroke + overload stop", [-180, 28], TEAL)
@@ -149,13 +158,13 @@ def write_presentation(out, scene, report, spec):
 
     for identifier, part, anchor in (("cartridge", "hall_foot_housing", [0, 0, 34]),
                                      ("hatch", "service_hatch", [0, -11, 124]),
-                                     ("pod-lid", "sensor_pod_lid", [17, 0, 44])):
+                                     ("pod-lid", "sensor_pod_lid", (pod_origin + foot.POD_R @ [0, 0, 4.6]).tolist())):
         shift = offsets[by_part[part]["id"]]
         elements.append({"id": f"{identifier}-service-guide", "kind": "line",
             "points": [_add(RIGHT, anchor), _add(RIGHT, _add(anchor, shift))],
             "color": "#94a8c2", "dashed": True})
 
-    optical_origin = foot.pod_point([0, 0, -foot.PCB_SIZE[2] / 2 - foot.TOF_SIZE[2]])
+    optical_origin = pod_origin + foot.POD_R @ [0, 0, -foot.PCB_SIZE[2] / 2 - foot.TOF_SIZE[2]]
     optical_direction = foot.POD_R @ [0, 0, -1]
     ray_length = (tip_z + 0.2 - optical_origin[2]) / optical_direction[2]
     optical_target = optical_origin + ray_length * optical_direction
@@ -184,7 +193,7 @@ def write_presentation(out, scene, report, spec):
         "Compare assembled bending, torsion, weight and durability with the carbon leg before loaded use."
     )
     diagram = {"name": DIAGRAM_NAME, "title": "Printed sensor leg · integrated structure, serviceable foot",
-        "background": "#0c1526", "camera": {"position": [120, -520, 240], "target": [5, 0, 91]},
+        "background": "#0c1526", "camera": {"position": [100, -400, 215], "target": [5, 0, 91]},
         "elements": elements, "notes": notes}
 
     classifications = {}
